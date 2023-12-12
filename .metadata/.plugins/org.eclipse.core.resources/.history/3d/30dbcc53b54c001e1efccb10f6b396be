@@ -1,0 +1,8 @@
+package API.componente;
+
+public interface SelecionaUm {
+
+    public void seleciona();
+    public void selecionaTodos();
+    public String valor();
+}

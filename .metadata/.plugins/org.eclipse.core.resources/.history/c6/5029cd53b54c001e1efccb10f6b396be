@@ -1,0 +1,9 @@
+package API.componente;
+
+public interface SelecionaVarios <T>{
+
+    public void seleciona(T... opcoes);
+    public void selecionaTodos();
+
+
+}

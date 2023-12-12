@@ -1,0 +1,16 @@
+package API.store;
+
+import API.componente.EntradaSimples;
+
+public interface ControleDeProdutoInterface {
+    public EntradaSimples codigo();
+
+    public EntradaSimples nome();
+
+    public EntradaSimples quantidade();
+
+    public EntradaSimples valor();
+
+    public EntradaSimples dataCadastro();
+
+}

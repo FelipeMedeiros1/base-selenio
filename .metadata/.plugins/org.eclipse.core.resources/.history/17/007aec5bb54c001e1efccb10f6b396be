@@ -1,0 +1,12 @@
+package API.store;
+
+
+import API.componente.EntradaSimples;
+
+public interface LoginStoreInterface {
+
+    public EntradaSimples email();
+
+    public EntradaSimples senha();
+
+}

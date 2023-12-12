@@ -1,0 +1,65 @@
+2023-09-06 09:55:11,803 [Worker-17] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.example:test-selenium:1.0-SNAPSHOT @ C:\Projetos\ws_robo\projeto-base-selenium\pom.xml.
+2023-09-06 09:55:12,950 [Worker-17] WARN  o.e.m.j.i.AbstractJavaProjectConfigurator - Could not determine source level, using default 1.4
+2023-09-06 09:55:12,951 [Worker-17] WARN  o.e.m.j.i.AbstractJavaProjectConfigurator - Could not determine target level, using default 1.4
+2023-09-06 09:55:13,086 [Worker-17] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /projeto-base-selenium/src/main/java
+2023-09-06 09:55:13,099 [Worker-17] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /projeto-base-selenium/src
+2023-09-06 09:55:20,084 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:55:20,085 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 09:55:20,086 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:55:20,086 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 09:55:50,688 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:55:50,689 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 09:55:50,690 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:55:50,690 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 09:59:26,853 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:59:26,853 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 09:59:26,855 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:59:26,855 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 09:59:50,976 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:59:50,976 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 09:59:50,977 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 09:59:50,977 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:00:17,712 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:17,713 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:00:17,713 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:17,713 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:00:31,279 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:31,279 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:00:31,281 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:31,281 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:00:37,155 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:37,155 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:00:37,156 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:00:37,156 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:01:14,269 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:01:14,269 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:01:14,270 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:01:14,271 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:02:19,966 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:19,966 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:02:19,967 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:19,967 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:02:25,863 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:25,864 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:02:25,865 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:25,865 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:02:31,470 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:31,471 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:02:31,473 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:31,473 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:02:36,111 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:36,112 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:02:36,113 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:36,113 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:02:37,233 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:37,233 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:02:37,235 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:02:37,235 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:03:02,186 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:03:02,186 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:03:02,187 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:03:02,188 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources
+2023-09-06 10:03:07,782 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:03:07,782 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\main\resources
+2023-09-06 10:03:07,783 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-06 10:03:07,783 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Projetos\ws_robo\projeto-base-selenium\src\test\resources

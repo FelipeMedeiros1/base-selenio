@@ -1,0 +1,13 @@
+package src.test.java.API;
+
+//import API.componente.Carteira;
+//import API.componente.SelecionaUm;
+//import API.componente.SelecionaVarios;
+
+//public interface ProcessamentoInterface {
+//    public SelecionaVarios<String> modulos(String... opcoes);
+//    public SelecionaVarios<String> tipoDeProcessamento(String... opcoes);
+//    public SelecionaUm dataInicial(String valor);
+//    public SelecionaUm dataFinal(String valor);
+//    public Carteira carteira(String valor);
+//}
