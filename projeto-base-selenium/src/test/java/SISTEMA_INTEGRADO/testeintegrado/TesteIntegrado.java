@@ -25,6 +25,6 @@ public class TesteIntegrado extends BaseTest {
         new ProcessamentoUtils(repositorio).executar(processamento,"P1");
         new CockPitUtils(repositorio).consultar(cockPit,"C1");
         new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara,"CD1")
-                .gerarRelatorio(cateirraDiara,"CD2").gerarRelatorio(cateirraDiara,"CD1");
+                .gerarRelatorio(cateirraDiara,"CD2");
     }
 }

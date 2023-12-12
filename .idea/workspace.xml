@@ -63,7 +63,7 @@
       <recent name="WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TesteIntegrado">
+  <component name="RunManager" selected="JUnit.TesteIntegrado.test01">
     <configuration name="CadastroFundosTest.testCadastrarFundos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-selenium" />
       <extension name="coverage">
@@ -143,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TesteIntegrado" />
         <item itemvalue="JUnit.TesteIntegrado.test01" />
+        <item itemvalue="JUnit.TesteIntegrado" />
         <item itemvalue="JUnit.SuiteTest" />
         <item itemvalue="JUnit.FundamentalTest" />
         <item itemvalue="JUnit.CadastroFundosTest.testCadastrarFundos" />
