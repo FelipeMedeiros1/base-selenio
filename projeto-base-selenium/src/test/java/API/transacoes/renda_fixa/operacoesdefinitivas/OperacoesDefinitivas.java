@@ -1,9 +1,10 @@
-package API.transacoes.renda_fixa;
+package API.transacoes.renda_fixa.operacoesdefinitivas;
 
+import API.componente.TestCase;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 
-public interface OperacoesDefinitivas {
+public interface OperacoesDefinitivas extends TestCase {
     public void modalidadeDoMovimento(String valor);
 
     public void dataDoMovimento(String valor);

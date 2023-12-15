@@ -14,7 +14,7 @@ public class ProcessamentoUtils {
         modeloDeCadastro = LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Processamento", Processamento.class);
 
         ProcessamentoPage page = new ProcessamentoPage();
-        page.acessaPaginaProcessamento();
+        page.acessaPagina();
         page.modulos(modeloDeCadastro.getModulos());
         page.tipoDeProcessamento(modeloDeCadastro.getTipoDeProcessamento());
         page.dataInicial(modeloDeCadastro.getDataInicial());
@@ -28,7 +28,7 @@ public class ProcessamentoUtils {
         modeloDeCadastro = LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Processamento", Processamento.class);
 
         ProcessamentoPage page = new ProcessamentoPage();
-        page.acessaPaginaProcessamento();
+        page.acessaPagina();
         page.modulos(modeloDeCadastro.getModulos());
         page.tipoDeProcessamento(modeloDeCadastro.getTipoDeProcessamento());
         page.dataInicial(modeloDeCadastro.getDataInicial());

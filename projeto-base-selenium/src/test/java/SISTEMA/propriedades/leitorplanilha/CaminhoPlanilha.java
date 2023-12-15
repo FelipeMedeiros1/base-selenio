@@ -28,16 +28,16 @@ public class CaminhoPlanilha {
         String nomeDaClasse = "FundamentalTest";
 
         try {
-            // Carregue a classe pelo nome
+            // Carregue Leitor classe pelo nome
             Class<?> classe = Class.forName(nomeDaClasse);
 
-            // Obtenha o caminho da planilha usando a classe
+            // Obtenha o caminho da planilha usando Leitor classe
             String caminhoDaPlanilha = obterCaminhoDaPlanilhaPelaClasse(classe);
 
             if (caminhoDaPlanilha != null) {
-                System.out.println("Caminho da planilha para a classe " + nomeDaClasse + ": " + caminhoDaPlanilha);
+                System.out.println("Caminho da planilha para Leitor classe " + nomeDaClasse + ": " + caminhoDaPlanilha);
             } else {
-                System.out.println("Planilha não encontrada para a classe " + nomeDaClasse);
+                System.out.println("Planilha não encontrada para Leitor classe " + nomeDaClasse);
             }
         } catch (ClassNotFoundException e) {
             System.out.println("Classe não encontrada: " + nomeDaClasse);

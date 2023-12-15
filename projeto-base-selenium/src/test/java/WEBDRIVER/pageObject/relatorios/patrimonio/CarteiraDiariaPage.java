@@ -19,7 +19,7 @@ public class CarteiraDiariaPage extends BasePage {
     @FindBy(id = "mainForm:saida:campo")private WebElement saida;
     //endregion
 
-    public void acessaPaginaCarteiraDiaria(){new Acessa().carteiraDiaria();}
+    public void acessaPaginaCarteiraDiaria(){new Acessa().relCarteiraDiaria();}
     public void dataInicio(String valor){preenche(inicio,valor); esperaPor(1000);}
     public void dataFinal(String valor){
         preenche(fim,valor);

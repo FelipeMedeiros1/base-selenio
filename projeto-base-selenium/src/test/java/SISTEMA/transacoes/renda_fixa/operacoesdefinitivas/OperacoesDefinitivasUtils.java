@@ -14,7 +14,7 @@ public class OperacoesDefinitivasUtils {
         modeloDeCadastro =
                 LeitorPlanilha.carregarDados(nomeDaClasse, chavePrimaria, "OperacoesDefinitivas", OperacoesDefinitivas.class);
         OperacoesDefinitivasPage page = new OperacoesDefinitivasPage();
-        page.aceesaPaginaOperacoesDefinitivas();
+        page.acessaPagina();
         page.modalidadeDoMovimento(modeloDeCadastro.getModalidadeDomovimento());
         page.dataDoMovimento(modeloDeCadastro.getDataDoMovimento());
         page.dataDaCompra(modeloDeCadastro.getDataDaCompra());

@@ -22,7 +22,7 @@ public class ExcelReader<T> {
 
     public void lerDados(Class<T> dataClass) {
         try (Workbook workbook = WorkbookFactory.create(new FileInputStream(caminhoDaPlanilha))) {
-            Sheet planilha = workbook.getSheetAt(0); // Acessa a primeira planilha
+            Sheet planilha = workbook.getSheetAt(0); // Acessa Leitor primeira planilha
 
             Row cabecalho = planilha.getRow(0);
             int numColumns = cabecalho.getLastCellNum();
@@ -74,7 +74,7 @@ public class ExcelReader<T> {
     }
 
 //    public static void main(String[] args) {
-//        ExcelReader<ProcessamentoDados> excelReader = new ExcelReader<>("src/test/java/SISTEMA/processamento/processamento/OperacoesDefinitivasTest.xlsx", "pkProcessamento");
+//        ExcelReader<ProcessamentoDados> excelReader = new ExcelReader<>("src/test/java/SISTEMA/processamento/processamento/OperacoesATermoTest.xlsx", "pkProcessamento");
 //        excelReader.readData(ProcessamentoDados.class);
 //
 //        ProcessamentoDados processamento = excelReader.getDataByPrimaryKey("chave_primaria_aqui");

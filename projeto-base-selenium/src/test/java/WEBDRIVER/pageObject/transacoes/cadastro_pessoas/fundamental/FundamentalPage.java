@@ -25,10 +25,10 @@ public class FundamentalPage extends BasePage implements Fundamental {
 
     //endregion
 
-    public void aceesaPaginaFundamental() {
+    @Override
+    public void acessaPagina() {
         new Acessa().cadastroFundamental();
         inserir();
-
     }
 
     public void pessoa(String pessoa) {
@@ -58,6 +58,7 @@ public class FundamentalPage extends BasePage implements Fundamental {
         apropriacaoAgentesAba.seleciona();
         return apropriacaoAgentesAba;
     }
-
 }
+
+
 

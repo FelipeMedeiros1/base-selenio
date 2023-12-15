@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2cadfb-f850-4053-8e98-c104e89833c5" name="Changes" comment="" />
+    <list default="true" id="2b2cadfb-f850-4053-8e98-c104e89833c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/TestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/renda_fixa/operacoestermo/CustodiaAba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/renda_fixa/operacoestermo/DadosDeMovimentacaoAba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/renda_fixa/operacoestermo/OperacoesATermo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoesdefinitivas/aTest.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/Custodia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/DadosDaMovimentacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/OperacoesATermo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/OperacoesATermoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/OperacoesATermoTest.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoestermo/OperacoesATermoUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/renda_fixa/operacoestermo/CustodiaAbaImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/renda_fixa/operacoestermo/DadosDaMovimentacaoAbaImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/renda_fixa/operacoestermo/OperacoesATermoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/bin" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/Flag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/FiltroSelecionaUm.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/FiltroSelecionaUm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/SelecionaUm.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/SelecionaUm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/SelecionaVarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/componente/SelecionaVarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/cadastro_pessoa/fundamental/Fundamental.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/cadastro_pessoa/fundamental/Fundamental.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/processamento/Processamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/processamento/Processamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/renda_fixa/OperacoesDefinitivas.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/API/transacoes/renda_fixa/operacoesdefinitivas/OperacoesDefinitivas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/CaminhoDoArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/CaminhoDoArquivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/CaminhoPlanilha.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/CaminhoPlanilha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/ExcelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/ExcelReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/LeitorPlanilha.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/LeitorPlanilha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/cadastro_pessoas/fundamental/FundamentalUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/cadastro_pessoas/fundamental/FundamentalUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/processamento/processamento/ProcessamentoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/processamento/processamento/ProcessamentoUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoesdefinitivas/OperacoesDefinitivasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoesdefinitivas/OperacoesDefinitivasUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/base/basePage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/base/basePage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/ComboBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/ComboBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/DSL.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/DSL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/EntradaSimples.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/PreencheDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/ManipulaTabela.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/ManipulaTabela.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/componentes/Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/painel_acoes/AcaoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/painel_acoes/AcaoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/painel_acoes/Acessa.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/painel_acoes/Acessa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/propriedades/LoginAmplisPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/config/menu/propriedades/LoginAmplisPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/relatorios/patrimonio/CarteiraDiariaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/relatorios/patrimonio/CarteiraDiariaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/cadastro_pessoas/fundamental/FundamentalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/cadastro_pessoas/fundamental/FundamentalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/processamento/processamento/ProcessamentoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/processamento/processamento/ProcessamentoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/renda_fixa/operacoesdefinitivas/OperacoesDefinitivasPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/WEBDRIVER/pageObject/transacoes/renda_fixa/operacoesdefinitivas/OperacoesDefinitivasPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +58,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/projeto-base-selenium/bin" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,22 +82,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/felipem.medeiros/Documents/02-cursos/java/base-selenio",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/felipem.medeiros/Documents/02-cursos/java/base-selenio/projeto-base-selenium/src/test/java/SISTEMA/transacoes/renda_fixa/operacoesdefinitivas&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="API.componente" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa\operacoesdefinitivas" />
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa\a" />
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa\operacoestermo" />
       <recent name="C:\Projetos\ws_robo\projeto-base-selenium\src\resources\drivers" />
       <recent name="C:\Projetos\ws_robo\projeto-base-selenium\src\test\java\SISTEMA\relatorios\patrimonio\carteira_diaria" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa\operacoesdefinitivas" />
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa\operacoestermo" />
+      <recent name="C:\Users\felipem.medeiros\Documents\02-cursos\java\base-selenio\projeto-base-selenium\src\test\java\SISTEMA\transacoes\renda_fixa" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="API.transacoes.processamento" />
@@ -63,79 +116,78 @@
       <recent name="WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TesteIntegrado.test01">
-    <configuration name="CadastroFundosTest.testCadastrarFundos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OperacoesATermoTest.teste01">
+    <configuration name="CaminhoDoArquivo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SISTEMA.propriedades.leitorplanilha.CaminhoDoArquivo" />
       <module name="test-selenium" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SISTEMA.transacoes.cadastro_pessoas.fundos.*" />
+          <option name="PATTERN" value="SISTEMA.propriedades.leitorplanilha.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.cadastro_pessoas.fundos" />
-      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.cadastro_pessoas.fundos.CadastroFundosTest" />
-      <option name="METHOD_NAME" value="testCadastrarFundos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperacoesATermoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-selenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SISTEMA.transacoes.renda_fixa.operacoestermo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.renda_fixa.operacoestermo" />
+      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.renda_fixa.operacoestermo.OperacoesATermoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperacoesATermoTest.teste01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-selenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SISTEMA.transacoes.renda_fixa.operacoestermo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.renda_fixa.operacoestermo" />
+      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.renda_fixa.operacoestermo.OperacoesATermoTest" />
+      <option name="METHOD_NAME" value="teste01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FundamentalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OperacoesDefinitivasTest.incluirOperacoesDefinitivas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-selenium" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SISTEMA.transacoes.cadastro_pessoas.fundamental.*" />
+          <option name="PATTERN" value="SISTEMA.transacoes.renda_fixa.operacoesdefinitivas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.cadastro_pessoas.fundamental" />
-      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.cadastro_pessoas.fundamental.FundamentalTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.renda_fixa.operacoesdefinitivas" />
+      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.renda_fixa.operacoesdefinitivas.OperacoesDefinitivasTest" />
+      <option name="METHOD_NAME" value="incluirOperacoesDefinitivas" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProcessamentoTest.testProcessarCarteira" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-selenium" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SISTEMA.suitetestcase.*" />
+          <option name="PATTERN" value="SISTEMA.transacoes.processamento.processamento.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SISTEMA.suitetestcase" />
-      <option name="MAIN_CLASS_NAME" value="SISTEMA.suitetestcase.SuiteTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TesteIntegrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test-selenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SISTEMA_INTEGRADO.testeintegrado.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SISTEMA_INTEGRADO.testeintegrado" />
-      <option name="MAIN_CLASS_NAME" value="SISTEMA_INTEGRADO.testeintegrado.TesteIntegrado" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TesteIntegrado.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test-selenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SISTEMA_INTEGRADO.testeintegrado.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SISTEMA_INTEGRADO.testeintegrado" />
-      <option name="MAIN_CLASS_NAME" value="SISTEMA_INTEGRADO.testeintegrado.TesteIntegrado" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="SISTEMA.transacoes.processamento.processamento" />
+      <option name="MAIN_CLASS_NAME" value="SISTEMA.transacoes.processamento.processamento.ProcessamentoTest" />
+      <option name="METHOD_NAME" value="testProcessarCarteira" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TesteIntegrado.test01" />
-        <item itemvalue="JUnit.TesteIntegrado" />
-        <item itemvalue="JUnit.SuiteTest" />
-        <item itemvalue="JUnit.FundamentalTest" />
-        <item itemvalue="JUnit.CadastroFundosTest.testCadastrarFundos" />
+        <item itemvalue="JUnit.OperacoesATermoTest.teste01" />
+        <item itemvalue="JUnit.OperacoesATermoTest" />
+        <item itemvalue="JUnit.OperacoesDefinitivasTest.incluirOperacoesDefinitivas" />
+        <item itemvalue="JUnit.ProcessamentoTest.testProcessarCarteira" />
+        <item itemvalue="Application.CaminhoDoArquivo" />
       </list>
     </recent_temporary>
   </component>
@@ -179,17 +231,6 @@
       <path value="$PROJECT_DIR$/projeto-base-selenium" />
       <path value="$PROJECT_DIR$/projeto-base-selenium/bin" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/projeto-base-selenium/src/test/java/SISTEMA/propriedades/leitorplanilha/LeitorPlanilha.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

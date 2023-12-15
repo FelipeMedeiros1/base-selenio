@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 
 public interface SelecionaVarios <T>{
 
-     void seleciona(T... opcoes);
+     String[] selecionaVarios(WebElement element,String... opcoes);
      void selecionaTodos();
 
 

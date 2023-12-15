@@ -1,6 +1,8 @@
 package API.transacoes.cadastro_pessoa.fundamental;
 
-public interface Fundamental {
+import API.componente.TestCase;
+
+public interface Fundamental extends TestCase {
 
     void pessoa(String valor);
 

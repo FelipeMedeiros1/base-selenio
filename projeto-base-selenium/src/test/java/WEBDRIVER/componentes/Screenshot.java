@@ -52,10 +52,10 @@ public class Screenshot {
         System.setProperty("webdriver.chrome.driver", "C:\\caminho\\para\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
-        // Abrir a página da web desejada
+        // Abrir Leitor página da web desejada
         driver.get("https://exemplo.com");
 
-        // Capturar a tela e salvar
+        // Capturar Leitor tela e salvar
         capturaScreenshot();
 
         // Fechar o navegador

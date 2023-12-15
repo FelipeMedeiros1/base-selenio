@@ -1,6 +1,6 @@
 package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas;
 
-import API.transacoes.renda_fixa.OperacoesDefinitivas;
+import API.transacoes.renda_fixa.operacoesdefinitivas.OperacoesDefinitivas;
 import WEBDRIVER.base.basePage.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
@@ -44,7 +44,7 @@ public class OperacoesDefinitivasPage extends BasePage implements OperacoesDefin
     private WebElement evento;
     //endregion
 
-    public void aceesaPaginaOperacoesDefinitivas() {
+    public void acessaPagina() {
         new Acessa().operacoesDefinitivas();
         inserir();
 

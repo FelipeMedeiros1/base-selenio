@@ -1,5 +1,7 @@
 package WEBDRIVER.componentes;
 
+import API.componente.SelecionaUm;
+import API.componente.SelecionaVarios;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -11,7 +13,7 @@ import java.util.List;
 
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
-public class ComboBox {
+public class ComboBox implements SelecionaUm, SelecionaVarios {
 
     public void seleciona(WebElement element, String value) {
          new Select(element).selectByVisibleText(value);
@@ -22,6 +24,19 @@ public class ComboBox {
         combo.selectByVisibleText(valor);
         new Espera().esperaPor(1000);
     }
+    public String[] selecionaVarios(WebElement element, String ...valores) {
+        element.click();
+        Select combo = new Select(element);
+
+        combo.deselectAll();
+        new Actions(getDriver()).keyDown(Keys.CONTROL);
+
+        for (String valor : valores) {
+            combo.selectByVisibleText(valor);
+        }
+        return valores;
+    }
+
 
     public void deseleciona(String id, String valor) {
         WebElement element = getDriver().findElement(By.id(id));
@@ -74,17 +89,10 @@ public class ComboBox {
         }
         return valores;
     }
-    public String[] selecionaVarios(WebElement element, String ...valores) {
-        element.click();
-        Select combo = new Select(element);
 
-        combo.deselectAll();
-        new Actions(getDriver()).keyDown(Keys.CONTROL);
+    @Override
+    public void selecionaTodos() {
 
-        for (String valor : valores) {
-            combo.selectByVisibleText(valor);
-        }
-        return valores;
     }
 
     public int obterQuantidadeOpcoes(WebElement element) {
@@ -117,5 +125,6 @@ public class ComboBox {
         }
         return false;
     }
+
 
 }

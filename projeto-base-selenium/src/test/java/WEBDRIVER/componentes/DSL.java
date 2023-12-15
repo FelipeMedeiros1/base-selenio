@@ -29,7 +29,7 @@ public class DSL {
         return getDriver().findElement(By.id(id_campo)).getAttribute("value");
     }
 
-    /********* Radio e Check ************/
+    /********* Radio e Flag ************/
 
     public void selecionarRadio(String id) {
         getDriver().findElement(By.id(id)).click();

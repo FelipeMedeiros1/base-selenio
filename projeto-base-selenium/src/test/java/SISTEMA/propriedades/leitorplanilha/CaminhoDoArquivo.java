@@ -13,7 +13,7 @@ import java.util.EnumSet;
 public class CaminhoDoArquivo {
     static Path caminhoCompleto = null;
     public static Path encontrarCaminhoDoArquivo(String nomeArquivo) throws IOException {
-        Path diretorioInicial = Paths.get("C:\\Projetos\\robo-selenium\\projeto-base-selenium\\src\\test\\java\\"); // Substitua pelo seu diretório inicial
+        Path diretorioInicial = Paths.get("C:\\Users\\felipem.medeiros\\Documents\\02-cursos\\java\\base-selenio\\projeto-base-selenium\\src\\test\\java"); // Substitua pelo seu diretório inicial
         EnumSet<FileVisitOption> options = EnumSet.of(FileVisitOption.FOLLOW_LINKS);
 
         Files.walkFileTree(diretorioInicial, options, Integer.MAX_VALUE, new SimpleFileVisitor<Path>() {
@@ -37,7 +37,7 @@ public class CaminhoDoArquivo {
 
     public static void main(String[] args) {
         try {
-            String nomeArquivo = "FundamentalTest.xlsx"; // Substitua pelo nome do seu arquivo
+            String nomeArquivo = "aTest.xlsx";
             Path caminhoArquivo = encontrarCaminhoDoArquivo(nomeArquivo);
 
             if (caminhoArquivo != null) {

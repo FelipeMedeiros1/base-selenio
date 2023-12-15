@@ -13,7 +13,7 @@ public class FundamentalUtils {
         modeloDeCadastro =
                 LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Fundamental", Fundamental.class);
         FundamentalPage page = new FundamentalPage();
-        page.aceesaPaginaFundamental();
+        page.acessaPagina();
         page.pessoa(modeloDeCadastro.getPessoa());
         page.codigo(modeloDeCadastro.getCodigo());
         page.localidade(modeloDeCadastro.getLocalidade());

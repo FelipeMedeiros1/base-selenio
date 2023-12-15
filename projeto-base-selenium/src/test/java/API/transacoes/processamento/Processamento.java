@@ -1,6 +1,8 @@
 package API.transacoes.processamento;
 
-public interface Processamento {
+import API.componente.TestCase;
+
+public interface Processamento extends TestCase {
     void modulos(String... opcoes);
 
     void tipoDeProcessamento(String... opcoes);

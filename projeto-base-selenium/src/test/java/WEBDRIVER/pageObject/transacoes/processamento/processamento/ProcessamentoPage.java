@@ -28,7 +28,7 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     private WebElement selecionaGrid;
     //endregion
 
-    public void acessaPaginaProcessamento() {
+    public void acessaPagina() {
         new Acessa().processamento();
 
     }

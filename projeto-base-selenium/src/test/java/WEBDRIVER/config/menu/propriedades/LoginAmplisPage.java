@@ -1,7 +1,7 @@
 package WEBDRIVER.config.menu.propriedades;
 
 import WEBDRIVER.base.basePage.BasePage;
-import WEBDRIVER.componentes.EntradaSimples;
+import WEBDRIVER.componentes.PreencheDados;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -12,8 +12,8 @@ public class LoginAmplisPage extends BasePage {
     @FindBy(id = "loginForm:botaoOk") private WebElement entrar;
 
     public void executarLogin(String email,String senha){
-        new EntradaSimples().preencheDados(inputEmail,email);
-        new EntradaSimples().preencheDados(inputSenha,senha);
+        new PreencheDados().preenche(inputEmail,email);
+        new PreencheDados().preenche(inputSenha,senha);
         entrar.click();
     }
 }

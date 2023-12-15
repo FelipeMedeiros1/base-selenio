@@ -14,7 +14,7 @@ public class ManipulaTabela {
         WebElement tabela = getDriver().findElement(By.xpath("//*[@id='"+idTabela+"']"));
         int idColuna = obterIndiceColuna(colunaBusca, tabela);
 
-        //encontrar a linha do registro
+        //encontrar Leitor linha do registro
         int idLinha = obterIndiceLinha(valor, tabela, idColuna);
 
         //procurar coluna do botao
@@ -57,7 +57,7 @@ public class ManipulaTabela {
 
     public void excluirLinha(String id_tabela, int linha) {
 
-        WebElement tab = getDriver().findElement(By.xpath("//*[@id='"+id_tabela+"']/tbody/tr["+linha+"]/td[2]/a[2]/span"));
+        WebElement tab = getDriver().findElement(By.xpath("//*[@id='"+id_tabela+"']/tbody/tr["+linha+"]/td[2]/Leitor[2]/span"));
         tab.findElement(By.xpath(".//input")).click();
 
     }
