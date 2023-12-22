@@ -11,7 +11,7 @@ public class Acessa extends BasePage {
 
     /*### TRANSAÇÕES ### */
     public void moedas() {
-        navegarPara(transacoes, cadastroBasico, moedas);
+       navegarPara(transacoes, cadastroBasico, moedas);
     }
 
     public void processamento() {
@@ -120,7 +120,7 @@ public class Acessa extends BasePage {
     private WebElement cadRendaVariavel;
     @FindBy(id = "mainForm:j_id_22:6:j_id_2z:3:j_id_32:0:j_id_3s:4:j_id_3z")
     private WebElement cadFundos;
-    @FindBy(id = "mainForm:j_id_22:6:j_id_2z:0:j_id_5e")
+    @FindBy(id = "mainForm:j_id_1z:6:j_id_2w:0:j_id_5b")
     private WebElement cadPessoas;
 
     /*Relatorios*/

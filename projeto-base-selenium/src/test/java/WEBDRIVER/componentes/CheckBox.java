@@ -12,7 +12,7 @@ public class CheckBox implements Flag {
 
     public boolean seleciona(WebElement chk, Boolean aBoolean) {
         if (aBoolean == true) {
-            new AcaoMenu().espereAteOElementoFicarInvisivel();
+            new AcaoMenu().esperaAjaxTerminar();
             if (!chk.isSelected()) {
                 chk.click();
             }

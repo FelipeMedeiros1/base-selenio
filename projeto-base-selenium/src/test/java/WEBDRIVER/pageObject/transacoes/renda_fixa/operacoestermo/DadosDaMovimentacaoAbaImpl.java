@@ -1,9 +1,10 @@
 package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoestermo;
 
 import API.componente.Aba;
+import API.componente.Click;
 import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
-import API.transacoes.renda_fixa.operacoestermo.DadosDeMovimentacaoAba;
+import API.transacoes.renda_fixa.operacoes_termo.DadosDeMovimentacaoAba;
 import WEBDRIVER.base.basePage.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -149,9 +150,7 @@ public class DadosDaMovimentacaoAbaImpl extends BasePage implements DadosDeMovim
     }
 
     @Override
-    public void calcular() {
-        clicar(calcular);
-    }
+    public Click calcular() { return clicar(calcular); }
 
     @Override
     public SelecionaUm rendimento(String valor) {

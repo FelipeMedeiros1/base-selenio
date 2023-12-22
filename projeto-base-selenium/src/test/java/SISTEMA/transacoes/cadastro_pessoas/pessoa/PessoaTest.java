@@ -8,6 +8,6 @@ public class PessoaTest extends BaseTest {
 
     @Test
     public void testIncluirPessoa(){
-        new PessoaUtils("PessoaTest").incluir(pessoa,"PS1");
+        new PessoaUtils("PessoaTest").iniciarTeste(pessoa,"PS1");
     }
 }

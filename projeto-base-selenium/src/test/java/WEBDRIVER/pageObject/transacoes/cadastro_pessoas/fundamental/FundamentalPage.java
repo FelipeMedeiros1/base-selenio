@@ -24,6 +24,7 @@ public class FundamentalPage extends BasePage implements Fundamental {
     private WebElement selecionaTodos;
 
     //endregion
+    ApropriacaoAgentesAba apropriacaoAgentesAba;
 
     @Override
     public void acessaPagina() {
@@ -54,8 +55,10 @@ public class FundamentalPage extends BasePage implements Fundamental {
 
     @Override
     public ApropriacaoAgentesAba apropriacao() {
-        ApropriacaoAgentesAba apropriacaoAgentesAba = new ApropriacaoAgentesAbaImpl();
-        apropriacaoAgentesAba.seleciona();
+        if (apropriacaoAgentesAba == null) {
+            apropriacaoAgentesAba = new ApropriacaoAgentesAbaImpl();
+            apropriacaoAgentesAba.seleciona();
+        }
         return apropriacaoAgentesAba;
     }
 }

@@ -1,4 +1,4 @@
-package SISTEMA.transacoes.renda_fixa.operacoesdefinitivas;
+package SISTEMA.transacoes.renda_fixa.operacoes_definitivas;
 
 import lombok.Data;
 
@@ -17,5 +17,7 @@ public class OperacoesDefinitivas {
     private String condicoesDeNegociacao;
     private String pu;
     private String quantidade;
+    private String financeiro;
+    private String rendimento;
     private String eventoEmAtraso;
 }

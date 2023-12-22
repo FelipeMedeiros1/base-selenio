@@ -22,8 +22,8 @@ public class TesteIntegrado extends BaseTest {
 
     @Test
     public void test01(){
-        new ProcessamentoUtils(repositorio).executar(processamento,"P1");
-        new CockPitUtils(repositorio).consultar(cockPit,"C1");
+        new ProcessamentoUtils(repositorio).iniciarTeste(processamento,"P1");
+        new CockPitUtils(repositorio).iniciarTeste(cockPit,"C1");
         new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara,"CD1")
                 .gerarRelatorio(cateirraDiara,"CD2");
     }

@@ -7,7 +7,7 @@ public class CockPitTest extends BaseTest {
     private CockPit cockPit;
     @Test
     public void testCockPit(){
-       new CockPitUtils("CockPitTest").consultar(cockPit,"C1");
+       new CockPitUtils("CockPitTest").iniciarTeste(cockPit,"C1");
     }
 
 }

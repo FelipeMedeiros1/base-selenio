@@ -1,19 +1,20 @@
 package SISTEMA.transacoes.cadastro_pessoas.fundamental;
 
+import SISTEMA.base.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental.FundamentalPage;
 
-public class FundamentalUtils {
-    private final String nomeDaPlanilhaTeste;
+public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, FundamentalPage> {
 
-    public FundamentalUtils(String nomeDaPlanilhaTeste){
-        this.nomeDaPlanilhaTeste = nomeDaPlanilhaTeste;
+    public FundamentalUtils(String nomeDaPlanilha) {
+        super(nomeDaPlanilha);
     }
-    public FundamentalUtils incluir(Fundamental modeloDeCadastro,String chavePrimaria){
+
+    @Override
+    protected void preencheDados(FundamentalPage page, Fundamental modeloDeCadastro, String chavePrimaria) {
         modeloDeCadastro =
-                LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Fundamental", Fundamental.class);
-        FundamentalPage page = new FundamentalPage();
-        page.acessaPagina();
+                LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Fundamental", Fundamental.class);
+
         page.pessoa(modeloDeCadastro.getPessoa());
         page.codigo(modeloDeCadastro.getCodigo());
         page.localidade(modeloDeCadastro.getLocalidade());
@@ -22,7 +23,15 @@ public class FundamentalUtils {
         page.apropriacao().administrador(modeloDeCadastro.getAdministrador());
         page.apropriacao().gestor(modeloDeCadastro.getGestor());
         page.apropriacao().custodiante(modeloDeCadastro.getCustodiante());
+    }
+
+    @Override
+    public FundamentalUtils iniciarTeste(Fundamental modeloDeCadastro, String chavePrimaria) {
+        FundamentalPage page = new FundamentalPage();
+        page.acessaPagina();
+        preencheDados(page, modeloDeCadastro, chavePrimaria);
         page.confirmaOperacao();
+
         return this;
     }
 }

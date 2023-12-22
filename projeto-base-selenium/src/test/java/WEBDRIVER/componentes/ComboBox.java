@@ -22,7 +22,11 @@ public class ComboBox implements SelecionaUm, SelecionaVarios {
         WebElement element = getDriver().findElement(By.id(id));
         Select combo = new Select(element);
         combo.selectByVisibleText(valor);
+        String valorAtual = combo.getFirstSelectedOption().getText();
         new Espera().esperaPor(1000);
+        if (valorAtual.equals(valor)) {
+            throw new RuntimeException("O texto não foi persistido corretamente.");
+        }
     }
     public String[] selecionaVarios(WebElement element, String ...valores) {
         element.click();

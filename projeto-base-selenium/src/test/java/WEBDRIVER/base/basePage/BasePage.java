@@ -1,8 +1,6 @@
 package WEBDRIVER.base.basePage;
 
-import API.componente.Aba;
-import API.componente.EntradaSimples;
-import API.componente.SelecionaUm;
+import API.componente.*;
 import WEBDRIVER.componentes.CheckBox;
 import WEBDRIVER.config.menu.painel_acoes.AcaoMenu;
 import org.openqa.selenium.WebElement;
@@ -69,9 +67,10 @@ public abstract class BasePage {
         new AcaoMenu().selecionaUm(elemento, valor);
         return null;
     }
-    protected String[] selecionaVarios(WebElement element, WebElement incluir, String... valores) {
+
+    protected SelecionaVarios selecionaVarios(WebElement element, WebElement incluir, String... valores) {
         new AcaoMenu().selecionaVarios(element, incluir, valores);
-        return new String[0];
+        return null;
     }
 
 
@@ -84,8 +83,9 @@ public abstract class BasePage {
         new AcaoMenu().selecionaChekBox(chk, boleano);
     }
 
-    protected void clicar(WebElement el) {
+    protected Click clicar(WebElement el) {
         new AcaoMenu().clicar(el);
+        return null;
     }
 
     protected Aba selecionaAba(WebElement nomeAba) {
@@ -101,7 +101,7 @@ public abstract class BasePage {
         new AcaoMenu().scrollParaCimaAteEncontrar(elemento);
     }
 
-    protected void validaMensagem(String msg, WebElement elemento) {
+    public void validaMensagem(String msg, WebElement elemento) {
         new AcaoMenu().validaMensagem(msg, elemento);
     }
 

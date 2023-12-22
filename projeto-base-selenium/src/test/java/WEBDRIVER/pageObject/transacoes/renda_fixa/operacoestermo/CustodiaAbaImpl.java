@@ -2,9 +2,8 @@ package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoestermo;
 
 import API.componente.Aba;
 import API.componente.SelecionaUm;
-import API.transacoes.renda_fixa.operacoestermo.CustodiaAba;
+import API.transacoes.renda_fixa.operacoes_termo.CustodiaAba;
 import WEBDRIVER.base.basePage.BasePage;
-import lombok.Data;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

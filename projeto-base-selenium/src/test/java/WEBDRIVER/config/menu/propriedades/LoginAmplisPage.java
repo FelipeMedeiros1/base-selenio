@@ -6,14 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginAmplisPage extends BasePage {
+    //region
+    @FindBy(id = "loginForm:userLoginInput:campo")
+    private WebElement inputEmail;
+    @FindBy(id = "loginForm:userPasswordInput")
+    private WebElement inputSenha;
+    @FindBy(id = "loginForm:botaoOk")
+    private WebElement entrar;
+    //endregion
 
-    @FindBy(id = "loginForm:userLoginInput:campo") private WebElement inputEmail;
-    @FindBy(id = "loginForm:userPasswordInput") private WebElement inputSenha;
-    @FindBy(id = "loginForm:botaoOk") private WebElement entrar;
-
-    public void executarLogin(String email,String senha){
-        new PreencheDados().preenche(inputEmail,email);
-        new PreencheDados().preenche(inputSenha,senha);
+    public void executarLogin(String email, String senha) {
+        new PreencheDados().preenche(inputEmail, email);
+        new PreencheDados().preenche(inputSenha, senha);
         entrar.click();
     }
 }

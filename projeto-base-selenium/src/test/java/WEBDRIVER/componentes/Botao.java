@@ -1,11 +1,12 @@
 package WEBDRIVER.componentes;
 
+import API.componente.Click;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
-public class Botao {
+public class Botao implements Click {
     public void clicar(String id) {
         getDriver().findElement(By.id(id)).click();
     }

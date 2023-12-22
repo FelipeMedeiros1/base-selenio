@@ -1,15 +1,20 @@
 package API.transacoes.processamento;
 
+import API.componente.EntradaSimples;
+import API.componente.SelecionaUm;
+import API.componente.SelecionaVarios;
 import API.componente.TestCase;
 
 public interface Processamento extends TestCase {
-    void modulos(String... opcoes);
+    SelecionaVarios modulos(String... opcoes);
 
-    void tipoDeProcessamento(String... opcoes);
+    SelecionaVarios tipoDeProcessamento(String... opcoes);
 
-    void dataInicial(String valor);
+    EntradaSimples dataInicial(String valor);
 
-    void dataFinal(String valor);
+    EntradaSimples dataFinal(String valor);
 
-    void carteira(String valor);
+    SelecionaUm filtroCarteira(String valor);
+
+    EntradaSimples carteira(String valor);
 }

@@ -1,10 +1,9 @@
-package SISTEMA.transacoes.renda_fixa.operacoestermo;
+package SISTEMA.transacoes.renda_fixa.operacoes_termo;
 
-import API.componente.Aba;
 import lombok.Data;
 
 @Data
-public class DadosDaMovimentacao {
+public class OperacoesATermo {
     private String modalidadeDoMovimento;
     private String dataDoMovimento;
     private String dataDaCompra;
@@ -27,4 +26,7 @@ public class DadosDaMovimentacao {
     private String iofDaOperacao;
     private String eventoEmAtraso;
 
+    private String custodiante;
+    private String localDeCustodia;
+    private String contaDeCustodia;
 }

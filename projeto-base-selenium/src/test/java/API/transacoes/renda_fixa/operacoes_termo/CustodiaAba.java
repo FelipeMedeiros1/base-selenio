@@ -1,4 +1,4 @@
-package API.transacoes.renda_fixa.operacoestermo;
+package API.transacoes.renda_fixa.operacoes_termo;
 
 import API.componente.Aba;
 import API.componente.SelecionaUm;

@@ -9,13 +9,13 @@ import java.util.Map;
 
 public class LeitorPlanilha<T> {
     private static String caminho;
-    public static <T> T carregarDados(String nomeArquivo, String chavePrimaria, String nomePlanilha, Class<T> clazz) {
+    public static <T> T carregarDados(String nomeArquivo, String chavePrimaria, String repositorio, Class<T> clazz) {
         T modeloDeCadastro = null;
         caminho = nomeArquivo +".xlsx";
 
         try {
             Workbook pastaDeTrabalho = WorkbookFactory.create(new FileInputStream(CaminhoDoArquivo.encontrarCaminhoDoArquivo(caminho).toString()));
-            Sheet planilha = pastaDeTrabalho.getSheet(nomePlanilha);
+            Sheet planilha = pastaDeTrabalho.getSheet(repositorio);
             Row cabecalho = planilha.getRow(0);
 
             int indiceColunaChavePrimaria = -1;

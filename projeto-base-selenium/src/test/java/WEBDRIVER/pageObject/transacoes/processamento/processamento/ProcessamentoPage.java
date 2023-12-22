@@ -1,5 +1,8 @@
 package WEBDRIVER.pageObject.transacoes.processamento.processamento;
 
+import API.componente.EntradaSimples;
+import API.componente.SelecionaUm;
+import API.componente.SelecionaVarios;
 import API.transacoes.processamento.Processamento;
 import WEBDRIVER.base.basePage.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
@@ -33,29 +36,33 @@ public class ProcessamentoPage extends BasePage implements Processamento {
 
     }
 
-    public void modulos(String... valores) {
-        selecionaVarios(selecionaModulos, incluirModulos, valores);
+    public SelecionaVarios modulos(String... valores) {
+        return selecionaVarios(selecionaModulos, incluirModulos, valores);
 
     }
 
-    public void tipoDeProcessamento(String... valores) {
-        selecionaVarios(selecionaProcessamento, incluir, valores);
+    public SelecionaVarios tipoDeProcessamento(String... valores) {
+        return selecionaVarios(selecionaProcessamento, incluir, valores);
 
     }
 
-    public void dataInicial(String dataInicial) {
-        preenche(inicio, dataInicial);
+    public EntradaSimples dataInicial(String dataInicial) {
+       return preenche(inicio, dataInicial);
 
     }
 
-    public void dataFinal(String dataFinal) {
-        preenche(fim, dataFinal);
+    public EntradaSimples dataFinal(String dataFinal) {
+       return preenche(fim, dataFinal);
 
     }
 
-    public void carteira(String valor) {
-        selecionaUm(filtro, "Igual");
-        preenche(carteira, valor);
+    @Override
+    public SelecionaUm filtroCarteira(String valor) {
+        return selecionaUm(filtro, "Igual");
+    }
+
+    public EntradaSimples carteira(String valor) {
+     return    preenche(carteira, valor);
 
     }
 

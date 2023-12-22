@@ -8,5 +8,7 @@ public class Processamento {
     private String[] tipoDeProcessamento;
     private String dataInicial ;
     private String dataFinal;
+    public String filtroCarteira;
     private String carteira;
+
 }

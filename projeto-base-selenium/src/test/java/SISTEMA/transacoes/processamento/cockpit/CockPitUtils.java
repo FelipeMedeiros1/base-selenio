@@ -1,26 +1,32 @@
 package SISTEMA.transacoes.processamento.cockpit;
 
+import SISTEMA.base.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.processamento.cockpit.CockPitPage;
 
-public class CockPitUtils {
-    private final String caminhoPlanilha;
+public class CockPitUtils extends UtilitarioCadastroTestCase<CockPit, CockPitPage> {
 
-    public CockPitUtils(String planilhaTeste){
-        this.caminhoPlanilha = planilhaTeste;
-    }
-    public CockPitUtils consultar(CockPit modeloDeCadastro, String chavePrimaria){
-        modeloDeCadastro =
-                LeitorPlanilha.carregarDados(caminhoPlanilha,chavePrimaria,"CockPit", CockPit.class);
-        CockPitPage ckp = new CockPitPage();
-        ckp.acessaPaginaCockPit()
-                .dataProcessamento(modeloDeCadastro.getDataProcessamento())
-                .tipoProcessamennto(modeloDeCadastro.getTipoProcessamennto())
-                .carteira(modeloDeCadastro.getCarteira())
-                .statusProcessamento(modeloDeCadastro.getStatusProcessamento())
-                .pesquisaResultado();
-
-    return this;
+    public CockPitUtils(String nomeDaPlanilha) {
+        super(nomeDaPlanilha);
     }
 
+    @Override
+    protected void preencheDados(CockPitPage page, CockPit modeloDeCadastro, String chavePrimaria) {
+        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CockPit", CockPit.class);
+
+        page.dataProcessamento(modeloDeCadastro.getDataProcessamento());
+        page.tipoProcessamennto(modeloDeCadastro.getTipoProcessamennto());
+        page.carteira(modeloDeCadastro.getCarteira());
+        page.statusProcessamento(modeloDeCadastro.getStatusProcessamento());
+    }
+
+    @Override
+    public CockPitUtils iniciarTeste(CockPit modeloDeCadastro, String chavePrimaria) {
+        CockPitPage page = new CockPitPage();
+        page.acessaPaginaCockPit();
+        preencheDados(page, modeloDeCadastro, chavePrimaria);
+        page.pesquisaResultado();
+
+        return this;
+    }
 }

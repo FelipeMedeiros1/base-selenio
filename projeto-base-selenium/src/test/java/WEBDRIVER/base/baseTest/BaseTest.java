@@ -18,6 +18,8 @@ import static WEBDRIVER.fabrica.FabricaDeDriver.finalizaeDriver;
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public abstract class BaseTest {
+    //region
+
     private static final String CAMINHO_DRIVER = "src/resources/drivers/chromedriver.exe";
 
 //    private static final String URL_BASE_01 = "https://funcional-ath-congelada.totvs.amplis.com.br/amplis/login/SEC_00001.jsf";
@@ -26,10 +28,7 @@ public abstract class BaseTest {
     private static final String URL_BASE_01 = "https://funcional-ath.totvs.amplis.com.br/amplis/login/SEC_00001.jsf";
     private static final String EMAIL_01 = "robo.ath@totvs.com.br";
     private static final String SENHA_01 = "@123456Robo";
-
-
-
-
+    //endregion
     @BeforeClass
     public static void inicializar() {
         System.setProperty("webdriver.chrome.driver", CAMINHO_DRIVER);
@@ -54,7 +53,7 @@ public abstract class BaseTest {
             throw new RuntimeException(e);
         }
     }
-    @AfterClass
+//    @AfterClass
     public static void finalizar() {
         finalizaeDriver();
 

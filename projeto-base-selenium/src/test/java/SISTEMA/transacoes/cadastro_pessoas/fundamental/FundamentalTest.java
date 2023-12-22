@@ -11,6 +11,6 @@ public class FundamentalTest extends BaseTest {
 
     @Test
     public void testCadastrarFundamental(){
-      new FundamentalUtils("FundamentalTest").incluir(fundamental,"F1");
+      new FundamentalUtils("FundamentalTest").iniciarTeste(fundamental,"F1");
     }
 }

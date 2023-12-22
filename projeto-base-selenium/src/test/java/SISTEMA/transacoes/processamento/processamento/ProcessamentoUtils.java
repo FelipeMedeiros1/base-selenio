@@ -1,31 +1,39 @@
 package SISTEMA.transacoes.processamento.processamento;
 
+import SISTEMA.base.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.componentes.Screenshot;
 import WEBDRIVER.pageObject.transacoes.processamento.processamento.ProcessamentoPage;
+import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas.OperacoesDefinitivasPage;
 
-public class ProcessamentoUtils {
-    private String nomeDaPlanilhaTeste;
-
-    public ProcessamentoUtils(String planilhaTeste){
-        this.nomeDaPlanilhaTeste = planilhaTeste;
+public class ProcessamentoUtils extends UtilitarioCadastroTestCase<Processamento, ProcessamentoPage> {
+    public ProcessamentoUtils(String nomeDaPlanilha) {
+        super(nomeDaPlanilha);
     }
-    public ProcessamentoUtils executar(Processamento modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Processamento", Processamento.class);
 
-        ProcessamentoPage page = new ProcessamentoPage();
-        page.acessaPagina();
+    @Override
+    protected void preencheDados(ProcessamentoPage page, Processamento modeloDeCadastro, String chavePrimaria) {
+        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Processamento", Processamento.class);
+
         page.modulos(modeloDeCadastro.getModulos());
         page.tipoDeProcessamento(modeloDeCadastro.getTipoDeProcessamento());
         page.dataInicial(modeloDeCadastro.getDataInicial());
         page.dataFinal(modeloDeCadastro.getDataFinal());
+        page.filtroCarteira(modeloDeCadastro.getFiltroCarteira());
         page.carteira(modeloDeCadastro.getCarteira());
-        page.executarProcessamento();Screenshot.capturaScreenshot();
+    }
 
+    @Override
+    public ProcessamentoUtils iniciarTeste(Processamento modeloDeCadastro, String chavePrimaria) {
+        ProcessamentoPage page = new ProcessamentoPage();
+        page.acessaPagina();
+        preencheDados(page, modeloDeCadastro, chavePrimaria);
+        page.executarProcessamento();
         return this;
     }
+
     public ProcessamentoUtils executarComPreview(Processamento modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(nomeDaPlanilhaTeste,chavePrimaria,"Processamento", Processamento.class);
+        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Processamento", Processamento.class);
 
         ProcessamentoPage page = new ProcessamentoPage();
         page.acessaPagina();
@@ -38,3 +46,5 @@ public class ProcessamentoUtils {
         return this;
     }
 }
+
+

@@ -1,9 +1,9 @@
 package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoestermo;
 
 
-import API.transacoes.renda_fixa.operacoestermo.CustodiaAba;
-import API.transacoes.renda_fixa.operacoestermo.DadosDeMovimentacaoAba;
-import API.transacoes.renda_fixa.operacoestermo.OperacoesATermo;
+import API.transacoes.renda_fixa.operacoes_termo.CustodiaAba;
+import API.transacoes.renda_fixa.operacoes_termo.DadosDeMovimentacaoAba;
+import API.transacoes.renda_fixa.operacoes_termo.OperacoesATermo;
 import WEBDRIVER.base.basePage.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 
