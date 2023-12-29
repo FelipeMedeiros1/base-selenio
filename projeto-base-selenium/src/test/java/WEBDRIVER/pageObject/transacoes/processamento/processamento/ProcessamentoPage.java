@@ -37,12 +37,12 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     }
 
     public SelecionaVarios modulos(String... valores) {
-        return selecionaVarios(selecionaModulos, incluirModulos, valores);
+        return selecionaVarios(selecionaModulos,valores);
 
     }
 
     public SelecionaVarios tipoDeProcessamento(String... valores) {
-        return selecionaVarios(selecionaProcessamento, incluir, valores);
+        return selecionaVarios(selecionaProcessamento, valores);
 
     }
 

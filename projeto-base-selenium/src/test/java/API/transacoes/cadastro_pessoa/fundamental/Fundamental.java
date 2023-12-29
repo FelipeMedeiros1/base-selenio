@@ -1,16 +1,19 @@
 package API.transacoes.cadastro_pessoa.fundamental;
 
+import API.componente.EntradaSimples;
+import API.componente.SelecionaUm;
+import API.componente.SelecionaVarios;
 import API.componente.TestCase;
 
 public interface Fundamental extends TestCase {
 
-    void pessoa(String valor);
+    EntradaSimples pessoa(String valor);
 
-    void codigo(String valor);
+    EntradaSimples codigo(String valor);
 
-    void localidade(String valor);
+    SelecionaUm localidade(String valor);
 
-    void grupoDeCarteiras(String... valores);
+    SelecionaVarios grupoDeCarteiras(String... valores);
 
      ApropriacaoAgentesAba apropriacao();
 

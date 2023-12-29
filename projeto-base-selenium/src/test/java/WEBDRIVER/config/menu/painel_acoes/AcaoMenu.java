@@ -3,15 +3,13 @@ package WEBDRIVER.config.menu.painel_acoes;
 import API.componente.Aba;
 import API.componente.SelecionaUm;
 import WEBDRIVER.componentes.*;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -64,17 +62,13 @@ public class AcaoMenu {
     public void confirmaOperacao() {
         esperaAjaxTerminar();
         confirmar();
-
         String mensagemEsperada = "Operação realizada com sucesso!";
         String mensagemAtual = new ResultadoMensagem().validaMensagem("messageContent");
-
         Assert.assertTrue(mensagemAtual.startsWith(mensagemEsperada));
-
         clicarBotaoOk();
     }
 
     public void selectGrid(int index) {
-
         new CheckBox().seleciona("mainForm:filterDataTable:" + index + ":chk");
     }
 
@@ -89,6 +83,7 @@ public class AcaoMenu {
     }
 
     public void clicar(WebElement el) {
+        scrollParaBaixoAteEncontrar(el);
         esperaElementoSerClicavel(el);
         new Botao().clicar(el);
     }
@@ -117,7 +112,7 @@ public class AcaoMenu {
         scrollParaBaixoAteEncontrar(input);
         if (input.isEnabled()) {
             new PreencheDados().preenche(input, texto);
-            espereOTextoEstarPresente(input, texto);
+            esperaTextoEstarPresente(input, texto);
         }
         return this;
     }
@@ -128,8 +123,9 @@ public class AcaoMenu {
         esperaElementoSerClicavel(input);
         if (input.isEnabled()) {
             new PreencheDados().preenche(input, texto);
-            espereOTextoEstarPresente(input, texto);
+            esperaTextoEstarPresente(input, texto);
             clicarForaDoCampo();
+            esperaAjaxTerminar();
         }
         return this;
     }
@@ -144,19 +140,30 @@ public class AcaoMenu {
         return null;
     }
 
-    public String[] selecionaVarios(WebElement elemento, WebElement incluir, String... valor) {
-        scrollParaBaixoAteEncontrar(elemento);
-        new ComboBox().selecionaVarios(elemento, valor);
-        incluirSelecionados(incluir);
+    public String[] selecionaVarios(WebElement elemento, String... valor) {
         esperaAjaxTerminar();
+        scrollParaBaixoAteEncontrar(elemento);
+        deselecionaTodos();
+        esperaPor(1000);
+        new ComboBox().selecionaVarios(elemento, valor);
+        incluirSelecionados();
         esperaPor(500);
         return new String[0];
+    }
+    public void deselecionaTodos(){
+        By selector = By.cssSelector("[id$='excludeAll']");
+        WebElement elemento = getDriver().findElement(selector);
+        elemento.click();
+    }
+    public void incluirSelecionados(){
+        By selector = By.cssSelector("[id$='includeSelected']");
+        WebElement elemento = getDriver().findElement(selector);
+        elemento.click();
     }
 
     public boolean selecionaChekBox(WebElement chk, Boolean aBoolean) {
         scrollParaBaixoAteEncontrar(chk);
         new CheckBox().seleciona(chk, aBoolean);
-
         return false;
     }
 
@@ -185,47 +192,17 @@ public class AcaoMenu {
     }
 
     public void esperaElementoSerClicavel(WebElement elemento) {
-        new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(elemento));
+        new Espera().esperaElementoSerClicavel(elemento);
     }
 
-    public ExpectedCondition<Boolean> esperaAjaxTerminar() {
-//        esperaPor(500);
-//        WebElement ajax = getDriver().findElement(By.id("j_id__v_0:javax.faces.ViewState:2"));
-//        new WebDriverWait(getDriver(), 15)
-//                .until(ExpectedConditions.invisibilityOf(ajax));
-
-
-        return new ExpectedCondition<Boolean>() {
-            @NullableDecl
-            @Override
-            public Boolean apply(@NullableDecl WebDriver d) {
-                WebElement element = d.findElement(By.className("rf-st-start"));
-                WebElement element2 = d.findElement(By.id("j_id__v_0:javax.faces.ViewState:2"));
-                if (element.isDisplayed() && element2.isDisplayed()) {
-                    return (boolean) ((JavascriptExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.FALSE;
-                }
-                return (boolean) ((JavascriptExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.TRUE;
-            }
-        };
-
-
-    }
+    public void esperaAjaxTerminar() { new Espera().esperaAjaxTerminar();}
 
     public void esperaPor(int mill) {
-        try {
-            new Thread().sleep(mill);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        new Espera().esperaPor(mill);
     }
 
-    public WebElement espereOTextoEstarPresente(WebElement elemento, String texto) {
-        new JS().executarScript("arguments[0].value = arguments[1];", elemento, texto);
-        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
-        if (texto.equals(elemento.getAttribute("value"))) {
-            return elemento;
-        }
-        return null;
+    public void esperaTextoEstarPresente(WebElement elemento, String texto) {
+        new Espera().esperaTextoEstarPresente(elemento, texto);
     }
 
     public boolean verificaSeTextoEstaPresente(String texto) {

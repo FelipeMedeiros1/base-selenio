@@ -11,7 +11,7 @@ public class Acessa extends BasePage {
 
     /*### TRANSAÇÕES ### */
     public void moedas() {
-       navegarPara(transacoes, cadastroBasico, moedas);
+        navegarPara(transacoes, cadastroBasico, moedas);
     }
 
     public void processamento() {
@@ -62,6 +62,10 @@ public class Acessa extends BasePage {
         navegarPara(transacoes, rendaFixa, opTermo);
     }
 
+    public void movimentacaoFundos(){
+        navegarPara(transacoes,fundos,movimentacaoFundos);
+    }
+
     /*### RELATÓRIOS ###*/
     public void relCarteiraDiaria() {
         navegarPara(relatorios, relPatrimonio, relCarteiraDiaria);
@@ -90,12 +94,18 @@ public class Acessa extends BasePage {
     private WebElement transacoes;
     @FindBy(linkText = "Renda Fixa")
     private WebElement rendaFixa;
+    @FindBy(linkText = "Processamento")
+    private WebElement processamento;
+    @FindBy(linkText = "Cadastros de Pessoas")
+    private WebElement cadastroDePessoas;
+    @FindBy(linkText = "Fundos")
+    private WebElement fundos;
+    @FindBy(linkText = "Cadastros Básicos")
+    private WebElement cadastroBasico;
     @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:1:j_id_36")
     private WebElement opDefinitivas;
     @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:2:j_id_36")
     private WebElement opTermo;
-    @FindBy(linkText = "Processamento")
-    private WebElement processamento;
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:1:j_id_36")
     private WebElement processamentoTela;
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:4:j_id_36")
@@ -104,12 +114,8 @@ public class Acessa extends BasePage {
     private WebElement bloqueioELiberacao;
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:2:j_id_2z:0:j_id_36")
     private WebElement processamentoContabil;
-    @FindBy(linkText = "Cadastros Básicos")
-    private WebElement cadastroBasico;
     @FindBy(id = "mainForm:j_id_1z:3:j_id_2w:4:j_id_5b")
     private WebElement moedas;
-    @FindBy(linkText = "Cadastros de Pessoas")
-    private WebElement cadastroDePessoas;
     @FindBy(id = "mainForm:j_id_1z:6:j_id_2w:3:j_id_2z:0:j_id_3p:0:j_id_3w")
     private WebElement fundamental;
     @FindBy(id = "mainForm:j_id_22:6:j_id_2z:3:j_id_32:0:j_id_3s:1:j_id_3z")
@@ -122,16 +128,19 @@ public class Acessa extends BasePage {
     private WebElement cadFundos;
     @FindBy(id = "mainForm:j_id_1z:6:j_id_2w:0:j_id_5b")
     private WebElement cadPessoas;
+    @FindBy(id = "mainForm:j_id_1z:11:j_id_2w:5:j_id_2z:1:j_id_36")
+    private WebElement movimentacaoFundos;
+
 
     /*Relatorios*/
     @FindBy(id = "menuRelatoriosButtonSpan")
     private WebElement relatorios;
     @FindBy(linkText = "Patrimônio")
     private WebElement relPatrimonio;
-    @FindBy(id = "mainForm:j_id_62:2:j_id_6n:0:j_id_82")
-    private WebElement relCarteiraDiaria;
     @FindBy(linkText = "Renda Fixa")
     private WebElement relRendaFixa;
+    @FindBy(id = "mainForm:j_id_62:2:j_id_6n:0:j_id_82")
+    private WebElement relCarteiraDiaria;
     @FindBy(id = "mainForm:j_id_62:1:j_id_6n:0:j_id_82")
     private WebElement relMovimentacaoRendaFixa;
     @FindBy(id = "mainForm:j_id_62:1:j_id_6n:1:j_id_82")

@@ -22,7 +22,7 @@ public class ProcessamentoContabilPage extends BasePage {
         new Acessa().processamentoContabil();
     }
     public void modulos(String... valores){
-        selecionaVarios(varios,incluirModulos,valores);
+        selecionaVarios(varios,valores);
     }
     public void dataInicial(String valor){
         preenche(inicio,valor);

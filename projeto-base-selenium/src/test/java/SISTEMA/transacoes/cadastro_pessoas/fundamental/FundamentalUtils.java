@@ -19,7 +19,7 @@ public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, Fu
         page.codigo(modeloDeCadastro.getCodigo());
         page.localidade(modeloDeCadastro.getLocalidade());
         page.grupoDeCarteiras(modeloDeCadastro.getGrupoDeCarteiras());
-        page.apropriacao().seleciona();
+        page.selecionaTodos();
         page.apropriacao().administrador(modeloDeCadastro.getAdministrador());
         page.apropriacao().gestor(modeloDeCadastro.getGestor());
         page.apropriacao().custodiante(modeloDeCadastro.getCustodiante());

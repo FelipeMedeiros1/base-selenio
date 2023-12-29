@@ -1,11 +1,12 @@
 package API.transacoes.cadastro_pessoa.fundamental;
 
 import API.componente.Aba;
+import API.componente.EntradaSimples;
 
 public interface ApropriacaoAgentesAba extends Aba {
-    void administrador(String valor);
-    void gestor(String valor);
-    void custodiante(String valor);
+    EntradaSimples administrador(String valor);
+    EntradaSimples gestor(String valor);
+    EntradaSimples custodiante(String valor);
 
   }
 

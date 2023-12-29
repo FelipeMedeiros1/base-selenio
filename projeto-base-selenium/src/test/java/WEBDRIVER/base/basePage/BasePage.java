@@ -68,8 +68,8 @@ public abstract class BasePage {
         return null;
     }
 
-    protected SelecionaVarios selecionaVarios(WebElement element, WebElement incluir, String... valores) {
-        new AcaoMenu().selecionaVarios(element, incluir, valores);
+    protected SelecionaVarios selecionaVarios(WebElement elemento, String... valores) {
+        new AcaoMenu().selecionaVarios(elemento, valores);
         return null;
     }
 

@@ -1,18 +1,16 @@
 package SISTEMA.relatorios.renda_fixa.movimentacao;
 
+import SISTEMA.base.UtilitarioRelatorioTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.relatorios.renda_fixa.MovimentacaoPage;
 
-public class MovimentacaoUtils {
-    private String repositorioTeste;
-
-    public MovimentacaoUtils(String repositorioTeste) {
-        this.repositorioTeste = repositorioTeste;
+public class MovimentacaoUtils extends UtilitarioRelatorioTestCase<Movimentacao,MovimentacaoPage> {
+    public MovimentacaoUtils(String nomeDaPlanilha) {
+        super(nomeDaPlanilha);
     }
-    public void gerarRelatorio(Movimentacao modeloDeCadastro,String chavePrimaria){
-        modeloDeCadastro = LeitorPlanilha.carregarDados(repositorioTeste,chavePrimaria,"Movimentacao", Movimentacao.class);
-        MovimentacaoPage page = new MovimentacaoPage();
-        page.acessaPaginaRelMovimentacao();
+    @Override
+    protected void preencheDados(MovimentacaoPage page, Movimentacao modeloDeCadastro, String chavePrimaria) {
+        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(),chavePrimaria,"Movimentacao", Movimentacao.class);
         page.dataInicio(modeloDeCadastro.getDataInicio());
         page.dataFinal(modeloDeCadastro.getDataFinal());
         page.modalidadeDeMovimento(modeloDeCadastro.getModalidadeDeMovimento());
@@ -23,8 +21,14 @@ public class MovimentacaoUtils {
         page.idioma(modeloDeCadastro.getIdioma());
         page.moeda(modeloDeCadastro.getMoeda());
         page.tipoRelatorio(modeloDeCadastro.getTipoRelatorio());
+    }
+    @Override
+    protected MovimentacaoUtils gerarRelatorio(Movimentacao modeloDeCadastro, String chavePrimaria) {
+        MovimentacaoPage page = new MovimentacaoPage();
+        page.acessaPagina();
+        preencheDados(page,modeloDeCadastro,chavePrimaria);
         page.confirmar();
 
+        return this;
     }
-
 }

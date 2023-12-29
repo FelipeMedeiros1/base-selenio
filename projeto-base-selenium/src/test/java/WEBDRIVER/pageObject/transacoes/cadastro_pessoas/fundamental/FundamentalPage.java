@@ -1,6 +1,9 @@
 package WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental;
 
 
+import API.componente.EntradaSimples;
+import API.componente.SelecionaUm;
+import API.componente.SelecionaVarios;
 import API.transacoes.cadastro_pessoa.fundamental.ApropriacaoAgentesAba;
 import API.transacoes.cadastro_pessoa.fundamental.Fundamental;
 import WEBDRIVER.base.basePage.BasePage;
@@ -32,25 +35,27 @@ public class FundamentalPage extends BasePage implements Fundamental {
         inserir();
     }
 
-    public void pessoa(String pessoa) {
-        preencheAutoComplete(inputPessoa, pessoa);
-
+    @Override
+    public EntradaSimples pessoa(String pessoa) {
+        return preencheAutoComplete(inputPessoa, pessoa);
     }
 
-    public void codigo(String codigo) {
-        preenche(inputCodigo, codigo);
-
+    @Override
+    public EntradaSimples codigo(String codigo) {
+        return preenche(inputCodigo, codigo);
     }
 
-    public void localidade(String valor) {
-        selecionaUm(selectLocalidade, valor);
-
+    @Override
+    public SelecionaUm localidade(String valor) {
+        return selecionaUm(selectLocalidade, valor);
     }
 
-    public void grupoDeCarteiras(String... valores) {
-        selecionaVarios(seleciona, incluir, valores);
+    @Override
+    public SelecionaVarios grupoDeCarteiras(String... valores) {
+        return selecionaVarios(seleciona, valores);
+    }
+    public void selecionaTodos() {
         clicar(selecionaTodos);
-
     }
 
     @Override

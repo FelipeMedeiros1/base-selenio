@@ -1,5 +1,7 @@
 package WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental;
 
+import API.componente.EntradaSimples;
+import API.componente.SelecionaUm;
 import API.transacoes.cadastro_pessoa.fundamental.ApropriacaoAgentesAba;
 import API.componente.Aba;
 import WEBDRIVER.base.basePage.BasePage;
@@ -22,18 +24,18 @@ public class ApropriacaoAgentesAbaImpl extends BasePage implements ApropriacaoAg
     //endregion
 
     @Override
-    public void administrador(String valor) {
-        preencheAutoComplete(administrador, valor);
+    public EntradaSimples administrador(String valor) {
+       return preencheAutoComplete(administrador, valor);
     }
 
     @Override
-    public void gestor(String valor) {
-        preencheAutoComplete(gestor, valor);
+    public EntradaSimples gestor(String valor) {
+       return preencheAutoComplete(gestor, valor);
     }
 
     @Override
-    public void custodiante(String valor) {
-        preencheAutoComplete(custodiante, valor);
+    public EntradaSimples custodiante(String valor) {
+        return preencheAutoComplete(custodiante, valor);
     }
 
     @Override
