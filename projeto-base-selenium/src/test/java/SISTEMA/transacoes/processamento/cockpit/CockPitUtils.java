@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.processamento.cockpit;
 
-import SISTEMA.base.UtilitarioCadastroTestCase;
+import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.processamento.cockpit.CockPitPage;
 

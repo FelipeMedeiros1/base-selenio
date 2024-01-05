@@ -1,4 +1,4 @@
-package WEBDRIVER.pageObject.relatorios.renda_fixa;
+package WEBDRIVER.pageObject.relatorios.renda_fixa.rendimentos;
 
 import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
@@ -44,7 +44,7 @@ public class RendimentosPage extends BasePage implements Rendimentos {
 
     @Override
     public SelecionaVarios carteira(String... valores) {
-        return selecionaVarios(carteira, valores);
+        return selecionaVarios(carteira,incluir, valores);
     }
 
     @Override

@@ -18,7 +18,7 @@ public class ProcessamentoContabilPage extends BasePage {
 
     //endregion
 
-    public void acessaPaginaaProcessamentoContabil(){
+    public void acessaPagina(){
         new Acessa().processamentoContabil();
     }
     public void modulos(String... valores){

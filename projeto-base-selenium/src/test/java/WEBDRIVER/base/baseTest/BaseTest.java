@@ -38,7 +38,7 @@ public abstract class BaseTest {
     }
     @Rule
     public TestName testName = new TestName();
-    @After
+//    @After
     public void evidencia() {
         Robot robot = null;
         try {

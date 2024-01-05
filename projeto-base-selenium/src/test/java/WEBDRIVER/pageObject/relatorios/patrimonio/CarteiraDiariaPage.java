@@ -33,6 +33,7 @@ public class CarteiraDiariaPage extends BasePage implements CarteiraDiaria {
     private WebElement tipoRelatorio;
     @FindBy(id = "mainForm:saida:campo")
     private WebElement saida;
+
     //endregion
     @Override
     public void acessaPagina() {
@@ -52,8 +53,8 @@ public class CarteiraDiariaPage extends BasePage implements CarteiraDiaria {
 
     @Override
     public SelecionaVarios tipoDePosicao(String... valores) {
-//        deseleciona.click();
-        return selecionaVarios(seleciona, valores);
+        deseleciona.click();
+        return selecionaVarios(seleciona, incluir, valores);
     }
 
     @Override
@@ -68,7 +69,7 @@ public class CarteiraDiariaPage extends BasePage implements CarteiraDiaria {
 
     @Override
     public SelecionaVarios carteira(String... valores) {
-        return selecionaVarios(carteira,valores);
+        return selecionaVarios(carteira, incluirCarteira, valores);
     }
 
     @Override

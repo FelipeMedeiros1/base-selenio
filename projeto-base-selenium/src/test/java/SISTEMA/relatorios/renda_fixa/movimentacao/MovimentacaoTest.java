@@ -7,7 +7,7 @@ public class MovimentacaoTest extends BaseTest {
     private Movimentacao movimentacao;
     @Test
     public void relatorioMovimentacaoRendaFixa(){
-        new MovimentacaoUtils("MovimentacaoFdsTest").gerarRelatorio(movimentacao,"MV1");
+        new MovimentacaoUtils("MovimentacaoTest").gerarRelatorio(movimentacao,"MV1");
     }
 
 }

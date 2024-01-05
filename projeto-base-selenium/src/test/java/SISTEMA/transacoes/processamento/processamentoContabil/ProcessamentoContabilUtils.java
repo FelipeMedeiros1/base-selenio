@@ -12,7 +12,7 @@ public class ProcessamentoContabilUtils {
     public ProcessamentoContabilUtils executar(ProcessamentoContabil modeloDecadastro,String chavePrimaria){
         modeloDecadastro = LeitorPlanilha.carregarDados(planilhaTeste,chavePrimaria,"ProcessamentoContabil", ProcessamentoContabil.class);
         ProcessamentoContabilPage page = new ProcessamentoContabilPage();
-        page.acessaPaginaaProcessamentoContabil();
+        page.acessaPagina();
         page.modulos(modeloDecadastro.getModulos());
         page.dataInicial(modeloDecadastro.getDataInicial());
         page.dataFinal(modeloDecadastro.getDataFinal());

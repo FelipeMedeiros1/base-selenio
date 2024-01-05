@@ -1,10 +1,8 @@
 package SISTEMA.transacoes.processamento.processamento;
 
-import SISTEMA.base.UtilitarioCadastroTestCase;
+import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import WEBDRIVER.componentes.Screenshot;
 import WEBDRIVER.pageObject.transacoes.processamento.processamento.ProcessamentoPage;
-import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas.OperacoesDefinitivasPage;
 
 public class ProcessamentoUtils extends UtilitarioCadastroTestCase<Processamento, ProcessamentoPage> {
     public ProcessamentoUtils(String nomeDaPlanilha) {

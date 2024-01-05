@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_termo;
 
-import SISTEMA.base.UtilitarioCadastroTestCase;
+import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoestermo.OperacoesATermoPage;
 

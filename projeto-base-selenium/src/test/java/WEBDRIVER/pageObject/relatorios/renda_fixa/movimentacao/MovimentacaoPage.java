@@ -1,4 +1,4 @@
-package WEBDRIVER.pageObject.relatorios.renda_fixa;
+package WEBDRIVER.pageObject.relatorios.renda_fixa.movimentacao;
 
 import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
@@ -54,7 +54,7 @@ public class MovimentacaoPage extends BasePage implements Movimentacao {
 
     @Override
     public SelecionaVarios modalidadeDeMovimento(String... valores) {
-        return selecionaVarios(modalidadeDeMovimento, valores);
+        return selecionaVarios(modalidadeDeMovimento, incluirModalidade, valores);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class MovimentacaoPage extends BasePage implements Movimentacao {
 
     @Override
     public SelecionaVarios carteira(String... valores) {
-        return selecionaVarios(carteira, valores);
+        return selecionaVarios(carteira, incluirCarteira, valores);
     }
 
     @Override

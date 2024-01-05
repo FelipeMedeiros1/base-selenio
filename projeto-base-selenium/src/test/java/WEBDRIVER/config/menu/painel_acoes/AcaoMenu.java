@@ -147,6 +147,15 @@ public class AcaoMenu {
         esperaPor(1000);
         new ComboBox().selecionaVarios(elemento, valor);
         incluirSelecionados();
+        esperaPor(2000);
+        return new String[0];
+    }
+    public String[] selecionaVarios(WebElement elemento,WebElement incluir, String... valor) {
+        esperaAjaxTerminar();
+        scrollParaBaixoAteEncontrar(elemento);
+        esperaPor(1000);
+        new ComboBox().selecionaVarios(elemento, valor);
+        incluir.click();
         esperaPor(500);
         return new String[0];
     }

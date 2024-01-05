@@ -1,4 +1,4 @@
-package SISTEMA.base;
+package SISTEMA.utils;
 
 import lombok.Getter;
 

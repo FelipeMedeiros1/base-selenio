@@ -16,7 +16,7 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     @FindBy(id = "mainForm:functionPickList:includeSelected")
     private WebElement incluirModulos;
     @FindBy(id = "mainForm:evaluationSituationPickList:firstSelect")
-    private WebElement selecionaProcessamento;
+    private WebElement tipoDeProcessamento;
     @FindBy(id = "mainForm:evaluationSituationPickList:includeSelected")
     private WebElement incluir;
     @FindBy(id = "mainForm:initialDateCalendar:campoInputDate")
@@ -37,22 +37,22 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     }
 
     public SelecionaVarios modulos(String... valores) {
-        return selecionaVarios(selecionaModulos,valores);
+        return selecionaVarios(selecionaModulos, incluirModulos, valores);
 
     }
 
     public SelecionaVarios tipoDeProcessamento(String... valores) {
-        return selecionaVarios(selecionaProcessamento, valores);
+        return selecionaVarios(tipoDeProcessamento, incluir, valores);
 
     }
 
     public EntradaSimples dataInicial(String dataInicial) {
-       return preenche(inicio, dataInicial);
+        return preenche(inicio, dataInicial);
 
     }
 
     public EntradaSimples dataFinal(String dataFinal) {
-       return preenche(fim, dataFinal);
+        return preenche(fim, dataFinal);
 
     }
 
@@ -62,7 +62,7 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     }
 
     public EntradaSimples carteira(String valor) {
-     return    preenche(carteira, valor);
+        return preenche(carteira, valor);
 
     }
 

@@ -1,8 +1,7 @@
 package SISTEMA.relatorios.patrimonio.carteira_diaria;
 
-import SISTEMA.base.UtilitarioRelatorioTestCase;
+import SISTEMA.utils.UtilitarioRelatorioTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import SISTEMA.propriedades.valida_csv.ValidaArquivo;
 import WEBDRIVER.pageObject.relatorios.patrimonio.CarteiraDiariaPage;
 
 public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDiaria,CarteiraDiariaPage> {

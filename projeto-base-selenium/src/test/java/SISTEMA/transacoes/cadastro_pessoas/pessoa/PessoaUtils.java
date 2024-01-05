@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_pessoas.pessoa;
 
-import SISTEMA.base.UtilitarioCadastroTestCase;
+import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.pessoa.PessoaPage;
 

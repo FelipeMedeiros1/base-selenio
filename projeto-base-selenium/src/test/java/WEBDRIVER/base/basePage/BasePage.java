@@ -72,6 +72,10 @@ public abstract class BasePage {
         new AcaoMenu().selecionaVarios(elemento, valores);
         return null;
     }
+    protected SelecionaVarios selecionaVarios(WebElement elemento, WebElement incluir, String... valores) {
+        new AcaoMenu().selecionaVarios(elemento, incluir, valores);
+        return null;
+    }
 
 
     protected void selecionaNaGrid(int index) {

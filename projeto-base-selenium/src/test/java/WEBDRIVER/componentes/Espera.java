@@ -42,22 +42,12 @@ public class Espera {
 
     public ExpectedCondition<Boolean> esperaAjaxTerminar() {
         WebElement ajax = getDriver().findElement(By.id("waitOuter"));
-        WebDriverWait wait = new WebDriverWait(getDriver(), 15);
-        wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete';"));
-        wait.until(ExpectedConditions.invisibilityOf(ajax));
 
-
-        return new ExpectedCondition<Boolean>() {
-            @NullableDecl
-            @Override
-            public Boolean apply(@NullableDecl WebDriver d) {
-                WebElement element = d.findElement(By.className("rf-st-start"));
-                WebElement element2 = d.findElement(By.id("waitOuter"));
-                if (element.isDisplayed() && element2.isDisplayed()) {
-                    return (boolean) ((JavascriptExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.FALSE;
-                }
-                return (boolean) ((JavascriptExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.TRUE;
-            }
+        return driver -> {
+            WebDriverWait wait = new WebDriverWait(driver,  30);
+            wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete';"));
+            wait.until(ExpectedConditions.invisibilityOf(ajax));
+            return true;
         };
     }
 
