@@ -1,4 +1,4 @@
-package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas;
+package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas;
 
 import API.componente.Aba;
 import API.componente.Click;

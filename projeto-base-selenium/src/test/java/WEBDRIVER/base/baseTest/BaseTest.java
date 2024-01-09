@@ -2,7 +2,6 @@ package WEBDRIVER.base.baseTest;
 
 import WEBDRIVER.componentes.Espera;
 import WEBDRIVER.config.menu.propriedades.LoginAmplisPage;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -14,7 +13,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import static WEBDRIVER.fabrica.FabricaDeDriver.finalizaeDriver;
+import static WEBDRIVER.fabrica.FabricaDeDriver.finalizarDriver;
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public abstract class BaseTest {
@@ -55,7 +54,7 @@ public abstract class BaseTest {
     }
     @AfterClass
     public static void finalizar() {
-        finalizaeDriver();
+        finalizarDriver();
 
     }
 }

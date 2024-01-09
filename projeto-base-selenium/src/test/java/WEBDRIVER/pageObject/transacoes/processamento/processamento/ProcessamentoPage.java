@@ -5,6 +5,7 @@ import API.componente.SelecionaUm;
 import API.componente.SelecionaVarios;
 import API.transacoes.processamento.Processamento;
 import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -71,6 +72,7 @@ public class ProcessamentoPage extends BasePage implements Processamento {
         scrollParaBaixoAteEncontrar(selecionaGrid);
         selecionaGrid.click();
         confirmar();
+        new CapturaDeTela().evidencia("processamento","Finalizando-teste");
         clicarBotaoOk();
     }
 

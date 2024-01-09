@@ -9,7 +9,7 @@ import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public class Acessa extends BasePage {
 
-    /*### TRANSAÇÕES ### */
+    /* TRANSAÇÕES  */
     public void moedas() {
         navegarPara(transacoes, cadastroBasico, moedas);
     }
@@ -62,11 +62,11 @@ public class Acessa extends BasePage {
         navegarPara(transacoes, rendaFixa, opTermo);
     }
 
-    public void movimentacaoFundos(){
-        navegarPara(transacoes,fundos,movimentacaoFundos);
-    }
+    public void operacoesCompromissadas() { navegarPara(transacoes, rendaFixa, opCompromissadas);}
 
-    /*### RELATÓRIOS ###*/
+    public void movimentacaoFundos() { navegarPara(transacoes, fundos, movimentacaoFundos);}
+
+    /* RELATÓRIOS */
     public void relCarteiraDiaria() {
         navegarPara(relatorios, relPatrimonio, relCarteiraDiaria);
     }
@@ -102,10 +102,14 @@ public class Acessa extends BasePage {
     private WebElement fundos;
     @FindBy(linkText = "Cadastros Básicos")
     private WebElement cadastroBasico;
+    //endregion
+    //region
     @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:1:j_id_36")
     private WebElement opDefinitivas;
     @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:2:j_id_36")
     private WebElement opTermo;
+    @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:3:j_id_36")
+    private WebElement opCompromissadas;
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:1:j_id_36")
     private WebElement processamentoTela;
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:4:j_id_36")

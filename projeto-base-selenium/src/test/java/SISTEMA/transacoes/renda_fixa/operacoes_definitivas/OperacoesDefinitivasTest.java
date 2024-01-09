@@ -7,7 +7,7 @@ public class OperacoesDefinitivasTest extends BaseTest {
     private OperacoesDefinitivas opDefinitivas;
     @Test
     public void incluirOperacoesDefinitivas(){
-        new OperacoesDefinitivasUtils("OperacoesDefinitivasTest").iniciarTeste(opDefinitivas, "OD2");
+        new OperacoesDefinitivasUtils("OperacoesDefinitivasTest").executarTeste(opDefinitivas, "OD2");
     }
 
 }

@@ -2,6 +2,7 @@ package SISTEMA.transacoes.processamento.bloqueio_liberacao;
 
 import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.pageObject.transacoes.processamento.bloqueio_liberacao.BloqueioELiberacaoPage;
 
 public class BloqueioELiberacaoUtils extends UtilitarioCadastroTestCase<BloqueioELiberacao,BloqueioELiberacaoPage> {
@@ -15,8 +16,10 @@ public class BloqueioELiberacaoUtils extends UtilitarioCadastroTestCase<Bloqueio
         modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(),chavePrimaria,"BloqueioEliberacao", BloqueioELiberacao.class);
 
         page.dataBloqueioLiberacao(modeloDeCadastro.getDataBloqueioLiberacao());
+        new CapturaDeTela().evidencia("BloqueioEliberacao","preenchendo-dataBloqueioLiberacao");
         page.tipo(modeloDeCadastro.getTipo());
         page.carteira(modeloDeCadastro.getCarteira());
+        new CapturaDeTela().evidencia("BloqueioEliberacao","preenchendo-carteira");
         if (modeloDeCadastro.getBloqueado().equals("true")){
             page.bloqueado(Boolean.valueOf(modeloDeCadastro.getBloqueado()));
             page.liberacaoContabil(Boolean.valueOf(modeloDeCadastro.getLiberacaoContabil()));
@@ -25,15 +28,17 @@ public class BloqueioELiberacaoUtils extends UtilitarioCadastroTestCase<Bloqueio
             page.bloqueado(Boolean.valueOf(modeloDeCadastro.getBloqueado()));
         }
         page.motivoDoBloqueio(modeloDeCadastro.getMotivoDoBloqueio());
+        new CapturaDeTela().evidencia("BloqueioEliberacao","preenchendo-motivoDoBloqueio");
         page.motivoDoDesbloqueio(modeloDeCadastro.getMotivoDoDesbloqueio());
+        new CapturaDeTela().evidencia("BloqueioEliberacao","preenchendo-motivoDoDesbloqueio");
     }
 
     @Override
-    public BloqueioELiberacaoUtils iniciarTeste(BloqueioELiberacao modeloDeCadastro, String chavePrimaria) {
+    public BloqueioELiberacaoUtils executarTeste(BloqueioELiberacao modeloDeCadastro, String chavePrimaria) {
         BloqueioELiberacaoPage page = new BloqueioELiberacaoPage();
         page.acessaPaginaBloqueioELiberacao();
         preencheDados(page,modeloDeCadastro,chavePrimaria);
-        page.confirmaOperacao();
+        page.confirmaOperacao("BloqueioEliberacao");
         return this;
     }
 }

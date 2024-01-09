@@ -9,6 +9,6 @@ public class BloqueioELiberacaoTest extends BaseTest {
 
     @Test
     public void bloqueioDeProcessamentoELiberacaoContabil(){
-        new BloqueioELiberacaoUtils("BloqueioELiberacaoTest").iniciarTeste(libContabil,"BL2");
+        new BloqueioELiberacaoUtils("BloqueioELiberacaoTest").executarTeste(libContabil,"BL2");
     }
 }

@@ -8,6 +8,8 @@ public class ProcessamentoTest extends BaseTest {
 
     @Test
     public void testProcessarCarteira(){
-        new ProcessamentoUtils ("ProcessamentoTest").iniciarTeste(processamento,"P1");
+        new ProcessamentoUtils ("ProcessamentoTest")
+                .executarTeste(processamento,"P1");
+
     }
 }

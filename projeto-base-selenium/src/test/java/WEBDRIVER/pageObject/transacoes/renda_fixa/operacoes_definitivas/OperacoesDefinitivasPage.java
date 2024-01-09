@@ -1,11 +1,9 @@
-package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas;
+package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas;
 
 import API.transacoes.renda_fixa.operacoes_definitivas.DadosDaMovimentacaoAba;
 import API.transacoes.renda_fixa.operacoes_definitivas.OperacoesDefinitivas;
 import WEBDRIVER.base.basePage.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class OperacoesDefinitivasPage extends BasePage implements OperacoesDefinitivas {
     private DadosDaMovimentacaoAba dadosDaMovimentacao;

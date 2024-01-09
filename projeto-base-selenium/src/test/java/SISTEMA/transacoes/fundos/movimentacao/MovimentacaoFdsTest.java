@@ -8,6 +8,6 @@ public class MovimentacaoFdsTest extends BaseTest {
 
     @Test
     public void incluirMovimentacaoFundos() {
-        new MovimentacaoFdsUtils("MovimentacaoFdsTest").iniciarTeste(movimentacao, "M1");
+        new MovimentacaoFdsUtils("MovimentacaoFdsTest").executarTeste(movimentacao, "M1");
     }
 }

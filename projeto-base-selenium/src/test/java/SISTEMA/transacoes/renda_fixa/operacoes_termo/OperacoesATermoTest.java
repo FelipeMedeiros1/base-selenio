@@ -8,7 +8,7 @@ public class OperacoesATermoTest extends BaseTest {
 
     @Test
     public void teste01() {
-        new OperacoesATermoUtils("OperacoesATermoTest").iniciarTeste(OpTermo, "OT1");
+        new OperacoesATermoUtils("OperacoesATermoTest").executarTeste(OpTermo, "OT1");
 
 
     }

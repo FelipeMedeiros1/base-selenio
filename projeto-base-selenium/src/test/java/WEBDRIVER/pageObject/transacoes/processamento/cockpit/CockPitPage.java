@@ -1,6 +1,7 @@
 package WEBDRIVER.pageObject.transacoes.processamento.cockpit;
 
 import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,6 +51,7 @@ public class CockPitPage extends BasePage {
         resultado.click();
         scrollParaBaixoAteEncontrar(check);
         check.click();
+        new CapturaDeTela().evidencia("CockPit","Finalizando-teste");
         scrollParaBaixoAteEncontrar(msg);
 //        validaMensagem("Processamento realizado com sucesso.",msg);
     }

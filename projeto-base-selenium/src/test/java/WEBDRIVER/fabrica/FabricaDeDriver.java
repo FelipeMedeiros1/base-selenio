@@ -27,7 +27,7 @@ public class  FabricaDeDriver {
         return driver;
     }
 
-    public static void finalizaeDriver() {
+    public static void finalizarDriver() {
         WebDriver driver = getDriver();
         if (driver != null) {
             driver.quit();

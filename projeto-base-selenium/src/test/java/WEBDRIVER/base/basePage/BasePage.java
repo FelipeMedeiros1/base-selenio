@@ -5,12 +5,21 @@ import WEBDRIVER.componentes.CheckBox;
 import WEBDRIVER.config.menu.painel_acoes.AcaoMenu;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public abstract class BasePage {
     public BasePage() {
-        PageFactory.initElements(getDriver(), this);
+//        PageFactory.initElements(getDriver(), this);
+
+        AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(getDriver(), 10);
+        PageFactory.initElements(factory, this);
+
+
+
+
+
     }
 
     public String obterTituloDaPagina() {
@@ -28,6 +37,9 @@ public abstract class BasePage {
     public void excluir() {
         new AcaoMenu().excluir();
     }
+    public void excluir(String nomeDoArquivo) {
+        new AcaoMenu().excluir(nomeDoArquivo);
+    }
 
     public void confirmar() {
         new AcaoMenu().confirmar();
@@ -39,6 +51,10 @@ public abstract class BasePage {
 
     public void confirmaOperacao() {
         new AcaoMenu().confirmaOperacao();
+    }
+    public void confirmaOperacao(String nomeDoArquivo) {
+        new AcaoMenu().confirmaOperacao(nomeDoArquivo);
+
     }
 
     protected void clicarBotaoOk() {
@@ -98,11 +114,11 @@ public abstract class BasePage {
     }
 
     protected void scrollParaBaixoAteEncontrar(WebElement elemento) {
-        new AcaoMenu().scrollParaBaixoAteEncontrar(elemento);
+        new AcaoMenu().rolarParaBaixoAteEncontrar(elemento);
     }
 
     protected void scrollParaCimaAteEncontrar(WebElement elemento) {
-        new AcaoMenu().scrollParaCimaAteEncontrar(elemento);
+        new AcaoMenu().rolarParaCimaAteEncontrar(elemento);
     }
 
     public void validaMensagem(String msg, WebElement elemento) {

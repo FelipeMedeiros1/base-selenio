@@ -1,4 +1,4 @@
-package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoestermo;
+package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_termo;
 
 import API.componente.Aba;
 import API.componente.Click;

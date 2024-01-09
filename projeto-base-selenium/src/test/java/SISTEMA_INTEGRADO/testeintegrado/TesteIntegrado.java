@@ -1,14 +1,11 @@
 package SISTEMA_INTEGRADO.testeintegrado;
 
 import SISTEMA.relatorios.patrimonio.carteira_diaria.CarteiraDiaria;
-import SISTEMA.relatorios.patrimonio.carteira_diaria.CarteiraDiariaUtils;
 import SISTEMA.transacoes.cadastro_pessoas.fundamental.Fundamental;
 import SISTEMA.transacoes.fundos.movimentacao.Movimentacao;
 import SISTEMA.transacoes.fundos.movimentacao.MovimentacaoFdsUtils;
 import SISTEMA.transacoes.processamento.cockpit.CockPit;
-import SISTEMA.transacoes.processamento.cockpit.CockPitUtils;
 import SISTEMA.transacoes.processamento.processamento.Processamento;
-import SISTEMA.transacoes.processamento.processamento.ProcessamentoUtils;
 import WEBDRIVER.base.baseTest.BaseTest;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -29,7 +26,7 @@ public class TesteIntegrado extends BaseTest {
 //        new CockPitUtils(repositorio).iniciarTeste(cockPit,"C1");
 //        new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara,"CD1")
 //                .gerarRelatorio(cateirraDiara,"CD2");
-        new MovimentacaoFdsUtils(repositorio).iniciarTeste(mov,"M1");
+        new MovimentacaoFdsUtils(repositorio).executarTeste(mov,"M1");
 
 
     }

@@ -26,7 +26,7 @@ public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> 
     }
 
     @Override
-    public PessoaUtils iniciarTeste(Pessoa modeloDeCadastro, String chavePrimaria) {
+    public PessoaUtils executarTeste(Pessoa modeloDeCadastro, String chavePrimaria) {
         PessoaPage page = new PessoaPage();
         page.acessaPaginaPessoas();
         preencheDados(page, modeloDeCadastro, chavePrimaria);

@@ -2,7 +2,7 @@ package SISTEMA.transacoes.renda_fixa.operacoes_definitivas;
 
 import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoesdefinitivas.OperacoesDefinitivasPage;
+import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas.OperacoesDefinitivasPage;
 
 public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<OperacoesDefinitivas, OperacoesDefinitivasPage> {
 
@@ -36,7 +36,7 @@ public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<Operac
 
     }
     @Override
-    public OperacoesDefinitivasUtils iniciarTeste(OperacoesDefinitivas modeloDeCadastro, String chavePrimaria) {
+    public OperacoesDefinitivasUtils executarTeste(OperacoesDefinitivas modeloDeCadastro, String chavePrimaria) {
         OperacoesDefinitivasPage page = new OperacoesDefinitivasPage();
         page.acessaPagina();
         preencheDados(page, modeloDeCadastro,chavePrimaria);

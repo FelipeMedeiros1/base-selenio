@@ -17,10 +17,11 @@ import java.io.IOException;
 
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
-public class Screenshot {
+public class CapturaDeTela {
 
     @Rule
     public static TestName testName = new TestName();
+
     public static void evidencia() {
         Robot robot = null;
         try {
@@ -35,8 +36,10 @@ public class Screenshot {
             throw new RuntimeException(e);
         }
     }
+
     @Rule
     public static TestName nomeTeste = new TestName();
+
     public static void capturaScreenshot() {
         try {
             File screenshotFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
@@ -46,6 +49,35 @@ public class Screenshot {
             e.printStackTrace();
         }
     }
+
+    public static void evidencia(String nomeDoArquivo, String nomeDoTeste) {
+        WebDriver driver = getDriver();
+        if (driver instanceof TakesScreenshot) {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File fonte = ts.getScreenshotAs(OutputType.FILE);
+
+            // Caminho do diretório único para cada teste
+            String diretorioDestino = "target" + File.separator + "evidencias" + File.separator + nomeDoArquivo + File.separator;
+
+            // Cria o diretório se ele não existir
+            File diretorio = new File(diretorioDestino);
+            if (!diretorio.exists()) {
+                diretorio.mkdirs();
+            }
+
+            File destino = new File(diretorioDestino + nomeDoTeste + ".png");
+
+            try {
+                FileUtils.copyFile(fonte, destino);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+
 
     public static void main(String[] args) {
         // Configurar o WebDriver (neste caso, para o Chrome)

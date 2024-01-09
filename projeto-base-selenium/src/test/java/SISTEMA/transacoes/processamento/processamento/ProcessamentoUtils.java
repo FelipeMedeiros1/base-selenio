@@ -2,6 +2,7 @@ package SISTEMA.transacoes.processamento.processamento;
 
 import SISTEMA.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.pageObject.transacoes.processamento.processamento.ProcessamentoPage;
 
 public class ProcessamentoUtils extends UtilitarioCadastroTestCase<Processamento, ProcessamentoPage> {
@@ -14,19 +15,24 @@ public class ProcessamentoUtils extends UtilitarioCadastroTestCase<Processamento
         modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Processamento", Processamento.class);
 
         page.modulos(modeloDeCadastro.getModulos());
+        new CapturaDeTela().evidencia("processamento","preenchendo-modulos");
         page.tipoDeProcessamento(modeloDeCadastro.getTipoDeProcessamento());
+        new CapturaDeTela().evidencia("processamento","preenchendo-tipoDeProcessamento");
         page.dataInicial(modeloDeCadastro.getDataInicial());
         page.dataFinal(modeloDeCadastro.getDataFinal());
+        new CapturaDeTela().evidencia("processamento","preenchendo-data");
         page.filtroCarteira(modeloDeCadastro.getFiltroCarteira());
         page.carteira(modeloDeCadastro.getCarteira());
+        new CapturaDeTela().evidencia("processamento","preenchendo-carteira");
     }
 
     @Override
-    public ProcessamentoUtils iniciarTeste(Processamento modeloDeCadastro, String chavePrimaria) {
+    public ProcessamentoUtils executarTeste(Processamento modeloDeCadastro, String chavePrimaria) {
         ProcessamentoPage page = new ProcessamentoPage();
         page.acessaPagina();
         preencheDados(page, modeloDeCadastro, chavePrimaria);
         page.executarProcessamento();
+
         return this;
     }
 

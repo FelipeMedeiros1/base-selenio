@@ -5,7 +5,6 @@ import API.componente.SelecionaUm;
 import WEBDRIVER.componentes.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.HashMap;
 import java.util.Map;
 
+import static WEBDRIVER.componentes.CapturaDeTela.evidencia;
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public class AcaoMenu {
@@ -34,6 +34,15 @@ public class AcaoMenu {
         esperaAjaxTerminar();
         Botao b = new Botao();
         b.clicar("mainForm:removeButton");
+        b.clicar("messageForm:painelMensagensConfirmDialogButton");
+        Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new ResultadoMensagem().validaMensagem("messageContent"));
+    }
+
+    public void excluir(String nomeDoArquivo) {
+        esperaAjaxTerminar();
+        Botao b = new Botao();
+        b.clicar("mainForm:removeButton");
+        new CapturaDeTela().evidencia(nomeDoArquivo, "Teste-finalizado");
         b.clicar("messageForm:painelMensagensConfirmDialogButton");
         Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new ResultadoMensagem().validaMensagem("messageContent"));
     }
@@ -68,6 +77,16 @@ public class AcaoMenu {
         clicarBotaoOk();
     }
 
+    public void confirmaOperacao(String nomeDoArquivo) {
+        esperaAjaxTerminar();
+        confirmar();
+        evidencia(nomeDoArquivo, "Teste-finalizado");
+        String mensagemEsperada = "Operação realizada com sucesso!";
+        String mensagemAtual = new ResultadoMensagem().validaMensagem("messageContent");
+        Assert.assertTrue(mensagemAtual.startsWith(mensagemEsperada));
+        clicarBotaoOk();
+    }
+
     public void selectGrid(int index) {
         new CheckBox().seleciona("mainForm:filterDataTable:" + index + ":chk");
     }
@@ -83,7 +102,7 @@ public class AcaoMenu {
     }
 
     public void clicar(WebElement el) {
-        scrollParaBaixoAteEncontrar(el);
+        rolarParaBaixoAteEncontrar(el);
         esperaElementoSerClicavel(el);
         new Botao().clicar(el);
     }
@@ -101,7 +120,7 @@ public class AcaoMenu {
 
     public Aba selecionaAba(WebElement elemento) {
         esperaAjaxTerminar();
-        scrollParaCimaAteEncontrar(elemento);
+        rolarParaCimaAteEncontrar(elemento);
         esperaPor(500);
         elemento.click();
         return null;
@@ -109,7 +128,7 @@ public class AcaoMenu {
 
     public AcaoMenu preenche(WebElement input, String texto) {
         esperaAjaxTerminar();
-        scrollParaBaixoAteEncontrar(input);
+        rolarParaBaixoAteEncontrar(input);
         if (input.isEnabled()) {
             new PreencheDados().preenche(input, texto);
             esperaTextoEstarPresente(input, texto);
@@ -119,7 +138,7 @@ public class AcaoMenu {
 
     public AcaoMenu preencheAutoComplete(WebElement input, String texto) {
         esperaAjaxTerminar();
-        scrollParaBaixoAteEncontrar(input);
+        rolarParaBaixoAteEncontrar(input);
         esperaElementoSerClicavel(input);
         if (input.isEnabled()) {
             new PreencheDados().preenche(input, texto);
@@ -132,7 +151,7 @@ public class AcaoMenu {
 
     public SelecionaUm selecionaUm(WebElement elemento, String valor) {
         esperaAjaxTerminar();
-        scrollParaBaixoAteEncontrar(elemento);
+        rolarParaBaixoAteEncontrar(elemento);
         esperaElementoSerClicavel(elemento);
         if (elemento.isEnabled()) {
             new ComboBox().seleciona(elemento, valor);
@@ -142,7 +161,7 @@ public class AcaoMenu {
 
     public String[] selecionaVarios(WebElement elemento, String... valor) {
         esperaAjaxTerminar();
-        scrollParaBaixoAteEncontrar(elemento);
+        rolarParaBaixoAteEncontrar(elemento);
         deselecionaTodos();
         esperaPor(1000);
         new ComboBox().selecionaVarios(elemento, valor);
@@ -150,33 +169,36 @@ public class AcaoMenu {
         esperaPor(2000);
         return new String[0];
     }
-    public String[] selecionaVarios(WebElement elemento,WebElement incluir, String... valor) {
+
+    public String[] selecionaVarios(WebElement elemento, WebElement incluir, String... valor) {
         esperaAjaxTerminar();
-        scrollParaBaixoAteEncontrar(elemento);
+        rolarParaBaixoAteEncontrar(elemento);
         esperaPor(1000);
         new ComboBox().selecionaVarios(elemento, valor);
         incluir.click();
         esperaPor(500);
         return new String[0];
     }
-    public void deselecionaTodos(){
+
+    public void deselecionaTodos() {
         By selector = By.cssSelector("[id$='excludeAll']");
         WebElement elemento = getDriver().findElement(selector);
         elemento.click();
     }
-    public void incluirSelecionados(){
+
+    public void incluirSelecionados() {
         By selector = By.cssSelector("[id$='includeSelected']");
         WebElement elemento = getDriver().findElement(selector);
         elemento.click();
     }
 
     public boolean selecionaChekBox(WebElement chk, Boolean aBoolean) {
-        scrollParaBaixoAteEncontrar(chk);
+        rolarParaBaixoAteEncontrar(chk);
         new CheckBox().seleciona(chk, aBoolean);
         return false;
     }
 
-    public void scrollParaBaixo() {
+    public void rolarParaBaixo() {
         new JS().executarScript("window.scrollTo(0, document.documentElement.scrollHeight)");
     }
 
@@ -184,13 +206,13 @@ public class AcaoMenu {
         new JS().executarScript("window.scrollTo(0, " + yOffset + ")");
     }
 
-    public void scrollParaBaixoAteEncontrar(WebElement elemento) {
+    public void rolarParaBaixoAteEncontrar(WebElement elemento) {
         esperaAjaxTerminar();
         esperaPor(500);
         new JS().executarScript("arguments[0].scrollIntoView(true);", elemento);
     }
 
-    public void scrollParaCimaAteEncontrar(WebElement elemento) {
+    public void rolarParaCimaAteEncontrar(WebElement elemento) {
         esperaAjaxTerminar();
         new JS().executarScript("window.scrollBy(0,arguments[0])", elemento.getLocation().y++);
     }
@@ -204,7 +226,9 @@ public class AcaoMenu {
         new Espera().esperaElementoSerClicavel(elemento);
     }
 
-    public void esperaAjaxTerminar() { new Espera().esperaAjaxTerminar();}
+    public void esperaAjaxTerminar() {
+        new Espera().esperaAjaxTerminar();
+    }
 
     public void esperaPor(int mill) {
         new Espera().esperaPor(mill);
