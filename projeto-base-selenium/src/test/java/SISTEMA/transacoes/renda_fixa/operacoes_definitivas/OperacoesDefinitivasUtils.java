@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_definitivas;
 
-import SISTEMA.utils.UtilitarioCadastroTestCase;
+import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas.OperacoesDefinitivasPage;
 
@@ -18,7 +18,7 @@ public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<Operac
         page.dadosDaMovimentacao().carteira(modeloDeCadastro.getCarteira());
         page.dadosDaMovimentacao().titulo(modeloDeCadastro.getTitulo());
         page.dadosDaMovimentacao().emissao(modeloDeCadastro.getEmissao());
-        if (modeloDeCadastro.getEstoque().equalsIgnoreCase("Venda a Vista Coberta") || modeloDeCadastro.getEstoque().equalsIgnoreCase("Retirada a Vista Coberta")){
+        if (modeloDeCadastro.getEstoque().equalsIgnoreCase("Venda config.properties Vista Coberta") || modeloDeCadastro.getEstoque().equalsIgnoreCase("Retirada config.properties Vista Coberta")){
         page.dadosDaMovimentacao().estoque(modeloDeCadastro.getEstoque());
         }
         page.dadosDaMovimentacao().ativaPassiva(modeloDeCadastro.getAtivaPassiva());

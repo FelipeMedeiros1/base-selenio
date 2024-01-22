@@ -40,6 +40,19 @@ public class ComboBox implements SelecionaUm, SelecionaVarios {
         }
         return valores;
     }
+    public String[] selecionaVarios(String id, String ...valores) {
+        WebElement element = getDriver().findElement(By.id(id));
+        element.click();
+        Select combo = new Select(element);
+
+        combo.deselectAll();
+        new Actions(getDriver()).keyDown(Keys.CONTROL);
+
+        for (String valor : valores) {
+            combo.selectByVisibleText(valor);
+        }
+        return valores;
+    }
 
 
     public void deseleciona(String id, String valor) {
@@ -76,20 +89,6 @@ public class ComboBox implements SelecionaUm, SelecionaVarios {
         List<String> valores = new ArrayList<String>();
         for(WebElement opcao: allSelectedOptions) {
             valores.add(opcao.getText());
-        }
-        return valores;
-    }
-
-    public String[] selecionaVarios(String id, String ...valores) {
-        WebElement element = getDriver().findElement(By.id(id));
-        element.click();
-        Select combo = new Select(element);
-
-        combo.deselectAll();
-        new Actions(getDriver()).keyDown(Keys.CONTROL);
-
-        for (String valor : valores) {
-            combo.selectByVisibleText(valor);
         }
         return valores;
     }

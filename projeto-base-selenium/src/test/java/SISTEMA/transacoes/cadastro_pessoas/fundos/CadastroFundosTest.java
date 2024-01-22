@@ -12,6 +12,6 @@ public class CadastroFundosTest extends BaseTest {
                 .carteira("FELIPE - JSM")
                 .formaDeCondominio("Aberto")
                 .tipoDeFundos("Fundo de Investimento")
-                .confirmaOperacao();
+                .confirmaOperacao("Cadastro-fundo");
     }
 }

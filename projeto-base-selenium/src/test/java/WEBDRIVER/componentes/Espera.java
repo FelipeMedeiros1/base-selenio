@@ -59,8 +59,27 @@ public class Espera {
         }
         return null;
     }
+    public String esperaTextoEstarPresente(String id, String texto) {
+        WebElement elemento = getDriver().findElement(By.id(id));
+
+        new JS().executarScript("arguments[0].value = arguments[1];", elemento, texto);
+        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
+
+        String valorAtual = elemento.getAttribute("value");
+
+        if (texto.equals(valorAtual)) {
+            return valorAtual;
+        }
+
+        return null;
+    }
+
 
     public void esperaElementoSerClicavel(WebElement elemento) {
+        new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(elemento));
+    }
+    public void esperaElementoSerClicavel(String id) {
+        WebElement elemento = getDriver().findElement(By.id(id));
         new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(elemento));
     }
 

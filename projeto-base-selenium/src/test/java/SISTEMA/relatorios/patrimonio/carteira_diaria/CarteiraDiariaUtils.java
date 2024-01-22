@@ -1,6 +1,6 @@
 package SISTEMA.relatorios.patrimonio.carteira_diaria;
 
-import SISTEMA.utils.UtilitarioRelatorioTestCase;
+import SISTEMA.propriedades.utils.UtilitarioRelatorioTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.relatorios.patrimonio.CarteiraDiariaPage;
 

@@ -11,7 +11,7 @@ public class CadastroPatrimonioTest extends BaseTest {
         page.acessaPaginaPatrimonio()
                 .carteira("ATIVOS 60266")
                 .valorDaCotaInicial("1.000")
-                .confirmaOperacao();
+                .confirmaOperacao("Cadastro-patrimonio");
 
     }
 

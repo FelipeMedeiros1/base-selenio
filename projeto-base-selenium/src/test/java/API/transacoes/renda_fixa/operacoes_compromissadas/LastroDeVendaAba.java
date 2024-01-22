@@ -5,29 +5,29 @@ import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
 
 public interface LastroDeVendaAba extends Aba {
-    SelecionaUm tituloSelicPu550Titulo();
+    SelecionaUm tituloSelicPu550Titulo(String valor);
 
-    SelecionaUm emissao();
+    SelecionaUm emissao(String valor);
 
-    EntradaSimples codigoDaOperacao();
+    EntradaSimples codigoDaOperacao(String valor);
 
-    EntradaSimples dataDeEmissao();
+    EntradaSimples dataDeEmissao(String valor);
 
-    EntradaSimples dataDeVencimento();
+    EntradaSimples dataDeVencimento(String valor);
 
-    SelecionaUm calcular();
+    SelecionaUm calcular(String valor);
 
-    EntradaSimples financeiroIda();
+    EntradaSimples financeiroIda(String valor);
 
-    EntradaSimples pu550Pu();
+    EntradaSimples pu550Pu(String valor);
 
-    EntradaSimples quantidade();
+    EntradaSimples quantidade(String valor);
 
-    EntradaSimples financeiroDeIdaCalculado();
+    EntradaSimples financeiroDeIdaCalculado(String valor);
 
-    EntradaSimples isin();
+    EntradaSimples isin(String valor);
 
-    EntradaSimples codigoSelicCetip();
+    EntradaSimples codigoSelicCetip(String valor);
 
-    EntradaSimples codigoCBLC();
+    EntradaSimples codigoCBLC(String valor);
 }

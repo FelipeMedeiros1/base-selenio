@@ -5,40 +5,40 @@ import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
 
 public interface LastroDeCompraAba extends Aba {
-    EntradaSimples tituloSelicPu550Titulo();
+    EntradaSimples tituloSelicPu550Titulo(String valor);
 
-    SelecionaUm titulo();
+    SelecionaUm titulo(String valor);
 
-    SelecionaUm emissao();
+    SelecionaUm emissao(String valor);
 
-    EntradaSimples dataDaEmissao();
+    EntradaSimples dataDaEmissao(String valor);
 
-    EntradaSimples dataDeVencimento();
+    EntradaSimples dataDeVencimento(String valor);
 
-    SelecionaUm calcular();
+    SelecionaUm calcular(String valor);
 
-    EntradaSimples financeiroIda();
+    EntradaSimples financeiroIda(String valor);
 
-    EntradaSimples pu550Pu();
+    EntradaSimples pu550Pu(String valor);
 
-    EntradaSimples quantidade();
+    EntradaSimples quantidade(String valor);
 
-    EntradaSimples financeiroDeIdaCalculado();
+    EntradaSimples financeiroDeIdaCalculado(String valor);
 
-    EntradaSimples isin();
+    EntradaSimples isin(String valor);
 
-    EntradaSimples codigoSelicCetipCompra();
+    EntradaSimples codigoSelicCetipCompra(String valor);
 
-    SelecionaUm esferaDaEmissao();
+    SelecionaUm esferaDaEmissao(String valor);
 
-    SelecionaUm empresaLigada();
+    SelecionaUm empresaLigada(String valor);
 
-    SelecionaUm descricaoBacen();
+    SelecionaUm descricaoBacen(String valor);
 
-    EntradaSimples codigoCBLCCompra();
+    EntradaSimples codigoCBLCCompra(String valor);
 
-    SelecionaUm localidade();
+    SelecionaUm localidade(String valor);
 
-    SelecionaUm emissorParaPerfilMensal();
+    SelecionaUm emissorParaPerfilMensal(String valor);
 
 }

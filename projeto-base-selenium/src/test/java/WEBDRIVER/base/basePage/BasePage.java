@@ -11,15 +11,8 @@ import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public abstract class BasePage {
     public BasePage() {
-//        PageFactory.initElements(getDriver(), this);
-
         AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(getDriver(), 10);
         PageFactory.initElements(factory, this);
-
-
-
-
-
     }
 
     public String obterTituloDaPagina() {
@@ -37,6 +30,7 @@ public abstract class BasePage {
     public void excluir() {
         new AcaoMenu().excluir();
     }
+
     public void excluir(String nomeDoArquivo) {
         new AcaoMenu().excluir(nomeDoArquivo);
     }
@@ -52,9 +46,9 @@ public abstract class BasePage {
     public void confirmaOperacao() {
         new AcaoMenu().confirmaOperacao();
     }
+
     public void confirmaOperacao(String nomeDoArquivo) {
         new AcaoMenu().confirmaOperacao(nomeDoArquivo);
-
     }
 
     protected void clicarBotaoOk() {
@@ -63,6 +57,9 @@ public abstract class BasePage {
 
     protected void esperaElementoSerClicavel(WebElement elemento) {
         new AcaoMenu().esperaElementoSerClicavel(elemento);
+    }
+    protected void esperaElementoSerClicavel(String id) {
+        new AcaoMenu().esperaElementoSerClicavel(id);
     }
 
     protected void esperaPor(int miliSegundos) {
@@ -74,8 +71,18 @@ public abstract class BasePage {
         return null;
     }
 
+    protected EntradaSimples preenche(String id, String texto) {
+        new AcaoMenu().preenche(id, texto);
+        return null;
+    }
+
     protected EntradaSimples preencheAutoComplete(WebElement input, String texto) {
         new AcaoMenu().preencheAutoComplete(input, texto);
+        return null;
+    }
+
+    protected EntradaSimples preencheAutoComplete(String id, String texto) {
+        new AcaoMenu().preencheAutoComplete(id, texto);
         return null;
     }
 
@@ -84,12 +91,23 @@ public abstract class BasePage {
         return null;
     }
 
+    protected SelecionaUm selecionaUm(String id, String valor) {
+        new AcaoMenu().selecionaUm(id, valor);
+        return null;
+    }
+
     protected SelecionaVarios selecionaVarios(WebElement elemento, String... valores) {
         new AcaoMenu().selecionaVarios(elemento, valores);
         return null;
     }
+
+
     protected SelecionaVarios selecionaVarios(WebElement elemento, WebElement incluir, String... valores) {
         new AcaoMenu().selecionaVarios(elemento, incluir, valores);
+        return null;
+    }
+    protected SelecionaVarios selecionaVarios(String id, String incluir, String... valores) {
+        new AcaoMenu().selecionaVarios(id, incluir, valores);
         return null;
     }
 
@@ -107,14 +125,24 @@ public abstract class BasePage {
         new AcaoMenu().clicar(el);
         return null;
     }
+    protected Click clicar(String id) {
+        new AcaoMenu().clicar(id);
+        return null;
+    }
 
     protected Aba selecionaAba(WebElement nomeAba) {
+        new AcaoMenu().selecionaAba(nomeAba);
+        return null;
+    }
+    protected Aba selecionaAba(String nomeAba) {
         new AcaoMenu().selecionaAba(nomeAba);
         return null;
     }
 
     protected void scrollParaBaixoAteEncontrar(WebElement elemento) {
         new AcaoMenu().rolarParaBaixoAteEncontrar(elemento);
+    }  protected void scrollParaBaixoAteEncontrar(String id) {
+        new AcaoMenu().rolarParaBaixoAteEncontrar(id);
     }
 
     protected void scrollParaCimaAteEncontrar(WebElement elemento) {

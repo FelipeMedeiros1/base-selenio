@@ -1,15 +1,13 @@
 package WEBDRIVER.componentes;
 
 import API.componente.EntradaSimples;
-import WEBDRIVER.config.menu.painel_acoes.AcaoMenu;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 
-public class PreencheDados implements EntradaSimples {
+public class CampoTexto implements EntradaSimples {
     public void preenche(By by, String text) {
         getDriver().findElement(by).clear();
         getDriver().findElement(by).sendKeys(text);

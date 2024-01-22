@@ -1,4 +1,4 @@
-package WEBDRIVER.utils;
+package SISTEMA.propriedades.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

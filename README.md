@@ -64,7 +64,7 @@ public class LoginPage extends BasePage implements Login {
 
 }
 ```
-E não esquece de fazer todas as classes pageObjecte stenderem BasePage e implementarem a interface certinha.
+E não esquece de fazer todas as classes pageObject estenderem BasePage e implementarem a interface certinha.
 
 ## Testes Reais no Pacote SISTEMA
 No pacote SISTEMA, é onde a mágica real acontece. Testes específicos pra cada telinha.

@@ -95,6 +95,10 @@ public class AcaoMenu {
         esperaAjaxTerminar();
         clicar(el);
     }
+    public void incluirSelecionados(String id) {
+        esperaAjaxTerminar();
+        clicar(id);
+    }
 
     public void desmarqueTodods() {
         new Botao().clicar("mainForm:functionPickList:excludeAll");
@@ -105,6 +109,11 @@ public class AcaoMenu {
         rolarParaBaixoAteEncontrar(el);
         esperaElementoSerClicavel(el);
         new Botao().clicar(el);
+    }
+    public void clicar(String id) {
+        rolarParaBaixoAteEncontrar(id);
+        esperaElementoSerClicavel(id);
+        new Botao().clicar(id);
     }
 
     public void clicarBotaoOk() {
@@ -126,13 +135,46 @@ public class AcaoMenu {
         return null;
     }
 
+    public Aba selecionaAba(String id) {
+        WebElement elemento = getDriver().findElement(By.id(id));
+        esperaAjaxTerminar();
+        rolarParaCimaAteEncontrar(elemento);
+        esperaPor(500);
+        elemento.click();
+        return null;
+    }
+
     public AcaoMenu preenche(WebElement input, String texto) {
         esperaAjaxTerminar();
         rolarParaBaixoAteEncontrar(input);
         if (input.isEnabled()) {
-            new PreencheDados().preenche(input, texto);
+            new CampoTexto().preenche(input, texto);
             esperaTextoEstarPresente(input, texto);
         }
+        return this;
+    }
+
+    public AcaoMenu preenche(String id, String texto) {
+        WebElement input = getDriver().findElement(By.id(id));
+        esperaAjaxTerminar();
+        rolarParaBaixoAteEncontrar(input);
+        if (input.isEnabled()) {
+            new CampoTexto().preenche(input, texto);
+            esperaTextoEstarPresente(input, texto);
+        }
+        return this;
+    }
+
+    public AcaoMenu preencheAutoComplete(String id, String texto) {
+
+        esperaAjaxTerminar();
+        rolarParaBaixoAteEncontrar(id);
+        esperaElementoSerClicavel(id);
+
+        new CampoTexto().preenche(id, texto);
+        esperaTextoEstarPresente(id, texto);
+        clicarForaDoCampo();
+        esperaAjaxTerminar();
         return this;
     }
 
@@ -141,7 +183,7 @@ public class AcaoMenu {
         rolarParaBaixoAteEncontrar(input);
         esperaElementoSerClicavel(input);
         if (input.isEnabled()) {
-            new PreencheDados().preenche(input, texto);
+            new CampoTexto().preenche(input, texto);
             esperaTextoEstarPresente(input, texto);
             clicarForaDoCampo();
             esperaAjaxTerminar();
@@ -156,6 +198,15 @@ public class AcaoMenu {
         if (elemento.isEnabled()) {
             new ComboBox().seleciona(elemento, valor);
         }
+        return null;
+    }
+
+    public SelecionaUm selecionaUm(String id, String valor) {
+        esperaAjaxTerminar();
+        rolarParaBaixoAteEncontrar(id);
+        esperaElementoSerClicavel(id);
+
+        new ComboBox().seleciona(id, valor);
         return null;
     }
 
@@ -175,6 +226,17 @@ public class AcaoMenu {
         rolarParaBaixoAteEncontrar(elemento);
         esperaPor(1000);
         new ComboBox().selecionaVarios(elemento, valor);
+        incluir.click();
+        esperaPor(500);
+        return new String[0];
+    }
+
+    public String[] selecionaVarios(String id, String idIncluir, String... valor) {
+        WebElement incluir = getDriver().findElement(By.id(idIncluir));
+        esperaAjaxTerminar();
+        rolarParaBaixoAteEncontrar(id);
+        esperaPor(1000);
+        new ComboBox().selecionaVarios(id, valor);
         incluir.click();
         esperaPor(500);
         return new String[0];
@@ -212,7 +274,22 @@ public class AcaoMenu {
         new JS().executarScript("arguments[0].scrollIntoView(true);", elemento);
     }
 
+    public void rolarParaBaixoAteEncontrar(String id) {
+        WebElement elemento = getDriver().findElement(By.id(id));
+        esperaAjaxTerminar();
+        esperaPor(500);
+        new JS().executarScript("arguments[0].scrollIntoView(true);", elemento);
+    }
+
     public void rolarParaCimaAteEncontrar(WebElement elemento) {
+        esperaAjaxTerminar();
+        new JS().executarScript("window.scrollBy(0,arguments[0])", elemento.getLocation().y++);
+        esperaPor(500);
+    }
+
+
+    public void rolarParaCimaAteEncontrar(String id) {
+        WebElement elemento = getDriver().findElement(By.id(id));
         esperaAjaxTerminar();
         new JS().executarScript("window.scrollBy(0,arguments[0])", elemento.getLocation().y++);
     }
@@ -226,6 +303,10 @@ public class AcaoMenu {
         new Espera().esperaElementoSerClicavel(elemento);
     }
 
+    public void esperaElementoSerClicavel(String id) {
+        new Espera().esperaElementoSerClicavel(id);
+    }
+
     public void esperaAjaxTerminar() {
         new Espera().esperaAjaxTerminar();
     }
@@ -236,6 +317,10 @@ public class AcaoMenu {
 
     public void esperaTextoEstarPresente(WebElement elemento, String texto) {
         new Espera().esperaTextoEstarPresente(elemento, texto);
+    }
+
+    public void esperaTextoEstarPresente(String id, String texto) {
+        new Espera().esperaTextoEstarPresente(id, texto);
     }
 
     public boolean verificaSeTextoEstaPresente(String texto) {

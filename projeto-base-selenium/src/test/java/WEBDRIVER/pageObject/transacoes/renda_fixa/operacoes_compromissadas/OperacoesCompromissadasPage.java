@@ -4,10 +4,11 @@ import API.transacoes.renda_fixa.operacoes_compromissadas.DadosDaMovimentacaoAba
 import API.transacoes.renda_fixa.operacoes_compromissadas.LastroDeCompraAba;
 import API.transacoes.renda_fixa.operacoes_compromissadas.LastroDeVendaAba;
 import API.transacoes.renda_fixa.operacoes_compromissadas.OperacoesCompromissadas;
+import WEBDRIVER.base.basePage.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 
 
-public class OperacoesCompromissadasPage implements OperacoesCompromissadas {
+public class OperacoesCompromissadasPage extends BasePage implements OperacoesCompromissadas {
     private DadosDaMovimentacaoAba dadosDaMovimentacao;
     private LastroDeCompraAba lastroDeCompra;
     private LastroDeVendaAba lastroDeVenda;
@@ -40,4 +41,5 @@ public class OperacoesCompromissadasPage implements OperacoesCompromissadas {
         }
         return lastroDeVenda;
     }
+
 }

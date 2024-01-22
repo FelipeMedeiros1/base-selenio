@@ -1,8 +1,7 @@
 package SISTEMA.transacoes.cadastro_pessoas.fundamental;
 
-import SISTEMA.utils.UtilitarioCadastroTestCase;
+import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental.FundamentalPage;
 
 import static WEBDRIVER.componentes.CapturaDeTela.evidencia;

@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.processamento.bloqueio_liberacao;
 
-import SISTEMA.utils.UtilitarioCadastroTestCase;
+import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.pageObject.transacoes.processamento.bloqueio_liberacao.BloqueioELiberacaoPage;

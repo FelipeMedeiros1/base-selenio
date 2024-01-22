@@ -1,6 +1,6 @@
 package SISTEMA.relatorios.renda_fixa.movimentacao;
 
-import SISTEMA.utils.UtilitarioRelatorioTestCase;
+import SISTEMA.propriedades.utils.UtilitarioRelatorioTestCase;
 import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.relatorios.renda_fixa.movimentacao.MovimentacaoPage;
 

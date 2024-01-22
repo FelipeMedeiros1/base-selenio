@@ -71,7 +71,7 @@
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
-            <version>5.6</version> <!-- Verifique a versão mais recente no site oficial do OpenCSV -->
+            <version>5.6</version> <!-- Verifique config.properties versão mais recente no site oficial do OpenCSV -->
         </dependency>
 
 
@@ -112,7 +112,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version> <!-- Verifique a versão mais recente no site oficial -->
+            <version>1.18.26</version> <!-- Verifique config.properties versão mais recente no site oficial -->
             <scope>provided</scope>
         </dependency>
         <dependency>

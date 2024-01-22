@@ -23,6 +23,21 @@ public class CheckBox implements Flag {
         return false;
     }
 
+    @Override
+    public boolean seleciona(String id, Boolean aBoolean) {
+        WebElement chk = getDriver().findElement(By.id(id));
+        if (aBoolean == true) {
+            new AcaoMenu().esperaAjaxTerminar();
+            if (!chk.isSelected()) {
+                chk.click();
+            }
+        } else {
+            chk.click();
+        }
+        new AcaoMenu().esperaPor(1000);
+        return false;
+    }
+
     public void seleciona(String id) {
         getDriver().findElement(By.id(id)).click();
     }

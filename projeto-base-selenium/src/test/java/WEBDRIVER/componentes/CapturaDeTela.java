@@ -22,7 +22,7 @@ public class CapturaDeTela {
     @Rule
     public static TestName testName = new TestName();
 
-    public static void evidencia() {
+    public void evidencia() {
         Robot robot = null;
         try {
             robot = new Robot();
@@ -74,23 +74,9 @@ public class CapturaDeTela {
             }
         }
     }
-
-
-
-
-
-    public static void main(String[] args) {
-        // Configurar o WebDriver (neste caso, para o Chrome)
-        System.setProperty("webdriver.chrome.driver", "C:\\caminho\\para\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-
-        // Abrir Leitor página da web desejada
-        driver.get("https://exemplo.com");
-
-        // Capturar Leitor tela e salvar
-        capturaScreenshot();
-
-        // Fechar o navegador
-        driver.quit();
-    }
 }
+
+
+
+
+
