@@ -1,6 +1,6 @@
-package WEBDRIVER.config.menu.propriedades;
+package WEBDRIVER.pageObject.login;
 
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import WEBDRIVER.componentes.CampoTexto;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

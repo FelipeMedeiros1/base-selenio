@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_pessoas.pessoa;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class PessoaTest extends BaseTest {

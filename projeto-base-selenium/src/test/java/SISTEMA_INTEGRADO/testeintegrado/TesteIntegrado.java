@@ -6,7 +6,7 @@ import SISTEMA.transacoes.fundos.movimentacao.Movimentacao;
 import SISTEMA.transacoes.fundos.movimentacao.MovimentacaoFdsUtils;
 import SISTEMA.transacoes.processamento.cockpit.CockPit;
 import SISTEMA.transacoes.processamento.processamento.Processamento;
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;

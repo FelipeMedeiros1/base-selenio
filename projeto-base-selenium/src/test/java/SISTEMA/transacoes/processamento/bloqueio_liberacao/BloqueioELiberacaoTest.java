@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.processamento.bloqueio_liberacao;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class BloqueioELiberacaoTest extends BaseTest {

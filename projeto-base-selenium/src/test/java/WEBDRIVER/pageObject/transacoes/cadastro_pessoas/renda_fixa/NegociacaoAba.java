@@ -1,6 +1,6 @@
 package WEBDRIVER.pageObject.transacoes.cadastro_pessoas.renda_fixa;
 
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

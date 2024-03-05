@@ -1,10 +1,9 @@
 package WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental;
 
 import API.componente.EntradaSimples;
-import API.componente.SelecionaUm;
 import API.transacoes.cadastro_pessoa.fundamental.ApropriacaoAgentesAba;
 import API.componente.Aba;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

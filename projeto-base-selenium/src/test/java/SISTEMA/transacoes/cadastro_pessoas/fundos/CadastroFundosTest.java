@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_pessoas.fundos;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundos.CadastroFundosPage;
 import org.junit.Test;
 

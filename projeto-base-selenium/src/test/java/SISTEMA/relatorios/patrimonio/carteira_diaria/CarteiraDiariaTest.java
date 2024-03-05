@@ -1,6 +1,6 @@
 package SISTEMA.relatorios.patrimonio.carteira_diaria;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class CarteiraDiariaTest extends BaseTest {

@@ -4,7 +4,7 @@ import API.componente.Aba;
 import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
 import API.transacoes.renda_fixa.operacoes_compromissadas.LastroDeCompraAba;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 
 public class LastroDeCompraAbaImpl extends BasePage implements LastroDeCompraAba {
     @Override

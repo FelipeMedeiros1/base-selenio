@@ -1,6 +1,6 @@
 package WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundos;
 
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

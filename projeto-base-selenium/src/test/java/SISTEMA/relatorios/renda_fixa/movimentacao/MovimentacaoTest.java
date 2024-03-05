@@ -1,6 +1,6 @@
 package SISTEMA.relatorios.renda_fixa.movimentacao;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class MovimentacaoTest extends BaseTest {

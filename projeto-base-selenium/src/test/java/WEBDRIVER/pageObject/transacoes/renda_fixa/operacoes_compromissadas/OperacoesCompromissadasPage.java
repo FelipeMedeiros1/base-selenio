@@ -4,7 +4,7 @@ import API.transacoes.renda_fixa.operacoes_compromissadas.DadosDaMovimentacaoAba
 import API.transacoes.renda_fixa.operacoes_compromissadas.LastroDeCompraAba;
 import API.transacoes.renda_fixa.operacoes_compromissadas.LastroDeVendaAba;
 import API.transacoes.renda_fixa.operacoes_compromissadas.OperacoesCompromissadas;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 
 

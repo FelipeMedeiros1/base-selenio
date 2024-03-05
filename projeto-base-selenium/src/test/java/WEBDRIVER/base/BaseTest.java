@@ -1,7 +1,7 @@
-package WEBDRIVER.base.baseTest;
+package WEBDRIVER.base;
 
 import WEBDRIVER.componentes.Espera;
-import WEBDRIVER.config.menu.propriedades.LoginPage;
+import WEBDRIVER.pageObject.login.LoginPage;
 import SISTEMA.config.servicos.utils.ConfigReader;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

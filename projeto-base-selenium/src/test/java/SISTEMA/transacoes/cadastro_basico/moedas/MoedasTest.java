@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_basico.moedas;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import WEBDRIVER.pageObject.transacoes.cadastros_basicos.moedas.MoedaAlteracaoPage;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

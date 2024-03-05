@@ -4,7 +4,7 @@ import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
 import API.componente.SelecionaVarios;
 import API.relatorio.patrimonio.CarteiraDiaria;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

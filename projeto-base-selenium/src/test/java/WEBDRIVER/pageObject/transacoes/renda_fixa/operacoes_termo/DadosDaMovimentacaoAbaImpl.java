@@ -5,7 +5,7 @@ import API.componente.Click;
 import API.componente.EntradaSimples;
 import API.componente.SelecionaUm;
 import API.transacoes.renda_fixa.operacoes_termo.DadosDeMovimentacaoAba;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

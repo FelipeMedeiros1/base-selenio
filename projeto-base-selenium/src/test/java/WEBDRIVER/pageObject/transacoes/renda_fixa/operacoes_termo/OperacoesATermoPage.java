@@ -4,7 +4,7 @@ package WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_termo;
 import API.transacoes.renda_fixa.operacoes_termo.CustodiaAba;
 import API.transacoes.renda_fixa.operacoes_termo.DadosDeMovimentacaoAba;
 import API.transacoes.renda_fixa.operacoes_termo.OperacoesATermo;
-import WEBDRIVER.base.basePage.BasePage;
+import WEBDRIVER.base.BasePage;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 
 public class OperacoesATermoPage extends BasePage implements OperacoesATermo {

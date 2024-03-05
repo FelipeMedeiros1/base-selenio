@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.processamento.processamentoContabil;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class ProcessamentoContabilTest extends BaseTest {

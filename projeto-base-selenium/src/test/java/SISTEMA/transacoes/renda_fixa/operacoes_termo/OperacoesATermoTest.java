@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_termo;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import org.junit.Test;
 
 public class OperacoesATermoTest extends BaseTest {

@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_pessoas.patrimonio;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.patrimonio.CadastroPatrimonioPage;
 import org.junit.Test;
 

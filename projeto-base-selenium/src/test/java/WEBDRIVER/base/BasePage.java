@@ -1,4 +1,4 @@
-package WEBDRIVER.base.basePage;
+package WEBDRIVER.base;
 
 import API.componente.*;
 import WEBDRIVER.componentes.CheckBox;

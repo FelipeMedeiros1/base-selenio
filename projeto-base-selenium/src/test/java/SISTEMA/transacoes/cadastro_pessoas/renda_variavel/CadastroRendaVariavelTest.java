@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.cadastro_pessoas.renda_variavel;
 
-import WEBDRIVER.base.baseTest.BaseTest;
+import WEBDRIVER.base.BaseTest;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.renda_variavel.CadastroRendaVariavelPage;
 import org.junit.Test;
 
