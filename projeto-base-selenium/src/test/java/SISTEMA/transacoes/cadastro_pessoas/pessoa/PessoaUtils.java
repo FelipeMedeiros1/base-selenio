@@ -1,10 +1,11 @@
 package SISTEMA.transacoes.cadastro_pessoas.pessoa;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.pessoa.PessoaPage;
 
-import static WEBDRIVER.componentes.CapturaDeTela.evidencia;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> {
 
@@ -17,29 +18,35 @@ public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> 
         modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Pessoa", Pessoa.class);
 
         page.codigo(modeloDeCadastro.getCodigo());
-        evidencia("Pessoa","codigo");
+        evidencia("Pessoa", "codigo");
         page.tipoDaPessoa(modeloDeCadastro.getTipoDaPessoa());
-        evidencia("Pessoa","tipoDaPessoa");
+        evidencia("Pessoa", "tipoDaPessoa");
         page.razaoSocial(modeloDeCadastro.getRazaoSocial());
-        evidencia("Pessoa","razaoSocial");
-        page .nomeFantasia(modeloDeCadastro.getNomeFantasia());
-        evidencia("Pessoa","nomeFantasia");
-        page .cnpj(modeloDeCadastro.getCnpj());
-        evidencia("Pessoa","cnpj");
-        page .localidade(modeloDeCadastro.getLocalidade());
-        evidencia("Pessoa","localidade");
-        page .setorDeAtividade(modeloDeCadastro.getSetorDeAtividade());
+        evidencia("Pessoa", "razaoSocial");
+        page.nomeFantasia(modeloDeCadastro.getNomeFantasia());
+        evidencia("Pessoa", "nomeFantasia");
+        page.cnpj(modeloDeCadastro.getCnpj());
+        evidencia("Pessoa", "cnpj");
+        page.localidade(modeloDeCadastro.getLocalidade());
+        evidencia("Pessoa", "localidade");
+        page.setorDeAtividade(modeloDeCadastro.getSetorDeAtividade());
         page.status(modeloDeCadastro.getStatus());
-        evidencia("Pessoa","status");
+        evidencia("Pessoa", "status");
 
     }
 
     @Override
     public PessoaUtils executarTeste(Pessoa modeloDeCadastro, String chavePrimaria) {
-        PessoaPage page = new PessoaPage();
-        page.acessaPaginaPessoas();
-        preencheDados(page, modeloDeCadastro, chavePrimaria);
-        page.confirmaOperacao();
-        return this;
+        try {
+            PessoaPage page = new PessoaPage();
+            page.acessaPagina();
+            preencheDados(page, modeloDeCadastro, chavePrimaria);
+            page.confirmaOperacao("Pessoa");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            adicionarLogDeFalha("Pessoa");
+        }
+        return null;
     }
 }

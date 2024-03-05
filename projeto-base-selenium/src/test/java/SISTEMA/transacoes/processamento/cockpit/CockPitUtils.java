@@ -1,9 +1,12 @@
 package SISTEMA.transacoes.processamento.cockpit;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import WEBDRIVER.componentes.CapturaDeTela;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.processamento.cockpit.CockPitPage;
+
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
+
 
 public class CockPitUtils extends UtilitarioCadastroTestCase<CockPit, CockPitPage> {
 
@@ -16,20 +19,26 @@ public class CockPitUtils extends UtilitarioCadastroTestCase<CockPit, CockPitPag
         modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CockPit", CockPit.class);
 
         page.dataProcessamento(modeloDeCadastro.getDataProcessamento());
-        new CapturaDeTela().evidencia("CockPit","preenchendo-dataProcessamento");
+        evidencia("CockPit","preenchendo-dataProcessamento");
         page.tipoProcessamennto(modeloDeCadastro.getTipoProcessamennto());
-        new CapturaDeTela().evidencia("CockPit","preenchendo-tipoProcessamennto");
+        evidencia("CockPit","preenchendo-tipoProcessamennto");
         page.carteira(modeloDeCadastro.getCarteira());
-        new CapturaDeTela().evidencia("CockPit","preenchendo-carteira");
+        evidencia("CockPit","preenchendo-carteira");
         page.statusProcessamento(modeloDeCadastro.getStatusProcessamento());
     }
 
     @Override
     public CockPitUtils executarTeste(CockPit modeloDeCadastro, String chavePrimaria) {
+        try {
         CockPitPage page = new CockPitPage();
         page.acessaPaginaCockPit();
         preencheDados(page, modeloDeCadastro, chavePrimaria);
         page.pesquisaResultado();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            adicionarLogDeFalha("CockPit");
+        }
 
         return this;
     }

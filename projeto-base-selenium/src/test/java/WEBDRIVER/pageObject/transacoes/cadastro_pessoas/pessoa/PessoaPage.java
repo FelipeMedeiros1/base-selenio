@@ -17,7 +17,7 @@ public class PessoaPage extends BasePage {
     @FindBy(id = "mainForm:accessibilityDropdown:campo")private WebElement status;
     //endregion
 
-    public PessoaPage acessaPaginaPessoas(){
+    public PessoaPage acessaPagina(){
         new Acessa().cadastroPessoas();
         inserir();
         return this;

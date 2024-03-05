@@ -1,7 +1,7 @@
 package SISTEMA.transacoes.renda_fixa.operacoe_compromisadas;
 
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_compromissadas.OperacoesCompromissadasPage;
 
 public class OperacoesCompromissadasUtils extends UtilitarioCadastroTestCase<OperacoesCompromissadas, OperacoesCompromissadasPage> {

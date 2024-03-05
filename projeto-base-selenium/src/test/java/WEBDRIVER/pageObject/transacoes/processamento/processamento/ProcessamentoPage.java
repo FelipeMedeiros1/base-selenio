@@ -5,10 +5,10 @@ import API.componente.SelecionaUm;
 import API.componente.SelecionaVarios;
 import API.transacoes.processamento.Processamento;
 import WEBDRIVER.base.basePage.BasePage;
-import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 public class ProcessamentoPage extends BasePage implements Processamento {
     //region
@@ -34,19 +34,14 @@ public class ProcessamentoPage extends BasePage implements Processamento {
 
     public void acessaPagina() {
         new Acessa().processamento();
-
     }
-
-
 
     public SelecionaVarios modulos(String... valores) {
         return selecionaVarios(selecionaModulos, incluirModulos, valores);
-
     }
 
     public SelecionaVarios tipoDeProcessamento(String... valores) {
         return selecionaVarios(tipoDeProcessamento, incluir, valores);
-
     }
 
     public EntradaSimples dataInicial(String dataInicial) {
@@ -69,18 +64,13 @@ public class ProcessamentoPage extends BasePage implements Processamento {
 
     }
 
-    public void executarProcessamento() {
-        confirmar();
-        scrollParaBaixoAteEncontrar(selecionaGrid);
-        selecionaGrid.click();
-        confirmar();
-        new CapturaDeTela().evidencia("processamento","Finalizando-teste");
-        clicarBotaoOk();
+    public void executar() {
+       executarProcessamento(selecionaGrid,"Processamento");
     }
 
-    public void executarProcessamentoComPreview() {
+    public void executarComPreview() {
         confirmar();
-        scrollParaBaixoAteEncontrar(selecionaGrid);
+        rolarParaBaixoAteEncontrar(selecionaGrid);
         selecionaGrid.click();
         confirmar();
         clicarBotaoOk();

@@ -15,15 +15,17 @@ import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public class ComboBox implements SelecionaUm, SelecionaVarios {
 
-    public void seleciona(WebElement element, String value) {
-         new Select(element).selectByVisibleText(value);
+    public void seleciona(WebElement element, String valor) {
+         new Select(element).selectByVisibleText(valor);
+        new Espera().esperaPor(1000);
+
     }
     public void seleciona(String id, String valor) {
         WebElement element = getDriver().findElement(By.id(id));
         Select combo = new Select(element);
         combo.selectByVisibleText(valor);
         String valorAtual = combo.getFirstSelectedOption().getText();
-        new Espera().esperaPor(1000);
+        new Espera().esperaPor(1500);
         if (valorAtual.equals(valor)) {
             throw new RuntimeException("O texto não foi persistido corretamente.");
         }

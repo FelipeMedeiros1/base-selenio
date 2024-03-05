@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.cadastro_pessoas.fundamental;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental.FundamentalPage;
 
-import static WEBDRIVER.componentes.CapturaDeTela.evidencia;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
+
 
 public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, FundamentalPage> {
 
@@ -36,11 +38,16 @@ public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, Fu
 
     @Override
     public FundamentalUtils executarTeste(Fundamental modeloDeCadastro, String chavePrimaria) {
-        FundamentalPage page = new FundamentalPage();
-        page.acessaPagina();
-        preencheDados(page, modeloDeCadastro, chavePrimaria);
-        page.confirmaOperacao("Fundamental");
+        try {
+            FundamentalPage page = new FundamentalPage();
+            page.acessaPagina();
+            preencheDados(page, modeloDeCadastro, chavePrimaria);
+            page.confirmaOperacao("Fundamental");
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            adicionarLogDeFalha("Fundamental");
+        }
         return this;
     }
 }

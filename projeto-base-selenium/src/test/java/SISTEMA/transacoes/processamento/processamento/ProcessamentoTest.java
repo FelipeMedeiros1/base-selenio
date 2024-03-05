@@ -11,5 +11,10 @@ public class ProcessamentoTest extends BaseTest {
         new ProcessamentoUtils ("ProcessamentoTest")
                 .executarTeste(processamento,"P1");
 
+        new ProcessamentoUtils ("ProcessamentoTest")
+                .executarTeste(processamento,"P1");
+
+
+
     }
 }

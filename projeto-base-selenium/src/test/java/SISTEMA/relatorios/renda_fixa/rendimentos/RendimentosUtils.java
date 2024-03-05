@@ -1,7 +1,7 @@
 package SISTEMA.relatorios.renda_fixa.rendimentos;
 
-import SISTEMA.propriedades.utils.UtilitarioRelatorioTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioRelatorioTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.relatorios.renda_fixa.rendimentos.RendimentosPage;
 
 public class RendimentosUtils extends UtilitarioRelatorioTestCase<Rendimentos,RendimentosPage> {

@@ -17,8 +17,7 @@ import static org.junit.runners.Suite.*;
         CockPitTest.class,
         BloqueioELiberacaoTest.class,
         CarteiraDiariaTest.class,
-        MoedasTest.class,
-        Movimentacao.class
+        MoedasTest.class
 
 })
 

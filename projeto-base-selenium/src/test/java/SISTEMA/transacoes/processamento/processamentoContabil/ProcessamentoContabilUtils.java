@@ -1,6 +1,6 @@
 package SISTEMA.transacoes.processamento.processamentoContabil;
 
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.processamento.processamento_contabil.ProcessamentoContabilPage;
 
 public class ProcessamentoContabilUtils {

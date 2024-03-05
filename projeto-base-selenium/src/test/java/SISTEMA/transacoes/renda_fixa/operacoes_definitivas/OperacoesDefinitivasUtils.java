@@ -1,7 +1,7 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_definitivas;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas.OperacoesDefinitivasPage;
 
 public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<OperacoesDefinitivas, OperacoesDefinitivasPage> {

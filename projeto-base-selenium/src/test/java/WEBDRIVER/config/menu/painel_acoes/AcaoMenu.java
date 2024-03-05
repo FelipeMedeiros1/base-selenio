@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.HashMap;
 import java.util.Map;
 
-import static WEBDRIVER.componentes.CapturaDeTela.evidencia;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public class AcaoMenu {
@@ -35,20 +35,27 @@ public class AcaoMenu {
         Botao b = new Botao();
         b.clicar("mainForm:removeButton");
         b.clicar("messageForm:painelMensagensConfirmDialogButton");
-        Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new ResultadoMensagem().validaMensagem("messageContent"));
+        Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new Assertivas().validaMensagem("messageContent"));
     }
 
     public void excluir(String nomeDoArquivo) {
         esperaAjaxTerminar();
         Botao b = new Botao();
         b.clicar("mainForm:removeButton");
-        new CapturaDeTela().evidencia(nomeDoArquivo, "Teste-finalizado");
+        evidencia(nomeDoArquivo, "Teste-finalizado");
         b.clicar("messageForm:painelMensagensConfirmDialogButton");
-        Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new ResultadoMensagem().validaMensagem("messageContent"));
+        Assert.assertEquals("1 remoção(ões) realizada(s) com sucesso.", new Assertivas().validaMensagem("messageContent"));
     }
 
     public void confirmar() {
         esperaAjaxTerminar();
+        new Botao().clicar("mainForm:confirmButton");
+        esperaPor(1000);
+    }
+
+    public void confirmar(String nomeDoTeste) {
+        esperaAjaxTerminar();
+        evidencia(nomeDoTeste, "Teste-finalizado");
         new Botao().clicar("mainForm:confirmButton");
         esperaPor(1000);
     }
@@ -65,24 +72,23 @@ public class AcaoMenu {
         linkDownload.click();
         esperaPor(1000);
 
-
     }
 
     public void confirmaOperacao() {
         esperaAjaxTerminar();
         confirmar();
         String mensagemEsperada = "Operação realizada com sucesso!";
-        String mensagemAtual = new ResultadoMensagem().validaMensagem("messageContent");
+        String mensagemAtual = new Assertivas().validaMensagem("messageContent");
         Assert.assertTrue(mensagemAtual.startsWith(mensagemEsperada));
         clicarBotaoOk();
     }
 
-    public void confirmaOperacao(String nomeDoArquivo) {
+    public void confirmaOperacao(String nomeDoTeste) {
         esperaAjaxTerminar();
         confirmar();
-        evidencia(nomeDoArquivo, "Teste-finalizado");
+        evidencia(nomeDoTeste, "Teste-finalizado");
         String mensagemEsperada = "Operação realizada com sucesso!";
-        String mensagemAtual = new ResultadoMensagem().validaMensagem("messageContent");
+        String mensagemAtual = new Assertivas().validaMensagem("messageContent");
         Assert.assertTrue(mensagemAtual.startsWith(mensagemEsperada));
         clicarBotaoOk();
     }
@@ -95,6 +101,7 @@ public class AcaoMenu {
         esperaAjaxTerminar();
         clicar(el);
     }
+
     public void incluirSelecionados(String id) {
         esperaAjaxTerminar();
         clicar(id);
@@ -110,6 +117,7 @@ public class AcaoMenu {
         esperaElementoSerClicavel(el);
         new Botao().clicar(el);
     }
+
     public void clicar(String id) {
         rolarParaBaixoAteEncontrar(id);
         esperaElementoSerClicavel(id);
@@ -161,6 +169,7 @@ public class AcaoMenu {
         if (input.isEnabled()) {
             new CampoTexto().preenche(input, texto);
             esperaTextoEstarPresente(input, texto);
+            new Assertivas().assertivas(texto, input);
         }
         return this;
     }
@@ -326,5 +335,23 @@ public class AcaoMenu {
     public boolean verificaSeTextoEstaPresente(String texto) {
         return getDriver().getPageSource().contains(texto);
     }
+
+    public void executarProcessamento(WebElement selecionaGrid, String processamento) {
+        confirmar();
+        rolarParaBaixoAteEncontrar(selecionaGrid);
+        selecionaGrid.click();
+        confirmar();
+        evidencia(processamento, "teste-finalizado");
+        clicarBotaoOk();
+    }
+    public void executarProcessamento(String selecionaGrid, String processamento) {
+        confirmar();
+        rolarParaBaixoAteEncontrar(selecionaGrid);
+        clicar(selecionaGrid);
+        confirmar();
+        evidencia(processamento, "teste-finalizado");
+        clicarBotaoOk();
+    }
+
 
 }

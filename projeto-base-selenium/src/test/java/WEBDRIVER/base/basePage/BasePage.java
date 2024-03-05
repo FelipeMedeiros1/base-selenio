@@ -39,6 +39,10 @@ public abstract class BasePage {
         new AcaoMenu().confirmar();
     }
 
+    public void confirmar(String nomeDoTeste) {
+        new AcaoMenu().confirmar(nomeDoTeste);
+    }
+
     public void confirmarDownload() {
         new AcaoMenu().confirmarDownload();
     }
@@ -51,6 +55,14 @@ public abstract class BasePage {
         new AcaoMenu().confirmaOperacao(nomeDoArquivo);
     }
 
+    public void executarProcessamento(WebElement selecinaGrid, String processmento) {
+        new AcaoMenu().executarProcessamento(selecinaGrid, processmento);
+    }
+
+    public void executarProcessamento(String selecinaGrid, String processmento) {
+        new AcaoMenu().executarProcessamento(selecinaGrid, processmento);
+    }
+
     protected void clicarBotaoOk() {
         new AcaoMenu().clicarBotaoOk();
     }
@@ -58,6 +70,7 @@ public abstract class BasePage {
     protected void esperaElementoSerClicavel(WebElement elemento) {
         new AcaoMenu().esperaElementoSerClicavel(elemento);
     }
+
     protected void esperaElementoSerClicavel(String id) {
         new AcaoMenu().esperaElementoSerClicavel(id);
     }
@@ -106,6 +119,7 @@ public abstract class BasePage {
         new AcaoMenu().selecionaVarios(elemento, incluir, valores);
         return null;
     }
+
     protected SelecionaVarios selecionaVarios(String id, String incluir, String... valores) {
         new AcaoMenu().selecionaVarios(id, incluir, valores);
         return null;
@@ -125,6 +139,7 @@ public abstract class BasePage {
         new AcaoMenu().clicar(el);
         return null;
     }
+
     protected Click clicar(String id) {
         new AcaoMenu().clicar(id);
         return null;
@@ -134,14 +149,17 @@ public abstract class BasePage {
         new AcaoMenu().selecionaAba(nomeAba);
         return null;
     }
+
     protected Aba selecionaAba(String nomeAba) {
         new AcaoMenu().selecionaAba(nomeAba);
         return null;
     }
 
-    protected void scrollParaBaixoAteEncontrar(WebElement elemento) {
+    protected void rolarParaBaixoAteEncontrar(WebElement elemento) {
         new AcaoMenu().rolarParaBaixoAteEncontrar(elemento);
-    }  protected void scrollParaBaixoAteEncontrar(String id) {
+    }
+
+    protected void rolarParaBaixoAteEncontrar(String id) {
         new AcaoMenu().rolarParaBaixoAteEncontrar(id);
     }
 

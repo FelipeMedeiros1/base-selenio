@@ -1,10 +1,11 @@
 package WEBDRIVER.pageObject.transacoes.processamento.cockpit;
 
 import WEBDRIVER.base.basePage.BasePage;
-import WEBDRIVER.componentes.CapturaDeTela;
 import WEBDRIVER.config.menu.painel_acoes.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 public class CockPitPage extends BasePage {
     //region
@@ -46,13 +47,13 @@ public class CockPitPage extends BasePage {
 
     public void pesquisaResultado(){
         confirmar();
-        scrollParaBaixoAteEncontrar(resultado);
+        rolarParaBaixoAteEncontrar(resultado);
         esperaElementoSerClicavel(resultado);
         resultado.click();
-        scrollParaBaixoAteEncontrar(check);
+        rolarParaBaixoAteEncontrar(check);
         check.click();
-        new CapturaDeTela().evidencia("CockPit","Finalizando-teste");
-        scrollParaBaixoAteEncontrar(msg);
+        rolarParaBaixoAteEncontrar(msg);
+        evidencia("CockPit","Teste-finalizado");
 //        validaMensagem("Processamento realizado com sucesso.",msg);
     }
 }

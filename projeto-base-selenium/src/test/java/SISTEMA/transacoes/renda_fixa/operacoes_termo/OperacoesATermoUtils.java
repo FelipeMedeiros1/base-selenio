@@ -1,12 +1,14 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_termo;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_termo.OperacoesATermoPage;
 
-import static WEBDRIVER.componentes.CapturaDeTela.evidencia;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
-public class OperacoesATermoUtils extends UtilitarioCadastroTestCase<OperacoesATermo,OperacoesATermoPage> {
+
+public class OperacoesATermoUtils extends UtilitarioCadastroTestCase<OperacoesATermo, OperacoesATermoPage> {
 
     public OperacoesATermoUtils(String nomeDaPlanilha) {
         super(nomeDaPlanilha);
@@ -15,67 +17,71 @@ public class OperacoesATermoUtils extends UtilitarioCadastroTestCase<OperacoesAT
 
     @Override
     protected void preencheDados(OperacoesATermoPage page, OperacoesATermo modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro =
-                LeitorPlanilha.carregarDados(getNomeDaPlanilha(),chavePrimaria,"OperacoesATermo", OperacoesATermo.class);
+        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesATermo", OperacoesATermo.class);
 
         page.dadosDaMovimentacao().modalidadeDoMovimento(modeloDeCadastro.getModalidadeDoMovimento());
-        evidencia("OperacoesATermo","modalidadeDoMovimento");
+        evidencia("OperacoesATermo", "modalidadeDoMovimento");
         page.dadosDaMovimentacao().dataDoMovimento(modeloDeCadastro.getDataDoMovimento());
-        evidencia("OperacoesATermo","dataDoMovimento");
+        evidencia("OperacoesATermo", "dataDoMovimento");
         page.dadosDaMovimentacao().dataDaCompra(modeloDeCadastro.getDataDaCompra());
-        evidencia("OperacoesATermo","dataDaCompra");
+        evidencia("OperacoesATermo", "dataDaCompra");
         page.dadosDaMovimentacao().dataDoVencimentoDoTermo(modeloDeCadastro.getDataDoVencimentoDoTermo());
-        evidencia("OperacoesATermo","dataDoVencimentoDoTermo");
+        evidencia("OperacoesATermo", "dataDoVencimentoDoTermo");
         page.dadosDaMovimentacao().carteira(modeloDeCadastro.getCarteira());
-        evidencia("OperacoesATermo","carteira");
+        evidencia("OperacoesATermo", "carteira");
         page.dadosDaMovimentacao().titulo(modeloDeCadastro.getTitulo());
-        evidencia("OperacoesATermo","titulo");
+        evidencia("OperacoesATermo", "titulo");
         page.dadosDaMovimentacao().emissao(modeloDeCadastro.getEmissao());
-        evidencia("OperacoesATermo","emissao");
+        evidencia("OperacoesATermo", "emissao");
         page.dadosDaMovimentacao().subsegmentoPrevic(modeloDeCadastro.getSubsegmentoPrevic());
-        evidencia("OperacoesATermo","subsegmentoPrevic");
+        evidencia("OperacoesATermo", "subsegmentoPrevic");
         page.dadosDaMovimentacao().estoque(modeloDeCadastro.getEstoque());
-        evidencia("OperacoesATermo","estoque");
+        evidencia("OperacoesATermo", "estoque");
         page.dadosDaMovimentacao().nivelDeRisco(modeloDeCadastro.getNivelDeRisco());
-        evidencia("OperacoesATermo","nivelDeRisco");
+        evidencia("OperacoesATermo", "nivelDeRisco");
         page.dadosDaMovimentacao().ativaPassiva(modeloDeCadastro.getAtivaPassiva());
-        evidencia("OperacoesATermo","ativaPassiva");
+        evidencia("OperacoesATermo", "ativaPassiva");
         page.dadosDaMovimentacao().categoria(modeloDeCadastro.getCategoria());
-        evidencia("OperacoesATermo","categoria");
+        evidencia("OperacoesATermo", "categoria");
         page.dadosDaMovimentacao().riscoBeneficio(modeloDeCadastro.getRiscoBeneficio());
-        evidencia("OperacoesATermo","riscoBeneficio");
+        evidencia("OperacoesATermo", "riscoBeneficio");
         page.dadosDaMovimentacao().condicaoDeNegociacao(modeloDeCadastro.getRiscoBeneficio());
-        evidencia("OperacoesATermo","condicaoDeNegociacao");
+        evidencia("OperacoesATermo", "condicaoDeNegociacao");
         page.dadosDaMovimentacao().taxaDeNegociacao(modeloDeCadastro.getTaxaDeNegociacao());
-        evidencia("OperacoesATermo","taxaDeNegociacao");
+        evidencia("OperacoesATermo", "taxaDeNegociacao");
         page.dadosDaMovimentacao().pu(modeloDeCadastro.getPu());
-        evidencia("OperacoesATermo","pu");
+        evidencia("OperacoesATermo", "pu");
         page.dadosDaMovimentacao().quantidade(modeloDeCadastro.getQuantidade());
-        evidencia("OperacoesATermo","quantidade");
+        evidencia("OperacoesATermo", "quantidade");
         page.dadosDaMovimentacao().calcular();
         page.dadosDaMovimentacao().rendimento(modeloDeCadastro.getRendimento());
-        evidencia("OperacoesATermo","rendimento");
+        evidencia("OperacoesATermo", "rendimento");
         page.dadosDaMovimentacao().irDaOperacao(modeloDeCadastro.getIrDaOperacao());
-        evidencia("OperacoesATermo","irDaOperacao");
+        evidencia("OperacoesATermo", "irDaOperacao");
         page.dadosDaMovimentacao().iofDaOperacao(modeloDeCadastro.getIofDaOperacao());
-        evidencia("OperacoesATermo","iofDaOperacao");
+        evidencia("OperacoesATermo", "iofDaOperacao");
         page.dadosDaMovimentacao().eventoEmAtraso(modeloDeCadastro.getEventoEmAtraso());
-        evidencia("OperacoesATermo","eventoEmAtraso");
-
+        evidencia("OperacoesATermo", "eventoEmAtraso");
         page.custodia().custodiante(modeloDeCadastro.getCustodiante());
-        evidencia("OperacoesATermo","custodiante");
+        evidencia("OperacoesATermo", "custodiante");
         page.custodia().localDeCustodia(modeloDeCadastro.getLocalDeCustodia());
-        evidencia("OperacoesATermo","localDeCustodia");
+        evidencia("OperacoesATermo", "localDeCustodia");
         page.custodia().contaDeCustodia(modeloDeCadastro.getContaDeCustodia());
-        evidencia("OperacoesATermo","contaDeCustodia");
+        evidencia("OperacoesATermo", "contaDeCustodia");
     }
 
     @Override
-    public  OperacoesATermoUtils executarTeste(OperacoesATermo modeloDeCadastro, String chavePrimaria) {
-        OperacoesATermoPage page = new OperacoesATermoPage();
-        page.acessaPagina();
-        preencheDados(page,modeloDeCadastro,chavePrimaria);
-        page.confirmaOperacao("OperacoesATermo");
+    public OperacoesATermoUtils executarTeste(OperacoesATermo modeloDeCadastro, String chavePrimaria) {
+        try {
+            OperacoesATermoPage page = new OperacoesATermoPage();
+            page.acessaPagina();
+            preencheDados(page, modeloDeCadastro, chavePrimaria);
+            page.confirmaOperacao("OperacoesATermo");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            adicionarLogDeFalha("OperacoesATermo");
+        }
         return this;
     }
 }

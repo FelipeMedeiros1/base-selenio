@@ -1,9 +1,12 @@
 package SISTEMA.transacoes.fundos.movimentacao;
 
-import SISTEMA.propriedades.utils.UtilitarioCadastroTestCase;
-import SISTEMA.propriedades.leitorplanilha.LeitorPlanilha;
-import WEBDRIVER.componentes.CapturaDeTela;
+import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
+import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.transacoes.fundos.movimentacao.MovimentacaoPage;
+
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
+
 
 public class MovimentacaoFdsUtils extends UtilitarioCadastroTestCase<Movimentacao, MovimentacaoPage> {
     public MovimentacaoFdsUtils(String nomeDaPlanilha) {
@@ -15,36 +18,41 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastroTestCase<Movimentaca
         modeloDeCadastro =
                 LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Movimentacao", Movimentacao.class);
         page.dataDoMovimento(modeloDeCadastro.getDataDoMovimento());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-dataDoMovimento");
+        evidencia("Movimentacao","preenchendo-dataDoMovimento");
         page.carteira(modeloDeCadastro.getCarteira());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-carteira");
+        evidencia("Movimentacao","preenchendo-carteira");
         page.fundo(modeloDeCadastro.getFundo());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-fundo");
+        evidencia("Movimentacao","preenchendo-fundo");
         page.modalidadeDoMovimento(modeloDeCadastro.getModalidadeDoMovimento());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-modalidadeDoMovimento");
+        evidencia("Movimentacao","preenchendo-modalidadeDoMovimento");
         page.subsegmentoPREVIC(modeloDeCadastro.getSubsegmentoPREVIC());
         page.dataDaAplicacao(modeloDeCadastro.getDataDaAplicacao());
         page.dataDeCotizacao(modeloDeCadastro.getDataDeCotizacao());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-dataDeCotizacao");
+        evidencia("Movimentacao","preenchendo-dataDeCotizacao");
         page.liquidacaoDoMovimento(modeloDeCadastro.getLiquidacaoDoMovimento());
         if (modeloDeCadastro.getEstoque() != "" || modeloDeCadastro.getEstoque() != null) {
             page.estoque(modeloDeCadastro.getEstoque());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-estoque");
+            evidencia("Movimentacao","preenchendo-estoque");
         }
         page.quantidade(modeloDeCadastro.getQuantidade());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-quantidade");
+        evidencia("Movimentacao","preenchendo-quantidade");
         page.financeiro(modeloDeCadastro.getFinanceiro());
-        new CapturaDeTela().evidencia("Movimentacao","preenchendo-financeiro");
+        evidencia("Movimentacao","preenchendo-financeiro");
 
     }
 
     @Override
     public MovimentacaoFdsUtils executarTeste(Movimentacao modeloDeCadastro, String chavePrimaria) {
-        MovimentacaoPage page = new MovimentacaoPage();
-        page.acessaPagina();
-        preencheDados(page, modeloDeCadastro, chavePrimaria);
-        page.confirmaOperacao("Movimentacao");
+        try {
+            MovimentacaoPage page = new MovimentacaoPage();
+            page.acessaPagina();
+            preencheDados(page, modeloDeCadastro, chavePrimaria);
+            page.confirmaOperacao("Movimentacao");
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            adicionarLogDeFalha("Movimentacao");
+        }
         return this;
     }
 }

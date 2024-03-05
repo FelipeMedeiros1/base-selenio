@@ -14,4 +14,9 @@
       <module name="test-selenium" target="17" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="test-selenium" options="--add-exports java.base/sun.security.ssl=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
