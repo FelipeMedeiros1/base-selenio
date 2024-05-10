@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 public class ProcessamentoPage extends BasePage implements Processamento {
     //region
     @FindBy(id = "mainForm:functionPickList:firstSelect")
-    private WebElement selecionaModulos;
+    private WebElement modulos;
     @FindBy(id = "mainForm:functionPickList:includeSelected")
     private WebElement incluirModulos;
     @FindBy(id = "mainForm:evaluationSituationPickList:firstSelect")
@@ -21,11 +21,11 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     @FindBy(id = "mainForm:evaluationSituationPickList:includeSelected")
     private WebElement incluir;
     @FindBy(id = "mainForm:initialDateCalendar:campoInputDate")
-    private WebElement inicio;
+    private WebElement dataInicial;
     @FindBy(id = "mainForm:finalDateCalendar:campoInputDate")
-    private WebElement fim;
+    private WebElement dataFinal;
     @FindBy(id = "mainForm:portfolioMnemonicCriteria:criteriaOperator:campo")
-    private WebElement filtro;
+    private WebElement filtroCarteira;
     @FindBy(id = "mainForm:portfolioMnemonicCriteria:criteriaInputText:campo")
     private WebElement carteira;
     @FindBy(id = "mainForm:dataTable1:0:processPortfolioCheckbox")
@@ -37,26 +37,26 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     }
 
     public SelecionaVarios modulos(String... valores) {
-        return selecionaVarios(selecionaModulos, incluirModulos, valores);
+        return selecionaVarios(modulos, incluirModulos, valores);
     }
 
     public SelecionaVarios tipoDeProcessamento(String... valores) {
         return selecionaVarios(tipoDeProcessamento, incluir, valores);
     }
 
-    public EntradaSimples dataInicial(String dataInicial) {
-        return preenche(inicio, dataInicial);
+    public EntradaSimples dataInicial(String valor) {
+        return preenche(dataInicial, valor);
 
     }
 
-    public EntradaSimples dataFinal(String dataFinal) {
-        return preenche(fim, dataFinal);
+    public EntradaSimples dataFinal(String valor) {
+        return preenche(dataFinal, valor);
 
     }
 
     @Override
     public SelecionaUm filtroCarteira(String valor) {
-        return selecionaUm(filtro, "Igual");
+        return selecionaUm(filtroCarteira, "Igual");
     }
 
     public EntradaSimples carteira(String valor) {
@@ -65,10 +65,11 @@ public class ProcessamentoPage extends BasePage implements Processamento {
     }
 
     public void executar() {
-       executarProcessamento(selecionaGrid,"Processamento");
+        executarProcessamento(selecionaGrid, "Processamento");
     }
 
     public void executarComPreview() {
+
         confirmar();
         rolarParaBaixoAteEncontrar(selecionaGrid);
         selecionaGrid.click();

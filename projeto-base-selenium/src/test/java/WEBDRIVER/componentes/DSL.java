@@ -97,7 +97,7 @@ public class DSL {
         return false;
     }
 
-    /********* AcaoMenu
+    /********* BasePage
      * @return************/
 
     public void clicarBotao(String id) {

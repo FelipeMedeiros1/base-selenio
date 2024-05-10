@@ -1,0 +1,31 @@
+[
+  {
+
+    "modulos": [
+      "Fundos",
+      "Patrimônio"
+    ],
+    "tipoDeProcessamento": [
+      "Abertura",
+      "Fechamento"
+    ],
+    "dataInicial": "04/01/2022",
+    "dataFinal": "07/01/2022",
+    "filtroCarteira": "Igual",
+    "carteira": "ATIVOS 60266"
+  },
+  {
+
+    "modulos": [
+      "Fundos",
+      "Patrimônio"
+    ],
+    "tipoDeProcessamento": [
+      "Fechamento"
+    ],
+    "dataInicial": "04/01/2022",
+    "dataFinal": "07/01/2022",
+    "filtroCarteira": "Igual",
+    "carteira": "ATIVOS"
+  }
+]

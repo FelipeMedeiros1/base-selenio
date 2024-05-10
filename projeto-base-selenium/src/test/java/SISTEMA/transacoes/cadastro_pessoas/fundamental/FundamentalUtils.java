@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.cadastro_pessoas.fundamental;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.fundamental.FundamentalPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 
@@ -17,7 +19,7 @@ public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, Fu
     @Override
     protected void preencheDados(FundamentalPage page, Fundamental modeloDeCadastro, String chavePrimaria) {
         modeloDeCadastro =
-                LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Fundamental", Fundamental.class);
+                LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Fundamental", Fundamental.class);
 
         page.pessoa(modeloDeCadastro.getPessoa());
         evidencia("Fundamental", "preenchendo-pessoa");
@@ -46,7 +48,7 @@ public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental, Fu
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("Fundamental");
+            logDeFalha("Fundamental");
         }
         return this;
     }

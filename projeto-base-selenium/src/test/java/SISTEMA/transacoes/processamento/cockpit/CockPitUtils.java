@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.processamento.cockpit;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.processamento.cockpit.CockPitPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 
@@ -16,7 +18,7 @@ public class CockPitUtils extends UtilitarioCadastroTestCase<CockPit, CockPitPag
 
     @Override
     protected void preencheDados(CockPitPage page, CockPit modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CockPit", CockPit.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CockPit", CockPit.class);
 
         page.dataProcessamento(modeloDeCadastro.getDataProcessamento());
         evidencia("CockPit","preenchendo-dataProcessamento");
@@ -37,7 +39,7 @@ public class CockPitUtils extends UtilitarioCadastroTestCase<CockPit, CockPitPag
 
         }catch (Exception e){
             e.printStackTrace();
-            adicionarLogDeFalha("CockPit");
+            logDeFalha("CockPit");
         }
 
         return this;

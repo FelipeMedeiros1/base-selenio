@@ -1,10 +1,11 @@
 package SISTEMA.transacoes.cadastro_basico.moedas;
 
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import WEBDRIVER.pageObject.transacoes.cadastros_basicos.moedas.MoedaConsultaPage;
 import WEBDRIVER.pageObject.transacoes.cadastros_basicos.moedas.MoedaPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 public class MoedasUtils {
@@ -16,7 +17,7 @@ public class MoedasUtils {
 
     public void incluir(Moedas modeloDeCadastro, String chavePrimaria) {
         modeloDeCadastro =
-                LeitorPlanilha.carregarDados(caminhoPlanilha, chavePrimaria, "Moedas", Moedas.class);
+                LeitorXls.carregarDados(caminhoPlanilha, chavePrimaria, "Moedas", Moedas.class);
 
         try {
             MoedaPage page = new MoedaPage();
@@ -31,7 +32,7 @@ public class MoedasUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("Moedas");
+            logDeFalha("Moedas");
         }
 
 
@@ -47,7 +48,7 @@ public class MoedasUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("Moedas");
+            logDeFalha("Moedas");
         }
     }
 

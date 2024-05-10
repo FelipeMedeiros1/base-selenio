@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_termo;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_termo.OperacoesATermoPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 
@@ -17,7 +19,7 @@ public class OperacoesATermoUtils extends UtilitarioCadastroTestCase<OperacoesAT
 
     @Override
     protected void preencheDados(OperacoesATermoPage page, OperacoesATermo modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesATermo", OperacoesATermo.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesATermo", OperacoesATermo.class);
 
         page.dadosDaMovimentacao().modalidadeDoMovimento(modeloDeCadastro.getModalidadeDoMovimento());
         evidencia("OperacoesATermo", "modalidadeDoMovimento");
@@ -80,7 +82,7 @@ public class OperacoesATermoUtils extends UtilitarioCadastroTestCase<OperacoesAT
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("OperacoesATermo");
+            logDeFalha("OperacoesATermo");
         }
         return this;
     }

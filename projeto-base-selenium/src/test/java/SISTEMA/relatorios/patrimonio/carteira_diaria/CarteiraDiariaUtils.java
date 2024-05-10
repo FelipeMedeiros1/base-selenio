@@ -1,10 +1,11 @@
 package SISTEMA.relatorios.patrimonio.carteira_diaria;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioRelatorioTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
 import WEBDRIVER.pageObject.relatorios.patrimonio.CarteiraDiariaPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDiaria, CarteiraDiariaPage> {
@@ -15,7 +16,7 @@ public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDia
 
     @Override
     protected void preencheDados(CarteiraDiariaPage page, CarteiraDiaria modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CarteiraDiaria", CarteiraDiaria.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "CarteiraDiaria", CarteiraDiaria.class);
 
         page.dataInicio(modeloDeCadastro.getDataInicio());
         page.dataFinal(modeloDeCadastro.getDataFinal());
@@ -40,7 +41,7 @@ public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDia
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("CarteiraDiaria");
+            logDeFalha("CarteiraDiaria");
         }
         return this;
 

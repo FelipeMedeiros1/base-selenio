@@ -24,7 +24,7 @@ public class RelatorioEvidenciaDeTeste {
     public static void evidencia(String nomeDoArquivoHtml, String nomeDoTeste) {
         iniciarRelatorio(nomeDoArquivoHtml);
         iniciarTeste("Teste: " + nomeDoArquivoHtml);
-        adicionarLog(nomeDoTeste);
+        log(nomeDoTeste);
         capturaTela(nomeDoArquivoHtml, nomeDoTeste);
         finalizarTeste();
     }
@@ -42,7 +42,7 @@ public class RelatorioEvidenciaDeTeste {
         test = extent.createTest(nomeDoTeste);
     }
 
-    public static void adicionarLog(String mensagem) {
+    public static void log(String mensagem) {
         mensagens.add(mensagem);
         StringBuilder mensagemFinal = new StringBuilder();
         for (String msg : mensagens) {
@@ -52,7 +52,7 @@ public class RelatorioEvidenciaDeTeste {
 
     }
 
-    public static void adicionarLogDeFalha(String nomeDoArquivo) {
+    public static void logDeFalha(String nomeDoArquivo) {
         capturaTela(nomeDoArquivo, "Teste-falhou");
         test.fail("Erro durante a execução do Teste");
         finalizarTeste();

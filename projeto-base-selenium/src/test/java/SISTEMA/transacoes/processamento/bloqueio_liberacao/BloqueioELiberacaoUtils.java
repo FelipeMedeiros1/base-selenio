@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.processamento.bloqueio_liberacao;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.processamento.bloqueio_liberacao.BloqueioELiberacaoPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 
@@ -16,7 +18,7 @@ public class BloqueioELiberacaoUtils extends UtilitarioCadastroTestCase<Bloqueio
 
     @Override
     protected void preencheDados(BloqueioELiberacaoPage page, BloqueioELiberacao modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "BloqueioEliberacao", BloqueioELiberacao.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "BloqueioEliberacao", BloqueioELiberacao.class);
 
         page.dataBloqueioLiberacao(modeloDeCadastro.getDataBloqueioLiberacao());
         evidencia("BloqueioEliberacao", "preenchendo-dataBloqueioLiberacao");
@@ -45,7 +47,7 @@ public class BloqueioELiberacaoUtils extends UtilitarioCadastroTestCase<Bloqueio
             page.confirmaOperacao("BloqueioEliberacao");
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("BloqueioEliberacao");
+            logDeFalha("BloqueioEliberacao");
         }
 
         return this;

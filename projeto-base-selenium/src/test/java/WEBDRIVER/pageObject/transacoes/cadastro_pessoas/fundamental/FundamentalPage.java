@@ -14,11 +14,11 @@ import org.openqa.selenium.support.FindBy;
 public class FundamentalPage extends BasePage implements Fundamental {
     //region
     @FindBy(id = "mainForm:peopleSuggestionInput")
-    private WebElement inputPessoa;
+    private WebElement pessoa;
     @FindBy(id = "mainForm:mnemonicTextField:campo")
-    private WebElement inputCodigo;
+    private WebElement codigo;
     @FindBy(id = "mainForm:siteDropdown:campo")
-    private WebElement selectLocalidade;
+    private WebElement localidade;
     @FindBy(id = "mainForm:grupoCarteira_PickList:firstSelect")
     private WebElement seleciona;
     @FindBy(id = "mainForm:grupoCarteira_PickList:includeSelected")
@@ -27,7 +27,7 @@ public class FundamentalPage extends BasePage implements Fundamental {
     private WebElement selecionaTodos;
 
     //endregion
-    ApropriacaoAgentesAba apropriacaoAgentesAba;
+    private ApropriacaoAgentesAba apropriacaoAgentesAba;
 
     @Override
     public void acessaPagina() {
@@ -36,18 +36,18 @@ public class FundamentalPage extends BasePage implements Fundamental {
     }
 
     @Override
-    public EntradaSimples pessoa(String pessoa) {
-        return preencheAutoComplete(inputPessoa, pessoa);
+    public EntradaSimples pessoa(String valor) {
+        return preencheAutoComplete(this.pessoa, valor);
     }
 
     @Override
-    public EntradaSimples codigo(String codigo) {
-        return preenche(inputCodigo, codigo);
+    public EntradaSimples codigo(String valor) {
+        return preenche(codigo, valor);
     }
 
     @Override
     public SelecionaUm localidade(String valor) {
-        return selecionaUm(selectLocalidade, valor);
+        return selecionaUm(localidade, valor);
     }
 
     @Override

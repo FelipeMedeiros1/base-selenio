@@ -1,7 +1,9 @@
 package SISTEMA.relatorios.renda_fixa.movimentacao;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioRelatorioTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.relatorios.renda_fixa.movimentacao.MovimentacaoPage;
 
 public class MovimentacaoUtils extends UtilitarioRelatorioTestCase<Movimentacao,MovimentacaoPage> {
@@ -10,7 +12,7 @@ public class MovimentacaoUtils extends UtilitarioRelatorioTestCase<Movimentacao,
     }
     @Override
     protected void preencheDados(MovimentacaoPage page, Movimentacao modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(),chavePrimaria,"MovimentacaoFds", Movimentacao.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(),chavePrimaria,"MovimentacaoFds", Movimentacao.class);
         page.dataInicio(modeloDeCadastro.getDataInicio());
         page.dataFinal(modeloDeCadastro.getDataFinal());
         page.modalidadeDeMovimento(modeloDeCadastro.getModalidadeDeMovimento());

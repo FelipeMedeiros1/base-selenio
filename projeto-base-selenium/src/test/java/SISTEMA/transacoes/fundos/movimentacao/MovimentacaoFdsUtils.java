@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.fundos.movimentacao;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.fundos.movimentacao.MovimentacaoPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 
@@ -16,7 +18,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastroTestCase<Movimentaca
     @Override
     protected void preencheDados(MovimentacaoPage page, Movimentacao modeloDeCadastro, String chavePrimaria) {
         modeloDeCadastro =
-                LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Movimentacao", Movimentacao.class);
+                LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Movimentacao", Movimentacao.class);
         page.dataDoMovimento(modeloDeCadastro.getDataDoMovimento());
         evidencia("Movimentacao","preenchendo-dataDoMovimento");
         page.carteira(modeloDeCadastro.getCarteira());
@@ -51,7 +53,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastroTestCase<Movimentaca
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("Movimentacao");
+            logDeFalha("Movimentacao");
         }
         return this;
     }

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLog;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.log;
 import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 
 public class CapturaDeTela {
@@ -45,7 +45,7 @@ public class CapturaDeTela {
 
             adicionarImagensAoRelatorio(nomeDoArquivo, nomeDoTeste);
         } catch (Exception e) {
-            adicionarLog("Erro durante a execução do Teste " + e.getMessage());
+            log("Erro durante a execução do Teste " + e.getMessage());
         }
     }
 
@@ -55,7 +55,7 @@ public class CapturaDeTela {
             String caminhoRelativo = "target/evidencias/" + nomeDoArquivo + "/" + nomeDoTeste + ".jpg";
             mensagemFinal.append("<img src='" + caminhoRelativo + "' width='350px' height='200px' /><br><br>");
         }
-        adicionarLog(mensagemFinal.toString());
+        log(mensagemFinal.toString());
     }
 
 

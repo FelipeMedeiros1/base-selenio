@@ -1,7 +1,9 @@
 package SISTEMA.transacoes.renda_fixa.operacoes_definitivas;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_definitivas.OperacoesDefinitivasPage;
 
 public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<OperacoesDefinitivas, OperacoesDefinitivasPage> {
@@ -11,7 +13,7 @@ public class OperacoesDefinitivasUtils extends UtilitarioCadastroTestCase<Operac
     }
     @Override
     protected void preencheDados(OperacoesDefinitivasPage page, OperacoesDefinitivas modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesDefinitivas", OperacoesDefinitivas.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesDefinitivas", OperacoesDefinitivas.class);
         page.dadosDaMovimentacao().modalidadeDoMovimento(modeloDeCadastro.getModalidadeDomovimento());
         page.dadosDaMovimentacao().dataDoMovimento(modeloDeCadastro.getDataDoMovimento());
         page.dadosDaMovimentacao().dataDaCompra(modeloDeCadastro.getDataDaCompra());

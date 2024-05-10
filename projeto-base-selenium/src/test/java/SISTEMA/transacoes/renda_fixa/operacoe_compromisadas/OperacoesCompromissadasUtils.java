@@ -1,6 +1,8 @@
 package SISTEMA.transacoes.renda_fixa.operacoe_compromisadas;
 
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
 import WEBDRIVER.pageObject.transacoes.renda_fixa.operacoes_compromissadas.OperacoesCompromissadasPage;
 
@@ -11,7 +13,7 @@ public class OperacoesCompromissadasUtils extends UtilitarioCadastroTestCase<Ope
 
     @Override
     protected void preencheDados(OperacoesCompromissadasPage page, OperacoesCompromissadas modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesCompromissadas", OperacoesCompromissadas.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "OperacoesCompromissadas", OperacoesCompromissadas.class);
 
         page.dadosDaMovimentacao().modalidadeDoMovimento(modeloDeCadastro.getModalidadeDoMovimento());
         page.dadosDaMovimentacao().dataDoMovimento(modeloDeCadastro.getDataDoMovimento());

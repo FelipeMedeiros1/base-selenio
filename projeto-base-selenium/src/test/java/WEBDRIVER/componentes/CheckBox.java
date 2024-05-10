@@ -1,7 +1,7 @@
 package WEBDRIVER.componentes;
 
 import API.componente.Flag;
-import WEBDRIVER.config.menu.painel_acoes.AcaoMenu;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,31 +10,29 @@ import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 public class CheckBox implements Flag {
 
 
-    public boolean seleciona(WebElement chk, Boolean aBoolean) {
-        if (aBoolean == true) {
-            new AcaoMenu().esperaAjaxTerminar();
+    public boolean seleciona(WebElement chk, Boolean boleano) {
+        if (boleano == true) {
+            new Espera().esperaAjaxTerminar();
             if (!chk.isSelected()) {
                 chk.click();
             }
-        } else {
-            chk.click();
         }
-        new AcaoMenu().esperaPor(1000);
+        new Espera().esperaPor(1000);
         return false;
     }
 
     @Override
-    public boolean seleciona(String id, Boolean aBoolean) {
+    public boolean seleciona(String id, Boolean boleano) {
         WebElement chk = getDriver().findElement(By.id(id));
-        if (aBoolean == true) {
-            new AcaoMenu().esperaAjaxTerminar();
+        if (boleano == true) {
+            new Espera().esperaAjaxTerminar();
             if (!chk.isSelected()) {
                 chk.click();
             }
         } else {
             chk.click();
         }
-        new AcaoMenu().esperaPor(1000);
+        new Espera().esperaPor(1000);
         return false;
     }
 

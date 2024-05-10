@@ -1,10 +1,12 @@
 package SISTEMA.transacoes.cadastro_pessoas.pessoa;
 
+
+import SISTEMA.config.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import SISTEMA.config.servicos.utils.UtilitarioCadastroTestCase;
-import SISTEMA.config.servicos.leitorplanilha.LeitorPlanilha;
+
 import WEBDRIVER.pageObject.transacoes.cadastro_pessoas.pessoa.PessoaPage;
 
-import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.adicionarLogDeFalha;
+import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.logDeFalha;
 import static SISTEMA.config.servicos.utils.RelatorioEvidenciaDeTeste.evidencia;
 
 public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> {
@@ -15,7 +17,7 @@ public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> 
 
     @Override
     protected void preencheDados(PessoaPage page, Pessoa modeloDeCadastro, String chavePrimaria) {
-        modeloDeCadastro = LeitorPlanilha.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Pessoa", Pessoa.class);
+        modeloDeCadastro = LeitorXls.carregarDados(getNomeDaPlanilha(), chavePrimaria, "Pessoa", Pessoa.class);
 
         page.codigo(modeloDeCadastro.getCodigo());
         evidencia("Pessoa", "codigo");
@@ -45,7 +47,7 @@ public class PessoaUtils extends UtilitarioCadastroTestCase<Pessoa, PessoaPage> 
 
         } catch (Exception e) {
             e.printStackTrace();
-            adicionarLogDeFalha("Pessoa");
+            logDeFalha("Pessoa");
         }
         return null;
     }
