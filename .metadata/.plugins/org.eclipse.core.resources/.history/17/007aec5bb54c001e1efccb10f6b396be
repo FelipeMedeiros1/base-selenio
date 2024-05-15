@@ -1,7 +1,7 @@
-package API.store;
+package api.store;
 
 
-import API.componente.EntradaSimples;
+import api.componente.EntradaSimples;
 
 public interface LoginStoreInterface {
 

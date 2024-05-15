@@ -1,8 +1,8 @@
-package API;
+package api;
 
-import API.componente.Carteira;
-import API.componente.SelecionaUm;
-import API.componente.SelecionaVarios;
+import api.componente.Carteira;
+import api.componente.SelecionaUm;
+import api.componente.SelecionaVarios;
 
 public interface ProcessamentoInterface {
     public SelecionaVarios<String> modulos(String... opcoes);

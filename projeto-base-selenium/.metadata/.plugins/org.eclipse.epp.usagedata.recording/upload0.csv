@@ -150,7 +150,7 @@ locale,sysinfo,,,"pt_BR",1682446793011
 processors,sysinfo,,,"8",1682446793011
 java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1682446793011
 java.runtime.version,sysinfo,,,"1.8.0_331-b09",1682446793011
-java.specification.name,sysinfo,,,"Java Platform API Specification",1682446793011
+java.specification.name,sysinfo,,,"Java Platform api Specification",1682446793011
 java.specification.vendor,sysinfo,,,"Oracle Corporation",1682446793011
 java.specification.version,sysinfo,,,"1.8",1682446793011
 java.vendor,sysinfo,,,"Oracle Corporation",1682446793011

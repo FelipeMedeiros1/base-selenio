@@ -1,4 +1,4 @@
-package API.componente;
+package api.componente;
 
 public interface Check {
     public boolean marcada();

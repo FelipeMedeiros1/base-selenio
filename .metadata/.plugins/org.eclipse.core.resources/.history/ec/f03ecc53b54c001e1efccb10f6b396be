@@ -1,4 +1,4 @@
-package API.componente;
+package api.componente;
 
 /**
  * Interface com o sistema que permite filtrar uma informação a partir da

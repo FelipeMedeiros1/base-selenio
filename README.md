@@ -15,11 +15,11 @@ Bora lá! Mas antes de decolar, certifique-se de ter as seguintes ferramentas in
 Beleza, vamos entender a bagunça organizada aqui:
 
 - `src/test/java`: Aqui é onde os testes mágicos acontecem.
-  - `API`: Interfaces que dão vida à automação.
-  - `WEBDRIVER`: Implementações das interfaces e a mágica do Selenium.
+  - `api`: Interfaces que dão vida à automação.
+  - `webdriver`: Implementações das interfaces e a mágica do Selenium.
     - `BasePage`: Classe base pra todas as outras.
-    - Classes que implementam interfaces em `API` e estendem `BasePage`.
-  - `SISTEMA`: Testes específicos pra cada pedacinho do sistema.
+    - Classes que implementam interfaces em `api` e estendem `BasePage`.
+  - `sistema`: Testes específicos pra cada pedacinho do sistema.
     - `modulo`: Cada pedacinho do sistema é um módulo.
       - `tela`: E cada tela é um submódulo.
         - `Modelo`: Tá aqui todos os detalhes da tela.
@@ -32,9 +32,9 @@ Agora ficou ainda mais fácil!
 Você pode usar o Lombok para reduzir o boilerplate do código. Adicione anotações como `@Data` e `@Builder` nas suas classes para criar automaticamente getters, setters, construtores, etc.
 Ah, e certifique-se de que o plugin do Lombok está instalado na sua IDE!
 
-## Parte Prática no Pacote `API`
+## Parte Prática no Pacote `api`
 
-1. No pacote `API`, é onde a mágica começa. Interfaces pra cada tela. Olha só:
+1. No pacote `api`, é onde a mágica começa. Interfaces pra cada tela. Olha só:
 
 ```java
 // Exemplo de interface pra página de login
@@ -46,8 +46,8 @@ public interface Login extends TestCase {
     Click clicarBtLogin();
 }
 ```
-## Praticando com o Pacote WEBDRIVER
-Agora, no pacote WEBDRIVER, é onde a gente dá vida às interfaces. Implementações e tal, saca?
+## Praticando com o Pacote webdriver
+Agora, no pacote webdriver, é onde a gente dá vida às interfaces. Implementações e tal, saca?
 
 ```java
 // Exemplo de implementação pra página de login
@@ -66,8 +66,8 @@ public class LoginPage extends BasePage implements Login {
 ```
 E não esquece de fazer todas as classes pageObject estenderem BasePage e implementarem a interface certinha.
 
-## Testes Reais no Pacote SISTEMA
-No pacote SISTEMA, é onde a mágica real acontece. Testes específicos pra cada telinha.
+## Testes Reais no Pacote sistema
+No pacote sistema, é onde a mágica real acontece. Testes específicos pra cada telinha.
 
 ## Partiu Teste Integrado! 🚀
 Chegamos no pacote SISTEMA_INTEGRADO, a área onde a mágica realmente acontece! 🌟 É aqui que nossos testes se tornam verdadeiros aventureiros, explorando e interagindo com todo o sistema.
