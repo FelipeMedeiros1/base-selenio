@@ -1,14 +1,20 @@
 package sistema.servicos.utils;
 
-import lombok.Getter;
 
 
-public abstract class UtilitarioRelatorioTestCase<T, P>{
-    @Getter
-    private final String nomeDaPlanilha;
-    public UtilitarioRelatorioTestCase(String nomeDaPlanilha) {
-        this.nomeDaPlanilha = nomeDaPlanilha;
+
+public abstract class UtilitarioRelatorioTestCase<M>{
+
+    private final String caminhoArquivo;
+    public UtilitarioRelatorioTestCase(String caminhoArquivo) {
+        this.caminhoArquivo = caminhoArquivo;
     }
-    protected abstract void preencheDados(P page, T modeloDeCadastro, String chavePrimaria);
-    protected abstract UtilitarioRelatorioTestCase<T,P> gerarRelatorio(T modeloDeCadastro, String chavePrimaria);
+    protected abstract void preencheDados(M dados, int posicao);
+    protected abstract UtilitarioRelatorioTestCase<M> gerarRelatorio(M dados, int posicao);
+    public abstract void acessa();
+    public abstract void confirmaOperacao();
+
+    public String getCaminhoArquivo() {
+        return caminhoArquivo;
+    }
 }

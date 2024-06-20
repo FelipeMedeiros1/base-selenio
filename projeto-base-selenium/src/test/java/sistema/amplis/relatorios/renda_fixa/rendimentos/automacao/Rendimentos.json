@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "dataInicial": "27/07/2023",
+    "dataFinal": "27/07/2023",
+    "carteira": "WFA- EXP LEGAIS",
+    "saida": "CSV",
+    "moeda": "REAL"
+  },
+  {
+    "id": 2,
+    "dataInicial": "03/07/2023",
+    "dataFinal": "03/07/2023",
+    "carteira": "PRE REQ C12",
+    "saida": "PDF",
+    "moeda": "REAL"
+  }
+]

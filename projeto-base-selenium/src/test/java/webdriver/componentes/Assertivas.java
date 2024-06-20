@@ -13,26 +13,26 @@ public class Assertivas {
     private static String FALHOU = "<font class=\"status fail\">O resultado da comparação de valores.\r\n<br><b>Esperado: xxx \r\n<br>Atual: yyy</b>\r\n<br>Estão incorretos.</font>";
 
 
-    public static String validaMensagem(By by) {
+    public static String obterMensagemAtual(By by) {
         return getDriver().findElement(by).getText();
     }
 
 
     public static final void assertivas(String esperado, String atual) {
-        Assert.assertEquals(esperado, validaMensagem(atual));
+        Assert.assertEquals(esperado, obterMensagemAtual(atual));
     }
 
     public static final void assertivas(String esperado, WebElement atual) {
-        Assert.assertEquals(esperado, validaMensagem(atual));
+        Assert.assertEquals(esperado, obterMensagemAtual(atual));
 
     }
 
-    public static String validaMensagem(WebElement element) {
+    public static String obterMensagemAtual(WebElement element) {
         return element.getText();
     }
 
-    public static String validaMensagem(String id) {
-        return validaMensagem(By.id(id));
+    public static String obterMensagemAtual(String id) {
+        return obterMensagemAtual(By.id(id));
     }
 
 

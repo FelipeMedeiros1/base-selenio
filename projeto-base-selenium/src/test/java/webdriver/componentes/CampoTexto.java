@@ -1,33 +1,64 @@
 package webdriver.componentes;
 
-import api.componente.EntradaSimples;
 import org.openqa.selenium.By;
+
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 
-public class CampoTexto implements EntradaSimples {
+public class CampoTexto {
     public void preenche(By by, String text) {
         getDriver().findElement(by).clear();
         getDriver().findElement(by).sendKeys(text);
     }
 
-    public void preenche(WebElement input, String texto) {
-        input.clear();
-        input.sendKeys(texto.trim());
+    public void preenche(WebElement elemento, String valor) {
+        elemento.clear();
+        elemento.sendKeys(valor.trim());
     }
+
+
+    public void preencheDevagar(WebElement elemento, String valor) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        for (int tentativa = 0; tentativa < 3; tentativa++) {
+            try {
+                wait.until(ExpectedConditions.visibilityOf(elemento));
+                String valorAtual = elemento.getAttribute("value");
+                if (!valorAtual.equals(valor)) {
+                    elemento.clear();
+                    wait.until(ExpectedConditions.attributeToBe(elemento, "value", ""));
+                    for (int i = 0; i < valor.length(); i++) {
+                        elemento.sendKeys(String.valueOf(valor.charAt(i)));
+                    }
+
+                    wait.until(ExpectedConditions.attributeToBe(elemento, "value", valor));
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                return; // Saia do método se a operação foi bem-sucedida
+            } catch (StaleElementReferenceException e) {
+                // Tentar novamente se encontrar um StaleElementReferenceException
+                System.out.println("Tentativa " + (tentativa + 1) + " falhou devido a um StaleElementReferenceException. Tentando novamente...");
+            }
+        }
+        throw new RuntimeException("Falhou ao preencher o campo após várias tentativas devido a StaleElementReferenceException.");
+    }
+
     public void preenche(String id, String texto) {
         preenche(By.id(id), texto);
     }
 
-    public void preencheDados_class(String className, String texto) {
-        preenche(By.className(className), texto);
-    }
 
-    public void preencheDados_css(String css, String texto) {
-        preenche(By.cssSelector(css), texto);
-    }
 
     public String obterValorCampo(WebElement element, String value) {
         return element.getAttribute(value);

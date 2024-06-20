@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "dataProcessamento": "04/01/2022",
+    "tipoProcessamennto": "Fechamento",
+    "filtroCarteira": "Igual",
+    "carteira": "ATIVOS 60266",
+    "statusProcessamento": "Todos"
+  },
+  {
+    "id": 2,
+    "dataProcessamento": "14/04/2022",
+    "tipoProcessamennto": "Fechamento",
+    "filtroCarteira": "Igual",
+    "carteira": "IT153 TESOURO",
+    "statusProcessamento": "Todos"
+  }
+]

@@ -1,32 +1,28 @@
 package webdriver.componentes;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class Espera {
-    public void esperaElementoAparecerNaTela(int time) {
-        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
 
     public void finalizaEspera() {
         getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     }
 
-    public void esperaAteElementoAparecerNaTela(String id) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), 30);
-        wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(By.id(id))));
-        try {
-            new Thread().sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public void esperaAteElementoAparecerNaTela(WebElement elemento) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(elemento)));
+
     }
 
     public void esperaPor(int miliSegundos) {
@@ -37,20 +33,18 @@ public class Espera {
         }
     }
 
-    public ExpectedCondition<Boolean> esperaAjaxTerminar() {
-        WebElement ajax = getDriver().findElement(By.id("waitOuter"));
+    public void esperaAjaxTerminar() {
 
-        return driver -> {
-            WebDriverWait wait = new WebDriverWait(driver,  30);
-            wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete';"));
-            wait.until(ExpectedConditions.invisibilityOf(ajax));
-            return true;
-        };
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+        WebElement elemento = getDriver().findElement(By.xpath("//*[@id='waitMessageBox']/div/div"));
+        wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(elemento)));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='waitMessageBox']/div/div")));
+
     }
 
     public WebElement esperaTextoEstarPresente(WebElement elemento, String texto) {
         new JS().executarScript("arguments[0].value = arguments[1];", elemento, texto);
-        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
         if (texto.equals(elemento.getAttribute("value"))) {
             return elemento;
         }
@@ -60,7 +54,7 @@ public class Espera {
         WebElement elemento = getDriver().findElement(By.id(id));
 
         new JS().executarScript("arguments[0].value = arguments[1];", elemento, texto);
-        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
 
         String valorAtual = elemento.getAttribute("value");
 
@@ -73,12 +67,15 @@ public class Espera {
 
 
     public void esperaElementoSerClicavel(WebElement elemento) {
-        new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(elemento));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(elemento));
     }
     public void esperaElementoSerClicavel(String id) {
         WebElement elemento = getDriver().findElement(By.id(id));
-        new WebDriverWait(getDriver(), 15).until(ExpectedConditions.elementToBeClickable(elemento));
+        new WebDriverWait(getDriver(), Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(elemento));
     }
-
+    private void esperaPaginaCarregar() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
+    }
 
 }

@@ -1,7 +1,7 @@
 package sistema.servicos.leitorDeArquivo.config_csv;
 
 
-import sistema.servicos.leitorDeArquivo.config_xls.CaminhoDoArquivo;
+import sistema.servicos.leitorDeArquivo.config_xls.BuscadorDeArquivoXls;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 
@@ -19,7 +19,7 @@ public class ValidaArquivo {
         String caminhoArquivoGerado = "C:\\Users\\felipem.medeiros";
         String caminhoArquivoEstatico = null;
         try {
-            caminhoArquivoEstatico = new FileInputStream(CaminhoDoArquivo.encontrarCaminhoDoArquivo(nomeDoArquivo).toString()).toString();
+            caminhoArquivoEstatico = new FileInputStream(BuscadorDeArquivoXls.encontrarCaminhoDoArquivo(nomeDoArquivo).toString()).toString();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

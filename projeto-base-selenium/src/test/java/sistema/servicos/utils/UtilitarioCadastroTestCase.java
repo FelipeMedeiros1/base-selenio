@@ -1,14 +1,28 @@
 package sistema.servicos.utils;
 
-import lombok.Getter;
 
+public abstract class UtilitarioCadastroTestCase<M> {
+    private final String caminhoArquivo;
 
-public abstract class UtilitarioCadastroTestCase<M, P>{
-    @Getter
-    private final String nomeDaPlanilha;
     public UtilitarioCadastroTestCase(String caminhoArquivo) {
-        this.nomeDaPlanilha = caminhoArquivo;
+        this.caminhoArquivo = caminhoArquivo;
     }
-    protected abstract void preencheDados(P page, M modeloDeCadastro, String chavePrimaria);
-    protected abstract UtilitarioCadastroTestCase<M,P> executarTeste(M modeloDeCadastro, String chavePrimaria);
+
+    protected abstract void preencheDados(M dados, int posicao);
+
+    protected abstract UtilitarioCadastroTestCase<M> executar(M dados, int posicao);
+
+    protected abstract void consulta(M dados, int posicao);
+
+    protected abstract UtilitarioCadastroTestCase<M> atualizar(M dados, int posicao);
+
+    protected abstract void excluir(M dados, int posicao);
+
+    public abstract void acessa();
+
+    public abstract void confirmaOperacao();
+
+    public String getCaminhoArquivo() {
+        return caminhoArquivo;
+    }
 }

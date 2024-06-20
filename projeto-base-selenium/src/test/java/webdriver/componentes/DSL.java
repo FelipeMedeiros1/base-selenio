@@ -97,7 +97,7 @@ public class DSL {
         return false;
     }
 
-    /********* BasePage
+    /********* Interagivel
      * @return************/
 
     public void clicarBotao(String id) {

@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "codigo": "FELIPE - JSM",
+    "tipoDaPessoa": "Pessoa Jurídica",
+    "razaoSocial": "123456789",
+    "nomeFantasia": "FE",
+    "cnpj": "33133133131",
+    "localidade": "LOCALIDADE 10",
+    "setorDeAtividade": "@TESTE - @teste",
+    "status": "Ativo"
+  }
+]

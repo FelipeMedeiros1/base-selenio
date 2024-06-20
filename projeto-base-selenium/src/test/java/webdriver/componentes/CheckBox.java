@@ -1,43 +1,48 @@
 package webdriver.componentes;
 
-import api.componente.Flag;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
-public class CheckBox implements Flag {
+public class CheckBox {
+    private Espera espera = new Espera();
 
-
-    public boolean seleciona(WebElement chk, Boolean boleano) {
-        if (boleano == true) {
-            new Espera().esperaAjaxTerminar();
-            if (!chk.isSelected()) {
-                chk.click();
-            }
+    public boolean seleciona(WebElement elemento, Boolean boleano) {
+        if (boleano && !estaSelecionado(elemento)) {
+            espera.esperaAjaxTerminar();
+            elemento.click();
+        }
+        if (!boleano && estaSelecionado(elemento)) {
+            espera.esperaAjaxTerminar();
+            elemento.click();
         }
         new Espera().esperaPor(1000);
         return false;
     }
 
-    @Override
+
     public boolean seleciona(String id, Boolean boleano) {
         WebElement chk = getDriver().findElement(By.id(id));
         if (boleano == true) {
-            new Espera().esperaAjaxTerminar();
-            if (!chk.isSelected()) {
+            espera.esperaAjaxTerminar();
+            if (!estaSelecionado(chk)) {
                 chk.click();
             }
         } else {
             chk.click();
         }
-        new Espera().esperaPor(1000);
+        espera.esperaPor(1000);
         return false;
     }
 
     public void seleciona(String id) {
         getDriver().findElement(By.id(id)).click();
+    }
+
+    public void esperaPorIndex(WebElement elemento, int posicao) {
+        new Select(elemento).selectByIndex(posicao);
     }
 
     public boolean estaSelecionado(WebElement element) {

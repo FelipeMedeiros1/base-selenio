@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "modalidadeDomovimento": "Retirada a Vista Coberta",
+    "dataDoMovimento": "03/11/2022",
+    "dataDaCompra": "",
+    "carteira": "AN #60197",
+    "titulo": "LTN",
+    "emissao": "44539 - 26/10/2018 - 01/03/2025",
+    "estoque": "",
+    "ativaPassiva": "",
+    "categoria": "Não",
+    "riscoBeneficio": "",
+    "condicoesDeNegociacao": "1",
+    "pu": "1",
+    "quantidade": "1",
+    "financeiro": "",
+    "rendimento": "",
+    "eventoEmAtraso": "Não"
+  },
+  {
+    "id": 2,
+    "modalidadeDomovimento": "Compra a Vista",
+    "dataDoMovimento": "01/06/2007",
+    "dataDaCompra": "01/06/2007",
+    "carteira": "TA-CART TEST 1",
+    "titulo": "TA-LTN 01",
+    "emissao": "TA-EM LTN 01 - 01/06/2007 - 01/02/2008",
+    "estoque": "",
+    "ativaPassiva": "Ativa",
+    "categoria": "Negociação",
+    "riscoBeneficio": "Não",
+    "condicoesDeNegociacao": "1",
+    "pu": "1",
+    "quantidade": "1",
+    "financeiro": "1,0",
+    "rendimento": "Nominal",
+    "eventoEmAtraso": "Não"
+  }
+]

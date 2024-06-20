@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "dataInicio": "27/07/2023",
+    "dataFinal": "27/07/2023",
+    "tipoDePosicao": [
+      "Fechamento"
+    ],
+    "tipoDeConsolidacao": "Por Corretora/PNP/PL",
+    "custoMedio": "Sem Corretagem",
+    "carteira": [
+      "WFA- EXP LEGAIS"
+    ],
+    "tipoDoRelatorio": "Analítico",
+    "saida": "CSV"
+  }
+]

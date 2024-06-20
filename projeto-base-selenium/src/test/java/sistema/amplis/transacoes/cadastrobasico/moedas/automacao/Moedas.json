@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "filtroConsulta": "",
+    "codigoConsulta": "",
+    "codigo": "123456",
+    "nome": "Felipe",
+    "simbolo": "2307",
+    "status": "Ativo"
+  },
+  {
+    "id": 2,
+    "filtroConsulta": "Igual",
+    "codigoConsulta": "123456",
+    "codigo": "654321",
+    "nome": "FelipeMedeiros",
+    "simbolo": "1407",
+    "status": "Ativo"
+  },
+  {
+    "id": 2,
+    "filtroConsulta": "Igual",
+    "codigoConsulta": "654321",
+    "codigo": "",
+    "nome": "",
+    "simbolo": "",
+    "status": ""
+  }
+]

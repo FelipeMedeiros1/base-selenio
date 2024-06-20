@@ -1,20 +1,18 @@
 package sistema_integrado;
 
-import sistema.dominio.relatorios.patrimonio.carteira_diaria.CarteiraDiaria;
-import sistema.dominio.relatorios.patrimonio.carteira_diaria.CarteiraDiariaUtils;
-import sistema.dominio.transacoes.cadastro_pessoas.fundamental.Fundamental;
-import sistema.dominio.transacoes.fundos.movimentacao.Movimentacao;
-import sistema.dominio.transacoes.fundos.movimentacao.MovimentacaoFdsUtils;
-import sistema.dominio.transacoes.processamento.cockpit.CockPit;
-import sistema.dominio.transacoes.processamento.cockpit.CockPitUtils;
-import sistema.dominio.transacoes.processamento.processamento.Processamento;
-import webdriver.base.BaseTest;
+import sistema.amplis.relatorios.patrimonio.carteira_diaria.automacao.CarteiraDiaria;
+import sistema.amplis.transacoes.cadastropessoas.fundamental.automacao.Fundamental;
+import sistema.amplis.transacoes.fundos.movimentacao.automacao.Movimentacao;
+import sistema.amplis.transacoes.fundos.movimentacao.automacao.MovimentacaoFdsUtils;
+import sistema.amplis.transacoes.processamento.cockpit.automacao.CockPit;
+import sistema.amplis.transacoes.processamento.processamento.automacao.Processamento;
+import webdriver.base.BaseTeste;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TesteIntegrado extends BaseTest {
+public class TesteIntegrado extends BaseTeste {
     private String repositorio = "TesteIntegrado";
     private Processamento processamento;
     private CockPit cockPit;
@@ -24,10 +22,10 @@ public class TesteIntegrado extends BaseTest {
 
     @Test
     public void test01() {
-        new CockPitUtils(repositorio).executarTeste(cockPit, "C1");
-        new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara, "CD1")
-                .gerarRelatorio(cateirraDiara, "CD2");
-        new MovimentacaoFdsUtils(repositorio).executarTeste(mov, "M1");
+//        new CockPitUtils(repositorio).executarTeste(cockPit, "C1");
+//        new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara, "CD1")
+//                .gerarRelatorio(cateirraDiara, "CD2");
+        new MovimentacaoFdsUtils(repositorio).executar(mov, 1);
 
 
     }

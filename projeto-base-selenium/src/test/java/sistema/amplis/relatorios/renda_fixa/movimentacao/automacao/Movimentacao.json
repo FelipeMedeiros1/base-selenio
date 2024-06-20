@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "dataInicio": "27/07/2023",
+    "dataFinal": "27/07/2023",
+    "modalidadeDeMovimento": [
+      "Compra a Vista"
+    ],
+    "titulo": "I-LTN",
+    "emissao": "XX-LTN 1",
+    "carteira": [
+      "WFA- EXP LEGAIS"
+    ],
+    "saida": "CSV",
+    "idioma": "Português (Default)",
+    "moeda": "REAL",
+    "tipoRelatorio": "Analítico"
+  }
+]

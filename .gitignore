@@ -1,2 +1,3 @@
 # Project exclude paths
 /projeto-base-selenium/target/
+/projeto-base-selenium/src/resources/config.propriedades

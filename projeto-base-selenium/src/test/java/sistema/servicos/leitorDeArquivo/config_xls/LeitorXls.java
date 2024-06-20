@@ -14,7 +14,7 @@ public class LeitorXls<T> {
         String caminho = nomeArquivo +".xlsx";
 
         try {
-            Workbook pastaDeTrabalho = WorkbookFactory.create(new FileInputStream(CaminhoDoArquivo.encontrarCaminhoDoArquivo(caminho).toString()));
+            Workbook pastaDeTrabalho = WorkbookFactory.create(new FileInputStream(BuscadorDeArquivoXls.encontrarCaminhoDoArquivo(caminho).toString()));
             Sheet planilha = pastaDeTrabalho.getSheet(repositorio);
             Row cabecalho = planilha.getRow(0);
 
