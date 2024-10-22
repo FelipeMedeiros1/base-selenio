@@ -1,7 +1,6 @@
 package sistema.amplis.transacoes.rendafixa.operacoes_termo.automacao;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 
 public record OperacoesATermo(

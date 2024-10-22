@@ -1,12 +1,10 @@
 package sistema.amplis.transacoes.processamento.processamentoContabil.automacao;
 
 import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
-import sistema.servicos.leitorDeArquivo.config_xls.LeitorXls;
 import sistema.amplis.transacoes.processamento.processamentoContabil.pagina.PaginaProcessamentoContabil;
-import sistema.servicos.utils.UtilitarioCadastroTestCase;
-import sistema.servicos.utils.UtilitarioProcessamentoTestCase;
+import sistema.servicos.utils.UtilitarioProcessamento;
 
-public class ProcessamentoContabilUtils extends UtilitarioProcessamentoTestCase<ProcessamentoContabil> {
+public class ProcessamentoContabilUtils extends UtilitarioProcessamento<ProcessamentoContabil> {
 
     public ProcessamentoContabilUtils(String caminhoArquivo) {
         super(caminhoArquivo);
@@ -17,28 +15,25 @@ public class ProcessamentoContabilUtils extends UtilitarioProcessamentoTestCase<
     @Override
     protected void preencheDados(ProcessamentoContabil dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, ProcessamentoContabil.class);
-        pagina.selecionaVarios(pagina.modulos, dados.modulos());
-        pagina.preenche(pagina.dataInicial, dados.dataInicial());
-        pagina.preenche(pagina.dataFinal, dados.dataFinal());
-        pagina.selecionaUm(pagina.filtroCarteira, dados.filtroCarteira());
-        pagina.preenche(pagina.carteira,dados.carteira());
+        selecionaPickList(pagina.modulos, dados.modulos());
+        preenche(pagina.dataInicial, dados.dataInicial());
+        preenche(pagina.dataFinal, dados.dataFinal());
+        selecionaUm(pagina.filtroCarteira, dados.filtroCarteira());
+        preenche(pagina.carteira, dados.carteira());
     }
 
     @Override
     protected ProcessamentoContabilUtils executar(ProcessamentoContabil dados, int posicao) {
-        acessa();
+        this.acessaPagina();
         preencheDados(dados, posicao);
-        confirmaOperacao();
+        executarProcessamento();
         return this;
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.executarProcessamento(pagina.selecionaGrid);
-    }
+
 }

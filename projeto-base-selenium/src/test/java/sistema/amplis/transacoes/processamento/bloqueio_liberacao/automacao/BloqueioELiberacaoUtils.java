@@ -2,13 +2,12 @@ package sistema.amplis.transacoes.processamento.bloqueio_liberacao.automacao;
 
 
 import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
-import sistema.servicos.utils.UtilitarioCadastroTestCase;
 
 import sistema.amplis.transacoes.processamento.bloqueio_liberacao.pagina.PaginaBloqueioELiberacao;
-import sistema.servicos.utils.UtilitarioProcessamentoTestCase;
+import sistema.servicos.utils.UtilitarioProcessamento;
 
 
-public class BloqueioELiberacaoUtils extends UtilitarioProcessamentoTestCase<BloqueioELiberacao> {
+public class BloqueioELiberacaoUtils extends UtilitarioProcessamento<BloqueioELiberacao> {
 
     public BloqueioELiberacaoUtils(String caminhoArquivo) {
         super(caminhoArquivo);
@@ -19,37 +18,35 @@ public class BloqueioELiberacaoUtils extends UtilitarioProcessamentoTestCase<Blo
     @Override
     protected void preencheDados(BloqueioELiberacao dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, BloqueioELiberacao.class);
-        pagina.preenche(pagina.dataBloqueioLiberacao, dados.dataBloqueioLiberacao());
-        pagina.selecionaUm(pagina.tipo, dados.tipo());
-        pagina.selecionaUm(pagina.filtroCarteira, dados.fitroCarteira());
-        pagina.preenche(pagina.carteira, dados.carteira()).confirma();
+        preenche(pagina.dataBloqueioLiberacao, dados.dataBloqueioLiberacao());
+        selecionaUm(pagina.tipo, dados.tipo());
+        selecionaUm(pagina.filtroCarteira, dados.fitroCarteira());
+        preenche(pagina.carteira, dados.carteira());
+        confirma();
         if (dados.bloqueado().equals("true")) {
-            pagina.selecionaChekBox(pagina.bloqueado, Boolean.valueOf(dados.bloqueado()));
-            pagina.selecionaChekBox(pagina.liberacaoContabil, Boolean.valueOf(dados.liberacaoContabil()));
+            selecionaChekBox(pagina.bloqueado, Boolean.valueOf(dados.bloqueado()));
+            selecionaChekBox(pagina.liberacaoContabil, Boolean.valueOf(dados.liberacaoContabil()));
         }
         if (dados.bloqueado().equals("false") && dados.liberacaoContabil().equals("false")) {
-            pagina.selecionaChekBox(pagina.liberacaoContabil, Boolean.valueOf(dados.liberacaoContabil()));
-            pagina.selecionaChekBox(pagina.bloqueado, Boolean.valueOf(dados.bloqueado()));
+            selecionaChekBox(pagina.liberacaoContabil, Boolean.valueOf(dados.liberacaoContabil()));
+            selecionaChekBox(pagina.bloqueado, Boolean.valueOf(dados.bloqueado()));
         }
-        pagina.preenche(pagina.motivoDoBloqueio, dados.motivoDoBloqueio());
-        pagina.preenche(pagina.motivoDoDesbloqueio, dados.motivoDoDesbloqueio());
+        preenche(pagina.motivoDoBloqueio, dados.motivoDoBloqueio());
+        preenche(pagina.motivoDoDesbloqueio, dados.motivoDoDesbloqueio());
     }
 
     @Override
     public BloqueioELiberacaoUtils executar(BloqueioELiberacao dados, int posicao) {
-        acessa();
+        acessaPagina();
         preencheDados(dados, posicao);
         confirmaOperacao();
         return this;
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.confirmaOperacao();
-    }
+
 }

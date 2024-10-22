@@ -1,6 +1,6 @@
 package sistema.amplis.relatorios.patrimonio.carteira_diaria.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class CarteiraDiariaTest extends BaseTeste {

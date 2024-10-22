@@ -1,11 +1,11 @@
 package sistema.amplis.transacoes.processamento.bloqueio_liberacao.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaBloqueioELiberacao extends Interagivel {
+public class PaginaBloqueioELiberacao extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:3:j_id_36")
     public WebElement bloqueioELiberacao;

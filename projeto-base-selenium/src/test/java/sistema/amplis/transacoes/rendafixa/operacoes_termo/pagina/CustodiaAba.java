@@ -1,10 +1,9 @@
 package sistema.amplis.transacoes.rendafixa.operacoes_termo.pagina;
 
-import webdriver.componentes.Aba;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CustodiaAba extends PaginaOperacoesATermo implements Aba {
+public class CustodiaAba extends PaginaOperacoesATermo   {
 
     //region
     @FindBy(id = "mainForm:tab3:header")
@@ -17,9 +16,6 @@ public class CustodiaAba extends PaginaOperacoesATermo implements Aba {
     public WebElement contaDeCustodia;
 
     //endregion
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(custodia);
-    }
+
 
 }

@@ -1,12 +1,13 @@
 package sistema.amplis.transacoes.cadastropessoas.fundamental.pagina;
 
 
-import webdriver.base.Interagivel;
+import sistema.servicos.utils.LogUtil;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaFundamental extends Interagivel {
+public class PaginaFundamental extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:6:j_id_2w:3:j_id_2z:0:j_id_3p:0:j_id_3w")
     public WebElement fundamental;
@@ -16,7 +17,9 @@ public class PaginaFundamental extends Interagivel {
     public WebElement codigo;
     @FindBy(id = "mainForm:siteDropdown:campo")
     public WebElement localidade;
-    @FindBy(id = "mainForm:grupoCarteira_PickList:firstSelect")
+    @FindBy(id = "mainForm:statusDropdown:campo")
+    public WebElement status;
+    @FindBy(id = "mainForm:grupoCarteira_PickList")
     public WebElement grupoDeCarteiras;
     @FindBy(id = "mainForm:grupoCarteira_PickList:includeSelected")
     public WebElement incluir;
@@ -30,13 +33,11 @@ public class PaginaFundamental extends Interagivel {
     @Override
     public void acessa() {
         new Acessa().transacoesCadastroDePessoas(fundamental);
-        inserir();
     }
 
     public ApropriacaoAgentesAba apropriacao() {
         if (apropriacaoAgentesAba == null) {
             apropriacaoAgentesAba = new ApropriacaoAgentesAba();
-            apropriacaoAgentesAba.seleciona();
         }
         return apropriacaoAgentesAba;
     }

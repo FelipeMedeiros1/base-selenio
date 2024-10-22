@@ -1,12 +1,13 @@
 package sistema.amplis.transacoes.processamento.cockpit.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class PaginaCockPit extends Interagivel {
+
+public class PaginaCockPit extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:4:j_id_36")
     public WebElement cockPit;
@@ -24,23 +25,12 @@ public class PaginaCockPit extends Interagivel {
     public WebElement resultado;
     @FindBy(css = "#mainForm\\:clientTree\\:0\\.0\\:j_id_ah_2_67 > div > span.rf-trn-hnd-colps.rf-trn-hnd")
     public WebElement check;
-    @FindBy(id = "mainForm:clientTree:0.0.0:dataTablePatrimonio:0:mensagensPatrimonio")
-    public WebElement msg;
+    @FindBy(xpath = "//*[@id=\"mainForm:clientTree:0.0.0:dataTablePatrimonio:0:mensagensPatrimonio:dgb\"]/tr/td/span")
+    public WebElement mensagemAtual;
     //endregion
 
     public void acessa() {
         new Acessa().transacoesProcessamento(cockPit);
     }
 
-    public void pesquisaResultado() {
-        confirma();
-        rolarParaBaixoAteEncontrar(resultado);
-        esperaElementoSerClicavel(resultado);
-        clicar(resultado);
-        rolarParaBaixoAteEncontrar(check);
-        clicar(check);
-        rolarParaBaixoAteEncontrar(msg);
-
-//        validaMensagem("Processamento realizado com sucesso.",msg);
-    }
 }

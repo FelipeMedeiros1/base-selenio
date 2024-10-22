@@ -2,11 +2,14 @@ package sistema.amplis.relatorios.patrimonio.carteira_diaria.automacao;
 
 
 import sistema.amplis.relatorios.patrimonio.carteira_diaria.pagina.PaginaCarteiraDiaria;
+import sistema.servicos.leitorDeArquivo.ValidadorDeArquivo;
 import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
-import sistema.servicos.utils.UtilitarioRelatorioTestCase;
+import sistema.servicos.utils.UtilitarioRelatorio;
+
+import static sistema.servicos.leitorDeArquivo.ValidadorDeArquivo.validaCSV;
 
 
-public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDiaria> {
+public class CarteiraDiariaUtils extends UtilitarioRelatorio<CarteiraDiaria> {
 
     private PaginaCarteiraDiaria pagina = new PaginaCarteiraDiaria();
 
@@ -18,31 +21,29 @@ public class CarteiraDiariaUtils extends UtilitarioRelatorioTestCase<CarteiraDia
     protected void preencheDados(CarteiraDiaria dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CarteiraDiaria.class);
 
-        pagina.preenche(pagina.dataInicio, dados.dataInicio());
-        pagina.preenche(pagina.dataFinal, dados.dataFinal());
-        pagina.clicar(pagina.deseleciona).selecionaVarios(pagina.tipoDePosicao, pagina.incluir, dados.tipoDePosicao());
-        pagina.selecionaUm(pagina.tipoDeConsolidacao, dados.tipoDeConsolidacao());
-        pagina.selecionaUm(pagina.custoMedio, dados.custoMedio());
-        pagina.selecionaVarios(pagina.carteira, pagina.incluirCarteira, dados.carteira());
-        pagina.selecionaUm(pagina.tipoDoRelatorio, dados.tipoDoRelatorio());
-        pagina.selecionaUm(pagina.saida, dados.saida());
+        preenche(pagina.dataInicio, dados.dataInicio());
+        preenche(pagina.dataFinal, dados.dataFinal());
+        clicar(pagina.deseleciona);
+        selecionaPickList(pagina.tipoDePosicao, dados.tipoDePosicao());
+        selecionaUm(pagina.tipoDeConsolidacao, dados.tipoDeConsolidacao());
+        selecionaUm(pagina.custoMedio, dados.custoMedio());
+        selecionaPickList(pagina.carteira, dados.carteira());
+        selecionaUm(pagina.tipoDoRelatorio, dados.tipoDoRelatorio());
+        selecionaUm(pagina.saida, dados.saida());
     }
 
     @Override
     public CarteiraDiariaUtils gerarRelatorio(CarteiraDiaria dados, int posicao) {
-        acessa();
+        acessaPagina();
         preencheDados(dados, posicao);
-        pagina.confirma();
+        confirma();
         return this;
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.confirma();
-    }
+
 }

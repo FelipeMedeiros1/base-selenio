@@ -1,12 +1,12 @@
 package sistema.amplis.transacoes.fundos.movimentacao.pagina;
 
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaMovimentacao extends Interagivel {
+public class PaginaMovimentacao extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:11:j_id_2w:5:j_id_2z:1:j_id_36")
     public WebElement movimentacao;
@@ -41,7 +41,7 @@ public class PaginaMovimentacao extends Interagivel {
     @Override
     public void acessa() {
         new Acessa().transacoesFundos(movimentacao);
-        inserir();
+
     }
 
     public PaginaMovimentacaoConsulta consulta() {

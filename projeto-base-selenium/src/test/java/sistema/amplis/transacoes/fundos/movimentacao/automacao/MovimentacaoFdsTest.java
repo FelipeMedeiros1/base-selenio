@@ -1,6 +1,6 @@
 package sistema.amplis.transacoes.fundos.movimentacao.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class MovimentacaoFdsTest extends BaseTeste {
@@ -9,6 +9,6 @@ public class MovimentacaoFdsTest extends BaseTeste {
 
     @Test
     public void incluirMovimentacaoFundos() {
-        new MovimentacaoFdsUtils(json).executar(movimentacao, 1);
+        new MovimentacaoFdsUtils(json).incluir(movimentacao, 1);
     }
 }

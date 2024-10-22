@@ -4,10 +4,10 @@ import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
 
 
 import sistema.amplis.transacoes.processamento.processamento.pagina.PaginaProcessamento;
-import sistema.servicos.utils.UtilitarioProcessamentoTestCase;
+import sistema.servicos.utils.UtilitarioProcessamento;
 
 
-public class ProcessamentoUtils extends UtilitarioProcessamentoTestCase<Processamento> {
+public class ProcessamentoUtils extends UtilitarioProcessamento<Processamento> {
     public ProcessamentoUtils(String nomeDaPlanilha) {
         super(nomeDaPlanilha);
     }
@@ -16,30 +16,25 @@ public class ProcessamentoUtils extends UtilitarioProcessamentoTestCase<Processa
 
     protected void preencheDados(Processamento dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Processamento.class);
-        pagina.selecionaVarios(pagina.modulos, pagina.incluirModulos, dados.modulos());
-        pagina.selecionaVarios(pagina.tipoDeProcessamento, pagina.incluirTipo, dados.tipoDeProcessamento());
-        pagina.preenche(pagina.dataInicial, dados.dataInicial());
-        pagina.preenche(pagina.dataFinal, dados.dataFinal());
-        pagina.selecionaUm(pagina.filtroCarteira, dados.filtroCarteira());
-        pagina.preenche(pagina.carteira, dados.carteira());
+        selecionaPickList(pagina.modulos, dados.modulos());
+        selecionaPickList(pagina.tipoDeProcessamento, dados.tipoDeProcessamento());
+        preenche(pagina.dataInicial, dados.dataInicial());
+        preenche(pagina.dataFinal, dados.dataFinal());
+        selecionaUm(pagina.filtroCarteira, dados.filtroCarteira());
+        preenche(pagina.carteira, dados.carteira());
     }
 
     public ProcessamentoUtils executar(Processamento dadosProcessamento, int posicao) {
-        acessa();
+        this.acessaPagina();
         preencheDados(dadosProcessamento, posicao);
-        confirmaOperacao();
+        executarProcessamento();
         return this;
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.executarProcessamento(pagina.selecionaGrid);
-    }
+
 }
-
-

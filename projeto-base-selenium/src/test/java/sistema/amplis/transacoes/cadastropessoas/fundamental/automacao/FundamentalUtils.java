@@ -1,76 +1,77 @@
 package sistema.amplis.transacoes.cadastropessoas.fundamental.automacao;
 
 
-import sistema.amplis.transacoes.fundos.movimentacao.automacao.Movimentacao;
 import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
-import sistema.servicos.leitorDeArquivo.config_xls.LeitorXls;
-import sistema.servicos.utils.UtilitarioCadastroTestCase;
+import sistema.servicos.utils.LogUtil;
+import sistema.servicos.utils.UtilitarioCadastro;
 
 import sistema.amplis.transacoes.cadastropessoas.fundamental.pagina.PaginaFundamental;
 
-public class FundamentalUtils extends UtilitarioCadastroTestCase<Fundamental> {
+
+import static sistema.servicos.utils.LogUtil.info;
+
+public class FundamentalUtils extends UtilitarioCadastro<Fundamental> {
 
     private PaginaFundamental pagina = new PaginaFundamental();
 
 
     public FundamentalUtils(String caminhoArquivo) {
         super(caminhoArquivo);
+        info("Acessando: Transações > Cadastros de Pessoas > Carteiras > Cadastros > Fundamental");
     }
 
     @Override
-    protected void preencheDados(Fundamental dados, int posicao) {
+    public void preencheDados(Fundamental dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Fundamental.class);
-        pagina.preencheAutoComplete(pagina.pessoa, dados.pessoa());
-        pagina.preenche(pagina.codigo, dados.codigo());
-        pagina.selecionaUm(pagina.localidade, dados.localidade());
-        pagina.selecionaVarios(pagina.grupoDeCarteiras, dados.grupoDeCarteiras());
-        pagina.selecionaTodos();
-        pagina.preencheAutoComplete(pagina.apropriacao().administrador, dados.administrador());
-        pagina.preencheAutoComplete(pagina.apropriacao().gestor, dados.gestor());
-        pagina.preencheAutoComplete(pagina.apropriacao().custodiante, dados.custodiante());
+        preencheAutoComplete(pagina.pessoa, dados.pessoa());
+        preenche(pagina.codigo, dados.codigo());
+        selecionaUm(pagina.localidade, dados.localidade());
+        selecionaUm(pagina.status, dados.status());
+        selecionaPickList(pagina.grupoDeCarteiras, dados.grupoDeCarteiras());
+
+        selecionaAba(pagina.apropriacao().apropriacaoAgentes);
+        preencheAutoComplete(pagina.apropriacao().administrador, dados.administrador());
+        preencheAutoComplete(pagina.apropriacao().gestor, dados.gestor());
+        preencheAutoComplete(pagina.apropriacao().custodiante, dados.custodiante());
     }
 
     @Override
-    public FundamentalUtils executar(Fundamental dados, int posicao) {
-        acessa();
+    public FundamentalUtils incluir(Fundamental dados, int posicao) {
+        acessaPagina();
+        inserir();
         preencheDados(dados, posicao);
         confirmaOperacao();
         return this;
     }
 
     @Override
-    protected void consulta(Fundamental dados, int posicao) {
+    public void consultar(Fundamental dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Fundamental.class);
-        pagina.consulta().acessaConsulta();
-        pagina.selecionaUm(pagina.consulta().filtroConsulta, dados.filtroConsulta());
-        pagina.preenche(pagina.consulta().codigoConsulta, dados.codigoConsulta());
-        pagina.confirma();
-        pagina.selecionaNaGrid(0).clicarGrid();
+        acessaPagina();
+        selecionaUm(pagina.consulta().filtroConsulta, "Igual");
+        preenche(pagina.consulta().codigoConsulta, dados.codigo());
+        confirmaConsulta();
     }
 
     @Override
-    protected FundamentalUtils atualizar(Fundamental dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Fundamental.class);
-        consulta(dados, posicao);
-        pagina.alterar();
-        pagina.preenche(pagina.codigo, dados.codigo());
+    public FundamentalUtils atualizar(Fundamental dados, int posicao) {
+        consultar(dados, posicao);
+        alterar();
+        preencheDados(dados, posicao);
         confirmaOperacao();
         return this;
     }
 
     @Override
-    protected void excluir(Fundamental dados, int posicao) {
-        consulta(dados, posicao);
-        pagina.excluir();
+    public void excluir(Fundamental dados, int posicao) {
+        consultar(dados, posicao);
+        excluir();
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
+
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.confirmaOperacao();
-    }
 }

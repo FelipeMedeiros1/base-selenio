@@ -2,44 +2,52 @@ package sistema.amplis.transacoes.processamento.cockpit.automacao;
 
 
 import sistema.servicos.leitorDeArquivo.config_json.LeitorJson;
-import sistema.servicos.leitorDeArquivo.config_xls.LeitorXls;
-import sistema.servicos.utils.UtilitarioCadastroTestCase;
 
 import sistema.amplis.transacoes.processamento.cockpit.pagina.PaginaCockPit;
-import sistema.servicos.utils.UtilitarioProcessamentoTestCase;
+import sistema.servicos.utils.UtilitarioProcessamento;
 
 
-public class CockPitUtils extends UtilitarioProcessamentoTestCase<CockPit> {
+public class CockPitUtils extends UtilitarioProcessamento<CockPit> {
 
     public CockPitUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
+
     private PaginaCockPit pagina = new PaginaCockPit();
+
     @Override
-    protected void preencheDados(  CockPit dados, int posicao) {
+    protected void preencheDados(CockPit dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CockPit.class);
-        pagina.preenche(pagina.dataProcessamento,dados.dataProcessamento());
-        pagina.selecionaUm(pagina.tipoProcessamennto,dados.tipoProcessamennto());
-        pagina.selecionaUm(pagina.filtroCarteira ,dados.filtroCarteira());
-        pagina.preenche(pagina.carteira,dados.carteira());
-        pagina.selecionaUm(pagina.statusProcessamento,dados.statusProcessamento());
+        preenche(pagina.dataProcessamento, dados.dataProcessamento());
+        selecionaUm(pagina.tipoProcessamennto, dados.tipoProcessamennto());
+        selecionaUm(pagina.filtroCarteira, dados.filtroCarteira());
+        preenche(pagina.carteira, dados.carteira());
+        selecionaUm(pagina.statusProcessamento, dados.statusProcessamento());
     }
 
     @Override
     public CockPitUtils executar(CockPit dados, int posicao) {
-        acessa();
-        preencheDados(  dados, posicao);
-        confirmaOperacao();
+        this.acessaPagina();
+        preencheDados(dados, posicao);
+        pesquisaResultado();
         return this;
     }
 
     @Override
-    public void acessa() {
+    public void acessaPagina() {
         pagina.acessa();
     }
 
-    @Override
-    public void confirmaOperacao() {
-        pagina.pesquisaResultado();
+
+
+    public void pesquisaResultado() {
+        confirma();
+        rolarParaBaixoAteEncontrar(pagina.resultado);
+        esperaElementoSerClicavel(pagina.resultado);
+        clicar(pagina.resultado);
+        rolarParaBaixoAteEncontrar(pagina.check);
+        clicar(pagina.check);
+        rolarParaBaixoAteEncontrar(pagina.mensagemAtual);
+        //validaMensagem("Processada", mensagemAtual);
     }
 }

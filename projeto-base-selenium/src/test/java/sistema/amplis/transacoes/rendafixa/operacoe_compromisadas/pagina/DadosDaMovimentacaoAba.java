@@ -1,10 +1,9 @@
 package sistema.amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
-import webdriver.componentes.Aba;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DadosDaMovimentacaoAba extends PaginaOperacoesCompromissadas implements Aba {
+public class DadosDaMovimentacaoAba extends PaginaOperacoesCompromissadas  {
     //region
     @FindBy(id = "")
     public WebElement dadosDaMovimentacao;
@@ -50,9 +49,6 @@ public class DadosDaMovimentacaoAba extends PaginaOperacoesCompromissadas implem
     public WebElement livreMovimentacao;
 
     //endregion
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(dadosDaMovimentacao);
-    }
+
 
 }

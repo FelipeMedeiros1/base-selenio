@@ -6,8 +6,7 @@
       "Patrimônio"
     ],
     "tipoDeProcessamento": [
-      "Abertura",
-      "Fechamento"
+      "todos"
     ],
     "dataInicial": "04/01/2022",
     "dataFinal": "07/01/2022",

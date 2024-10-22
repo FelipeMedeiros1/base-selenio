@@ -1,34 +1,34 @@
 package sistema.servicos.leitorDeArquivo.config_csv;
 
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+import com.opencsv.exceptions.CsvValidationException;
+
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LeitorCSV {
 
-    private static final String RESOURCES =" src/main/resources/";
-    public static void main(final String... args) throws IOException {
+    public static List<String[]> lerCSV(String csvFilePath, char separador) {
+        List<String[]> dados = new ArrayList<>();
 
-        final Path path = Paths.get(RESOURCES + args[0]);
-
-        final List<String> lines = Files.readAllLines(path);
-
-        double total = 0;
-
-        for(final String line: lines) {
-
-            final String[] columns = line.split(",");
-
-            final double amount = Double.parseDouble(columns[1]);
-
-            total += amount;
-
+        try (CSVReader leitor = new CSVReaderBuilder(new FileReader(csvFilePath))
+                .withCSVParser(new CSVParserBuilder().withSeparator(separador).build()).build()) {
+            String[] nextLine;
+            while ((nextLine = leitor.readNext()) != null) {
+                dados.add(nextLine);
+            }
+        } catch (IOException | CsvValidationException e) {
+            throw new RuntimeException("Erro ao ler o arquivo CSV: " + e.getMessage(), e);
         }
-
-        System.out.println("The total for all transactions is " + total);
-
+        return dados;
     }
 
+    // Método para ler CSV com separador padrão (';')
+    public static List<String[]> lerCSV(String csvFilePath) {
+        return lerCSV(csvFilePath, ';');
+    }
 }

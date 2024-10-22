@@ -4,7 +4,6 @@ package sistema.amplis.transacoes.cadastropessoas.fundamental.pagina;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import sistema.servicos.navegacao.Acessa;
-import webdriver.base.Interagivel;
 
 public class PaginaFundamentalConsulta extends PaginaFundamental {
     //region
@@ -15,8 +14,5 @@ public class PaginaFundamentalConsulta extends PaginaFundamental {
     //endregion
 
 
-    public void acessaConsulta() {
-        new Acessa().transacoesCadastroDePessoas(fundamental);
-    }
 
 }

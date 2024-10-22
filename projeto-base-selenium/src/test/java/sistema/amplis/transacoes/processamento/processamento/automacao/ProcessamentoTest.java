@@ -1,6 +1,6 @@
 package sistema.amplis.transacoes.processamento.processamento.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class ProcessamentoTest extends BaseTeste {
@@ -9,6 +9,6 @@ public class ProcessamentoTest extends BaseTeste {
 
     @Test
     public void testProcessarCarteira() {
-        new ProcessamentoUtils(json).executar(processamento, 3);
+        new ProcessamentoUtils(json).executar(processamento, 1);
     }
 }

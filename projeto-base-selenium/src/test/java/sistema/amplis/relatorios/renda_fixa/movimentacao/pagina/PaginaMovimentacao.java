@@ -1,11 +1,11 @@
 package sistema.amplis.relatorios.renda_fixa.movimentacao.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaMovimentacao extends Interagivel {
+public class PaginaMovimentacao extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_62:1:j_id_6n:0:j_id_82")
     public WebElement movimentacao;
@@ -13,18 +13,14 @@ public class PaginaMovimentacao extends Interagivel {
     public WebElement dataInicio;
     @FindBy(id = "mainForm:calendarDateEnd:campoInputDate")
     public WebElement dataFinal;
-    @FindBy(id = "mainForm:modalityPickList:firstSelect")
+    @FindBy(id = "mainForm:modalityPickList")
     public WebElement modalidadeDeMovimento;
-    @FindBy(id = "mainForm:modalityPickList:includeSelected")
-    public WebElement incluirModalidade;
     @FindBy(id = "mainForm:security_dropdown:campo")
     public WebElement titulo;
     @FindBy(id = "mainForm:issue_dropdown:campo")
     public WebElement emissao;
-    @FindBy(id = "mainForm:portfolioPickList:firstSelect")
+    @FindBy(id = "mainForm:portfolioPickList")
     public WebElement carteira;
-    @FindBy(id = "mainForm:portfolioPickList:includeSelected")
-    public WebElement incluirCarteira;
     @FindBy(id = "mainForm:reportExtension:campo")
     public WebElement saida;
     @FindBy(id = "mainForm:reportIdiom:campo")

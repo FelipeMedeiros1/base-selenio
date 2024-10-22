@@ -14,8 +14,6 @@ public class PaginaMoedasConsulta extends PaginaMoedas {
     public WebElement selecionaGrid;
 
     //endregion
-    public void acessaConsulta() {
-        new Acessa().transacoesCadastroBasico(moedas);
-    }
+
 
 }

@@ -1,17 +1,24 @@
 package sistema.amplis.transacoes.cadastropessoas.renda_fixa.automacao;
 
-import webdriver.base.BaseTeste;
 import sistema.amplis.transacoes.cadastropessoas.renda_fixa.pagina.PaginaCadastroRendaFixa;
 import org.junit.Test;
+import webdriver.base.Interagivel;
 
-public class CadastroRendaFixaTest extends BaseTeste {
+public class CadastroRendaFixaTest extends Interagivel {
+    PaginaCadastroRendaFixa pagina = new PaginaCadastroRendaFixa();
 
     @Test
     public void testCadastroRendaFixa() {
-        PaginaCadastroRendaFixa paginaCadastroRendaFixa = new PaginaCadastroRendaFixa();
-        paginaCadastroRendaFixa.acessa();
-        paginaCadastroRendaFixa.carteira("FELIPE - JSM");
-        paginaCadastroRendaFixa.negociacao().mtm("Não");
-        paginaCadastroRendaFixa.confirmaOperacao();
+        acessaPagina();
+        preencheAutoComplete(pagina.carteira, "FELIPE - JSM");
+        selecionaAba(pagina.negociacao().negociacao);
+        selecionaUm(pagina.negociacao().mtm, "Não");
+        confirmaOperacao();
+    }
+
+    @Override
+    public void acessaPagina() {
+        pagina.acessa();
+        inserir();
     }
 }

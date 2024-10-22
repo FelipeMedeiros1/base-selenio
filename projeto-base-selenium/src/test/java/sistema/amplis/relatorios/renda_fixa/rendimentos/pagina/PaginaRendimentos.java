@@ -1,11 +1,11 @@
 package sistema.amplis.relatorios.renda_fixa.rendimentos.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaRendimentos extends Interagivel {
+public class PaginaRendimentos extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_62:1:j_id_6n:1:j_id_82")
     public WebElement rendimentos;
@@ -13,10 +13,8 @@ public class PaginaRendimentos extends Interagivel {
     public WebElement dataInicial;
     @FindBy(id = "mainForm:calendarDateEnd:campoInputDate")
     public WebElement dataFinal;
-    @FindBy(id = "mainForm:portfolioPickList:firstSelect")
+    @FindBy(id = "mainForm:portfolioPickList")
     public WebElement carteira;
-    @FindBy(id = "mainForm:portfolioPickList:includeSelected")
-    public WebElement incluirCarteira;
     @FindBy(id = "mainForm:reportExtension:campo")
     public WebElement saida;
     @FindBy(id = "mainForm:reportIdiom:campo")

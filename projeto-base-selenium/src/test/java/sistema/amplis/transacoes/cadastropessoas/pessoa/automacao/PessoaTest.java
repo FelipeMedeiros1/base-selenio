@@ -1,6 +1,6 @@
 package sistema.amplis.transacoes.cadastropessoas.pessoa.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class PessoaTest extends BaseTeste {
@@ -9,6 +9,6 @@ public class PessoaTest extends BaseTeste {
 
     @Test
     public void testIncluirPessoa(){
-        new PessoaUtils(json).executar(pessoa,1);
+        new PessoaUtils(json).incluir(pessoa,1);
     }
 }

@@ -1,11 +1,10 @@
 [
   {
     "id": 1,
-    "filtroConsulta": "",
-    "codigoConsulta": "",
     "pessoa": "AN PESSOA",
     "codigo": "AN #36360",
     "localidade": "LOCALIDADE 10",
+    "status":"Ativo",
     "grupoDeCarteiras": "ATH",
     "administrador": "DIMENSA S.A.",
     "gestor": "DIMENSA S.A.",
@@ -13,21 +12,35 @@
   },
   {
     "id": 2,
-    "filtroConsulta": "Igual",
-    "codigoConsulta": "AN #36360",
-    "codigo": "AN #36360#"
-
+    "pessoa": "",
+    "codigo": "AN #36360",
+    "localidade": "",
+    "status":"Inativo",
+    "grupoDeCarteiras": "",
+    "administrador": "",
+    "gestor": "",
+    "custodiante": ""
   },
   {
     "id": 3,
-    "filtroConsulta": "Igual",
-    "codigoConsulta": "AN #36360#",
-    "codigo": "AN #36360"
+
+    "pessoa": "",
+    "codigo": "AN #36360",
+    "localidade": "",
+    "status":"",
+    "grupoDeCarteiras": "",
+    "administrador": "",
+    "gestor": "",
+    "custodiante": ""
   },
   {
     "id": 4,
-    "filtroConsulta": "Igual",
-    "codigoConsulta": "AN #36360#"
-
+    "pessoa": "",
+    "codigo": "AN #36360",
+    "localidade": "",
+    "grupoDeCarteiras": "",
+    "administrador": "",
+    "gestor": "",
+    "custodiante": ""
   }
 ]

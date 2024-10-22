@@ -1,20 +1,20 @@
 package sistema.amplis.transacoes.processamento.processamento.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class PaginaProcessamento extends Interagivel {
+public class PaginaProcessamento extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:18:j_id_2w:0:j_id_2z:1:j_id_36")
     public WebElement processamento;
-    @FindBy(id = "mainForm:functionPickList:firstSelect")
+    @FindBy(id = "mainForm:functionPickList")
     public WebElement modulos;
     @FindBy(id = "mainForm:functionPickList:includeSelected")
     public WebElement incluirModulos;
-    @FindBy(id = "mainForm:evaluationSituationPickList:firstSelect")
+    @FindBy(id = "mainForm:evaluationSituationPickList")
     public WebElement tipoDeProcessamento;
     @FindBy(id = "mainForm:evaluationSituationPickList:includeSelected")
     public WebElement incluirTipo;

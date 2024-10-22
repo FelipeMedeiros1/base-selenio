@@ -1,6 +1,6 @@
 package sistema.amplis.transacoes.processamento.processamentoContabil.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class ProcessamentoContabilTest extends BaseTeste {

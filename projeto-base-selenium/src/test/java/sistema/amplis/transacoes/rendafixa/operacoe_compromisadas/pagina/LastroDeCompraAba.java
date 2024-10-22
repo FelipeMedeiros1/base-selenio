@@ -2,17 +2,13 @@ package sistema.amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import webdriver.componentes.Aba;
 
 
-public class LastroDeCompraAba extends PaginaOperacoesCompromissadas implements Aba {
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(lastroDeCompra);
-    }
+public class LastroDeCompraAba extends PaginaOperacoesCompromissadas   {
+
 
     @FindBy(id = "mainForm:tab_fixRepoCollateralReceive:header")
-    private WebElement lastroDeCompra;
+    public WebElement lastroDeCompra;
     @FindBy(id = "mainForm:dataTable1:0:securitySelicPU550_textField:campo")
     public WebElement tituloSelicPu550Titulo;
     @FindBy(id = "mainForm:dataTable1:0:tituloDropdown:campo")

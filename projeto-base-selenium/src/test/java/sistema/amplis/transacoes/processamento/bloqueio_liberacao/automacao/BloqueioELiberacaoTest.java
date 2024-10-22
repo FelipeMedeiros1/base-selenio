@@ -1,6 +1,6 @@
 package sistema.amplis.transacoes.processamento.bloqueio_liberacao.automacao;
 
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.Test;
 
 public class BloqueioELiberacaoTest extends BaseTeste {

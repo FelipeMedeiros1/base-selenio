@@ -6,7 +6,7 @@ import sistema.amplis.transacoes.fundos.movimentacao.automacao.Movimentacao;
 import sistema.amplis.transacoes.fundos.movimentacao.automacao.MovimentacaoFdsUtils;
 import sistema.amplis.transacoes.processamento.cockpit.automacao.CockPit;
 import sistema.amplis.transacoes.processamento.processamento.automacao.Processamento;
-import webdriver.base.BaseTeste;
+import sistema.servicos.base.BaseTeste;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -25,7 +25,7 @@ public class TesteIntegrado extends BaseTeste {
 //        new CockPitUtils(repositorio).executarTeste(cockPit, "C1");
 //        new CarteiraDiariaUtils(repositorio).gerarRelatorio(cateirraDiara, "CD1")
 //                .gerarRelatorio(cateirraDiara, "CD2");
-        new MovimentacaoFdsUtils(repositorio).executar(mov, 1);
+        new MovimentacaoFdsUtils(repositorio).incluir(mov, 1);
 
 
     }

@@ -1,11 +1,11 @@
 package sistema.amplis.relatorios.patrimonio.carteira_diaria.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaCarteiraDiaria extends Interagivel {
+public class PaginaCarteiraDiaria extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_62:2:j_id_6n:0:j_id_82")
     public WebElement carteiraDiaria;
@@ -15,7 +15,7 @@ public class PaginaCarteiraDiaria extends Interagivel {
     public WebElement dataFinal;
     @FindBy(id = "mainForm:headerValuePositionType:excludeAll")
     public WebElement deseleciona;
-    @FindBy(id = "mainForm:headerValuePositionType:firstSelect")
+    @FindBy(id = "mainForm:headerValuePositionType")
     public WebElement tipoDePosicao;
     @FindBy(id = "mainForm:headerValuePositionType:includeSelected")
     public WebElement incluir;
@@ -23,7 +23,7 @@ public class PaginaCarteiraDiaria extends Interagivel {
     public WebElement tipoDeConsolidacao;
     @FindBy(id = "mainForm:tipoCustoMedio:campo")
     public WebElement custoMedio;
-    @FindBy(id = "mainForm:portfolioPickList:firstSelect")
+    @FindBy(id = "mainForm:portfolioPickList")
     public WebElement carteira;
     @FindBy(id = "mainForm:portfolioPickList:includeSelected")
     public WebElement incluirCarteira;

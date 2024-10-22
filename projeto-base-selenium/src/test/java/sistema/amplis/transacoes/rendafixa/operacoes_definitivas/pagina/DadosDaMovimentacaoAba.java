@@ -1,10 +1,9 @@
 package sistema.amplis.transacoes.rendafixa.operacoes_definitivas.pagina;
 
-import webdriver.componentes.Aba;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DadosDaMovimentacaoAba extends PaginaOperacoesDefinitivas implements Aba {
+public class DadosDaMovimentacaoAba extends PaginaOperacoesDefinitivas  {
     //region
     @FindBy(id = "mainForm:tab1:header")
     public WebElement dadosDaMovimentacao;
@@ -30,7 +29,7 @@ public class DadosDaMovimentacaoAba extends PaginaOperacoesDefinitivas implement
     public WebElement categoria;
     @FindBy(id = "mainForm:riscoBeneficio_dropdown:campo")
     public WebElement riscoBeneficio;
-    @FindBy(id = "mainForm:evaluationCriteria_dropdown:campo")
+    @FindBy(id = "mainForm:negotiationCondition_dropdown:campo")
     public WebElement condicoesDeNegociacao;
     @FindBy(id = "mainForm:price_textField:campo")
     public WebElement pu;
@@ -47,10 +46,7 @@ public class DadosDaMovimentacaoAba extends PaginaOperacoesDefinitivas implement
     public WebElement eventoEmAtraso;
 
     //endregion
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(dadosDaMovimentacao);
-    }
+
 
 
 }

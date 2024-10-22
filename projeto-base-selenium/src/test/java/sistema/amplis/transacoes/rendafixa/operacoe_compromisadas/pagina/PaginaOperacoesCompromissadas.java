@@ -2,16 +2,16 @@ package sistema.amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 
 
-public class PaginaOperacoesCompromissadas extends Interagivel {
+public class PaginaOperacoesCompromissadas extends BasePagina {
     @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:3:j_id_36")
     private WebElement opCompromissadas;
-    private DadosDaMovimentacaoAba dadosDaMovimentacao;
-    private LastroDeCompraAba lastroDeCompra;
-    private LastroDeVendaAba lastroDeVenda;
+    public DadosDaMovimentacaoAba dadosDaMovimentacao;
+    public LastroDeCompraAba lastroDeCompra;
+    public LastroDeVendaAba lastroDeVenda;
 
 
     public void acessa() {
@@ -21,7 +21,7 @@ public class PaginaOperacoesCompromissadas extends Interagivel {
     public DadosDaMovimentacaoAba dadosDaMovimentacao() {
         if (dadosDaMovimentacao == null) {
             dadosDaMovimentacao = new DadosDaMovimentacaoAba();
-            dadosDaMovimentacao.seleciona();
+
         }
         return dadosDaMovimentacao;
     }
@@ -29,7 +29,7 @@ public class PaginaOperacoesCompromissadas extends Interagivel {
     public LastroDeCompraAba lastroDeCompra() {
         if (lastroDeCompra == null) {
             lastroDeCompra = new LastroDeCompraAba();
-            lastroDeCompra.seleciona();
+
         }
         return lastroDeCompra;
     }
@@ -37,7 +37,7 @@ public class PaginaOperacoesCompromissadas extends Interagivel {
     public LastroDeVendaAba lastroDeVenda() {
         if (lastroDeVenda == null) {
             lastroDeVenda = new LastroDeVendaAba();
-            lastroDeVenda.seleciona();
+
         }
         return lastroDeVenda;
     }

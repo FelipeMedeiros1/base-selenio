@@ -97,7 +97,7 @@ public class DSL {
         return false;
     }
 
-    /********* Interagivel
+    /********* BasePagina
      * @return************/
 
     public void clicarBotao(String id) {
@@ -171,10 +171,10 @@ public class DSL {
         getDriver().switchTo().window(id);
     }
 
-    /************** JS *********************/
+    /************** JavascriptExecutor *********************/
 
     public Object executarJS(String cmd, Object... param) {
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) getDriver();
         return js.executeScript(cmd, param);
     }
 

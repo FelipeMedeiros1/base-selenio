@@ -1,10 +1,9 @@
 package sistema.amplis.transacoes.cadastropessoas.fundamental.pagina;
 
-import webdriver.componentes.Aba;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ApropriacaoAgentesAba extends PaginaFundamental implements Aba {
+public class ApropriacaoAgentesAba extends PaginaFundamental  {
     //region
     @FindBy(id = "mainForm:tab1:header")
     public WebElement apropriacaoAgentes;
@@ -15,9 +14,6 @@ public class ApropriacaoAgentesAba extends PaginaFundamental implements Aba {
     @FindBy(id = "mainForm:dataTable1:0:custodianSuggestionInput")
     public WebElement custodiante;
     //endregion
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(apropriacaoAgentes);
-    }
+
 
 }

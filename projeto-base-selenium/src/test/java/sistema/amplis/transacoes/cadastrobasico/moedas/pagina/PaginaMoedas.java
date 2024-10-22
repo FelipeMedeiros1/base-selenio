@@ -1,12 +1,12 @@
 package sistema.amplis.transacoes.cadastrobasico.moedas.pagina;
 
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaMoedas extends Interagivel {
+public class PaginaMoedas extends BasePagina {
     //region
     @FindBy(id = "mainForm:j_id_1z:3:j_id_2w:4:j_id_5b")
     public WebElement moedas;
@@ -21,9 +21,9 @@ public class PaginaMoedas extends Interagivel {
     //endregion
     private PaginaMoedasConsulta consulta;
 
+    @Override
     public void acessa() {
         new Acessa().transacoesCadastroBasico(moedas);
-        inserir();
     }
 
     public PaginaMoedasConsulta consulta() {
@@ -32,5 +32,6 @@ public class PaginaMoedas extends Interagivel {
         }
         return consulta;
     }
+
 
 }

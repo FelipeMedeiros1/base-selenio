@@ -1,7 +1,7 @@
 //package SISTEMA.config.servicos.utils;
 //
 //import WEBDRIVER.componentes.CapturaDeTela;
-//import com.aventstack.extentreports.ExtentReports;
+//import com.aventstack.extentreports.ExtentReportsManager;
 //import com.aventstack.extentreports.ExtentTest;
 //import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 //
@@ -14,7 +14,7 @@
 //import static WEBDRIVER.fabrica.FabricaDeDriver.getDriver;
 //
 //public class RelatorioEvidenciaDeTeste {
-//    private static ExtentReports extent;
+//    private static ExtentReportsManager extent;
 //    public static ExtentTest test;
 //    private static WebDriver driver = getDriver();
 //    private static ExtentHtmlReporter htmlReporter;
@@ -34,7 +34,7 @@
 //        if (htmlReporter == null) {
 //            htmlReporter = new ExtentHtmlReporter(caminhoRelatorio);
 //        }
-//        extent = new ExtentReports();
+//        extent = new ExtentReportsManager();
 //        extent.attachReporter(htmlReporter);
 //    }
 //

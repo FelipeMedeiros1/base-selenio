@@ -1,11 +1,9 @@
 package sistema.amplis.transacoes.rendafixa.operacoes_termo.pagina;
 
-import webdriver.componentes.Aba;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DadosDaMovimentacaoAba extends PaginaOperacoesATermo implements Aba {
+public class DadosDaMovimentacaoAba extends PaginaOperacoesATermo  {
     //region
     @FindBy(id = "mainForm:tab1:header")
     public WebElement dadosDaMovimentacao;
@@ -55,8 +53,5 @@ public class DadosDaMovimentacaoAba extends PaginaOperacoesATermo implements Aba
     public WebElement eventoEmAtraso;
 
     //endregion
-    @Override
-    public Aba seleciona() {
-        return selecionaAba(dadosDaMovimentacao);
-    }
+
 }

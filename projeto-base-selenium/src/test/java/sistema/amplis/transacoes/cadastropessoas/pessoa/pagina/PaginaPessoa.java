@@ -1,11 +1,11 @@
 package sistema.amplis.transacoes.cadastropessoas.pessoa.pagina;
 
-import webdriver.base.Interagivel;
+import webdriver.base.BasePagina;
 import sistema.servicos.navegacao.Acessa;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PaginaPessoa extends Interagivel {
+public class PaginaPessoa extends BasePagina {
     //region
 
     @FindBy(id = "mainForm:j_id_1z:6:j_id_2w:0:j_id_5b")
@@ -30,6 +30,6 @@ public class PaginaPessoa extends Interagivel {
 
     public void acessa() {
         new Acessa().transacoesCadastroDePessoas(cadPessoas);
-        inserir();
+
     }
 }

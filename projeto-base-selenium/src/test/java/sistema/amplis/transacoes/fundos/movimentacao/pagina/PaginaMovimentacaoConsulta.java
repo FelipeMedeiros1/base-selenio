@@ -16,8 +16,5 @@ public class PaginaMovimentacaoConsulta extends PaginaMovimentacao {
 
     //endregion
 
-    public void acessaConsulta() {
-        new Acessa().transacoesFundos(movimentacao);
 
-    }
 }
