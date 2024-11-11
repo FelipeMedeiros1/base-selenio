@@ -171,7 +171,7 @@ public class DSL {
         getDriver().switchTo().window(id);
     }
 
-    /************** JavascriptExecutor *********************/
+    /************** JsExecutor *********************/
 
     public Object executarJS(String cmd, Object... param) {
         JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) getDriver();

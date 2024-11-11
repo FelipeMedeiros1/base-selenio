@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "modulos": [
+      "Fundos",
+      "Patrimônio"
+    ],
+    "tipoDeProcessamento": [
+      "todos"
+    ],
+    "dataInicial": "04/01/2022",
+    "dataFinal": "07/01/2022",
+    "filtroCarteira": "Igual",
+    "carteira": "ATIVOS 60266"
+  },
+  {
+    "id": 2,
+    "modulos": [
+      "Fundos",
+      "Patrimônio"
+    ],
+    "tipoDeProcessamento": [
+      "Fechamento"
+    ],
+    "dataInicial": "04/01/2022",
+    "dataFinal": "07/01/2022",
+    "filtroCarteira": "Igual",
+    "carteira": "ATIVOS"
+  },
+  {
+    "id": 3,
+    "modulos": [
+      "Renda Fixa",
+      "Patrimônio"
+    ],
+    "tipoDeProcessamento": [
+      "Fechamento"
+    ],
+    "dataInicial": "07/01/2020",
+    "dataFinal": "07/01/2020",
+    "filtroCarteira": "Igual",
+    "carteira": "AC TESTE RF"
+  }
+]

@@ -15,7 +15,4 @@ public abstract class BasePagina {
         PageFactory.initElements(factory, this);
     }
 
-    public abstract void acessa();
-
-
 }

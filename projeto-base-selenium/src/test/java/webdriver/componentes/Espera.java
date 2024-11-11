@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
@@ -45,6 +43,16 @@ public class Espera {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(elemento)));
 
+    }
+
+    public WebElement esperaAteElementoAparecerNaTela1(By by) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+      return   wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf((WebElement) by)));
+
+    }
+    public WebElement esperaAteElementoAparecerNaTela(By locator) {
+        WebDriverWait espera = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+        return espera.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     /**
@@ -92,7 +100,7 @@ public class Espera {
      * @return O elemento se o texto estiver presente, null caso contrário.
      */
     public WebElement esperaTextoEstarPresente(WebElement elemento, String texto) {
-        new JavascriptExecutor().executarScript("arguments[0].value = arguments[1];", elemento, texto);
+        new JsExecutor().executarScript("arguments[0].value = arguments[1];", elemento, texto);
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
         if (texto.equals(elemento.getAttribute("value"))) {
             return elemento;
@@ -109,7 +117,7 @@ public class Espera {
      */
     public String esperaTextoEstarPresente(String id, String texto) {
         WebElement elemento = getDriver().findElement(By.id(id));
-        new JavascriptExecutor().executarScript("arguments[0].value = arguments[1];", elemento, texto);
+        new JsExecutor().executarScript("arguments[0].value = arguments[1];", elemento, texto);
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.textToBePresentInElementValue(elemento, texto));
         String valorAtual = elemento.getAttribute("value");
         if (texto.equals(valorAtual)) {
@@ -191,7 +199,7 @@ public class Espera {
         return new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
-                return new JavascriptExecutor().executarScript("return document.readyState").equals("complete");
+                return new JsExecutor().executarScript("return document.readyState").equals("complete");
             }
         };
     }
@@ -210,8 +218,8 @@ public class Espera {
 
                     return false;
                 } else {
-                    JavascriptExecutor jsExecutor = (JavascriptExecutor) d;
-                    return (boolean) new JavascriptExecutor().executarScript("return jQuery.active == 0;");
+                    JsExecutor jsExecutor = (JsExecutor) d;
+                    return (boolean) new JsExecutor().executarScript("return jQuery.active == 0;");
                 }
             }
         };
@@ -251,10 +259,10 @@ public class Espera {
 //                public Boolean apply(WebDriver d) {
 //                    WebElement element = d.findElement(By.className("rf-st-start"));
 //                    if (element.isDisplayed()) {
-//                        return (boolean) ((org.openqa.selenium.JavascriptExecutor) d).executeScript("return jQuery.active == 0;")
+//                        return (boolean) ((org.openqa.selenium.JsExecutor) d).executeScript("return jQuery.active == 0;")
 //                                & Boolean.FALSE;
 //                    }
-//                    return (boolean) ((org.openqa.selenium.JavascriptExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.TRUE;
+//                    return (boolean) ((org.openqa.selenium.JsExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.TRUE;
 //                }
 //            };
 //        }

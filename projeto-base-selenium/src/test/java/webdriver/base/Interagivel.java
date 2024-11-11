@@ -11,9 +11,9 @@ import webdriver.componentes.*;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
-import static sistema.servicos.utils.LogUtil.info;
-import static sistema.servicos.utils.LogUtil.warn;
-import static webdriver.componentes.Assertivas.obterMensagemAtual;
+
+import static webdriver.componentes.Evidencia.*;
+import static webdriver.componentes.PainelMensagem.*;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
@@ -21,7 +21,6 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
  * contendo métodos para interagir com elementos da página e realizar ações.
  */
 public abstract class Interagivel {
-    public abstract void acessaPagina();
 
     /**
      * Realiza a ação de inserir um novo registro.
@@ -30,7 +29,6 @@ public abstract class Interagivel {
      * Clica no botão "Inserir".
      */
     protected void inserir() {
-        info("Iniciando teste de Inclusão");
         try {
             pressionarAltMaisLetra('i');
         } catch (Exception e) {
@@ -45,16 +43,11 @@ public abstract class Interagivel {
      * Clica no botão "Alterar".
      */
     protected void alterar() {
-        info("Iniciando teste de Atualizaçção");
         esperaAjaxTerminar();
         clicarGrid();
-        try {
-            pressionarAltMaisLetra('a');
+        pressionarAltMaisLetra('a');
 
-        } catch (Exception e) {
-            alterar();
-        }
-        esperaPor(1000);
+
     }
 
     /**
@@ -67,12 +60,11 @@ public abstract class Interagivel {
      * Verifica se a mensagem termina com "sucesso.".
      */
     protected void excluir() {
-        info("Iniciando teste de Exclusão");
         esperaAjaxTerminar();
         selecionaGrid();
         try {
             pressionarAltMaisLetra('e');
-            new PainelMensagem().validaMensagemExcluir();
+            validaMensagemExclusao();
         } catch (Exception e) {
             excluir();
         }
@@ -103,6 +95,7 @@ public abstract class Interagivel {
      */
     protected void confirmaConsulta() {
         try {
+            capturaTelaInfo("DadosConsulta", "realizando consulta...");
             pressionarAltMaisLetra('o');
         } catch (Exception e) {
             confirmaConsulta();
@@ -119,7 +112,7 @@ public abstract class Interagivel {
      */
     protected void confirmaOperacao() {
         pressionarAltMaisLetra('o');
-        new PainelMensagem().validaMensagemCadastro();
+        validaMensagemInclusao();
 
     }
 
@@ -176,21 +169,21 @@ public abstract class Interagivel {
         try {
             clicar("mainForm:filterDataTable:0:coluna_mnemonic");
         } catch (Exception e) {
-            return;
+            logFalha("Elemento não encontrado na grid");
+            throw new RuntimeException(e.getMessage());
         }
     }
 
+    /**
+     *
+     */
     private void selecionaGrid() {
-        clicar("mainForm:filterDataTable:0:chk");
-
-
-    }
-
-    protected Interagivel selecionaNaGrid(int indice) {
-        esperaAjaxTerminar();
-        new CheckBox().seleciona("mainForm:filterDataTable:" + indice + ":chk");
-        clicarGrid();
-        return this;
+        try {
+            clicar("mainForm:filterDataTable:0:chk");
+        } catch (Exception e) {
+            logFalha("Elemento não encontrado na grid");
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     public Interagivel consultarNaGrid(String... valores) {
@@ -200,7 +193,7 @@ public abstract class Interagivel {
 
 
     /**
-     * Clica em um elemento fora do campo de entrada, geralmente para remover o foco do campo.
+     * Clica em um elemento fora do campo de entrada, para remover o foco do campo.
      */
     private void clicarForaDoCampo() {
         clicar("mainForm:headerTransacao");
@@ -233,6 +226,12 @@ public abstract class Interagivel {
         return this;
     }
 
+    protected Interagivel preencheNativo(WebElement elemento, String valor) {
+        esperaAjaxTerminar();
+        new CampoTexto().preencheNativo(elemento, valor);
+        return this;
+    }
+
     protected Interagivel preencheDuplicado(WebElement elemento, String valor) {
         esperaAjaxTerminar();
         new CampoTexto().preencheDuplicado(elemento, valor);
@@ -257,23 +256,6 @@ public abstract class Interagivel {
     }
 
     /**
-     * Preenche um campo de texto na página web de forma lenta, digitando cada caractere individualmente.
-     * <p>
-     * Aguarda o término do AJAX, se estiver presente, antes de preencher o campo.
-     * Após preencher o campo, clica fora dele para garantir que o foco seja removido.
-     *
-     * @param elemento O elemento da página web que representa o campo de texto a ser preenchido.
-     * @param valor    O valor que será inserido no campo de texto.
-     * @return O próprio objeto Interagivel, permitindo encadeamento de métodos.
-     */
-    protected Interagivel preencheDevagar(WebElement elemento, String valor) {
-        esperaAjaxTerminar();
-        new CampoTexto().preencheDevagar(elemento, valor);
-        clicarForaDoCampo();
-        return this;
-    }
-
-    /**
      * Seleciona um item específico em um ComboBox na página web.
      * <p>
      * Aguarda o término do AJAX, se estiver presente, antes de selecionar o item.
@@ -289,45 +271,6 @@ public abstract class Interagivel {
         return this;
     }
 
-    /**
-     * Seleciona múltiplos itens em um ComboBox na página web.
-     * <p>
-     * Aguarda o término do AJAX, se estiver presente, antes de selecionar os itens.
-     * Após selecionar os itens, chama o método `incluirSelecionados()` e aguarda 1 segundo.
-     *
-     * @param elemento O elemento da página web que representa o ComboBox a ser manipulado.
-     * @param valores  Os valores dos itens que serão selecionados no ComboBox.
-     * @return O próprio objeto Interagivel, permitindo encadeamento de métodos.
-     */
-    protected Interagivel selecionaVarios(WebElement elemento, String... valores) {
-        esperaAjaxTerminar();
-        new ComboBox().selecionaVarios(elemento, valores);
-        incluirSelecionados();
-//        esperaPor(1000);
-
-        return this;
-    }
-
-    /**
-     * Seleciona múltiplos itens em um ComboBox na página web e confirma a seleção.
-     * <p>
-     * Aguarda o término do AJAX, se estiver presente, antes de selecionar os itens.
-     * Após selecionar os itens, clica no botão de confirmação e aguarda 500 milissegundos.
-     *
-     * @param elemento O elemento da página web que representa o ComboBox a ser manipulado.
-     * @param incluir  O elemento da página web que representa o botão de confirmação da seleção.
-     * @param valores  Os valores dos itens que serão selecionados no ComboBox.
-     * @return O próprio objeto Interagivel, permitindo encadeamento de métodos.
-     */
-    protected Interagivel selecionaVarios(WebElement elemento, WebElement incluir, String... valores) {
-        esperaAjaxTerminar();
-        selecionaVarios(elemento, valores);
-        clicar(incluir);
-        esperaPor(500);
-
-        return this;
-    }
-
     protected Interagivel selecionaPickList(WebElement elemento, String... valores) {
         esperaAjaxTerminar();
         new ComboBox().pickList(elemento, valores);
@@ -336,13 +279,14 @@ public abstract class Interagivel {
         return this;
     }
 
-
-    /**
-     * Confirma a seleção de itens em um ComboBox.
-     */
-    protected void incluirSelecionados() {
-        new ComboBox().incluirSelecionados();
+    public void selecionaFiltroPesquisa(String nomeDoCampo, String valor) {
+        new Filtro().filtroPesquisaSeleciona(nomeDoCampo, valor);
     }
+
+    public void preencheFiltroPesquisa(String nomeDoCampo, String valor) {
+        new Filtro().filtroPesquisaPreenche(nomeDoCampo, valor);
+    }
+
 
     /**
      * Seleciona ou desmarca um checkbox na página web.
@@ -360,23 +304,21 @@ public abstract class Interagivel {
 
     }
 
-
     private void pressionarAltMaisLetra(char letra) {
         new Atalho().pressionarAltMaisLetra(letra);
     }
 
-
     protected void rolarParaBaixoAteEncontrar(WebElement elemento) {
         esperaAjaxTerminar();
         esperaPor(500);
-        new JavascriptExecutor().rolarParaBaixoAteEncontrar(elemento);
+        new JsExecutor().rolarParaBaixoAteEncontrar(elemento);
     }
 
     protected void rolarParaBaixoAteEncontrar(String id) {
         WebElement elemento = getDriver().findElement(By.id(id));
         esperaAjaxTerminar();
         esperaPor(500);
-        new JavascriptExecutor().rolarParaBaixoAteEncontrar(elemento);
+        new JsExecutor().rolarParaBaixoAteEncontrar(elemento);
     }
 
     protected void validaIgualdadeNaMensagem(String texto, WebElement elemento) {
@@ -413,14 +355,23 @@ public abstract class Interagivel {
     protected void executarProcessamento() {
         confirma();
         if (new PainelMensagem().estaVisivel()) {
-            throw new RuntimeException(obterMensagemAtual("messageContent"));
+            throw new RuntimeException(obterMensagemAtual());
         }
         clicar("mainForm:dataTable1:0:processPortfolioCheckbox");
         confirma();
-        new PainelMensagem().validaMensagemProcessamento();
+        validaMensagemProcessamento();
 
     }
+
+    protected void importarArquivo(WebElement nomeDoArquivo, String nomeArquivo) {
+        new ImportarArquivo().importar(nomeArquivo);
+    }
+
+    public boolean estaVisivel(WebElement elemento) {
+        try {
+            return elemento.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
-
-
-

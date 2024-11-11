@@ -2,16 +2,13 @@ package webdriver.componentes;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static sistema.servicos.utils.LogUtil.info;
+import static servico.utils.LogUtil.info;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
@@ -26,7 +23,7 @@ public class ComboBox {
 
     private Espera espera = new Espera();
     private Botao botao = new Botao();
-    private JavascriptExecutor js = new JavascriptExecutor();
+    private JsExecutor js = new JsExecutor();
 
     /**
      * Seleciona um item em um combobox, localizado por seu elemento.
@@ -48,20 +45,24 @@ public class ComboBox {
         long tempoInicial = System.currentTimeMillis();
         long tempoLimite = tempoInicial + 10000;
         boolean elementoEncontrado = false;
-
-        if (elemento.isDisplayed() && elemento.isEnabled()) {
-            while (System.currentTimeMillis() < tempoLimite) {
-                try {
-                    new Select(elemento).selectByVisibleText(valor);
-                    if (new Select(elemento).getFirstSelectedOption().getText().equals(valor)) {
-                        elementoEncontrado = true;
-                        return;
-                    }
-                } catch (StaleElementReferenceException e) {
-                    elemento.getLocation();
+try {
+    if (elemento.isDisplayed() && elemento.isEnabled()) {
+        while (System.currentTimeMillis() < tempoLimite) {
+            try {
+                new Select(elemento).selectByVisibleText(valor);
+                if (new Select(elemento).getFirstSelectedOption().getText().equals(valor)) {
+                    elementoEncontrado = true;
+                    return;
                 }
+            } catch (StaleElementReferenceException e) {
+                elemento.getLocation();
             }
         }
+    }
+}catch (Exception e){
+    throw new ElementNotInteractableException("Erro ao tentar selecionar, valor: [" + valor + "] não encontrado no elemento: " + elemento,e);
+}
+
 
     }
 
@@ -78,7 +79,7 @@ public class ComboBox {
      * @param valor O valor do item a ser selecionado.
      */
     public void seleciona(String id, String valor) {
-        info("Selecionando valor : " + valor);
+        info("Selecionando valor: " + valor);
         WebElement element = getDriver().findElement(By.id(id));
         Select combo = new Select(element);
         combo.selectByVisibleText(valor);
@@ -303,7 +304,7 @@ public class ComboBox {
 
 
     public String[] pickList(WebElement elemento, String... valores) {
-        info("pickList:" +  Arrays.toString(valores));
+        info("pickList:" + Arrays.toString(valores));
         espera.esperaPor(500);
         js.rolarParaBaixoAteEncontrar(elemento);
         espera.esperaAteElementoAparecerNaTela(elemento);

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "dataDoMovimento": "12/05/2022",
+    "carteira": "C-80818",
+    "fundo": "F-80818",
+    "NegociacaoDeCotaAMercado": "Não",
+    "modalidadeDoMovimento": "Aplicação por Financeiro",
+    "subsegmentoPREVIC": "",
+    "dataDaAplicacao": "12/05/2022",
+    "dataDeCotizacao": "",
+    "liquidacaoDoMovimento": "",
+    "estoque": "",
+    "quantidade": "",
+    "financeiro": "10000"
+  },
+  {
+    "id": 2,
+    "dataDoMovimento": "01/03/2007",
+    "carteira": "UNT_CART_RV1",
+    "fundo": "UNT_CART_RV1",
+    "NegociacaoDeCotaAMercado": "Não",
+    "modalidadeDoMovimento": "Aplicação por Quantidade",
+    "subsegmentoPREVIC": "",
+    "dataDaAplicacao": "01/03/2007",
+    "dataDeCotizacao": "",
+    "liquidacaoDoMovimento": "",
+    "estoque": null,
+    "quantidade": "1.000,0000",
+    "financeiro": ""
+  },
+  {
+    "id": 3,
+    "dataDoMovimento": "12/05/2022",
+    "carteira": "C-80818",
+    "fundo": "F-80818",
+    "NegociacaoDeCotaAMercado": "Não",
+    "modalidadeDoMovimento": "Aplicação por Financeiro",
+    "subsegmentoPREVIC": "",
+    "dataDaAplicacao": "12/05/2022",
+    "dataDeCotizacao": "",
+    "liquidacaoDoMovimento": "",
+    "estoque": "",
+    "quantidade": "",
+    "financeiro": "10000"
+  }
+]

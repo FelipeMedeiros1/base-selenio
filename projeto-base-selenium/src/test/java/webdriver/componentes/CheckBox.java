@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import static sistema.servicos.utils.LogUtil.info;
+import static servico.utils.LogUtil.info;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**

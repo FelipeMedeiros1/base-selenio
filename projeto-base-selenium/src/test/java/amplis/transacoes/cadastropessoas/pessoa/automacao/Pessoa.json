@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "codigo": "FELIPE - JSM",
+    "tipoDaPessoa": "Pessoa Física",
+    "razaoSocial": "123456789",
+    "nomeFantasia": "",
+    "cnpjCpf": "40569125057",
+    "localidade": "",
+    "setorDeAtividade": "@TESTE - @teste",
+    "status": "Ativo"
+  },
+  {
+    "id": 2,
+    "codigo": "FELIPE - JSM",
+    "tipoDaPessoa": "",
+    "razaoSocial": "",
+    "nomeFantasia": "",
+    "cnpjCpf": "",
+    "localidade": "",
+    "setorDeAtividade": "@TESTE - @teste",
+    "status": "Inativo"
+  },
+  {
+    "id": 3,
+    "codigo": "FELIPE - JSM",
+    "tipoDaPessoa": "",
+    "razaoSocial": "",
+    "nomeFantasia": "",
+    "cnpjCpf": "",
+    "localidade": "",
+    "setorDeAtividade": "",
+    "status": ""
+  }
+]

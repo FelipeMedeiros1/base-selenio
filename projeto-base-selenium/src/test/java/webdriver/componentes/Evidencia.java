@@ -2,119 +2,135 @@ package webdriver.componentes;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.model.Media;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import servico.utils.LogUtil;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.Base64;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
-
 public class Evidencia {
-
     private static ExtentReports extent;
-    private static ThreadLocal<ExtentTest> teste = new ThreadLocal<>();
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    private static String diretorioDestino = "C:/TEMP/Teseu/Amplis/Reports/teste/";
+    private static String diretorioImagens = diretorioDestino + "screenshots";
+    private static String timestamp = new SimpleDateFormat("dd_MM_yy_HHmm").format(new Date());
 
-    public static ExtentReports getExtentReports() {
+
+    private static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
+
+
+    private static ExtentReports inicializarReports() {
         if (extent == null) {
+
+            new File(diretorioDestino).mkdirs();
+            new File(diretorioImagens).mkdirs();
+
+            ExtentSparkReporter htmlReporter = new ExtentSparkReporter(
+                    diretorioDestino + "Amplis_Dimensa_" + timestamp + ".html");
+            htmlReporter.config().setDocumentTitle("Relatório de Testes Automatizados");
+            htmlReporter.config().setReportName("Resultados dos Testes");
+            htmlReporter.config().setTheme(Theme.DARK);
+
             extent = new ExtentReports();
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("target/extentreport.html");
-            sparkReporter.config().setTheme(Theme.DARK);
-            extent.attachReporter(sparkReporter);
+            extent.attachReporter(htmlReporter);
+            extent.setSystemInfo("Environment", "QA");
+            extent.setSystemInfo("User", "Test Automation Specialist");
         }
         return extent;
     }
 
-    public static void logSucesso(String titulo, String memssagem) {
-
-
-        teste.get().pass(memssagem);
-
+    public static ExtentTest iniciarTeste( String descricao) {
+        ExtentTest test = inicializarReports().createTest(descricao);
+        extentTestThreadLocal.set(test);
+        return test;
     }
 
-    public static void logFalhou(String titulo, String memssagem) {
-
-
-        teste.get().fail(memssagem);
-
+    private static ExtentTest getTeste() {
+        return extentTestThreadLocal.get();
     }
 
-    public static void logInfo(String titulo, String memssagem) {
+    private static Media adicionarImagem(String titulo) {
+        try {
+            File screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 
-        teste.get().info(memssagem);
+            String screenshotPath = diretorioImagens + "/" + titulo + "_" + getUrl() + "_" + timestamp + ".png";
+            Files.copy(screenshot.toPath(), Paths.get(screenshotPath), StandardCopyOption.REPLACE_EXISTING);
 
+            // Cria o objeto MediaEntityBuilder com a imagem
+            return MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
-    public static void logAlerta(String titulo, String memssagem) {
-
-
-        teste.get().warning(memssagem);
-
-    }
-    public static void nomeDoTeste(String titulo) {
-        teste.set(getExtentReports().createTest(titulo));
+    public static void capturaTelaSucesso(String titulo, String mensagem) {
+        LogUtil.info(mensagem);
+        getTeste().pass(mensagem, adicionarImagem(titulo));
     }
 
+    public static void capturaTelaInfo(String titulo, String mensagem) {
+        LogUtil.info(mensagem);
+        getTeste().info(mensagem, adicionarImagem(titulo));
+    }
 
+    public static void capituraTelaFalha(String titulo, String mensagem) {
+        LogUtil.error(mensagem);
+        getTeste().fail(mensagem, adicionarImagem(titulo));
+    }
+    public static void logSucesso(String mensagem) {
+        LogUtil.info(mensagem);
+        getTeste().pass(mensagem);
+    }
+    public static void logInfo(String mensagem) {
+        LogUtil.info(mensagem);
+        getTeste().info(mensagem);
+    }
 
-    public static void adicionarImagem1(String titulo) {
-        if (getDriver() instanceof TakesScreenshot) {
-            try {
-                // Captura a imagem como um arquivo
-                File screenshotFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+    public static void logFalha(String mensagem) {
+        LogUtil.error(mensagem);
+        getTeste().fail(mensagem);
+    }
 
-                // Converte o arquivo para Base64 usando FileUtils
-                byte[] screenshotBytes = FileUtils.readFileToByteArray(screenshotFile);
-                String base64Screenshot = Base64.getEncoder().encodeToString(screenshotBytes);
-                teste.get().addScreenCaptureFromBase64String(titulo, base64Screenshot);
-            } catch (IOException e) {
-                System.err.println("Erro ao converter imagem para Base64: " + e.getMessage());
-            }
+    public static void logAlerta(String titulo, String mensagem) {
+        LogUtil.warn(mensagem);
+        getTeste().warning(mensagem, adicionarImagem(titulo));
+    }
+
+    public static void logAlerta(String mensagem) {
+        LogUtil.warn(mensagem);
+        getTeste().warning(mensagem);
+    }
+
+    public static void flushReports() {
+        if (extent != null) {
+            extent.flush();
         }
     }
 
-    public static void adicionarImagem2(String titulo) {
-        if (getDriver() instanceof TakesScreenshot) {
-            try {
-                // Captura a imagem como um arquivo
-                File screenshotFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 
-                // Lê a imagem como BufferedImage
-                BufferedImage screenshotImage = ImageIO.read(screenshotFile);
+    public static String getUrl() {
+        String url = (String) ((JavascriptExecutor) getDriver())
+                .executeScript("return window.location.href;");
+        String[] segmentos = url.split("/");
+        String ultimoSegmento = segmentos[segmentos.length - 1];
+        return ultimoSegmento.split("\\.")[0];
+    }
 
-                // Converte a imagem para Base64
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ImageIO.write(screenshotImage, "png", baos); // Escreve a imagem como PNG
-                byte[] screenshotBytes = baos.toByteArray();
-                String base64Screenshot = Base64.getEncoder().encodeToString(screenshotBytes);
-                teste.get().addScreenCaptureFromBase64String(titulo, base64Screenshot);
-            } catch (IOException e) {
-                System.err.println("Erro ao converter imagem para Base64: " + e.getMessage());
-            }
-        }
-    }
-    public static void capturarImagem(String titulo) {
-        if (getDriver() instanceof TakesScreenshot) {
-            try {
-                // Captura a imagem como um array de bytes
-                byte[] screenshotBytes = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
-                String base64Screenshot = Base64.getEncoder().encodeToString(screenshotBytes);
-                teste.get().addScreenCaptureFromBase64String(titulo, base64Screenshot);
-            } catch (Exception e) {
-                System.err.println("Erro ao converter imagem para Base64: " + e.getMessage());
-            }
-        }
-    }
-    public static void liberarRelatorio() {
-        extent.flush();
-    }
+
 }
-

@@ -7,14 +7,12 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.Field;
 import java.time.Duration;
 
-import static sistema.servicos.utils.LogUtil.info;
+import static servico.utils.LogUtil.info;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
@@ -26,7 +24,7 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class CampoTexto {
     private Espera espera = new Espera();
-    private JavascriptExecutor js = new JavascriptExecutor();
+    private JsExecutor js = new JsExecutor();
 
     /**
      * Preenche um campo de texto usando um `By` (como `By.id`, `By.name`, etc.) e um valor.
@@ -38,6 +36,7 @@ public class CampoTexto {
         getDriver().findElement(by).clear();
         getDriver().findElement(by).sendKeys(valor);
     }
+
 
     /**
      * Preenche um elemento da página web com um valor.
@@ -59,7 +58,7 @@ public class CampoTexto {
      * @param valor    O valor a ser inserido no elemento.
      */
     public void preenche(WebElement elemento, String valor) {
-        info( elemento.getTagName() + ":" + valor);
+        info(elemento.getTagName() + ":" + valor);
         espera.esperaAjaxTerminar();
         js.rolarParaBaixoAteEncontrar(elemento);
         espera.esperaAteElementoAparecerNaTela(elemento);
@@ -69,7 +68,7 @@ public class CampoTexto {
         }
 
         if (!elemento.isEnabled() || !elemento.isDisplayed()) {
-            throw new ElementNotInteractableException("O elemento não está habilitado ou visível.");
+            throw new ElementNotInteractableException("O elemento não está habilitado ou visível." + elemento);
         }
 
         espera.esperaAteElementoEstarHabilitado(elemento);
@@ -89,13 +88,13 @@ public class CampoTexto {
         }
 
         if (!valorPersistido) {
-            throw new ElementNotInteractableException("O valor não foi persistido após " + maxTentativas + " tentativas.");
+            throw new ElementNotInteractableException("Erro ao tentar preencher: [" + valor + "] no elemento: " + elemento);
         }
     }
 
 
     public void preencheDuplicado(WebElement elemento, String valor) {
-        info( elemento.getTagName() + ":" + valor);
+        info(elemento.getTagName() + ":" + valor);
         if (elemento.isDisplayed() && elemento.isEnabled()) {
             for (int i = 0; i < 2; i++) {
                 try {
@@ -113,7 +112,7 @@ public class CampoTexto {
     }
 
     public void preencheNativo(WebElement elemento, String valor) {
-          info( elemento.getTagName() + ":" + valor);
+        info(elemento.getTagName() + ":" + valor);
         espera.esperaPaginaCarregar();
         js.rolarParaBaixoAteEncontrar(elemento);
 
@@ -129,10 +128,7 @@ public class CampoTexto {
                     try {
                         elemento.clear();
                         js.preenche(elemento, valor);
-//                        espera.esperaPor(1000);
-//                        valorPersistido = estaPreenchido(elemento, valor);
-//                        if (valorPersistido)
-//                            return;
+//
                     } catch (Exception e) {
                         espera.esperaPor(800);
                         Actions actions = new Actions(getDriver());
@@ -144,7 +140,7 @@ public class CampoTexto {
                     tentativas++;
                 }
                 if (!valorPersistido) {
-                    throw new RuntimeException("O valor não foi persistido após " + maxTentativas + " tentativas.");
+                    throw new RuntimeException("O valor não foi persistido: " + valor );
                 }
             } else {
                 throw new RuntimeException("O elemento não está visível na tela.");
@@ -169,7 +165,7 @@ public class CampoTexto {
      * @throws RuntimeException Se falhar ao preencher o campo após várias tentativas.
      */
     public void preencheDevagar(WebElement elemento, String valor) {
-        info( elemento.getTagName() + ":" + valor);
+        info(elemento.getTagName() + ":" + valor);
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         js.rolarParaBaixoAteEncontrar(elemento);
         for (int tentativa = 0; tentativa < 3; tentativa++) {

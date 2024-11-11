@@ -5,12 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import sistema.servicos.utils.LogUtil;
 
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
-import static sistema.servicos.utils.LogUtil.info;
+import static servico.utils.LogUtil.info;
+import static webdriver.componentes.Evidencia.capturaTelaInfo;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
@@ -19,7 +18,7 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
  */
 public class Botao {
     private Espera espera = new Espera();
-    private JavascriptExecutor js = new JavascriptExecutor();
+    private JsExecutor js = new JsExecutor();
 
     /**
      * Clica no botão com o ID especificado.
@@ -100,12 +99,12 @@ public class Botao {
      * @param elemento O elemento WebElement que representa a aba a ser selecionada.
      */
     public void selecionaAba(WebElement elemento) {
-        info("Aba selecionada: " + elemento.getText());
         js.rolarParaCimaAteEncontrar(elemento);
         espera.esperaAteElementoAparecerNaTela(elemento);
         espera.esperaPor(500);
         espera.esperaElementoSerClicavel(elemento);
         clicar(elemento);
+        capturaTelaInfo("AbaSelecionada","Aba selecionada: " + elemento.getText());
     }
 
     public void clicarEspecial(String locator, Keys... keys) {
@@ -173,6 +172,7 @@ public class Botao {
     public String obterValor(String id, String valor) {
         return getDriver().findElement(By.id(id)).getAttribute(valor);
     }
+
 
 }
 
