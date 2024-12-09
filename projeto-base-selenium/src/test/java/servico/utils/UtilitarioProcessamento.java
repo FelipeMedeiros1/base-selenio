@@ -2,6 +2,7 @@ package servico.utils;
 
 
 import webdriver.base.Interagivel;
+import webdriver.base.navegacao.automacao.NavegacaoAmplis;
 
 import static webdriver.componentes.Evidencia.capturaTelaInfo;
 
@@ -16,16 +17,18 @@ public abstract class UtilitarioProcessamento<M> extends Interagivel {
 
     public UtilitarioProcessamento<M> executar(M dados, int posicao) {
         acessaPagina();
-        capturaTelaInfo("capturaTelaMenuTransacoes", "Acessando: " + transacoes());
+        capturaTelaInfo("capturaTelaMenuTransacoes", "Acessando: " + transacao());
         preencheDados(dados, posicao);
         capturaTelaInfo("capturaTelaDadosProcessamento", "Foram preenchidos os dados para Processamento.");
         executarProcessamento();
         return this;
     }
 
-    public abstract void acessaPagina();
+    protected  void acessaPagina(){
+        new NavegacaoAmplis().navegarPara(transacao());
+    }
 
-    protected abstract String transacoes();
+    protected abstract String transacao();
 
     public String getCaminhoArquivo() {
         return caminhoArquivo;

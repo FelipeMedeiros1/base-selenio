@@ -53,11 +53,7 @@ public class OperacoesDefinitivasFixUtils extends UtilitarioCadastro<OperacoesDe
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesRendaFixa(pagina.opDefinitivas);
 
-    }
 
     @Override
     protected String transacao() {

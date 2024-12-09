@@ -66,6 +66,9 @@ public class CampoTexto {
         if (valor.isEmpty() || valor.equalsIgnoreCase(null)) {
             return;
         }
+        if (validaValorElementoDesabilitado(elemento, valor)) {
+            return;
+        }
 
         if (!elemento.isEnabled() || !elemento.isDisplayed()) {
             throw new ElementNotInteractableException("O elemento não está habilitado ou visível." + elemento);
@@ -140,7 +143,7 @@ public class CampoTexto {
                     tentativas++;
                 }
                 if (!valorPersistido) {
-                    throw new RuntimeException("O valor não foi persistido: " + valor );
+                    throw new RuntimeException("O valor não foi persistido: " + valor);
                 }
             } else {
                 throw new RuntimeException("O elemento não está visível na tela.");
@@ -280,4 +283,22 @@ public class CampoTexto {
         String valorAtual = elemento.getAttribute("value");
         return valorAtual != null && valorAtual.trim().equals(valor.trim());
     }
+
+    private boolean validaValorElementoDesabilitado(WebElement elemento, String valor) {
+
+        String valorAtual = elemento.getText();
+
+        if (!elemento.isEnabled() && valorAtual.contains(valor)) {
+            return true;
+        }
+        if (!elemento.isEnabled() && !valorAtual.contains(valor)) {
+            throw new RuntimeException(String.format(
+                    "O valor do elemento [%s] não contém o valor passado no parâmetro: [%s]. Valor atual: [%s]",
+                    elemento.getAttribute("id"), valor, valorAtual));
+
+        }
+
+        return false;
+    }
+
 }

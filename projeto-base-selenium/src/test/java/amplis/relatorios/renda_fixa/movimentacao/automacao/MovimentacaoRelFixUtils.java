@@ -38,8 +38,8 @@ public class MovimentacaoRelFixUtils extends UtilitarioRelatorio<MovimentacaoRel
     }
 
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().relatoriosRendaFixa(pagina.movimentacao);
+    protected String relatorio() {
+        return "Relatórios > Renda Fixa > Movimentação";
     }
 
 

@@ -4,6 +4,7 @@ import servico.leitorDeArquivo.config_json.LeitorJson;
 import amplis.transacoes.cadastrobasico.moedas.pagina.PaginaMoedas;
 import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
+import webdriver.base.navegacao.automacao.NavDinamica;
 ;
 
 
@@ -35,12 +36,6 @@ public class MoedasUtils extends UtilitarioCadastro<Moedas> {
 
         }catch (Exception e){
         }
-    }
-
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroBasico(pagina.paginaMoedas);
-
     }
 
     @Override

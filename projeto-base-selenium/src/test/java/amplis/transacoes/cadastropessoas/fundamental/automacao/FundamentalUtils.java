@@ -40,11 +40,7 @@ public class FundamentalUtils extends UtilitarioCadastro<Fundamental> {
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroDePessoas(pagina.fundamental);
 
-    }
 
     @Override
     protected String transacao() {

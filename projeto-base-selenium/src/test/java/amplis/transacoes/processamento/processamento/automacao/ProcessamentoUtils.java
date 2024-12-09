@@ -14,7 +14,7 @@ public class ProcessamentoUtils extends UtilitarioProcessamento<Processamento> {
     }
 
     private final PaginaProcessamento pagina = new PaginaProcessamento();
-
+    @Override
     protected void preencheDados(Processamento dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Processamento.class);
         selecionaPickList(pagina.modulos, dados.modulos());
@@ -25,14 +25,11 @@ public class ProcessamentoUtils extends UtilitarioProcessamento<Processamento> {
     }
 
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesProcessamento(pagina.processamento);
-    }
-
-    @Override
-    protected String transacoes() {
+    protected String transacao() {
         return "Transações > Processamento > Carteira > Processamento";
     }
+
+
 
 
 }

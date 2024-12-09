@@ -13,7 +13,7 @@ public class MoedasSteps {
 
     @Dado("que acesse a página Transações > Cadastros Básicos > Moedas")
     public void acessaPaginaMoedas() {
-        moedas.acessaPagina();
+
     }
 
     @Quando("preencher dados válidos para cada operação")

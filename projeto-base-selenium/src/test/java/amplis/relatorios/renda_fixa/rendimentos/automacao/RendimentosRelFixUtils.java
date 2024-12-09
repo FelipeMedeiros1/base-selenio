@@ -33,9 +33,8 @@ public class RendimentosRelFixUtils extends UtilitarioRelatorio<RendimentosRelFi
     }
 
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().relatoriosRendaFixa(pagina.rendimentos);
-
+    protected String relatorio() {
+        return "Relatórios > Renda Fixa > Rendimentos";
     }
 
 

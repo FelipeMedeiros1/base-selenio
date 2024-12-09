@@ -16,84 +16,86 @@ public class PaginaMenuNavegacao extends BasePagina {
     @FindBy(linkText = "Segurança")
     public WebElement segurança;
     @FindBy(linkText = "Duplo Controle")
-    public WebElement duploControle ;
+    public WebElement duploControle;
     @FindBy(linkText = "Auditoria")
-    public WebElement auditoria ;
+    public WebElement auditoria;
     @FindBy(linkText = "Cadastros Básicos")
     public WebElement cadastroBasico;
     @FindBy(linkText = "Taxas")
-    public WebElement  taxas;
+    public WebElement taxas;
     @FindBy(linkText = "Tributos")
-    public WebElement tributos ;
+    public WebElement tributos;
     @FindBy(linkText = "Cadastros de Pessoas")
     public WebElement cadastroDePessoas;
     @FindBy(linkText = "Dados de Mercado")
-    public WebElement  dadosDeMercado;
+    public WebElement dadosDeMercado;
     @FindBy(linkText = "Renda Fixa")
     public WebElement rendaFixa;
     @FindBy(linkText = "Renda Variável")
-    public WebElement  rendaVariavel;
+    public WebElement rendaVariavel;
     @FindBy(linkText = "Derivativos")
-    public WebElement  derivativos;
+    public WebElement derivativos;
     @FindBy(linkText = "Fundos")
     public WebElement fundos;
     @FindBy(linkText = "Outros Ativos")
-    public WebElement outrosAtivos ;
+    public WebElement outrosAtivos;
     @FindBy(linkText = "ETF – Módulo de Arquivos")
-    public WebElement  Etf;
+    public WebElement Etf;
     @FindBy(linkText = "Patrimônio")
-    public WebElement patrimonio ;
+    public WebElement patrimonio;
     @FindBy(linkText = "Contábil")
-    public WebElement  contabil;
+    public WebElement contabil;
     @FindBy(linkText = "Importações")
-    public WebElement importacoes ;
+    public WebElement importacoes;
     @FindBy(linkText = "Exportações")
-    public WebElement  exportacoes;
+    public WebElement exportacoes;
     @FindBy(linkText = "Processamento")
-    public WebElement processamento ;
+    public WebElement processamento;
     @FindBy(linkText = "Calculadora")
-    public WebElement calculadora ;
+    public WebElement calculadora;
     @FindBy(linkText = "Administração de Processamento")
-    public WebElement administracaoDeProcessamento ;
+    public WebElement administracaoDeProcessamento;
 
 //endregion
-    /**
+
+      /**
      * RELATÓRIOS MÓDULOS
      */
     //region
     @FindBy(id = "menuRelatoriosButtonSpan")
     public WebElement menuRelatorios;
     @FindBy(linkText = "Auditoria")
-    public WebElement  Auditoria;
+    public WebElement Auditoria;
     @FindBy(linkText = "Renda Fixa\n")
     public WebElement relRendaFixa;
     @FindBy(linkText = "Patrimônio")
-    public WebElement relPatrimonio ;
+    public WebElement relPatrimonio;
     @FindBy(linkText = "Renda Variável")
-    public WebElement  relRendaVariavel;
+    public WebElement relRendaVariavel;
     @FindBy(linkText = "Derivativos")
-    public WebElement relDerivativos ;
+    public WebElement relDerivativos;
     @FindBy(linkText = "Fundos")
-    public WebElement  relFundos;
+    public WebElement relFundos;
     @FindBy(linkText = "Outros Ativos")
-    public WebElement  relOutrosAtivos;
+    public WebElement relOutrosAtivos;
     @FindBy(linkText = "Câmbio, Forward e NDF")
-    public WebElement  relCâmbioForwardENDF;
+    public WebElement relCâmbioForwardENDF;
     @FindBy(linkText = "Personalizados")
-    public WebElement  relPersonalizados;
+    public WebElement relPersonalizados;
     @FindBy(linkText = "Cadastros de Pessoas")
-    public WebElement  relCadastrosDePessoas;
+    public WebElement relCadastrosDePessoas;
     @FindBy(linkText = "Contábil")
-    public WebElement  relContabil;
+    public WebElement relContabil;
     @FindBy(linkText = "Taxas")
-    public WebElement  relTaxas;
+    public WebElement relTaxas;
     @FindBy(linkText = "Tributos")
-    public WebElement relTributos ;
+    public WebElement relTributos;
     @FindBy(linkText = "TIR")
-    public WebElement  relTIR;
+    public WebElement relTIR;
     @FindBy(linkText = "Duplo Controle")
-    public WebElement relDuploControle ;
+    public WebElement relDuploControle;
 
     //endregion
+
 
 }

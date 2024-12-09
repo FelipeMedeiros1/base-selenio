@@ -38,9 +38,10 @@ public class CarteiraDiariaUtils extends UtilitarioRelatorio<CarteiraDiaria> {
         return this;
     }
 
+
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().relatoriosPatrimonio(pagina.carteiraDiaria);
+    protected String relatorio() {
+        return "Relatórios > Patrimônio > Carteira Diária";
     }
 
 

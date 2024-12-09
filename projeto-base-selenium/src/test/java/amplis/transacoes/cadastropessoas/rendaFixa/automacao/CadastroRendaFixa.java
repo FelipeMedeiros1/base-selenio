@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.renda_fixa.automacao;
+package amplis.transacoes.cadastropessoas.rendaFixa.automacao;
 
 public record CadastroRendaFixa(
         String carteira,

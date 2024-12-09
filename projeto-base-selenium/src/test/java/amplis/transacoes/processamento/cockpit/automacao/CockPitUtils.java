@@ -30,22 +30,20 @@ public class CockPitUtils extends UtilitarioProcessamento<CockPit> {
     }
 
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesProcessamento(pagina.cockPit);
-    }
-
-    @Override
-    protected String transacoes() {
+    protected String transacao() {
         return "Transações > Processamento > Carteira > Cockpit";
     }
+
+
     public UtilitarioProcessamento executar(CockPit dados, int posicao) {
         acessaPagina();
-        capturaTelaInfo("capturaTelaMenuTransacoes", transacoes());
+        capturaTelaInfo("capturaTelaMenuTransacoes", transacao());
         preencheDados(dados, posicao);
         capturaTelaInfo("capturaTelaDadosCockpit", "Foram preenchidos os dados para Cockpit.");
         pesquisaResultado();
         return this;
     }
+
 
     public void pesquisaResultado() {
         confirma();

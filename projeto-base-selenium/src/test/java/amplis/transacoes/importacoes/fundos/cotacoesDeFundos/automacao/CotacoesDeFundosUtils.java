@@ -24,8 +24,9 @@ public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos
 
     @Override
     public void acessaPagina() {
-        new MenuNavegacao().transacoesImportacao(pagina.cotacoesFundos);
+
     }
+
 
     @Override
     protected String transacoes() {

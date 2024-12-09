@@ -1,6 +1,7 @@
 package webdriver.base.navegacao.automacao;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,6 +11,7 @@ import webdriver.componentes.JsExecutor;
 
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
@@ -207,6 +209,82 @@ public class NavDinamica {
 //    }
 //}
 
+    public static void navegarParaPagina1(String navegacao) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Aumente o tempo de espera
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
+
+        List<String> partes = Arrays.asList(navegacao.split(">\\s*"));
+
+        String menuText = partes.get(0).trim();
+        String moduloText = partes.get(1).trim();
+        String penultimoTexto = partes.get(partes.size() - 2).trim();
+        String pagina = partes.get(partes.size() - 1).trim();
+
+        // Use ExpectedConditions.elementToBeClickable para garantir que o elemento seja clicável
+        WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuText + "')]")));
+
+        // Rolar para baixo até encontrar o elemento menu
+        new JsExecutor().rolarParaBaixoAteEncontrar(menu);
+
+        // Esperar o elemento menu ser clicável
+        new Espera().esperaElementoSerClicavel(menu);
+
+        // Clicar no elemento menu
+        new Actions(getDriver()).moveToElement(menu).perform();
+
+        // Encontrar o elemento modulo
+        String xpathExpression = "//a[(text()='" + moduloText + "' or @title='" + moduloText + "') or contains(@title, '" + moduloText + "') or contains(text(), '" + moduloText + "')]";
+        WebElement moduloElement = getDriver().findElement(By.xpath(xpathExpression));
+
+        // Clicar no elemento modulo
+        new Actions(getDriver()).moveToElement(moduloElement).perform();
+
+        getChildrens();
+        List<WebElement> elementosList = getChildrens();
+        for (WebElement elemento : elementosList) {
+            try {
+                WebElement el = elemento.findElement(By.tagName("a"));
+                if (el.getAttribute("onclick").contains(pagina)) {
+                    ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click()", el);
+                    wait.until(ExpectedConditions.urlContains(pagina));
+                    new Espera().esperaAjaxTerminar();
+                    break;
+                }
+            } catch (Exception e) {
+
+            }
+        }
+
+
+//        if (partes.size() > 3) {
+//            WebElement proximoElemento = getDriver().findElement(By.xpath("//*[contains(text(), '" + penultimoTexto + "')]/following-sibling::*"));
+//            new Actions(getDriver()).moveToElement(proximoElemento).perform();
+//            // Clicar no elemento proximoElemento
+//            new Actions(getDriver()).click(proximoElemento).perform();
+//        } else {
+//            // Encontrar o último elemento (página) usando o id
+//            WebElement ultimoElemento = wait.until(ExpectedConditions.elementToBeClickable(By.id("mainForm:j_id_1z:16:j_id_2w:13:j_id_2z:0:j_id_36")));
+//
+//            // Clicar no último elemento
+//            new Actions(getDriver()).click(ultimoElemento).perform();
+//        }
+    }
+
+    public static List<WebElement> getChildrens() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
+        // Localiza o último elemento pai visível e clicável
+        WebElement ultimoElemento = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("..")));
+
+        // Aguarda e retorna todos os elementos filhos <li>
+        return wait.until(driver -> {
+            List<WebElement> elements = ultimoElemento.findElements(By.tagName("li"));
+            return elements.isEmpty() ? null : elements; // Retorna null para aguardar se vazio
+        });
+    }
+
+
+
 //    public static void navegarParaPagina(String navegacao) {
 //        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Aumente o tempo de espera
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
@@ -243,57 +321,13 @@ public class NavDinamica {
 //            // Clicar no elemento proximoElemento
 //            new Actions(getDriver()).click(proximoElemento).perform();
 //        } else {
-//            // Encontrar o último elemento (página) usando o id
-//            WebElement ultimoElemento = wait.until(ExpectedConditions.elementToBeClickable(By.id("mainForm:j_id_1z:16:j_id_2w:13:j_id_2z:0:j_id_36")));
+//            // Encontrar o último elemento (página) usando XPath e ExpectedConditions.elementToBeClickable
+//            WebElement ultimoElemento = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(), '" + pagina + "')]")));
 //
 //            // Clicar no último elemento
 //            new Actions(getDriver()).click(ultimoElemento).perform();
 //        }
 //    }
-
-    public static void navegarParaPagina(String navegacao) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Aumente o tempo de espera
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
-
-        List<String> partes = Arrays.asList(navegacao.split(">\\s*"));
-
-        String menuText = partes.get(0).trim();
-        String moduloText = partes.get(1).trim();
-        String penultimoTexto = partes.get(partes.size() - 2).trim();
-        String pagina = partes.get(partes.size() - 1).trim();
-
-        // Use ExpectedConditions.elementToBeClickable para garantir que o elemento seja clicável
-        WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuText + "')]")));
-
-        // Rolar para baixo até encontrar o elemento menu
-        new JsExecutor().rolarParaBaixoAteEncontrar(menu);
-
-        // Esperar o elemento menu ser clicável
-        new Espera().esperaElementoSerClicavel(menu);
-
-        // Clicar no elemento menu
-        new Actions(getDriver()).moveToElement(menu).perform();
-
-        // Encontrar o elemento modulo
-        String xpathExpression = "//a[(text()='" + moduloText + "' or @title='" + moduloText + "') or contains(@title, '" + moduloText + "') or contains(text(), '" + moduloText + "')]";
-        WebElement moduloElement = getDriver().findElement(By.xpath(xpathExpression));
-
-        // Clicar no elemento modulo
-        new Actions(getDriver()).moveToElement(moduloElement).perform();
-
-        if (partes.size() > 3) {
-            WebElement proximoElemento = getDriver().findElement(By.xpath("//*[contains(text(), '" + penultimoTexto + "')]/following-sibling::*"));
-            new Actions(getDriver()).moveToElement(proximoElemento).perform();
-            // Clicar no elemento proximoElemento
-            new Actions(getDriver()).click(proximoElemento).perform();
-        } else {
-            // Encontrar o último elemento (página) usando XPath e ExpectedConditions.elementToBeClickable
-            WebElement ultimoElemento = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(), '" + pagina + "')]")));
-
-            // Clicar no último elemento
-            new Actions(getDriver()).click(ultimoElemento).perform();
-        }
-    }
 
 //    public static void navegarParaPagina(String navegacao) {
 //        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Aumente o tempo de espera
@@ -325,5 +359,48 @@ public class NavDinamica {
 //        }
 //    }
 
+    public static void navegarParaPagina(String navegacao) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
+
+        // Aguarda até que o body esteja visível para garantir que a página carregou
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
+
+        // Divide a string de navegação em partes
+        List<String> partes = Arrays.asList(navegacao.split(">\\s*"));
+
+        String menuText = partes.get(0).trim();
+        String moduloText = partes.get(1).trim();
+        String pagina = partes.get(partes.size() - 1).trim();
+
+        // Localiza o menu principal e aguarda até ser clicável
+        WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuText + "')]")));
+
+        // Clica no menu usando uma ação segura
+        menu.click();
+
+        // Localiza o módulo associado e aguarda até ser clicável
+        WebElement moduloElement = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//a[(text()='" + moduloText + "' or @title='" + moduloText + "') or contains(@title, '" + moduloText + "') or contains(text(), '" + moduloText + "')]")));
+
+        // Clica no módulo
+        moduloElement.click();
+
+        // Obtém os elementos filhos e busca o elemento da página desejada
+        List<WebElement> elementosList = getChildrens();
+        for (WebElement elemento : elementosList) {
+            try {
+                WebElement linkElement = elemento.findElement(By.tagName("a"));
+                if (linkElement.getAttribute("onclick") != null && linkElement.getAttribute("onclick").contains(pagina)) {
+                    ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click()", linkElement);
+                    wait.until(ExpectedConditions.urlContains(pagina));
+                    break;
+                }
+            } catch (Exception e) {
+                // Tratamento simples de exceções para elementos que não possuem os atributos esperados
+                System.out.println("Elemento não encontrado ou não clicável: " + e.getMessage());
+            }
+        }
+    }
 
 }

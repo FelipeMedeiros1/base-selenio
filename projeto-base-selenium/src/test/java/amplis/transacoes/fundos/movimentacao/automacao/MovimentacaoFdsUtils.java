@@ -52,11 +52,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastro<Movimentacao> {
     }
 
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesFundos(pagina.movimentacao);
 
-    }
 
     @Override
     protected String transacao() {

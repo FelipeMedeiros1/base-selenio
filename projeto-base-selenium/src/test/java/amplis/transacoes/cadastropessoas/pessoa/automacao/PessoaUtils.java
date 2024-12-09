@@ -36,10 +36,7 @@ public class PessoaUtils extends UtilitarioCadastro<Pessoa> {
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroDePessoas(pagina.pessoas);
-    }
+
 
     @Override
     protected String transacao() {

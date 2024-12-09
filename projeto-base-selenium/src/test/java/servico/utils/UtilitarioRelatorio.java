@@ -2,6 +2,7 @@ package servico.utils;
 
 
 import webdriver.base.Interagivel;
+import webdriver.base.navegacao.automacao.NavegacaoAmplis;
 
 public abstract class UtilitarioRelatorio<M> extends Interagivel {
 
@@ -11,7 +12,11 @@ public abstract class UtilitarioRelatorio<M> extends Interagivel {
     }
     protected abstract void preencheDados(M dados, int posicao);
     protected abstract UtilitarioRelatorio<M> gerarRelatorio(M dados, int posicao);
-    public abstract void acessaPagina();
+    protected  void acessaPagina(){
+        new NavegacaoAmplis().navegarPara(relatorio());
+    }
+
+    protected abstract String relatorio();
 
 
     public String getCaminhoArquivo() {

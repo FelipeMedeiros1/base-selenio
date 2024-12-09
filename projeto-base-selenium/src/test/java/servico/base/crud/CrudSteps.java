@@ -6,7 +6,6 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.java.pt.Então;
 import servico.utils.UtilitarioCadastro;
-import servico.utils.UtilitarioCadastroFabrica;
 import webdriver.componentes.PainelMensagem;
 
 
@@ -24,7 +23,6 @@ public class CrudSteps {
     @Dado("que o usuário acessa a página {string}, {string}")
     public void que_o_usuário_acessa_a_página(String pagina, String nomeDoArquivo)
    {
-        this.utilitarioCadastro = UtilitarioCadastroFabrica.getUtilitarioCadastro(pagina,nomeDoArquivo);
     }
     @Quando("o usuário preenche os campos com os dados do arquivo {string} na posição {int} do arquivo json")
     public void o_usuário_preenche_os_campos_com_os_dados_na_posição_do_arquivo_json(String string, Integer int1) {
@@ -40,7 +38,6 @@ public class CrudSteps {
 
     @Dado("que acesse a página {string}")
     public void que_acesse_a_página(String pagina) {
-        this.utilitarioCadastro = UtilitarioCadastroFabrica.getUtilitarioCadastro(pagina,"");
     }
 
 //    @Quando("executar a operação de inclusão e preencher os dados da pagina {string} na posição {int} do arquivo json")

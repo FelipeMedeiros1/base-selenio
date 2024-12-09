@@ -30,10 +30,7 @@ public class CadastroFundosUtils extends UtilitarioCadastro<CadastroFundos> {
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroDePessoas(pagina.cadastroFundos);
-    }
+
 
     @Override
     protected String transacao() {

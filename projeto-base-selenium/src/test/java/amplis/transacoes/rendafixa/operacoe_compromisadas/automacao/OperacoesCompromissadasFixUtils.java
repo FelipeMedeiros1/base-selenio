@@ -79,10 +79,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesRendaFixa(pagina.opCompromissadas);
-    }
+
 
     @Override
     protected String transacao() {

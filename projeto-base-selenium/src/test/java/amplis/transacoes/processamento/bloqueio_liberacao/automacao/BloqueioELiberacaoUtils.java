@@ -37,14 +37,11 @@ public class BloqueioELiberacaoUtils extends UtilitarioProcessamento<BloqueioELi
     }
 
     @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesProcessamento(pagina.bloqueioELiberacao);
+    protected String transacao() {
+        return "Transações > Processamento > Carteira > Bloqueio de Processamento e Liberação Contábil";
     }
 
-    @Override
-    protected String transacoes() {
-        return null;
-    }
+
 
 
 }

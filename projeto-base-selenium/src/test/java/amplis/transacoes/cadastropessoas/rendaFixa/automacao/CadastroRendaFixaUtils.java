@@ -1,8 +1,7 @@
-package amplis.transacoes.cadastropessoas.renda_fixa.automacao;
+package amplis.transacoes.cadastropessoas.rendaFixa.automacao;
 
-import amplis.transacoes.cadastropessoas.renda_fixa.pagina.PaginaCadastroRendaFixa;
+import amplis.transacoes.cadastropessoas.rendaFixa.pagina.PaginaCadastroRendaFixa;
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
 
 public class CadastroRendaFixaUtils extends UtilitarioCadastro<CadastroRendaFixa> {
@@ -26,17 +25,9 @@ public class CadastroRendaFixaUtils extends UtilitarioCadastro<CadastroRendaFixa
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }
-
-
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroDePessoas(pagina.cadRendaFixa);
-
-    }
-
     @Override
     protected String transacao() {
-        return null;
+        return "Transações > Cadastros de Pessoas > Carteiras > Cadastros > Renda Fixa";
     }
 
 }

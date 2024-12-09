@@ -57,10 +57,7 @@ public class OperacoesATermoFixUtils extends UtilitarioCadastro<OperacoesATermo>
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesRendaFixa(pagina.opTermo);
-    }
+
 
     @Override
     protected String transacao() {

@@ -1,6 +1,7 @@
 package servico.utils;
 
 import webdriver.base.Interagivel;
+import webdriver.base.navegacao.automacao.NavegacaoAmplis;
 
 import static webdriver.componentes.Evidencia.capturaTelaInfo;
 
@@ -47,7 +48,9 @@ public abstract class UtilitarioCadastro<M> extends Interagivel {
 
     public abstract void consultar(M dados, int posicao);
 
-    protected abstract void acessaPagina();
+    protected  void acessaPagina(){
+        new NavegacaoAmplis().navegarPara(transacao());
+    }
 
     protected abstract String transacao();
 

@@ -23,14 +23,10 @@ public class ProcessamentoContabilUtils extends UtilitarioProcessamento<Processa
         preenche(pagina.carteira, dados.carteira());
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesProcessamento(pagina.processamentoContabil);
-    }
 
     @Override
-    protected String transacoes() {
-        return null;
+    protected String transacao() {
+        return "Transações > Processamento > Contábil > Processamento";
     }
 
 

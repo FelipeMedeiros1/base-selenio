@@ -26,10 +26,7 @@ public class CadastroPatrimonioUtils extends UtilitarioCadastro<CadastroPatrimon
         confirmaConsulta();
     }
 
-    @Override
-    public void acessaPagina() {
-        new MenuNavegacao().transacoesCadastroDePessoas(pagina.cadastroPatrimonio);
-    }
+
 
     @Override
     protected String transacao() {

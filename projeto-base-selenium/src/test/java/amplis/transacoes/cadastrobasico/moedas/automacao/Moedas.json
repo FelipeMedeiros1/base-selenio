@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "codigo": "teste",
-    "nome": "nova",
+    "codigo": "teste Moeda",
+    "nome": "nova Moeda",
     "simbolo": "FLP",
     "status": "Ativo"
   },
   {
     "id": 2,
-    "codigo": "teste",
+    "codigo": "teste Moeda",
     "nome": "Alterada",
     "simbolo": "FEL",
     "status": "Inativo"
