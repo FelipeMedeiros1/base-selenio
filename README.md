@@ -15,56 +15,20 @@ Bora lá! Mas antes de decolar, certifique-se de ter as seguintes ferramentas in
 Beleza, vamos entender a bagunça organizada aqui:
 
 - `src/test/java`: Aqui é onde os testes mágicos acontecem.
-  - `api`: Interfaces que dão vida à automação.
-  - `webdriver`: Implementações das interfaces e a mágica do Selenium.
-    - `BasePage`: Classe base pra todas as outras.
-    - Classes que implementam interfaces em `api` e estendem `BasePage`.
+    - `webdriver`: Implementações das interfaces e a mágica do Selenium.
+    - `Base`: Classe base pra todas as outras.
   - `sistema`: Testes específicos pra cada pedacinho do sistema.
     - `modulo`: Cada pedacinho do sistema é um módulo.
       - `tela`: E cada tela é um submódulo.
         - `Modelo`: Tá aqui todos os detalhes da tela.
-        - `Utils`: Onde mora a inteligência do teste, estendendo `UtilitarioCadastroTestCase`.
+        - `Utils`: Onde mora a inteligência do teste, estendendo os `Utilitarios`.
         - `Test`: Classe de teste, estendendo `BaseTest`.
-        - `test.xlsx`: Massa de dados pro teste. Precisamos disso, né?
-       
-## Usando Lombok
-Agora ficou ainda mais fácil!
-Você pode usar o Lombok para reduzir o boilerplate do código. Adicione anotações como `@Data` e `@Builder` nas suas classes para criar automaticamente getters, setters, construtores, etc.
-Ah, e certifique-se de que o plugin do Lombok está instalado na sua IDE!
+        - `.xlsx` ou `.json` : Massa de dados pro teste. Precisamos disso, né?
 
-## Parte Prática no Pacote `api`
-
-1. No pacote `api`, é onde a mágica começa. Interfaces pra cada tela. Olha só:
-
-```java
-// Exemplo de interface pra página de login
-public interface Login extends TestCase {
-   
-    // Métodos pra interagir com os elementos da tela
-    EntradaSimples preencherUsuario(String usuario);
-    EntradaSimples preencherSenha(String senha);
-    Click clicarBtLogin();
-}
-```
 ## Praticando com o Pacote webdriver
-Agora, no pacote webdriver, é onde a gente dá vida às interfaces. Implementações e tal, saca?
-
-```java
-// Exemplo de implementação pra página de login
-public class LoginPage extends BasePage implements Login {
-
-    @FindBy(id = "usuario")
-        private WebElement usuario;
-    
-    // Implementação dos métodos da interface
-    @Override
-    public EntradaSimples preencherUsuario(String valor) {
-        preenche(usuario, valor);
-    }
-
-}
+Agora, no pacote webdriver, é onde a gente dá vida aos componentes. Implementações e tal, saca?
 ```
-E não esquece de fazer todas as classes pageObject estenderem BasePage e implementarem a interface certinha.
+E não esquece de fazer todas as classes pageObject estenderem BasePage.
 
 ## Testes Reais no Pacote sistema
 No pacote sistema, é onde a mágica real acontece. Testes específicos pra cada telinha.
