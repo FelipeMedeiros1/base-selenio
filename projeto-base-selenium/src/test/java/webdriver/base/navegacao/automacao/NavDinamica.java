@@ -120,7 +120,7 @@ public class NavDinamica {
 //        // Rolar para baixo até encontrar o elemento menu
 //        new JsExecutor().rolarParaBaixoAteEncontrar(menu);
 //
-//        // Esperar o elemento menu ser clicável
+//         
 //        new Espera().esperaElementoSerClicavel(menu);
 //
 //        // Clicar no elemento menu
@@ -210,33 +210,26 @@ public class NavDinamica {
 //}
 
     public static void navegarParaPagina1(String navegacao) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60)); // Aumente o tempo de espera
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));  
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
 
         List<String> partes = Arrays.asList(navegacao.split(">\\s*"));
 
-        String menuText = partes.get(0).trim();
-        String moduloText = partes.get(1).trim();
+        String menuTexto = partes.get(0).trim();
+        String moduloTexto = partes.get(1).trim();
         String penultimoTexto = partes.get(partes.size() - 2).trim();
         String pagina = partes.get(partes.size() - 1).trim();
 
-        // Use ExpectedConditions.elementToBeClickable para garantir que o elemento seja clicável
+         
         WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuText + "')]")));
-
-        // Rolar para baixo até encontrar o elemento menu
+       
         new JsExecutor().rolarParaBaixoAteEncontrar(menu);
-
-        // Esperar o elemento menu ser clicável
         new Espera().esperaElementoSerClicavel(menu);
-
-        // Clicar no elemento menu
         new Actions(getDriver()).moveToElement(menu).perform();
-
-        // Encontrar o elemento modulo
+ 
         String xpathExpression = "//a[(text()='" + moduloText + "' or @title='" + moduloText + "') or contains(@title, '" + moduloText + "') or contains(text(), '" + moduloText + "')]";
         WebElement moduloElement = getDriver().findElement(By.xpath(xpathExpression));
-
-        // Clicar no elemento modulo
+ 
         new Actions(getDriver()).moveToElement(moduloElement).perform();
 
         getChildrens();
