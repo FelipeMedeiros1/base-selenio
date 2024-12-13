@@ -27,7 +27,7 @@ public class LeitorCSV {
         return dados;
     }
 
-    // Método para ler CSV com separador padrão (';')
+
     public static List<String[]> lerCSV(String csvFilePath) {
         return lerCSV(csvFilePath, ';');
     }

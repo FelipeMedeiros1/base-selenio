@@ -4,50 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b2cadfb-f850-4053-8e98-c104e89833c5" name="Changes" comment="atualização">
-      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaVariavel/automacao/CadastroRendaVariavel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaVariavel/automacao/CadastroRendaVariavelUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+    <list default="true" id="2b2cadfb-f850-4053-8e98-c104e89833c5" name="Changes" comment="atualização sistema">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/patrimonio/carteira_diaria/automacao/CarteiraDiariaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/patrimonio/carteira_diaria/automacao/CarteiraDiariaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/renda_fixa/movimentacao/automacao/MovimentacaoRelFixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/renda_fixa/movimentacao/automacao/MovimentacaoRelFixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/renda_fixa/rendimentos/automacao/RendimentosRelFixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/relatorios/renda_fixa/rendimentos/automacao/RendimentosRelFixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/MoedasSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/MoedasSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/MoedasUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/automacao/MoedasUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastrobasico/moedas/pagina/PaginaMoedasConsulta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/fundamental/automacao/FundamentalUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/fundamental/automacao/FundamentalUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/fundos/automacao/CadastroFundosUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/fundos/automacao/CadastroFundosUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/patrimonio/automacao/CadastroPatrimonioUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/patrimonio/automacao/CadastroPatrimonioUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/pessoa/automacao/PessoaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/pessoa/automacao/PessoaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_fixa/automacao/CadastroRendaFixa.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaFixa/automacao/CadastroRendaFixa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_fixa/automacao/CadastroRendaFixaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaFixa/automacao/CadastroRendaFixaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_fixa/automacao/CadastroRendaFixaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaFixa/automacao/CadastroRendaFixaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_fixa/pagina/NegociacaoAba.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaFixa/pagina/NegociacaoAba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_fixa/pagina/PaginaCadastroRendaFixa.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaFixa/pagina/PaginaCadastroRendaFixa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_variavel/automacao/CadastroRendaVariavelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaVariavel/automacao/CadastroRendaVariavelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/renda_variavel/pagina/PaginaCadastroRendaVariavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaVariavel/pagina/PaginaCadastroRendaVariavel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/fundos/movimentacao/automacao/MovimentacaoFdsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/fundos/movimentacao/automacao/MovimentacaoFdsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/importacoes/fundos/cotacoesDeFundos/automacao/CotacoesDeFundosUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/importacoes/fundos/cotacoesDeFundos/automacao/CotacoesDeFundosUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/bloqueio_liberacao/automacao/BloqueioELiberacaoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/bloqueio_liberacao/automacao/BloqueioELiberacaoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/cockpit/automacao/CockPitUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/cockpit/automacao/CockPitUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/processamento/automacao/ProcessamentoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/processamento/automacao/ProcessamentoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/processamentoContabil/automacao/ProcessamentoContabilUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/processamento/processamentoContabil/automacao/ProcessamentoContabilUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoe_compromisadas/automacao/OperacoesCompromissadasFixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoe_compromisadas/automacao/OperacoesCompromissadasFixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoes_definitivas/automacao/OperacoesDefinitivasFixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoes_definitivas/automacao/OperacoesDefinitivasFixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermoFixUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/amplis/transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermoFixUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/base/crud/CrudSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/base/crud/CrudSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioCadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioCadastroFabrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/NavegacaoAmplis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioProcessamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioProcessamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioRelatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioRelatorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/MenuNavegacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/MenuNavegacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/NavDinamica.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/NavDinamica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/Navegacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/Navegacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/pagina/PaginaMenuNavegacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/pagina/PaginaMenuNavegacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/componentes/CampoTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/componentes/CampoTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/leitorDeArquivo/config_csv/LeitorCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/leitorDeArquivo/config_csv/LeitorCSV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,28 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.FundamentalTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MoedasTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MoedasTest.testInclusaoAlteracaoExclusao.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.MoedasTest.testRealizarInclusaoAlteracaoExclusao.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/felipem.medeiros/Documents/cursos/SELENIUM/base-selenio/projeto-base-selenium/src/test/java/amplis/transacoes/cadastropessoas/rendaVariavel/automacao&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.FundamentalTest.executor": "Run",
+    "JUnit.MoedasTest.executor": "Run",
+    "JUnit.MoedasTest.testInclusaoAlteracaoExclusao.executor": "Debug",
+    "JUnit.MoedasTest.testRealizarInclusaoAlteracaoExclusao.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/felipem.medeiros/Desktop/base-selenio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="webdriver.componentes" />
@@ -294,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729611405947</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="atualização sistema">
+      <created>1734093461573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734093461573</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +295,8 @@
     <MESSAGE value="atualização para ler massa de dados do json" />
     <MESSAGE value="atualização na estrutura e preparação para cucumber" />
     <MESSAGE value="atualização" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualização" />
+    <MESSAGE value="atualização sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualização sistema" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
