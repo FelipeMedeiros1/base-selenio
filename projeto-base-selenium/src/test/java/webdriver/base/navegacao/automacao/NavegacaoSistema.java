@@ -1,6 +1,6 @@
 package webdriver.base.navegacao.automacao;
 
-public class NavegacaoAmplis extends MenuNavegacao {
+public class NavegacaoSistema extends MenuNavegacao {
 
 
     public void navegarPara(String pagina) {
