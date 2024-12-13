@@ -64,7 +64,7 @@ zephyr.connector.zephyrKey=
 #file.transfer.amazon.s3.region=sa-east-1
 #file.transfer.amazon.s3.bucket.name=tfs-infrastructure-ath
 #file.transfer.amazon.s3.accesskey=***************
-#file.transfer.amazon.s3.secretkey=vGgLgg2e6wzNiIvhrWynQy+89ywuApmWbknaVu5p
+#file.transfer.amazon.s3.secretkey=***************
 #file.transfer.amazon.s3.sessiontoken=
 #file.transfer.amazon.s3.uploadpartsize=5
 
