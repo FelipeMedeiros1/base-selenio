@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/leitorDeArquivo/config_csv/LeitorCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/leitorDeArquivo/config_csv/LeitorCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioCadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioProcessamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioProcessamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioRelatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/servico/utils/UtilitarioRelatorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/NavegacaoAmplis.java" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-base-selenium/src/test/java/webdriver/base/navegacao/automacao/NavegacaoSistema.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
