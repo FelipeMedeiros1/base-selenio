@@ -56,3 +56,15 @@ jira.connector.jiraKey=
 zephyr.connector.isActive=false
 zephyr.connector.projectId=
 zephyr.connector.zephyrKey=
+
+
+#AWS-S3
+# credentialtype = basic, profile or environment
+#file.transfer.amazon.s3.credentialtype=basic
+#file.transfer.amazon.s3.region=sa-east-1
+#file.transfer.amazon.s3.bucket.name=tfs-infrastructure-ath
+#file.transfer.amazon.s3.accesskey=***************
+#file.transfer.amazon.s3.secretkey=vGgLgg2e6wzNiIvhrWynQy+89ywuApmWbknaVu5p
+#file.transfer.amazon.s3.sessiontoken=
+#file.transfer.amazon.s3.uploadpartsize=5
+
