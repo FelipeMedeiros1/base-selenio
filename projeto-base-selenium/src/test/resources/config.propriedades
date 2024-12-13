@@ -2,3 +2,57 @@ url=https://
 
 login=
 senha=
+
+#PROJECT
+project.name = Projeto Automacao
+project.version = ${version}
+project.system =
+project.system.version =
+
+#APPIUM
+mobile.appium.url = http://127.0.0.1:4723/wd/hub/
+mobile.appium.capability.android.platformName = android
+mobile.appium.capability.ios.platformName = ios
+mobile.appium.capability.android.automationName = uiautomator2
+mobile.appium.capability.ios.automationName = XCUITest
+mobile.appium.capability.android.deviceName = Android_8
+mobile.appium.capability.ios.deviceName = iPhone 14 Pro
+mobile.appium.capability.android.platformVersion = 10
+mobile.appium.capability.ios.platformVersion = 16.2
+mobile.appium.capability.noReset = true
+mobile.appium.capability.fullReset = false
+mobile.appium.capability.resetKeyboard = false
+mobile.appium.capability.unicodeKeyboard = false
+mobile.appium.capability.newCommandTimeout = 99999
+#mobile.appium.capability.autoGrantPermissions = true
+mobile.appium.capability.autoAcceptAlerts = true
+
+#APPIUM SERVER
+mobile.appium.server = false
+mobile.appium.server.consolelog = false
+mobile.appium.server.host = 0.0.0.0
+mobile.appium.server.port = 4723
+
+#DEVICE FARM
+mobile.devicefarm.android.isActive = false
+mobile.devicefarm.android.deviceSerial =
+
+#WEB
+web.drivers.path.windows=C:\\Users\\Public\\Drivers\\WebDrivers\\
+web.drivers.path.unix=/Users/Shared/Drivers/WebDrivers/
+web.drivers.headless=false
+web.url=
+#DRIVER QUE SERA EXECUTADO AS AUTOMACOES WEB. OPCOES: CHROME, EDGE, SAFARI
+web.drivers.set=CHROME
+web.drivers.manager.isActive=true
+
+#Jira
+jira.connector.isActive=false
+jira.connector.baseUrl=
+jira.connector.username=
+jira.connector.jiraKey=
+
+#Zephyr
+zephyr.connector.isActive=false
+zephyr.connector.projectId=
+zephyr.connector.zephyrKey=
