@@ -9,7 +9,7 @@ import org.junit.runners.MethodSorters;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:sistema/amplis/transacoes",
-        glue = {"sistema.amplis", "servico.base" },
+        glue = {"sistema", "servico.base" },
         monochrome = true,
         dryRun = false,
         plugin = {"pretty", "html:target/cucumber-reports","json:target/cucumber.json"},
