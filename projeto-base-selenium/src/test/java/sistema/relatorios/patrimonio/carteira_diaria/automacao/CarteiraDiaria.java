@@ -1,4 +1,4 @@
-package amplis.relatorios.patrimonio.carteira_diaria.automacao;
+package sistema.relatorios.patrimonio.carteira_diaria.automacao;
 
 public record CarteiraDiaria(
         int id,

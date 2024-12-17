@@ -22,6 +22,7 @@ public class JsExecutor {
         org.openqa.selenium.JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) getDriver();
         return js.executeScript(cmd, param);
     }
+
     public void preenche(WebElement elemento, String valor){
         executarScript("arguments[0].value = arguments[1];", elemento, valor.trim());
     }

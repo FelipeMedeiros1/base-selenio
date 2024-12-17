@@ -1,12 +1,10 @@
-package amplis.transacoes.processamento.cockpit.automacao;
+package sistema.transacoes.processamento.cockpit.automacao;
 
 
 import org.junit.jupiter.api.Assertions;
 import servico.leitorDeArquivo.config_json.LeitorJson;
-
-import amplis.transacoes.processamento.cockpit.pagina.PaginaCockPit;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioProcessamento;
+import sistema.transacoes.processamento.cockpit.pagina.PaginaCockPit;
 
 import static webdriver.componentes.Evidencia.*;
 
@@ -17,7 +15,7 @@ public class CockPitUtils extends UtilitarioProcessamento<CockPit> {
         super(caminhoArquivo);
     }
 
-    private PaginaCockPit pagina = new PaginaCockPit();
+    private final PaginaCockPit pagina = new PaginaCockPit();
 
     @Override
     protected void preencheDados(CockPit dados, int posicao) {

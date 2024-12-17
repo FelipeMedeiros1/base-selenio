@@ -1,15 +1,16 @@
-package amplis.transacoes.cadastropessoas.rendaFixa.automacao;
+package sistema.transacoes.cadastropessoas.rendaFixa.automacao;
 
-import amplis.transacoes.cadastropessoas.rendaFixa.pagina.PaginaCadastroRendaFixa;
+
 import servico.leitorDeArquivo.config_json.LeitorJson;
 import servico.utils.UtilitarioCadastro;
+import sistema.transacoes.cadastropessoas.rendaFixa.pagina.PaginaCadastroRendaFixa;
 
 public class CadastroRendaFixaUtils extends UtilitarioCadastro<CadastroRendaFixa> {
     public CadastroRendaFixaUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
 
-    private PaginaCadastroRendaFixa pagina = new PaginaCadastroRendaFixa();
+    private final PaginaCadastroRendaFixa pagina = new PaginaCadastroRendaFixa();
 
     @Override
     public void preencheDados(CadastroRendaFixa dados, int posicao) {

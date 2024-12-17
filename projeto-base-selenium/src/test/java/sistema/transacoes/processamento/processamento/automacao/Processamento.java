@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.processamento.automacao;
+package sistema.transacoes.processamento.processamento.automacao;
 public record Processamento(
         int id,
         String[] modulos,

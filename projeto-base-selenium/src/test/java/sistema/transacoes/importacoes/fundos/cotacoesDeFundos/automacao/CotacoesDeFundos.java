@@ -1,4 +1,4 @@
-package amplis.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
+package sistema.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
 
 public record CotacoesDeFundos(
 

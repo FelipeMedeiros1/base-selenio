@@ -1,11 +1,11 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
 public class LastroDeVendaAba extends PaginaOperacoesCompromissadas {
-    @FindBy(id = "")
+    @FindBy(id = "q")
     public WebElement lastroDeVenda;
     @FindBy(id = "mainForm:dataTable2:0:securityDelivery_dropdown:campo")
     public WebElement tituloSelicPu550TituloVenda;

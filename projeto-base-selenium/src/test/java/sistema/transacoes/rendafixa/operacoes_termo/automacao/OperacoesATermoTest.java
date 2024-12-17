@@ -1,4 +1,4 @@
-package amplis.transacoes.rendafixa.operacoes_termo.automacao;
+package sistema.transacoes.rendafixa.operacoes_termo.automacao;
 
 import org.junit.Test;
 import servico.base.BaseTeste;
@@ -10,7 +10,7 @@ public class OperacoesATermoTest extends BaseTeste {
     @Test
     public void qa() {
 
-        String json = "amplis/transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermo.json";
+        String json = "transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermo.json";
         new OperacoesATermoFixUtils(json).alterar(opTermo, 1);
 
     }

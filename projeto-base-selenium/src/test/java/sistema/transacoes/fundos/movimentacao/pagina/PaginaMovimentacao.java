@@ -1,4 +1,4 @@
-package amplis.transacoes.fundos.movimentacao.pagina;
+package sistema.transacoes.fundos.movimentacao.pagina;
 
 
 import webdriver.base.BasePagina;

@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.patrimonio.automacao;
+package sistema.transacoes.cadastropessoas.patrimonio.automacao;
 
 import org.junit.Test;
 import servico.base.BaseTeste;

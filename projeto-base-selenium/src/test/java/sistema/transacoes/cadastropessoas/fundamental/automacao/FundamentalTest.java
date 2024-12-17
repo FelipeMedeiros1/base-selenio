@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.fundamental.automacao;
+package sistema.transacoes.cadastropessoas.fundamental.automacao;
 
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
@@ -8,7 +8,7 @@ import org.junit.Test;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FundamentalTest extends BaseTeste {
     private Fundamental fundamental;
-    private String json = "amplis/transacoes/cadastropessoas/fundamental/automacao/Fundamental.json";
+    private final String json = "amplis/transacoes/cadastropessoas/fundamental/automacao/Fundamental.json";
 
     @Test
     public void test01_lInclusao() {

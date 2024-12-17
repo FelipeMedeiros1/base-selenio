@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class Filtro {
-    private Espera espera = new Espera();
-    private ComboBox comboBox = new ComboBox();
+    private final Espera espera = new Espera();
+    private final ComboBox comboBox = new ComboBox();
 
     public void filtroPesquisaPreenche(String nomeDoCampo, String valor) {
 

@@ -1,12 +1,9 @@
-package amplis.transacoes.cadastropessoas.pessoa.automacao;
+package sistema.transacoes.cadastropessoas.pessoa.automacao;
 
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-
-import amplis.transacoes.cadastropessoas.pessoa.pagina.PaginaPessoa;
-
+import sistema.transacoes.cadastropessoas.pessoa.pagina.PaginaPessoa;
 
 public class PessoaUtils extends UtilitarioCadastro<Pessoa> {
 
@@ -14,7 +11,7 @@ public class PessoaUtils extends UtilitarioCadastro<Pessoa> {
         super(nomeDaPlanilha);
     }
 
-    private PaginaPessoa pagina = new PaginaPessoa();
+    private final PaginaPessoa pagina = new PaginaPessoa();
 
     @Override
     public void preencheDados(Pessoa dados, int posicao) {

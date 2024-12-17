@@ -1,4 +1,4 @@
-package amplis.transacoes.rendafixa.operacoes_termo.automacao;
+package sistema.transacoes.rendafixa.operacoes_termo.automacao;
 
 
 

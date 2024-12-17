@@ -21,9 +21,9 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class ComboBox {
 
-    private Espera espera = new Espera();
-    private Botao botao = new Botao();
-    private JsExecutor js = new JsExecutor();
+    private final Espera espera = new Espera();
+    private final Botao botao = new Botao();
+    private final JsExecutor js = new JsExecutor();
 
     /**
      * Seleciona um item em um combobox, localizado por seu elemento.

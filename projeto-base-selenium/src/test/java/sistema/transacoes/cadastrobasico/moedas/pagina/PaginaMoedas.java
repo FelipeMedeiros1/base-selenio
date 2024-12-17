@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastrobasico.moedas.pagina;
+package sistema.transacoes.cadastrobasico.moedas.pagina;
 
 
 import webdriver.base.BasePagina;

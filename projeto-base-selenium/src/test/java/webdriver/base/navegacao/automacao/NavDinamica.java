@@ -221,13 +221,13 @@ public class NavDinamica {
         String pagina = partes.get(partes.size() - 1).trim();
 
          
-        WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuText + "')]")));
+        WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[starts-with(@id, 'menu')]/span[contains(text(), '" + menuTexto + "')]")));
        
         new JsExecutor().rolarParaBaixoAteEncontrar(menu);
         new Espera().esperaElementoSerClicavel(menu);
         new Actions(getDriver()).moveToElement(menu).perform();
  
-        String xpathExpression = "//a[(text()='" + moduloText + "' or @title='" + moduloText + "') or contains(@title, '" + moduloText + "') or contains(text(), '" + moduloText + "')]";
+        String xpathExpression = "//a[(text()='" + moduloTexto + "' or @title='" + moduloTexto + "') or contains(@title, '" + moduloTexto + "') or contains(text(), '" + moduloTexto + "')]";
         WebElement moduloElement = getDriver().findElement(By.xpath(xpathExpression));
  
         new Actions(getDriver()).moveToElement(moduloElement).perform();

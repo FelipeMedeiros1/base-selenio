@@ -1,10 +1,10 @@
-package amplis.transacoes.cadastropessoas.pessoa.automacao;
+package sistema.transacoes.cadastropessoas.pessoa.automacao;
 
 import servico.base.BaseTeste;
 import org.junit.Test;
 
 public class PessoaTest extends BaseTeste {
-    private String json ="amplis/transacoes/cadastropessoas/pessoa/automacao/Pessoa.json";
+    private final String json ="amplis/transacoes/cadastropessoas/pessoa/automacao/Pessoa.json";
     private Pessoa pessoa;
 
     @Test

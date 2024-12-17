@@ -1,4 +1,4 @@
-package amplis.transacoes.importacoes.fundos.cotacoesDeFundos.pagina;
+package sistema.transacoes.importacoes.fundos.cotacoesDeFundos.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

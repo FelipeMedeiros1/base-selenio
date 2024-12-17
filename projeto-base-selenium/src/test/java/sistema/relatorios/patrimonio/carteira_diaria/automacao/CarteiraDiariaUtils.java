@@ -1,15 +1,12 @@
-package amplis.relatorios.patrimonio.carteira_diaria.automacao;
+package sistema.relatorios.patrimonio.carteira_diaria.automacao;
 
-
-import amplis.relatorios.patrimonio.carteira_diaria.pagina.PaginaCarteiraDiaria;
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioRelatorio;
-
+import sistema.relatorios.patrimonio.carteira_diaria.pagina.PaginaCarteiraDiaria;
 
 public class CarteiraDiariaUtils extends UtilitarioRelatorio<CarteiraDiaria> {
 
-    private PaginaCarteiraDiaria pagina = new PaginaCarteiraDiaria();
+    private final PaginaCarteiraDiaria pagina = new PaginaCarteiraDiaria();
 
     public CarteiraDiariaUtils(String nomeDaPlanilha) {
         super(nomeDaPlanilha);

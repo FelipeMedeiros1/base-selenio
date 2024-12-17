@@ -1,11 +1,8 @@
-package amplis.transacoes.processamento.bloqueio_liberacao.automacao;
-
+package sistema.transacoes.processamento.bloqueio_liberacao.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-
-import amplis.transacoes.processamento.bloqueio_liberacao.pagina.PaginaBloqueioELiberacao;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioProcessamento;
+import sistema.transacoes.processamento.bloqueio_liberacao.pagina.PaginaBloqueioELiberacao;
 
 
 public class BloqueioELiberacaoUtils extends UtilitarioProcessamento<BloqueioELiberacao> {
@@ -14,7 +11,7 @@ public class BloqueioELiberacaoUtils extends UtilitarioProcessamento<BloqueioELi
         super(caminhoArquivo);
     }
 
-    private PaginaBloqueioELiberacao pagina = new PaginaBloqueioELiberacao();
+    private final PaginaBloqueioELiberacao pagina = new PaginaBloqueioELiberacao();
 
     @Override
     protected void preencheDados(BloqueioELiberacao dados, int posicao) {

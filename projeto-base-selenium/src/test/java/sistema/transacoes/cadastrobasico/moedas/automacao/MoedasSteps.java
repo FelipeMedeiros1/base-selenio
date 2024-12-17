@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastrobasico.moedas.automacao;
+package sistema.transacoes.cadastrobasico.moedas.automacao;
 
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
@@ -9,7 +9,7 @@ import webdriver.componentes.PainelMensagem;
 public class MoedasSteps {
 
     private Moedas dados;
-    private MoedasUtils moedas = new MoedasUtils("amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json");
+    private final MoedasUtils moedas = new MoedasUtils("amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json");
 
     @Dado("que acesse a página Transações > Cadastros Básicos > Moedas")
     public void acessaPaginaMoedas() {
@@ -24,7 +24,7 @@ public class MoedasSteps {
 
     @Então("deverá exibir uma mensagem de sucesso:")
     public void validarMensagemSucesso() {
-        PainelMensagem.validaMensagemInclusao();;
+        PainelMensagem.validaMensagemInclusao();
     }
 
 }

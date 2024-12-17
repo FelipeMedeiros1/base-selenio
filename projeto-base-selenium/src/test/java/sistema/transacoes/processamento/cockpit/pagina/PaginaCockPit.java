@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.cockpit.pagina;
+package sistema.transacoes.processamento.cockpit.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

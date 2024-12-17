@@ -1,11 +1,9 @@
-package amplis.transacoes.fundos.movimentacao.automacao;
+package sistema.transacoes.fundos.movimentacao.automacao;
 
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-
-import amplis.transacoes.fundos.movimentacao.pagina.PaginaMovimentacao;
+import sistema.transacoes.fundos.movimentacao.pagina.PaginaMovimentacao;
 
 
 public class MovimentacaoFdsUtils extends UtilitarioCadastro<Movimentacao> {
@@ -13,7 +11,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastro<Movimentacao> {
         super(caminhoArquivo);
     }
 
-    private PaginaMovimentacao pagina = new PaginaMovimentacao();
+    private final PaginaMovimentacao pagina = new PaginaMovimentacao();
 
     @Override
     public void preencheDados(Movimentacao dados, int posicao) {

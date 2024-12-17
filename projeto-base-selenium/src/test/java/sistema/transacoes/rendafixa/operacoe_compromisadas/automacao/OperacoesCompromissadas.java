@@ -1,4 +1,4 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.automacao;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.automacao;
 
 public record OperacoesCompromissadas(
         int id,

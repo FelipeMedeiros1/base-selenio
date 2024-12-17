@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.rendaVariavel.automacao;
+package sistema.transacoes.cadastropessoas.rendaVariavel.automacao;
 
 import servico.base.BaseTeste;
 

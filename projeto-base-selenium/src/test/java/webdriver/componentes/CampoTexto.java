@@ -23,8 +23,8 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
  */
 
 public class CampoTexto {
-    private Espera espera = new Espera();
-    private JsExecutor js = new JsExecutor();
+    private final Espera espera = new Espera();
+    private final JsExecutor js = new JsExecutor();
 
     /**
      * Preenche um campo de texto usando um `By` (como `By.id`, `By.name`, etc.) e um valor.
@@ -63,7 +63,7 @@ public class CampoTexto {
         js.rolarParaBaixoAteEncontrar(elemento);
         espera.esperaAteElementoAparecerNaTela(elemento);
 
-        if (valor.isEmpty() || valor.equalsIgnoreCase(null)) {
+        if (valor.isEmpty() || valor == null) {
             return;
         }
         if (validaValorElementoDesabilitado(elemento, valor)) {
@@ -73,8 +73,6 @@ public class CampoTexto {
         if (!elemento.isEnabled() || !elemento.isDisplayed()) {
             throw new ElementNotInteractableException("O elemento não está habilitado ou visível." + elemento);
         }
-
-        espera.esperaAteElementoEstarHabilitado(elemento);
 
         int tentativas = 0;
         int maxTentativas = 5;

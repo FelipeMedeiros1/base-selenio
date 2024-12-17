@@ -1,21 +1,24 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.automacao;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.automacao;
 
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
+
 import servico.utils.UtilitarioCadastro;
-import amplis.transacoes.rendafixa.operacoe_compromisadas.pagina.PaginaOperacoesCompromissadas;
+import sistema.transacoes.rendafixa.operacoe_compromisadas.pagina.PaginaOperacoesCompromissadas;
+
 
 public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<OperacoesCompromissadas> {
+
     public OperacoesCompromissadasFixUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
 
-    private PaginaOperacoesCompromissadas pagina = new PaginaOperacoesCompromissadas();
+    private final PaginaOperacoesCompromissadas pagina = new PaginaOperacoesCompromissadas();
 
     @Override
     public void preencheDados(OperacoesCompromissadas dados, int posicao) {
         dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, OperacoesCompromissadas.class);
+        /**/
         selecionaAba(pagina.dadosDaMovimentacao().dadosDaMovimentacao);
         selecionaUm(pagina.dadosDaMovimentacao().modalidadeDoMovimento, dados.modalidadeDoMovimento());
         preenche(pagina.dadosDaMovimentacao().dataDoMovimento, dados.dataDoMovimento());
@@ -36,6 +39,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
         selecionaUm(pagina.dadosDaMovimentacao().rendimento, dados.rendimento());
         selecionaUm(pagina.dadosDaMovimentacao().eventoEmAtraso, dados.eventoEmAtraso());
         selecionaUm(pagina.dadosDaMovimentacao().livreMovimentacao, dados.livreMovimentacao());
+        /**/
         selecionaAba(pagina.lastroDeCompra().lastroDeCompra);
         preenche(pagina.lastroDeCompra().tituloSelicPu550Titulo, dados.tituloSelicPu550TituloCompra());
         selecionaUm(pagina.lastroDeCompra().titulo, dados.titulo());
@@ -55,7 +59,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
         preenche(pagina.lastroDeCompra().codigoCBLCCompra, dados.codigoCBLCCompra());
         selecionaUm(pagina.lastroDeCompra().localidade, dados.localidadeCompra());
         selecionaUm(pagina.lastroDeCompra().emissorParaPerfilMensal, dados.emissorParaPerfilMensalCompra());
-
+        /**/
         selecionaAba(pagina.lastroDeVenda().lastroDeVenda);
         selecionaUm(pagina.lastroDeVenda().tituloSelicPu550TituloVenda, dados.tituloSelicPu550TituloVenda());
         selecionaUm(pagina.lastroDeVenda().emissaoVenda, dados.emissaoVenda());
@@ -83,7 +87,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
 
     @Override
     protected String transacao() {
-        return null;
+        return "Caminho da Página";
     }
 
 

@@ -1,12 +1,13 @@
 package servico.utils;
 
-import webdriver.base.Interagivel;
+import servico.base.Interagivel;
 import webdriver.base.navegacao.automacao.NavegacaoSistema;
 
 import static webdriver.componentes.Evidencia.capturaTelaInfo;
 
 
 public abstract class UtilitarioCadastro<M> extends Interagivel {
+
     private final String caminhoArquivo;
 
     public UtilitarioCadastro(String caminhoArquivo) {
@@ -14,6 +15,10 @@ public abstract class UtilitarioCadastro<M> extends Interagivel {
     }
 
     protected abstract void preencheDados(M dados, int posicao);
+
+    public abstract void consultar(M dados, int posicao);
+
+    protected abstract String transacao();
 
     public UtilitarioCadastro<M> incluir(M dados, int posicao) {
         acessaPagina();
@@ -43,16 +48,13 @@ public abstract class UtilitarioCadastro<M> extends Interagivel {
         capturaTelaInfo("capturaTelaMenuTransacoes", "Acessando: " + transacao() + " > Remoção");
         consultar(dados, posicao);
         capturaTelaInfo("capturaTelaTesteExclusao", "Iniciando teste de Exclusão.");
-        excluir();
+//        excluir();
     }
 
-    public abstract void consultar(M dados, int posicao);
 
-    protected  void acessaPagina(){
+    protected void acessaPagina() {
         new NavegacaoSistema().navegarPara(transacao());
     }
-
-    protected abstract String transacao();
 
     public String getCaminhoArquivo() {
         return caminhoArquivo;

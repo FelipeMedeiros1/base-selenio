@@ -41,7 +41,7 @@ public class BuscadorDeArquivoXls {
             Path caminhoArquivo = encontrarCaminhoDoArquivo(nomeArquivo);
 
             if (caminhoArquivo != null) {
-                System.out.println("Caminho completo do arquivo: " + caminhoArquivo.toString());
+                System.out.println("Caminho completo do arquivo: " + caminhoArquivo);
             } else {
                 System.out.println("Arquivo não encontrado.");
             }

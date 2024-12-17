@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.cockpit.automacao;
+package sistema.transacoes.processamento.cockpit.automacao;
 
 public record CockPit(
         int id,

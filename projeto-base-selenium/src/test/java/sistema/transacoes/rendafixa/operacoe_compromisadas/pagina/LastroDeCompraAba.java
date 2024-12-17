@@ -1,10 +1,11 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import sistema.transacoes.rendafixa.operacoe_compromisadas.pagina.PaginaOperacoesCompromissadas;
 
 
-public class LastroDeCompraAba extends PaginaOperacoesCompromissadas   {
+public class LastroDeCompraAba extends PaginaOperacoesCompromissadas {
 
 
     @FindBy(id = "mainForm:tab_fixRepoCollateralReceive:header")

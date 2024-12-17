@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import static webdriver.componentes.Evidencia.*;
 
 public class PaginaLogin extends BasePagina {
-    private CampoTexto pagina = new CampoTexto();
+    private final CampoTexto pagina = new CampoTexto();
 
     //region
     @FindBy(id = "loginForm:userLoginInput:campo")

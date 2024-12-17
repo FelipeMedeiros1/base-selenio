@@ -1,8 +1,7 @@
-package amplis.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
+package sistema.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
 
-import amplis.transacoes.importacoes.fundos.cotacoesDeFundos.pagina.PaginaCotacoesDeFundos;
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
+import sistema.transacoes.importacoes.fundos.cotacoesDeFundos.pagina.PaginaCotacoesDeFundos;
 import servico.utils.UtilitarioImportacao;
 
 public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos> {
@@ -10,7 +9,7 @@ public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos
         super(caminhoJson);
     }
 
-    private PaginaCotacoesDeFundos pagina = new PaginaCotacoesDeFundos();
+    private final PaginaCotacoesDeFundos pagina = new PaginaCotacoesDeFundos();
 
     @Override
     protected void preencheDados(CotacoesDeFundos dados, int posicao) {
@@ -19,7 +18,7 @@ public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos
         preenche(pagina.dataFinal, dados.dataFinal());
         selecionaUm(pagina.tipoImportacao, dados.tipoImportacao());
         selecionaUm(pagina.layoutImportacao, dados.layoutImportacao());
-        importarArquivo(pagina.nomeDoArquivo, dados.nomeDoArquivo());
+        importarArquivo(dados.nomeDoArquivo());
     }
 
     @Override

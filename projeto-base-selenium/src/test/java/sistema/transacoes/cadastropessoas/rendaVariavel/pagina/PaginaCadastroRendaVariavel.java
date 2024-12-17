@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.rendaVariavel.pagina;
+package sistema.transacoes.cadastropessoas.rendaVariavel.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.rendaFixa.automacao;
+package sistema.transacoes.cadastropessoas.rendaFixa.automacao;
 
 public class CadastroRendaFixaTest   {
 

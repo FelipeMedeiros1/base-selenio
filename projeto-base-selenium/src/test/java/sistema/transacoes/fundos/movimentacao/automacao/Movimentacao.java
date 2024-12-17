@@ -1,4 +1,4 @@
-package amplis.transacoes.fundos.movimentacao.automacao;
+package sistema.transacoes.fundos.movimentacao.automacao;
 
 public record Movimentacao(
         int id,

@@ -1,10 +1,10 @@
-package amplis.relatorios.patrimonio.carteira_diaria.automacao;
+package sistema.relatorios.patrimonio.carteira_diaria.automacao;
 
 import servico.base.BaseTeste;
 import org.junit.Test;
 
 public class CarteiraDiariaTest extends BaseTeste {
-private String json ="relatorios/patrimonio/carteira_diaria/automacao/CarteiraDiaria.json";
+private final String json ="relatorios/patrimonio/carteira_diaria/automacao/CarteiraDiaria.json";
     private CarteiraDiaria carteiraDiaria;
 
     @Test

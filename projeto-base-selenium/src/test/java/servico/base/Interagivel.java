@@ -1,4 +1,4 @@
-package webdriver.base;
+package servico.base;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -324,7 +324,7 @@ public abstract class Interagivel {
     protected void validaIgualdadeNaMensagem(String texto, WebElement elemento) {
         try {
             aguardaElementoTerTexto(elemento, texto);
-            Assert.assertEquals(elemento.getText(), texto, "A mensagem do elemento '" + elemento.toString() + "' não corresponde ao esperado: '" + texto + "'");
+            Assert.assertEquals(elemento.getText(), texto, "A mensagem do elemento '" + elemento + "' não corresponde ao esperado: '" + texto + "'");
         } catch (NoSuchElementException e) {
             throw new RuntimeException("O elemento '" + elemento.toString() + "' não foi encontrado.", e);
         } catch (TimeoutException e) {
@@ -363,7 +363,7 @@ public abstract class Interagivel {
 
     }
 
-    protected void importarArquivo(WebElement nomeDoArquivo, String nomeArquivo) {
+    protected void importarArquivo( String nomeArquivo) {
         new ImportarArquivo().importar(nomeArquivo);
     }
 

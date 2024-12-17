@@ -1,10 +1,10 @@
-package amplis.transacoes.rendafixa.operacoes_termo.automacao;
+package sistema.transacoes.rendafixa.operacoes_termo.automacao;
 
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.pt.Quando;
 
 public class OperacoesATermoSteps {
-    private String json = "transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermo.json";
+    private final String json = "transacoes/rendafixa/operacoes_termo/automacao/OperacoesATermo.json";
     private OperacoesATermo dados;
 
 

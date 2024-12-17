@@ -1,4 +1,5 @@
-package amplis.transacoes.rendafixa.operacoes_definitivas.automacao;
+package sistema.transacoes.rendafixa.operacoes_definitivas.automacao;
+
 public record OperacoesDefinitivas(
         int id,
         String dataDoMovimento,

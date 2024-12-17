@@ -1,4 +1,4 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,8 +6,7 @@ import webdriver.base.BasePagina;
 
 
 public class PaginaOperacoesCompromissadas extends BasePagina {
-    @FindBy(id = "mainForm:j_id_1z:8:j_id_2w:2:j_id_2z:3:j_id_36")
-    public WebElement opCompromissadas;
+
     public DadosDaMovimentacaoAba dadosDaMovimentacao;
     public LastroDeCompraAba lastroDeCompra;
     public LastroDeVendaAba lastroDeVenda;
@@ -22,14 +21,14 @@ public class PaginaOperacoesCompromissadas extends BasePagina {
 
     public LastroDeCompraAba lastroDeCompra() {
         if (lastroDeCompra == null) {
-            lastroDeCompra = new LastroDeCompraAba();
+            lastroDeCompra = new  LastroDeCompraAba();
         }
         return lastroDeCompra;
     }
 
     public LastroDeVendaAba lastroDeVenda() {
         if (lastroDeVenda == null) {
-            lastroDeVenda = new LastroDeVendaAba();
+            lastroDeVenda = new  LastroDeVendaAba();
         }
         return lastroDeVenda;
     }

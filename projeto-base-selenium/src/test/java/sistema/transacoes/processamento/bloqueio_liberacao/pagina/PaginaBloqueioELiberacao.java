@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.bloqueio_liberacao.pagina;
+package sistema.transacoes.processamento.bloqueio_liberacao.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

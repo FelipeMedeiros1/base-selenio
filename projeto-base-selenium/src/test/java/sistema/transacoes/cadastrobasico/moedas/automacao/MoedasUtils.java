@@ -1,15 +1,8 @@
-package amplis.transacoes.cadastrobasico.moedas.automacao;
+package sistema.transacoes.cadastrobasico.moedas.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import amplis.transacoes.cadastrobasico.moedas.pagina.PaginaMoedas;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-import webdriver.base.navegacao.automacao.NavDinamica;
-;
-
-
-import static com.aventstack.extentreports.model.service.TestService.createTest;
-
+import sistema.transacoes.cadastrobasico.moedas.pagina.PaginaMoedas;
 
 public class MoedasUtils extends UtilitarioCadastro<Moedas> {
     public MoedasUtils(String caminhoArquivo) {
@@ -17,7 +10,7 @@ public class MoedasUtils extends UtilitarioCadastro<Moedas> {
     }
 
 
-    private PaginaMoedas pagina = new PaginaMoedas();
+    private final PaginaMoedas pagina = new PaginaMoedas();
 
     @Override
     public void preencheDados(Moedas dados, int posicao) {

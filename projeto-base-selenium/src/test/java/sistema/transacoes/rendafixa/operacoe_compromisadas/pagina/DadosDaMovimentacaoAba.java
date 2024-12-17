@@ -1,51 +1,51 @@
-package amplis.transacoes.rendafixa.operacoe_compromisadas.pagina;
+package sistema.transacoes.rendafixa.operacoe_compromisadas.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DadosDaMovimentacaoAba extends PaginaOperacoesCompromissadas  {
+public class DadosDaMovimentacaoAba extends PaginaOperacoesCompromissadas {
     //region
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement dadosDaMovimentacao;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement modalidadeDoMovimento;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement dataDoMovimento;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement dataDaOperacaoOriginal;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement dataDeVencimento;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement carteira;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement titulo;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement estoque;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement moeda;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement categoria;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement riscoBeneficio;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement condicoesDeNegociacao;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement serie;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement porcentagemDaSerie;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement puInicio;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement quantidade;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement financeiroDeIda;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement calcular;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement rendimento;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement eventoEmAtraso;
-    @FindBy(id = "")
+    @FindBy(id = "qa")
     public WebElement livreMovimentacao;
 
     //endregion

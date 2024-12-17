@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.processamentoContabil.automacao;
+package sistema.transacoes.processamento.processamentoContabil.automacao;
 
 
 public record ProcessamentoContabil(

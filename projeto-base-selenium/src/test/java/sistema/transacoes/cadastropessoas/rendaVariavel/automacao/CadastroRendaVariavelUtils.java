@@ -1,16 +1,16 @@
-package amplis.transacoes.cadastropessoas.rendaVariavel.automacao;
+package sistema.transacoes.cadastropessoas.rendaVariavel.automacao;
 
-import amplis.transacoes.cadastropessoas.rendaFixa.pagina.PaginaCadastroRendaFixa;
-import amplis.transacoes.cadastropessoas.rendaVariavel.pagina.PaginaCadastroRendaVariavel;
+
 import servico.leitorDeArquivo.config_json.LeitorJson;
 import servico.utils.UtilitarioCadastro;
+import sistema.transacoes.cadastropessoas.rendaVariavel.pagina.PaginaCadastroRendaVariavel;
 
 public class CadastroRendaVariavelUtils extends UtilitarioCadastro<CadastroRendaVariavel> {
     public CadastroRendaVariavelUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
 
-    private PaginaCadastroRendaVariavel pagina = new PaginaCadastroRendaVariavel();
+    private final PaginaCadastroRendaVariavel pagina = new PaginaCadastroRendaVariavel();
 
     @Override
     public void preencheDados(CadastroRendaVariavel dados, int posicao) {

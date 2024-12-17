@@ -1,4 +1,4 @@
-package amplis.relatorios.renda_fixa.rendimentos.pagina;
+package sistema.relatorios.renda_fixa.rendimentos.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

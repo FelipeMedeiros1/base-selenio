@@ -1,4 +1,4 @@
-package amplis.relatorios.renda_fixa.rendimentos.automacao;
+package sistema.relatorios.renda_fixa.rendimentos.automacao;
 
 public record RendimentosRelFix(
         int id,

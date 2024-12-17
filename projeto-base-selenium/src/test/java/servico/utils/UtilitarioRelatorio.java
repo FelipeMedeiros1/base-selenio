@@ -1,7 +1,7 @@
 package servico.utils;
 
 
-import webdriver.base.Interagivel;
+import servico.base.Interagivel;
 import webdriver.base.navegacao.automacao.NavegacaoSistema;
 
 public abstract class UtilitarioRelatorio<M> extends Interagivel {

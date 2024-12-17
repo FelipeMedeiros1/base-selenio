@@ -1,4 +1,4 @@
-package amplis.transacoes.rendafixa.operacoes_termo.pagina;
+package sistema.transacoes.rendafixa.operacoes_termo.pagina;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

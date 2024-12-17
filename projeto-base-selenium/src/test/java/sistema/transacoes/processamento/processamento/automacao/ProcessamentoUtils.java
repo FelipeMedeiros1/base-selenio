@@ -1,11 +1,9 @@
-package amplis.transacoes.processamento.processamento.automacao;
+package sistema.transacoes.processamento.processamento.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
 
-
-import amplis.transacoes.processamento.processamento.pagina.PaginaProcessamento;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioProcessamento;
+import sistema.transacoes.processamento.processamento.pagina.PaginaProcessamento;
 
 
 public class ProcessamentoUtils extends UtilitarioProcessamento<Processamento> {

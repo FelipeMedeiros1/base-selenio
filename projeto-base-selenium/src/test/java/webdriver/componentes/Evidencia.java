@@ -25,13 +25,13 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class Evidencia {
     private static ExtentReports extent;
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-    private static String diretorioDestino = "C:/TEMP/Teseu/Amplis/Reports/teste/";
-    private static String diretorioImagens = diretorioDestino + "screenshots";
-    private static String timestamp = new SimpleDateFormat("dd_MM_yy_HHmm").format(new Date());
+    private static final ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    private static final String diretorioDestino = "C:/TEMP/Reports/teste/";
+    private static final String diretorioImagens = diretorioDestino + "screenshots";
+    private static final String timestamp = new SimpleDateFormat("dd_MM_yy_HHmm").format(new Date());
 
 
-    private static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
 
 
     private static ExtentReports inicializarReports() {
@@ -41,7 +41,7 @@ public class Evidencia {
             new File(diretorioImagens).mkdirs();
 
             ExtentSparkReporter htmlReporter = new ExtentSparkReporter(
-                    diretorioDestino + "Amplis_Dimensa_" + timestamp + ".html");
+                    diretorioDestino + "nome_do_projeto_" + timestamp + ".html");
             htmlReporter.config().setDocumentTitle("Relatório de Testes Automatizados");
             htmlReporter.config().setReportName("Resultados dos Testes");
             htmlReporter.config().setTheme(Theme.DARK);
@@ -92,7 +92,14 @@ public class Evidencia {
     public static void capituraTelaFalha(String titulo, String mensagem) {
         LogUtil.error(mensagem);
         getTeste().fail(mensagem, adicionarImagem(titulo));
+
     }
+
+    public static void logAlerta(String titulo, String mensagem) {
+        LogUtil.warn(mensagem);
+        getTeste().warning(mensagem, adicionarImagem(titulo));
+    }
+
     public static void logSucesso(String mensagem) {
         LogUtil.info(mensagem);
         getTeste().pass(mensagem);
@@ -105,11 +112,6 @@ public class Evidencia {
     public static void logFalha(String mensagem) {
         LogUtil.error(mensagem);
         getTeste().fail(mensagem);
-    }
-
-    public static void logAlerta(String titulo, String mensagem) {
-        LogUtil.warn(mensagem);
-        getTeste().warning(mensagem, adicionarImagem(titulo));
     }
 
     public static void logAlerta(String mensagem) {

@@ -1,19 +1,16 @@
-package amplis.transacoes.cadastropessoas.fundos.automacao;
+package sistema.transacoes.cadastropessoas.fundos.automacao;
 
-
-import amplis.transacoes.cadastropessoas.fundos.pagina.PaginaCadastroFundos;
 import servico.leitorDeArquivo.config_json.LeitorJson;
-
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-
+import sistema.transacoes.cadastropessoas.fundos.pagina.PaginaCadastroFundos;
 
 public class CadastroFundosUtils extends UtilitarioCadastro<CadastroFundos> {
 
     public CadastroFundosUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
-    private PaginaCadastroFundos pagina = new PaginaCadastroFundos();
+
+    private final PaginaCadastroFundos pagina = new PaginaCadastroFundos();
 
     @Override
     public void preencheDados(CadastroFundos dados, int posicao) {
@@ -29,7 +26,6 @@ public class CadastroFundosUtils extends UtilitarioCadastro<CadastroFundos> {
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }
-
 
 
     @Override

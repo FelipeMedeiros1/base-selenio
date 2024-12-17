@@ -13,7 +13,7 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class PainelMensagem {
 
-    private static Botao botao = new Botao();
+    private static final Botao botao = new Botao();
 
     public static void validaMensagemInclusao() {
         try {
@@ -123,7 +123,7 @@ public class PainelMensagem {
         String mensagem = obterMensagemAtual();
         String mensagemEsperada = "Operação realizada com sucesso! Código do Ativo: ";
         assertTrue(mensagem.startsWith(mensagemEsperada));
-        String[] codigos = mensagem.replace(mensagemEsperada, "").replace(".", "").trim().toString()
+        String[] codigos = mensagem.replace(mensagemEsperada, "").replace(".", "").trim()
                 .split(" Código da Operação: ");
         String ativo = codigos[0];
         String codigoDaOperacao = codigos[1];

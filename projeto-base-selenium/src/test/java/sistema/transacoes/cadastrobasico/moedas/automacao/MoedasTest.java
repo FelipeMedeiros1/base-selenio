@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastrobasico.moedas.automacao;
+package sistema.transacoes.cadastrobasico.moedas.automacao;
 
 
 import org.junit.Test;
@@ -7,7 +7,7 @@ import servico.utils.DescricaoCenario;
 
 public class MoedasTest extends BaseTeste {
 
-    private String json = "amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json";
+    private final String json = "amplis/transacoes/cadastrobasico/moedas/automacao/Moedas.json";
     private Moedas dados;
 
     @Test

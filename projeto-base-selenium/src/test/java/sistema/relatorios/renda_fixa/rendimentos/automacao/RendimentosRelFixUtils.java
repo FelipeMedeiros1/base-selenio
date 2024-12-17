@@ -1,10 +1,8 @@
-package amplis.relatorios.renda_fixa.rendimentos.automacao;
-
+package sistema.relatorios.renda_fixa.rendimentos.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioRelatorio;
-import amplis.relatorios.renda_fixa.rendimentos.pagina.PaginaRendimentos;
+import sistema.relatorios.renda_fixa.rendimentos.pagina.PaginaRendimentos;
 
 public class RendimentosRelFixUtils extends UtilitarioRelatorio<RendimentosRelFix> {
 
@@ -12,7 +10,7 @@ public class RendimentosRelFixUtils extends UtilitarioRelatorio<RendimentosRelFi
         super(nomeArquivo);
     }
 
-    private PaginaRendimentos pagina = new PaginaRendimentos();
+    private final PaginaRendimentos pagina = new PaginaRendimentos();
 
     @Override
     protected void preencheDados(RendimentosRelFix dados, int posicao) {

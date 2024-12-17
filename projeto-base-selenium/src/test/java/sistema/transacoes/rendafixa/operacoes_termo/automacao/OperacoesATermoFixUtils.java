@@ -1,16 +1,13 @@
-package amplis.transacoes.rendafixa.operacoes_termo.automacao;
-
+package sistema.transacoes.rendafixa.operacoes_termo.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-
-import amplis.transacoes.rendafixa.operacoes_termo.pagina.PaginaOperacoesATermo;
+import sistema.transacoes.rendafixa.operacoes_termo.pagina.PaginaOperacoesATermo;
 
 
 public class OperacoesATermoFixUtils extends UtilitarioCadastro<OperacoesATermo> {
 
-    private PaginaOperacoesATermo pagina = new PaginaOperacoesATermo();
+    private final PaginaOperacoesATermo pagina = new PaginaOperacoesATermo();
 
     public OperacoesATermoFixUtils(String caminhoArquivo) {
         super(caminhoArquivo);

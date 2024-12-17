@@ -1,4 +1,4 @@
-package amplis.relatorios.renda_fixa.movimentacao.automacao;
+package sistema.relatorios.renda_fixa.movimentacao.automacao;
 
 public record MovimentacaoRelFix(
         int id,

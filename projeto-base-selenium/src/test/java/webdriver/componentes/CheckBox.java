@@ -15,7 +15,7 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
  * esteja selecionado.</p>
  */
 public class CheckBox {
-    private Espera espera = new Espera();
+    private final Espera espera = new Espera();
 
     /**
      * Seleciona ou deseleciona um checkbox, com base no valor booleano fornecido.
@@ -51,7 +51,7 @@ public class CheckBox {
     public boolean seleciona(String id, Boolean boleano) {
         info("Checkbox selecionado: " + boleano);
         WebElement chk = getDriver().findElement(By.id(id));
-        if (boleano == true) {
+        if (boleano) {
             espera.esperaAjaxTerminar();
             if (!estaSelecionado(chk)) {
                 chk.click();

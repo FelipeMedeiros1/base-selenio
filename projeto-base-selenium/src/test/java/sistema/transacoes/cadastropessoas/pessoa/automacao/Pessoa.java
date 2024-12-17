@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.pessoa.automacao;
+package sistema.transacoes.cadastropessoas.pessoa.automacao;
 
 public record Pessoa(
         int id,

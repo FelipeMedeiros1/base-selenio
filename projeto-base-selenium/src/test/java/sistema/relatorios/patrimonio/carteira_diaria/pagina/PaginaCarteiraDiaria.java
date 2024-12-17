@@ -1,4 +1,4 @@
-package amplis.relatorios.patrimonio.carteira_diaria.pagina;
+package sistema.relatorios.patrimonio.carteira_diaria.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

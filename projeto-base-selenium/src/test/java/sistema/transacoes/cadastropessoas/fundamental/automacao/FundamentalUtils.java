@@ -1,12 +1,10 @@
-package amplis.transacoes.cadastropessoas.fundamental.automacao;
+package sistema.transacoes.cadastropessoas.fundamental.automacao;
+
 
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
-
-import amplis.transacoes.cadastropessoas.fundamental.pagina.PaginaFundamental;
-
+import sistema.transacoes.cadastropessoas.fundamental.pagina.PaginaFundamental;
 
 import static webdriver.componentes.Evidencia.capturaTelaInfo;
 
@@ -15,7 +13,7 @@ public class FundamentalUtils extends UtilitarioCadastro<Fundamental> {
         super(caminhoArquivo);
     }
 
-    private PaginaFundamental pagina = new PaginaFundamental();
+    private final PaginaFundamental pagina = new PaginaFundamental();
 
     @Override
     public void preencheDados(Fundamental dados, int posicao) {

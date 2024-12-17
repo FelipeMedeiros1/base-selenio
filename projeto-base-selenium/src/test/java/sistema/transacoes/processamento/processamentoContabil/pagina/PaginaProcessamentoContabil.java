@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.processamentoContabil.pagina;
+package sistema.transacoes.processamento.processamentoContabil.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package amplis.relatorios.renda_fixa.movimentacao.pagina;
+package sistema.relatorios.renda_fixa.movimentacao.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

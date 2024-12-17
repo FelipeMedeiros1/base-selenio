@@ -62,34 +62,12 @@ public class Espera {
      */
     public void esperaPor(int miliSegundos) {
         try {
-            new Thread().sleep(miliSegundos);
+            new Thread();
+            Thread.sleep(miliSegundos);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-
-
-//    public boolean esperaAjaxTerminar() {
-//        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
-//        List<WebElement> mensagensAguarde = getDriver().findElements(By.cssSelector("/html/body/div/span/div/div/div/text()"));
-//
-//        try {
-//            wait.until(driver -> {
-//                for (WebElement mensagem : mensagensAguarde) {
-//                    if (mensagem.getText().contains("Aguarde...")) {
-//                        System.out.println(mensagem.getText());
-//                        wait.until(ExpectedConditions.invisibilityOfAllElements(mensagensAguarde));
-////                        return false;
-//                    }
-//                }
-//                return true;
-//            });
-//            return true;
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    return true;
-//    }
 
 
     /**
@@ -240,34 +218,5 @@ public class Espera {
             }
         };
     }
-
-
-    //    public ExpectedCondition<Boolean> esperaAjaxTerminar1() {
-//        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
-//        boolean mensagemTerminada = wait.until(mensagemAguardeTerminada());
-//
-//        if (!mensagemTerminada) {
-//            List<WebElement> elementos = getDriver().findElements(By.xpath("//*[@id=\"waitMessageBox\"]/div/text()"));
-//            if (!elementos.isEmpty()) {
-//                WebElement elemento = elementos.get(0);
-//                wait.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(elemento)));
-//                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"waitMessageBox\"]/div/text()")));
-//            }
-//            esperaPor(200);
-//            return new ExpectedCondition<Boolean>() {
-//                @Override
-//                public Boolean apply(WebDriver d) {
-//                    WebElement element = d.findElement(By.className("rf-st-start"));
-//                    if (element.isDisplayed()) {
-//                        return (boolean) ((org.openqa.selenium.JsExecutor) d).executeScript("return jQuery.active == 0;")
-//                                & Boolean.FALSE;
-//                    }
-//                    return (boolean) ((org.openqa.selenium.JsExecutor) d).executeScript("return jQuery.active == 0;") & Boolean.TRUE;
-//                }
-//            };
-//        }
-//
-//        return null;
-//    }
 
 }

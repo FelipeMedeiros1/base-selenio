@@ -32,16 +32,16 @@ public class TabelaUtils {
         List<WebElement> celulasFiltradas = filtrarCelulas(tabela, contemNomePesquisado);
 
 
-        for (WebElement celula : celulasFiltradas) {
-            WebElement linha = celula.findElement(By.xpath("./ancestor::tr")); // Obtém a linha da célula
-            List<WebElement> colunas = linha.findElements(By.tagName("td"));
-            if (colunas.size() > 0) {
-                WebElement checkbox = colunas.get(0).findElement(By.tagName("input[type='checkbox']")); // Assumindo que a checkbox está na primeira coluna
-                if (!checkbox.isSelected()) {
-                    checkbox.click(); // Marca a checkbox se não estiver selecionada
-                }
-            }
-        }
+//        for (WebElement celula : celulasFiltradas) {
+//            WebElement linha = celula.findElement(By.xpath("./ancestor::tr")); // Obtém a linha da célula
+//            List<WebElement> colunas = linha.findElements(By.tagName("td"));
+//            if (colunas.size() > 0) {
+//                WebElement checkbox = colunas.get(0).findElement(By.tagName("input[type='checkbox']")); // Assumindo que a checkbox está na primeira coluna
+//                if (!checkbox.isSelected()) {
+//                    checkbox.click(); // Marca a checkbox se não estiver selecionada
+//                }
+//            }
+//        }
 
 
         boolean todosCheckboxSelecionados = nomesList.stream().allMatch(nome -> {

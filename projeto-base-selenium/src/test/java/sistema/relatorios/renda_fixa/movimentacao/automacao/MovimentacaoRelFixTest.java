@@ -1,10 +1,10 @@
-package amplis.relatorios.renda_fixa.movimentacao.automacao;
+package sistema.relatorios.renda_fixa.movimentacao.automacao;
 
 import servico.base.BaseTeste;
 import org.junit.Test;
 
 public class MovimentacaoRelFixTest extends BaseTeste {
-    private String json = "relatorios/renda_fixa/movimentacao/automacao/MovimentacaoRelFix.json";
+    private final String json = "relatorios/renda_fixa/movimentacao/automacao/MovimentacaoRelFix.json";
     private MovimentacaoRelFix movimentacao;
 
     @Test

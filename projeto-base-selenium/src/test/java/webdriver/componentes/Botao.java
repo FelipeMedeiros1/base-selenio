@@ -17,8 +17,8 @@ import static webdriver.fabrica.FabricaDeDriver.getDriver;
  * Utiliza o Selenium para encontrar e clicar em botões, além de oferecer métodos para obter valores de atributos de um botão.
  */
 public class Botao {
-    private Espera espera = new Espera();
-    private JsExecutor js = new JsExecutor();
+    private final Espera espera = new Espera();
+    private final JsExecutor js = new JsExecutor();
 
     /**
      * Clica no botão com o ID especificado.
@@ -33,7 +33,7 @@ public class Botao {
 
         WebElement elemento = getDriver().findElement(By.id(id));
         try {
-            if (elemento.isDisplayed() && elemento.isDisplayed()) ;
+            if (elemento.isDisplayed()) ;
             encontrou = true;
         } catch (NoSuchElementException e) {
             // Se o elemento não for encontrado, a pesquisa não teve sucesso
@@ -132,7 +132,7 @@ public class Botao {
                     actions.doubleClick(elemento).perform();
                     return;
                 } else {
-                    throw new Exception("Elemento não está clicável: " + elemento.toString());
+                    throw new Exception("Elemento não pode ser clicável: " + elemento);
                 }
             } catch (NoSuchElementException | TimeoutException e) {
                 tentativas++;
@@ -148,7 +148,7 @@ public class Botao {
         }
 
         try {
-            throw new Exception("Não foi possível realizar o duplo clique no elemento após " + tentativas + " segundos: " + elemento.toString());
+            throw new Exception("Não foi possível realizar o duplo clique no elemento após " + tentativas + " segundos: " + elemento);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

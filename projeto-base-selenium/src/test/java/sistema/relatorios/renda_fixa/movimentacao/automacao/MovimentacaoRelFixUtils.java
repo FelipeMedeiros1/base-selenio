@@ -1,18 +1,15 @@
-package amplis.relatorios.renda_fixa.movimentacao.automacao;
-
+package sistema.relatorios.renda_fixa.movimentacao.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioRelatorio;
-
-import amplis.relatorios.renda_fixa.movimentacao.pagina.PaginaMovimentacao;
+import sistema.relatorios.renda_fixa.movimentacao.pagina.PaginaMovimentacao;
 
 public class MovimentacaoRelFixUtils extends UtilitarioRelatorio<MovimentacaoRelFix> {
     public MovimentacaoRelFixUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
 
-    private PaginaMovimentacao pagina = new PaginaMovimentacao();
+    private final PaginaMovimentacao pagina = new PaginaMovimentacao();
 
 
     protected void preencheDados(MovimentacaoRelFix dados, int posicao) {

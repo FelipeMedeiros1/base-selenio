@@ -4,6 +4,7 @@ package servico.base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import amplis.login.PaginaLogin;
+import org.testng.annotations.AfterClass;
 import servico.utils.DescricaoCenario;
 import webdriver.componentes.Espera;
 import webdriver.componentes.Evidencia;
@@ -54,16 +55,6 @@ public class BaseTeste {
         flushReports();
         fecharBrowser();
     }
-    /* public  static String getDescricaoCenario() {
-     for (Method method : BaseTeste.class.getMethods()) {
-         if (method.isAnnotationPresent(DescricaoCenario.class) &&
-                 method.getName().startsWith("test") &&
-                 method.getParameterCount() == 0) {
-             DescricaoCenario descricao = method.getAnnotation(DescricaoCenario.class);
-             return descricao.value();
-         }
-     }
-     return null;
-     }*/
+
 
 }

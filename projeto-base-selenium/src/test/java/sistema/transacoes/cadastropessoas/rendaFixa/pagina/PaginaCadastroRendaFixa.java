@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.rendaFixa.pagina;
+package sistema.transacoes.cadastropessoas.rendaFixa.pagina;
 
 import webdriver.base.BasePagina;
 import org.openqa.selenium.WebElement;

@@ -36,7 +36,7 @@ public class Atalho {
                             .perform();
                     return;
                 } else {
-                    throw new Exception("Elemento corpo da página não está visível.");
+                    throw new Exception("Elemento da página não está visível.");
                 }
             } catch (Exception e) {
                 tentativas++;
@@ -71,7 +71,7 @@ public class Atalho {
                             .perform();
                     return;
                 } else {
-                    throw new Exception("Elemento corpo da página não está visível.");
+                    throw new Exception("Elemento da página não está visível.");
                 }
             } catch (Exception e) {
                 tentativas++;

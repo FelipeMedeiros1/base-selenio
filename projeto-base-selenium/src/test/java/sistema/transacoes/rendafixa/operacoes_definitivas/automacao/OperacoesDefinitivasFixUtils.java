@@ -1,17 +1,17 @@
-package amplis.transacoes.rendafixa.operacoes_definitivas.automacao;
+package sistema.transacoes.rendafixa.operacoes_definitivas.automacao;
 
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
+
 import servico.utils.UtilitarioCadastro;
 
-import amplis.transacoes.rendafixa.operacoes_definitivas.pagina.PaginaOperacoesDefinitivas;
+import sistema.transacoes.rendafixa.operacoes_definitivas.pagina.PaginaOperacoesDefinitivas;
 
 public class OperacoesDefinitivasFixUtils extends UtilitarioCadastro<OperacoesDefinitivas> {
-    private PaginaOperacoesDefinitivas pagina = new PaginaOperacoesDefinitivas();
+    private final PaginaOperacoesDefinitivas pagina = new PaginaOperacoesDefinitivas();
 
-    public OperacoesDefinitivasFixUtils(String nomeDaPlanilha) {
-        super(nomeDaPlanilha);
+    public OperacoesDefinitivasFixUtils(String caminhoArquivo) {
+        super(caminhoArquivo);
     }
 
     @Override
@@ -21,10 +21,7 @@ public class OperacoesDefinitivasFixUtils extends UtilitarioCadastro<OperacoesDe
         selecionaAba(pagina.dadosDaMovimentacao().dadosDaMovimentacao);
         selecionaUm(pagina.dadosDaMovimentacao().modalidadeDoMovimento, dados.modalidadeDomovimento());
         preenche(pagina.dadosDaMovimentacao().dataDoMovimento, dados.dataDoMovimento());
-        if (!dados.dataDaCompra().equals("")) {
-            preenche(pagina.dadosDaMovimentacao().dataDaCompra, dados.dataDaCompra());
-        }
-
+        preenche(pagina.dadosDaMovimentacao().dataDaCompra, dados.dataDaCompra());
         preencheDuplicado(pagina.dadosDaMovimentacao().carteira, dados.carteira()).esperaPor(1000);
         selecionaUm(pagina.dadosDaMovimentacao().titulo, dados.titulo()).esperaPor(1000);
         selecionaUm(pagina.dadosDaMovimentacao().emissao, dados.emissao()).esperaPor(1000);
@@ -34,9 +31,7 @@ public class OperacoesDefinitivasFixUtils extends UtilitarioCadastro<OperacoesDe
         selecionaUm(pagina.dadosDaMovimentacao().ativaPassiva, dados.ativaPassiva());
         selecionaUm(pagina.dadosDaMovimentacao().categoria, dados.categoria());
         selecionaUm(pagina.dadosDaMovimentacao().riscoBeneficio, dados.riscoBeneficio());
-        if (!dados.condicoesDeNegociacao().equalsIgnoreCase("")) {
-            selecionaUm(pagina.dadosDaMovimentacao().condicoesDeNegociacao, dados.condicoesDeNegociacao());
-        }
+        selecionaUm(pagina.dadosDaMovimentacao().condicoesDeNegociacao, dados.condicoesDeNegociacao());
         preenche(pagina.dadosDaMovimentacao().pu, dados.pu());
         preenche(pagina.dadosDaMovimentacao().quantidade, dados.quantidade());
         clicar(pagina.dadosDaMovimentacao().calcular);
@@ -54,10 +49,9 @@ public class OperacoesDefinitivasFixUtils extends UtilitarioCadastro<OperacoesDe
     }
 
 
-
     @Override
     protected String transacao() {
-        return null;
+        return "Transações > Renda Fixa > Movimentação > Operações Definitivas";
     }
 
 

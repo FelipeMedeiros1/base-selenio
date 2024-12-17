@@ -1,9 +1,8 @@
-package amplis.transacoes.processamento.processamentoContabil.automacao;
+package sistema.transacoes.processamento.processamentoContabil.automacao;
 
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import amplis.transacoes.processamento.processamentoContabil.pagina.PaginaProcessamentoContabil;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioProcessamento;
+import sistema.transacoes.processamento.processamentoContabil.pagina.PaginaProcessamentoContabil;
 
 public class ProcessamentoContabilUtils extends UtilitarioProcessamento<ProcessamentoContabil> {
 
@@ -11,7 +10,7 @@ public class ProcessamentoContabilUtils extends UtilitarioProcessamento<Processa
         super(caminhoArquivo);
     }
 
-    private PaginaProcessamentoContabil pagina = new PaginaProcessamentoContabil();
+    private final PaginaProcessamentoContabil pagina = new PaginaProcessamentoContabil();
 
     @Override
     protected void preencheDados(ProcessamentoContabil dados, int posicao) {

@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.fundamental.pagina;
+package sistema.transacoes.cadastropessoas.fundamental.pagina;
 
 
 import org.openqa.selenium.WebElement;

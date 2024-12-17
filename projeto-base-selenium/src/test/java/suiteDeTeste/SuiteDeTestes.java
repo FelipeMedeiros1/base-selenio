@@ -2,15 +2,18 @@ package suiteDeTeste;
 
 
 import org.junit.runner.RunWith;
-import amplis.transacoes.cadastropessoas.fundamental.automacao.FundamentalTest;
+
 
 import org.junit.runners.Suite;
+import sistema.integrado.taxas.ProcessamentoTest;
+import sistema.transacoes.cadastropessoas.fundamental.automacao.FundamentalTest;
 
 import static org.junit.runners.Suite.*;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-        FundamentalTest.class
+        FundamentalTest.class,
+        ProcessamentoTest.class
 
 
 })

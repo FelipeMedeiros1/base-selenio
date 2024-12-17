@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.fundos.automacao;
+package sistema.transacoes.cadastropessoas.fundos.automacao;
 
 public record CadastroFundos(
         String carteira,

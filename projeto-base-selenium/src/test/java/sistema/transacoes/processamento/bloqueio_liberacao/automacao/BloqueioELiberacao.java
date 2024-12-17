@@ -1,4 +1,4 @@
-package amplis.transacoes.processamento.bloqueio_liberacao.automacao;
+package sistema.transacoes.processamento.bloqueio_liberacao.automacao;
 
 public record BloqueioELiberacao(
         int id,

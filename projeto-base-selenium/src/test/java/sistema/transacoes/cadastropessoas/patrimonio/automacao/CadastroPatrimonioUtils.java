@@ -1,16 +1,16 @@
-package amplis.transacoes.cadastropessoas.patrimonio.automacao;
+package sistema.transacoes.cadastropessoas.patrimonio.automacao;
 
-import amplis.transacoes.cadastropessoas.patrimonio.pagina.PaginaCadastroPatrimonio;
+
 import servico.leitorDeArquivo.config_json.LeitorJson;
-import webdriver.base.navegacao.automacao.MenuNavegacao;
 import servico.utils.UtilitarioCadastro;
+import sistema.transacoes.cadastropessoas.patrimonio.pagina.PaginaCadastroPatrimonio;
 
 public class CadastroPatrimonioUtils extends UtilitarioCadastro<CadastroPatrimonio> {
     public CadastroPatrimonioUtils(String caminhoArquivo) {
         super(caminhoArquivo);
     }
 
-    private PaginaCadastroPatrimonio pagina = new PaginaCadastroPatrimonio();
+    private final PaginaCadastroPatrimonio pagina = new PaginaCadastroPatrimonio();
 
     @Override
     public void preencheDados(CadastroPatrimonio dados, int posicao) {

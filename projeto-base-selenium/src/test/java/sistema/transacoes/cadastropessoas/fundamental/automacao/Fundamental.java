@@ -1,4 +1,4 @@
-package amplis.transacoes.cadastropessoas.fundamental.automacao;
+package sistema.transacoes.cadastropessoas.fundamental.automacao;
 
 public record Fundamental(
         int id,
