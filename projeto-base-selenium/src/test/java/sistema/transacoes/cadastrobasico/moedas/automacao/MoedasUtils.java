@@ -14,7 +14,7 @@ public class MoedasUtils extends UtilitarioCadastro<Moedas> {
 
     @Override
     public void preencheDados(Moedas dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Moedas.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Moedas.class);
         preenche(pagina.codigo, dados.codigo());
         preenche(pagina.nome, dados.nome());
         preenche(pagina.simbolo, dados.simbolo());
@@ -23,7 +23,7 @@ public class MoedasUtils extends UtilitarioCadastro<Moedas> {
 
     public void consultar(Moedas dados, int posicao) {
         try {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Moedas.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Moedas.class);
         preencheFiltroPesquisa("Código", dados.codigo());
         confirmaConsulta();
 

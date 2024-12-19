@@ -1,4 +1,4 @@
-package amplis.login;
+package sistema.login;
 
 import webdriver.base.BasePagina;
 import webdriver.componentes.Botao;
@@ -6,6 +6,8 @@ import webdriver.componentes.CampoTexto;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static servico.leitorDeArquivo.LeitorPropriedade.getLogin;
+import static servico.leitorDeArquivo.LeitorPropriedade.getSenha;
 import static webdriver.componentes.Evidencia.*;
 
 public class PaginaLogin extends BasePagina {
@@ -23,6 +25,11 @@ public class PaginaLogin extends BasePagina {
 
     @FindBy(id = "loginForm:painelMensagensOkActionDialogButton")
     public WebElement painelMensagem;
+
+
+    private String login = getLogin();
+    private String senha = getSenha();
+
     //endregion
 
     public PaginaLogin temPainelMensagem() {
@@ -33,12 +40,15 @@ public class PaginaLogin extends BasePagina {
     }
 
 
-    public void executarLogin(String email, String senha) {
+    private void executarLogin(String email, String senha) {
         logInfo("Versão do sistema: " + versao.getText());
         pagina.preenche(inputEmail, email);
         pagina.preenche(inputSenha, senha);
         entrar.click();
         capturaTelaSucesso("PaginaLogin", "Validando a página de login");
+    }
+    public void executarLogin(){
+        executarLogin(getLogin(),getSenha());
     }
 
 

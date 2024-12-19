@@ -3,7 +3,7 @@ package servico.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import amplis.login.PaginaLogin;
+
 import org.testng.annotations.AfterClass;
 import servico.utils.DescricaoCenario;
 import webdriver.componentes.Espera;
@@ -34,8 +34,8 @@ public class BaseTeste {
             throw new RuntimeException("As propriedades do arquivo config.propriedades não foram configuradas corretamente.");
         }
         getDriver().get(url);
-        new PaginaLogin().executarLogin(login, senha);
-        new Espera().esperaPor(2500);
+//        new PaginaLogin().executarLogin(login, senha);
+//        new Espera().esperaPor(2500);
     }
 
     public List<String> getDescricaoCenario() {

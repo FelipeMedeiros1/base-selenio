@@ -16,7 +16,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastro<Movimentacao> {
     @Override
     public void preencheDados(Movimentacao dados, int posicao) {
         dados =
-                LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Movimentacao.class);
+                LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Movimentacao.class);
         preenche(pagina.dataDoMovimento, dados.dataDoMovimento());
         preencheDuplicado(pagina.carteira, dados.carteira());
         preencheAutoComplete(pagina.fundo, dados.fundo());
@@ -44,7 +44,7 @@ public class MovimentacaoFdsUtils extends UtilitarioCadastro<Movimentacao> {
 
     @Override
     public void consultar(Movimentacao dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Movimentacao.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Movimentacao.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

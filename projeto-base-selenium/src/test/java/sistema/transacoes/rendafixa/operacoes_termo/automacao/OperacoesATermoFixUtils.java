@@ -15,7 +15,7 @@ public class OperacoesATermoFixUtils extends UtilitarioCadastro<OperacoesATermo>
 
     @Override
     public void preencheDados(OperacoesATermo dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, OperacoesATermo.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, OperacoesATermo.class);
         selecionaAba(pagina.dadosDaMovimentacao().dadosDaMovimentacao);
         selecionaUm(pagina.dadosDaMovimentacao().modalidadeDoMovimento, dados.modalidadeDoMovimento());
         preenche(pagina.dadosDaMovimentacao().dataDoMovimento, dados.dataDoMovimento());
@@ -49,7 +49,7 @@ public class OperacoesATermoFixUtils extends UtilitarioCadastro<OperacoesATermo>
 
     @Override
     public void consultar(OperacoesATermo dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, OperacoesATermo.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, OperacoesATermo.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

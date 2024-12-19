@@ -21,11 +21,24 @@ public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos
         importarArquivo(dados.nomeDoArquivo());
     }
 
+    protected void preencheDados(String caminhoArquivo, CotacoesDeFundos dados, int posicao) {
+        dados = LeitorJson.carregarDados(getCaminhoArquivo(caminhoArquivo), posicao, CotacoesDeFundos.class);
+        preenche(pagina.dataInicial, dados.dataInicial()).esperaPor(2000);
+        preenche(pagina.dataFinal, dados.dataFinal());
+        selecionaUm(pagina.tipoImportacao, dados.tipoImportacao());
+        selecionaUm(pagina.layoutImportacao, dados.layoutImportacao());
+        importarArquivo(dados.nomeDoArquivo());
+    }
+
     @Override
     public void acessaPagina() {
 
     }
 
+
+    public String getCaminhoArquivo(String valor) {
+        return valor;
+    }
 
     @Override
     protected String transacoes() {

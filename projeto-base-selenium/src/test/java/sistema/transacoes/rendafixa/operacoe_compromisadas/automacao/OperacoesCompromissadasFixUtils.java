@@ -17,7 +17,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
 
     @Override
     public void preencheDados(OperacoesCompromissadas dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, OperacoesCompromissadas.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, OperacoesCompromissadas.class);
         /**/
         selecionaAba(pagina.dadosDaMovimentacao().dadosDaMovimentacao);
         selecionaUm(pagina.dadosDaMovimentacao().modalidadeDoMovimento, dados.modalidadeDoMovimento());
@@ -78,7 +78,7 @@ public class OperacoesCompromissadasFixUtils extends UtilitarioCadastro<Operacoe
 
     @Override
     public void consultar(OperacoesCompromissadas dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, OperacoesCompromissadas.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, OperacoesCompromissadas.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

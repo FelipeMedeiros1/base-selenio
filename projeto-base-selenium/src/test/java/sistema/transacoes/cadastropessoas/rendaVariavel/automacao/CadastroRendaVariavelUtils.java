@@ -14,12 +14,12 @@ public class CadastroRendaVariavelUtils extends UtilitarioCadastro<CadastroRenda
 
     @Override
     public void preencheDados(CadastroRendaVariavel dados, int posicao) {
-        LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroRendaVariavel.class);
+        LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroRendaVariavel.class);
 
     }
     @Override
     public void consultar(CadastroRendaVariavel dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroRendaVariavel.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroRendaVariavel.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

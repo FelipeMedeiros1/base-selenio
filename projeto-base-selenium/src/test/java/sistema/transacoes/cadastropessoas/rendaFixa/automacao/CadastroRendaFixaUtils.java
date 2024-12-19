@@ -14,7 +14,7 @@ public class CadastroRendaFixaUtils extends UtilitarioCadastro<CadastroRendaFixa
 
     @Override
     public void preencheDados(CadastroRendaFixa dados, int posicao) {
-        LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroRendaFixa.class);
+        LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroRendaFixa.class);
         preencheAutoComplete(pagina.carteira, dados.carteira());
         selecionaAba(pagina.negociacao().negociacao);
         selecionaUm(pagina.negociacao().mtm, dados.mtm());
@@ -22,7 +22,7 @@ public class CadastroRendaFixaUtils extends UtilitarioCadastro<CadastroRendaFixa
     }
     @Override
     public void consultar(CadastroRendaFixa dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroRendaFixa.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroRendaFixa.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

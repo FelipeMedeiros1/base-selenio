@@ -17,7 +17,7 @@ public class FundamentalUtils extends UtilitarioCadastro<Fundamental> {
 
     @Override
     public void preencheDados(Fundamental dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Fundamental.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Fundamental.class);
         preencheAutoComplete(pagina.pessoa, dados.pessoa());
         preenche(pagina.codigo, dados.codigo());
         capturaTelaInfo("preencheDadosInclusao", "Preencheendo dados para inclusão");
@@ -33,7 +33,7 @@ public class FundamentalUtils extends UtilitarioCadastro<Fundamental> {
 
     @Override
     public void consultar(Fundamental dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Fundamental.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Fundamental.class);
         preencheFiltroPesquisa("Código", dados.codigo());
         confirmaConsulta();
     }

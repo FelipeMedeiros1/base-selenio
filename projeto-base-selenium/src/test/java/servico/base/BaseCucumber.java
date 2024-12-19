@@ -5,8 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import amplis.login.PaginaLogin;
-import webdriver.componentes.Espera;
+
 
 import static servico.leitorDeArquivo.LeitorPropriedade.*;
 import static servico.utils.LogUtil.info;
@@ -32,8 +31,8 @@ public class BaseCucumber {
             throw new RuntimeException("As propriedades do arquivo config.propriedades não foram configuradas corretamente.");
         }
         getDriver().get(url);
-        new PaginaLogin().executarLogin(login, senha);
-        new Espera().esperaPor(2500);
+//        new PaginaLogin().executarLogin(login, senha);
+//        new Espera().esperaPor(2500);
 
     }
 

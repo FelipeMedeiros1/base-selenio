@@ -8,11 +8,13 @@ import static webdriver.componentes.Evidencia.capturaTelaInfo;
 
 public abstract class UtilitarioCadastro<M> extends Interagivel {
 
-    private final String caminhoArquivo;
+    private String caminhoArquivo;
 
     public UtilitarioCadastro(String caminhoArquivo) {
         this.caminhoArquivo = caminhoArquivo;
     }
+
+    public UtilitarioCadastro(){}
 
     protected abstract void preencheDados(M dados, int posicao);
 
@@ -56,7 +58,7 @@ public abstract class UtilitarioCadastro<M> extends Interagivel {
         new NavegacaoSistema().navegarPara(transacao());
     }
 
-    public String getCaminhoArquivo() {
+    public String obterCaminhoArquivo() {
         return caminhoArquivo;
     }
 }

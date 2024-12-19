@@ -15,7 +15,7 @@ public class PessoaUtils extends UtilitarioCadastro<Pessoa> {
 
     @Override
     public void preencheDados(Pessoa dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Pessoa.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Pessoa.class);
         preenche(pagina.codigo, dados.codigo());
         selecionaUm(pagina.tipoDaPessoa, dados.tipoDaPessoa());
         preenche(pagina.razaoSocial, dados.razaoSocial());
@@ -28,7 +28,7 @@ public class PessoaUtils extends UtilitarioCadastro<Pessoa> {
 
     @Override
     public void consultar(Pessoa dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, Pessoa.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, Pessoa.class);
         preencheFiltroPesquisa("Código", dados.codigo());
         confirmaConsulta();
     }

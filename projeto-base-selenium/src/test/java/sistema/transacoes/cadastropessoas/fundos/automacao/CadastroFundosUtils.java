@@ -14,7 +14,7 @@ public class CadastroFundosUtils extends UtilitarioCadastro<CadastroFundos> {
 
     @Override
     public void preencheDados(CadastroFundos dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroFundos.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroFundos.class);
         preencheAutoComplete(pagina.carteira, dados.carteira());
         selecionaUm(pagina.formaDeCondominio, dados.formaDeCondominio());
         selecionaUm(pagina.tipoDeFundos, dados.tipoDeFundos());
@@ -22,7 +22,7 @@ public class CadastroFundosUtils extends UtilitarioCadastro<CadastroFundos> {
 
     @Override
     public void consultar(CadastroFundos dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroFundos.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroFundos.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }

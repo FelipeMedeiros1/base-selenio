@@ -14,14 +14,14 @@ public class CadastroPatrimonioUtils extends UtilitarioCadastro<CadastroPatrimon
 
     @Override
     public void preencheDados(CadastroPatrimonio dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroPatrimonio.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroPatrimonio.class);
         preencheAutoComplete(pagina.carteira, dados.carteira());
         preencheAutoComplete(pagina.valorDaCotaInicial, dados.valorDaCotaInicial());
     }
 
     @Override
     public void consultar(CadastroPatrimonio dados, int posicao) {
-        dados = LeitorJson.carregarDados(getCaminhoArquivo(), posicao, CadastroPatrimonio.class);
+        dados = LeitorJson.carregarDados(obterCaminhoArquivo(), posicao, CadastroPatrimonio.class);
         preencheFiltroPesquisa("Carteira", dados.carteira());
         confirmaConsulta();
     }
