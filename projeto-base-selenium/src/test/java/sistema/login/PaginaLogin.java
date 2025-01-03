@@ -2,16 +2,16 @@ package sistema.login;
 
 import webdriver.base.BasePagina;
 import webdriver.componentes.Botao;
-import webdriver.componentes.CampoTexto;
+import webdriver.componentes.CaixaTexto;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static servico.leitorDeArquivo.LeitorPropriedade.getLogin;
-import static servico.leitorDeArquivo.LeitorPropriedade.getSenha;
+import static utils.leitorDeArquivo.LeitorPropriedade.getLogin;
+import static utils.leitorDeArquivo.LeitorPropriedade.getSenha;
 import static webdriver.componentes.Evidencia.*;
 
 public class PaginaLogin extends BasePagina {
-    private final CampoTexto pagina = new CampoTexto();
+    private final CaixaTexto pagina = new CaixaTexto();
 
     //region
     @FindBy(id = "loginForm:userLoginInput:campo")

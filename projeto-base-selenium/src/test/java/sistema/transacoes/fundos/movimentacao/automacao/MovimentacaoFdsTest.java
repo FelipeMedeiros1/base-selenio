@@ -1,6 +1,6 @@
 package sistema.transacoes.fundos.movimentacao.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class MovimentacaoFdsTest extends BaseTeste {

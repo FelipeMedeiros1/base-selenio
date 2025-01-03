@@ -1,7 +1,7 @@
 package sistema.transacoes.processamento.bloqueio_liberacao.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioProcessamento;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioProcessamento;
 import sistema.transacoes.processamento.bloqueio_liberacao.pagina.PaginaBloqueioELiberacao;
 
 

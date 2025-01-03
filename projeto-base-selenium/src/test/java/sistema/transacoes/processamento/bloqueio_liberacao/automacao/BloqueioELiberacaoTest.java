@@ -1,6 +1,6 @@
 package sistema.transacoes.processamento.bloqueio_liberacao.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class BloqueioELiberacaoTest extends BaseTeste {

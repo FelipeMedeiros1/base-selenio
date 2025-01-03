@@ -1,7 +1,7 @@
-url=https://github.com/FelipeMedeiros1
+url=http://165.227.93.41/lojinha-web/v2/
 
-login=
-senha=
+login=admin
+senha=admin
 
 #PROJECT
 project.name = Projeto Automacao

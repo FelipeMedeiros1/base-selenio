@@ -2,8 +2,8 @@ package sistema.transacoes.processamento.cockpit.automacao;
 
 
 import org.junit.jupiter.api.Assertions;
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioProcessamento;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioProcessamento;
 import sistema.transacoes.processamento.cockpit.pagina.PaginaCockPit;
 
 import static webdriver.componentes.Evidencia.*;

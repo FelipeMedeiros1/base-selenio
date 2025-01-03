@@ -29,7 +29,7 @@ public class OperacoesDefinitivasSteps {
         fixUtils.obterCaminhoJson(caminhoArquivo);
     }
 
-    @Quando("o usuário preenche os campos com os dados para realizar a inclusão da movimentação")
+    @Quando("o usuário preencher os campos com os dados para realizar a inclusão da movimentação")
     public void preencherCampos() {
         fixUtils.incluir(dadosMovimentacao, 1);
     }

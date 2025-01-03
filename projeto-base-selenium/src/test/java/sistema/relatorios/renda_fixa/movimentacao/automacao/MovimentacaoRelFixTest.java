@@ -1,6 +1,6 @@
 package sistema.relatorios.renda_fixa.movimentacao.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class MovimentacaoRelFixTest extends BaseTeste {

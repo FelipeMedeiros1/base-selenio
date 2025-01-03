@@ -1,6 +1,6 @@
 package sistema.transacoes.cadastropessoas.rendaVariavel.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 
 
 public class CadastroRendaVariavelTest extends BaseTeste {

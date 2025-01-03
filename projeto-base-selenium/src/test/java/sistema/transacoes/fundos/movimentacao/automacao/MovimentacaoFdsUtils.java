@@ -1,8 +1,8 @@
 package sistema.transacoes.fundos.movimentacao.automacao;
 
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioCadastro;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioCadastro;
 import sistema.transacoes.fundos.movimentacao.pagina.PaginaMovimentacao;
 
 

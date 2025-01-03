@@ -1,6 +1,6 @@
 package sistema.transacoes.cadastropessoas.pessoa.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class PessoaTest extends BaseTeste {

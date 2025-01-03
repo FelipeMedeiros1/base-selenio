@@ -91,7 +91,7 @@ public class ImportarArquivo {
 
         for (WebElement elemento : elementos)
             try {
-                new CampoTexto().preenche(elemento, caminhoArquivo);
+                new CaixaTexto().preenche(elemento, caminhoArquivo);
             } catch (Exception e) {
                 throw new RuntimeException(
                         "ERRO ao importar o arquivo [" + caminhoArquivo + "] - "

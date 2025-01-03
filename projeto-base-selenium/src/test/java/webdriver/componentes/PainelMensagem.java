@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertTrue;
 
-import static servico.utils.LogUtil.*;
+import static utils.LogUtil.*;
 
 import static webdriver.componentes.Evidencia.*;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;

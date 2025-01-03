@@ -14,7 +14,7 @@ public class Filtro {
         espera.esperaPor(500);
         espera.esperaAjaxTerminar();
         WebElement campoFiltro = espera.esperaAteElementoAparecerNaTela(By.xpath("(//span[text()='" + nomeDoCampo + "']/following-sibling::*//" + "input)[1]"));
-        new CampoTexto().preenche(campoFiltro, valor);
+        new CaixaTexto().preenche(campoFiltro, valor);
     }
 
     public void filtroPesquisaSeleciona(String nomeDoCampo, String valor) {

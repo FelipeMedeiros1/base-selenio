@@ -1,6 +1,6 @@
 package sistema.relatorios.renda_fixa.rendimentos.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class RendimentosRelFixTest extends BaseTeste {

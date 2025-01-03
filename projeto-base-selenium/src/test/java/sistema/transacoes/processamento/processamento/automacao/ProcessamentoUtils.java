@@ -1,8 +1,8 @@
 package sistema.transacoes.processamento.processamento.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
+import utils.leitorDeArquivo.config_json.LeitorJson;
 
-import servico.utils.UtilitarioProcessamento;
+import sistema.servico.utils.UtilitarioProcessamento;
 import sistema.transacoes.processamento.processamento.pagina.PaginaProcessamento;
 
 

@@ -1,7 +1,7 @@
 package sistema.transacoes.processamento.processamentoContabil.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioProcessamento;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioProcessamento;
 import sistema.transacoes.processamento.processamentoContabil.pagina.PaginaProcessamentoContabil;
 
 public class ProcessamentoContabilUtils extends UtilitarioProcessamento<ProcessamentoContabil> {

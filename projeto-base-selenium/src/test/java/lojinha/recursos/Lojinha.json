@@ -1,0 +1,9 @@
+[
+  {
+    "nomeDoProduto": "Camiseta",
+    "valorDoProduto": "50,00",
+    "coresDoProduto":"Azul, Branco",
+    "nomeDoComponente": "Botão",
+    "quantidadeDoComponente": 2
+  }
+]

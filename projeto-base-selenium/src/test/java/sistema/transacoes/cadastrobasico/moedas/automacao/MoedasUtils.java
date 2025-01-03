@@ -1,7 +1,7 @@
 package sistema.transacoes.cadastrobasico.moedas.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioCadastro;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioCadastro;
 import sistema.transacoes.cadastrobasico.moedas.pagina.PaginaMoedas;
 
 public class MoedasUtils extends UtilitarioCadastro<Moedas> {

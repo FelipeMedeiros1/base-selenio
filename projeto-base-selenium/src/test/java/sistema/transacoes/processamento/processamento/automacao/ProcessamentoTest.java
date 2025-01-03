@@ -1,6 +1,6 @@
 package sistema.transacoes.processamento.processamento.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class ProcessamentoTest extends BaseTeste {

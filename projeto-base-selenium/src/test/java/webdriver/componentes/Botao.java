@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.NoSuchElementException;
 
-import static servico.utils.LogUtil.info;
+import static utils.LogUtil.info;
 import static webdriver.componentes.Evidencia.capturaTelaInfo;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 

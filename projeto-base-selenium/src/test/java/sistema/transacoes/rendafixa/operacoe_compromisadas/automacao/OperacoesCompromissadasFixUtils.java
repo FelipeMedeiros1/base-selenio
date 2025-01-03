@@ -1,9 +1,9 @@
 package sistema.transacoes.rendafixa.operacoe_compromisadas.automacao;
 
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
+import utils.leitorDeArquivo.config_json.LeitorJson;
 
-import servico.utils.UtilitarioCadastro;
+import sistema.servico.utils.UtilitarioCadastro;
 import sistema.transacoes.rendafixa.operacoe_compromisadas.pagina.PaginaOperacoesCompromissadas;
 
 

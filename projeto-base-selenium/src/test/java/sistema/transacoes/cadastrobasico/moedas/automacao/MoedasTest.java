@@ -2,8 +2,8 @@ package sistema.transacoes.cadastrobasico.moedas.automacao;
 
 
 import org.junit.Test;
-import servico.base.BaseTeste;
-import servico.utils.DescricaoCenario;
+import base.BaseTeste;
+import utils.DescricaoCenario;
 
 public class MoedasTest extends BaseTeste {
 

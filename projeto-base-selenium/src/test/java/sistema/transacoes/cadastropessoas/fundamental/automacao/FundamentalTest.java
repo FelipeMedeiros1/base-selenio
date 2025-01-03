@@ -2,7 +2,7 @@ package sistema.transacoes.cadastropessoas.fundamental.automacao;
 
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)

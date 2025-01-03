@@ -1,7 +1,7 @@
 package sistema.relatorios.renda_fixa.movimentacao.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioRelatorio;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioRelatorio;
 import sistema.relatorios.renda_fixa.movimentacao.pagina.PaginaMovimentacao;
 
 public class MovimentacaoRelFixUtils extends UtilitarioRelatorio<MovimentacaoRelFix> {

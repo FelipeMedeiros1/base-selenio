@@ -1,6 +1,6 @@
 package sistema.relatorios.patrimonio.carteira_diaria.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class CarteiraDiariaTest extends BaseTeste {

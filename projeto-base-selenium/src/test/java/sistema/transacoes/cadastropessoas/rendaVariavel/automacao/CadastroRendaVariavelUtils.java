@@ -1,8 +1,8 @@
 package sistema.transacoes.cadastropessoas.rendaVariavel.automacao;
 
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioCadastro;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioCadastro;
 import sistema.transacoes.cadastropessoas.rendaVariavel.pagina.PaginaCadastroRendaVariavel;
 
 public class CadastroRendaVariavelUtils extends UtilitarioCadastro<CadastroRendaVariavel> {

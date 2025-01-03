@@ -1,9 +1,9 @@
 package sistema.transacoes.rendafixa.operacoes_definitivas.automacao;
 
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
+import utils.leitorDeArquivo.config_json.LeitorJson;
 
-import servico.utils.UtilitarioCadastro;
+import sistema.servico.utils.UtilitarioCadastro;
 
 import sistema.transacoes.rendafixa.operacoes_definitivas.pagina.PaginaOperacoesDefinitivas;
 

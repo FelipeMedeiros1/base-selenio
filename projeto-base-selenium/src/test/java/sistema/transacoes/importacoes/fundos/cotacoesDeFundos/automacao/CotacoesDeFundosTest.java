@@ -1,7 +1,7 @@
 package sistema.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
 
 import org.junit.Test;
-import servico.base.BaseTeste;
+import base.BaseTeste;
 
 public class CotacoesDeFundosTest extends BaseTeste {
 

@@ -1,7 +1,7 @@
 package sistema.transacoes.rendafixa.operacoes_termo.automacao;
 
 import org.junit.Test;
-import servico.base.BaseTeste;
+import base.BaseTeste;
 
 public class OperacoesATermoTest extends BaseTeste {
 

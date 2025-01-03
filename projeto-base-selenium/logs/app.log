@@ -2,3 +2,413 @@
 08:01:33.030 [main]  INFO Acessando o sistema pela url: https://
 08:02:33.645 [main]  INFO Acessando o sistema pela url: https://
 08:05:05.641 [main]  INFO Acessando o sistema pela url: https://github.com/FelipeMedeiros1
+12:09:50.402 [main]  INFO Acessando o sistema pela url: https://github.com
+12:12:09.196 [main]  INFO Acessando o sistema pela url: https://github.com/FelipeMedeiros1
+12:12:22.983 [main]  INFO Acessando o sistema pela url: https://github.com/FelipeMedeiros1
+12:12:40.237 [main]  INFO Acessando o sistema pela url: https://github.com/FelipeMedeiros1
+11:13:01.991 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+11:13:06.153 [main] ERROR Elemento não encontrado: Adicionar produto
+11:13:54.716 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+11:13:58.997 [main]  INFO input:admin
+11:13:59.296 [main]  INFO input:admin
+11:13:59.552 [main] ERROR Elemento não encontrado: Adicionar produto
+11:14:28.188 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+11:14:32.334 [main]  INFO input:admin
+11:14:32.661 [main]  INFO input:admin
+11:14:34.737 [main] ERROR Elemento não encontrado: Adicionar produto
+11:16:32.725 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+11:16:36.871 [main]  INFO input:admin
+11:16:37.176 [main]  INFO input:admin
+11:16:39.060 [main] ERROR Elemento não encontrado: Adicionar produto
+18:15:47.677 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:15:51.982 [main]  INFO input:admin
+18:15:52.492 [main]  INFO input:admin
+18:18:43.484 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:19:16.787 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:19:20.837 [main]  INFO input:admin
+18:19:21.146 [main]  INFO input:admin
+18:20:49.074 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:20:53.915 [main]  INFO input:admin
+18:20:54.230 [main]  INFO input:admin
+18:25:34.962 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:25:38.562 [main]  INFO input:admin
+18:25:38.885 [main]  INFO input:admin
+18:27:12.829 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:27:17.054 [main]  INFO input:admin
+18:27:17.365 [main]  INFO input:admin
+18:27:56.220 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:28:00.945 [main]  INFO input:admin
+18:28:01.278 [main]  INFO input:admin
+18:32:28.155 [main]  INFO input:Camiseta
+18:33:00.187 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:33:04.053 [main]  INFO input:admin
+18:33:04.356 [main]  INFO input:admin
+18:33:06.940 [main]  INFO input:Camiseta
+18:33:07.205 [main]  INFO input:50,00
+18:33:07.494 [main]  INFO input:Azul,Branco
+18:33:07.765 [main] ERROR Elemento não encontrado: Adicionar componente
+18:41:15.532 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:41:19.377 [main]  INFO input:admin
+18:41:19.677 [main]  INFO input:admin
+18:41:22.205 [main]  INFO input:Camiseta
+18:41:22.465 [main]  INFO input:50,00
+18:41:22.722 [main]  INFO input:Azul, Branco
+18:41:22.982 [main] ERROR Elemento não encontrado: /html/body/div[2]/div/div/div[3]/div[1]/a
+18:42:36.565 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:42:40.838 [main]  INFO input:admin
+18:42:41.140 [main]  INFO input:admin
+18:42:43.849 [main]  INFO input:Camiseta
+18:42:44.133 [main]  INFO input:50,00
+18:42:44.395 [main]  INFO input:Azul, Branco
+18:42:45.785 [main]  INFO input:Botão
+18:42:46.556 [main]  INFO input:2
+18:42:47.251 [main] ERROR Elemento não encontrado: /html/body/div[2]/div/div/div[3]/form/div[4]/a
+18:46:56.331 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:47:00.745 [main]  INFO input:admin
+18:47:01.043 [main]  INFO input:admin
+18:47:05.033 [main]  INFO input:Camiseta
+18:47:05.346 [main]  INFO input:50,00
+18:47:05.646 [main]  INFO input:Azul, Branco
+18:47:07.197 [main]  INFO input:Botão
+18:47:08.005 [main]  INFO input:2
+18:47:08.806 [main] ERROR Elemento não encontrado: /html/body/div[2]/div/div/div[3]/form/div[4]/a
+18:57:24.782 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:57:28.848 [main]  INFO input:admin
+18:57:29.148 [main]  INFO input:admin
+18:57:32.017 [main]  INFO input:Camiseta
+18:57:32.300 [main]  INFO input:50,00
+18:57:32.563 [main]  INFO input:Azul, Branco
+18:59:16.863 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+18:59:21.023 [main]  INFO input:admin
+18:59:21.322 [main]  INFO input:admin
+18:59:24.002 [main]  INFO input:Camiseta
+18:59:24.356 [main]  INFO input:50,00
+18:59:24.626 [main]  INFO input:Azul, Branco
+18:59:25.982 [main]  INFO input:Botão
+18:59:26.779 [main]  INFO input:2
+18:59:28.413 [main] ERROR Elemento não encontrado: /html/body/div[2]/div/div/div[3]/form/div[4]/a
+19:00:31.399 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:00:36.281 [main]  INFO input:admin
+19:00:36.690 [main]  INFO input:admin
+19:00:39.793 [main]  INFO input:Camiseta
+19:00:40.145 [main]  INFO input:50,00
+19:00:40.564 [main]  INFO input:Azul, Branco
+19:00:42.308 [main]  INFO input:Botão
+19:00:42.617 [main]  INFO input:2
+19:14:12.422 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:14:16.420 [main]  INFO input:admin
+19:14:16.731 [main]  INFO input:admin
+19:14:18.721 [main]  INFO Acessando tela inicial 
+19:14:19.280 [main]  INFO Acessando tela de Inclusão produto
+19:14:19.682 [main]  INFO input:Camiseta
+19:14:19.967 [main]  INFO input:50,00
+19:14:20.258 [main]  INFO input:Azul, Branco
+19:14:20.500 [main]  INFO Foram preenchidos os dados do produto.
+19:14:21.715 [main]  INFO Acessando tela de Inclusão componente
+19:15:53.599 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:15:57.589 [main]  INFO input:admin
+19:15:57.899 [main]  INFO input:admin
+19:15:58.961 [main]  INFO Acessando tela inicial 
+19:17:13.899 [main]  INFO Acessando tela de Inclusão produto
+19:17:41.596 [main]  INFO input:Camiseta
+19:17:42.133 [main]  INFO input:50,00
+19:17:42.665 [main]  INFO input:Azul, Branco
+19:17:43.174 [main]  INFO Foram preenchidos os dados do produto.
+19:17:48.215 [main]  INFO Acessando tela de Inclusão componente
+19:24:59.064 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:25:02.882 [main]  INFO input:admin
+19:25:03.248 [main]  INFO input:admin
+19:25:05.448 [main]  INFO Acessando tela inicial 
+19:25:06.003 [main]  INFO Acessando tela de Inclusão produto
+19:25:06.408 [main]  INFO input:Camiseta
+19:25:06.691 [main]  INFO input:50,00
+19:25:06.976 [main]  INFO input:Azul, Branco
+19:25:07.267 [main]  INFO Foram preenchidos os dados do produto.
+19:25:08.410 [main]  INFO Acessando tela de Inclusão componente
+19:32:38.342 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:32:42.301 [main]  INFO input:admin
+19:32:42.688 [main]  INFO input:admin
+19:32:44.407 [main]  INFO Acessando tela inicial 
+19:32:45.024 [main]  INFO Acessando tela de Inclusão produto
+19:32:45.520 [main]  INFO input:Camiseta
+19:32:45.936 [main]  INFO input:50,00
+19:32:46.442 [main]  INFO input:Azul, Branco
+19:32:46.908 [main]  INFO Foram preenchidos os dados do produto.
+19:32:48.762 [main]  INFO input:Botão
+19:32:49.152 [main]  INFO input:2
+19:32:49.554 [main]  INFO Foram preenchidos os dados do componente.
+19:34:35.152 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:34:39.448 [main]  INFO input:admin
+19:34:40.354 [main]  INFO input:admin
+19:34:44.183 [main]  INFO Acessando tela inicial 
+19:34:44.927 [main]  INFO Acessando tela de Inclusão produto
+19:34:45.393 [main]  INFO input:Camiseta
+19:34:45.692 [main]  INFO input:50,00
+19:34:46.029 [main]  INFO input:Azul, Branco
+19:34:46.391 [main]  INFO Foram preenchidos os dados do produto.
+19:34:47.949 [main]  INFO Acessando tela de Inclusão componente
+19:34:48.074 [main]  INFO input:Botão
+19:34:48.355 [main]  INFO input:2
+19:34:48.668 [main]  INFO Foram preenchidos os dados do componente.
+19:56:27.820 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:56:27.875 [main]  INFO Acessando tela de login
+19:59:26.579 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+19:59:26.617 [main]  INFO Acessando tela de login
+20:03:08.493 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:04:40.991 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:05:49.697 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:05:56.454 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:08:27.823 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:10:34.050 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:10:37.976 [main]  INFO input:admin
+20:10:38.299 [main]  INFO input:admin
+20:10:40.041 [main]  INFO Acessando tela inicial 
+20:10:40.580 [main]  INFO Acessando tela de Inclusão produto
+20:10:41.013 [main]  INFO input:Camiseta
+20:10:41.305 [main]  INFO input:50,00
+20:10:41.607 [main]  INFO input:Azul, Branco
+20:10:41.862 [main]  INFO Foram preenchidos os dados do produto.
+20:10:43.039 [main]  INFO Acessando tela de Inclusão componente
+20:10:43.194 [main]  INFO input:Botão
+20:10:43.523 [main]  INFO input:2
+20:10:43.805 [main]  INFO Foram preenchidos os dados do componente.
+20:13:27.207 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:13:31.096 [main]  INFO Acessando tela de login
+20:13:31.233 [main]  INFO input:admin
+20:13:31.595 [main]  INFO input:admin
+20:13:33.395 [main]  INFO Acessando tela inicial 
+20:13:33.919 [main]  INFO Acessando tela de Inclusão produto
+20:13:34.331 [main]  INFO input:Camiseta
+20:13:34.679 [main]  INFO input:50,00
+20:13:35.000 [main]  INFO input:Azul, Branco
+20:13:35.292 [main]  INFO Foram preenchidos os dados do produto.
+20:13:36.587 [main]  INFO Acessando tela de Inclusão componente
+20:13:36.771 [main]  INFO input:Botão
+20:13:37.057 [main]  INFO input:2
+20:13:37.299 [main]  INFO Foram preenchidos os dados do componente.
+20:20:25.061 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:20:29.562 [main]  INFO Acessando tela de login
+20:20:29.701 [main]  INFO input:admin
+20:20:30.049 [main]  INFO input:admin
+20:20:31.118 [main]  INFO Acessando tela inicial 
+20:20:32.557 [main]  INFO Acessando tela de Inclusão produto
+20:20:32.998 [main]  INFO input:Camiseta
+20:20:33.341 [main]  INFO input:50,00
+20:20:33.656 [main]  INFO input:Azul, Branco
+20:20:33.967 [main]  INFO Foram preenchidos os dados do produto.
+20:20:35.430 [main]  INFO Acessando tela de Inclusão componente
+20:20:35.598 [main]  INFO input:Botão
+20:20:35.930 [main]  INFO input:2
+20:20:36.177 [main]  INFO Foram preenchidos os dados do componente.
+20:26:38.359 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:26:43.646 [main]  INFO Acessando tela de login
+20:26:43.787 [main]  INFO input:admin
+20:26:44.124 [main]  INFO input:admin
+20:26:45.176 [main]  INFO Acessando tela inicial 
+20:26:46.385 [main]  INFO Acessando tela de inclusão produto
+20:26:46.826 [main]  INFO input:Camiseta
+20:26:47.105 [main]  INFO input:50,00
+20:26:47.368 [main]  INFO input:Azul, Branco
+20:26:47.612 [main]  INFO Foram preenchidos os dados do produto.
+20:26:48.843 [main]  INFO Acessando tela de inclusão componente
+20:26:49.016 [main]  INFO input:Botão
+20:26:49.292 [main]  INFO input:2
+20:26:49.521 [main]  INFO Foram preenchidos os dados do componente.
+20:26:51.248 [main]  INFO Acessando tela lista de produtos
+20:33:11.151 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+20:33:15.088 [main]  INFO Acessando tela de login
+20:33:15.226 [main]  INFO input:admin
+20:33:15.534 [main]  INFO input:admin
+20:33:17.641 [main]  INFO Acessando tela inicial 
+20:33:18.169 [main]  INFO Acessando tela de inclusão produto
+20:33:18.573 [main]  INFO input:Camiseta
+20:33:18.879 [main]  INFO input:50,00
+20:33:19.191 [main]  INFO input:Azul, Branco
+20:33:19.461 [main]  INFO Foram preenchidos os dados do produto.
+20:33:20.751 [main]  INFO Acessando tela de inclusão componente
+20:33:20.875 [main]  INFO input:Botão
+20:33:21.137 [main]  INFO input:2
+20:33:21.361 [main]  INFO Foram preenchidos os dados do componente.
+20:33:23.114 [main]  INFO Acessando tela lista de produtos
+11:19:40.150 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+11:19:43.987 [main]  INFO Acessando tela de login
+11:19:44.123 [main]  INFO input:admin
+11:19:44.537 [main]  INFO input:admin
+11:19:46.646 [main]  INFO Acessando tela inicial 
+11:19:47.320 [main]  INFO Acessando tela de inclusão produto
+11:19:48.211 [main]  INFO input:Camiseta
+11:19:48.875 [main]  INFO input:50,00
+11:19:49.397 [main]  INFO input:Azul, Branco
+11:19:49.772 [main]  INFO Foram preenchidos os dados do produto.
+11:19:52.174 [main]  INFO Acessando tela de inclusão componente
+11:19:52.397 [main]  INFO input:Botão
+11:19:53.069 [main]  INFO input:2
+11:19:53.587 [main]  INFO Foram preenchidos os dados do componente.
+11:19:56.255 [main]  INFO Acessando tela lista de produtos
+12:12:19.266 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:12:23.164 [main]  INFO Acessando tela de login
+12:12:23.321 [main]  INFO input:admin
+12:12:23.688 [main]  INFO input:admin
+12:12:25.310 [main]  INFO Acessando tela inicial 
+12:12:26.034 [main]  INFO Acessando tela de inclusão produto
+12:12:26.433 [main]  INFO input:Camiseta
+12:12:26.711 [main]  INFO input:50,00
+12:12:26.979 [main]  INFO input:Azul, Branco
+12:12:27.235 [main]  INFO Foram preenchidos os dados do produto.
+12:12:28.386 [main]  INFO Produto adicionado com sucesso
+12:12:28.485 [main] ERROR Teste finalizado com erro!
+12:12:28.591 [main]  WARN Não foi possível cadastrar: Mensagem: Produto adicionado com sucesso,  não corresponde a mensagem esperada.
+12:13:54.551 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:13:58.560 [main]  INFO Acessando tela de login
+12:13:58.717 [main]  INFO input:admin
+12:13:59.116 [main]  INFO input:admin
+12:14:01.117 [main]  INFO Acessando tela inicial 
+12:14:01.668 [main]  INFO Acessando tela de inclusão produto
+12:14:02.083 [main]  INFO input:Camiseta
+12:14:02.475 [main]  INFO input:50,00
+12:14:02.824 [main]  INFO input:Azul, Branco
+12:14:03.139 [main]  INFO Foram preenchidos os dados do produto.
+12:14:04.350 [main]  INFO Produto adicionado com sucesso
+12:14:04.444 [main]  INFO Teste finalizado com sucesso!
+12:14:04.513 [main]  INFO Acessando tela de inclusão componente
+12:14:04.661 [main]  INFO input:Botão
+12:14:04.987 [main]  INFO input:2
+12:14:05.280 [main]  INFO Foram preenchidos os dados do componente.
+12:14:05.523 [main]  INFO Produto adicionado com sucesso
+12:14:05.643 [main] ERROR Teste finalizado com erro!
+12:14:05.875 [main]  WARN Não foi possível cadastrar: Mensagem: Produto adicionado com sucesso,  não corresponde a mensagem esperada.
+12:14:58.111 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:15:01.667 [main]  INFO Acessando tela de login
+12:15:01.810 [main]  INFO input:admin
+12:15:02.136 [main]  INFO input:admin
+12:15:03.205 [main]  INFO Acessando tela inicial 
+12:15:03.845 [main]  INFO Acessando tela de inclusão produto
+12:15:04.207 [main]  INFO input:Camiseta
+12:15:04.526 [main]  INFO input:50,00
+12:15:04.801 [main]  INFO input:Azul, Branco
+12:15:05.062 [main]  INFO Foram preenchidos os dados do produto.
+12:15:06.198 [main]  INFO Produto adicionado com sucesso
+12:15:06.302 [main]  INFO Teste finalizado com sucesso!
+12:15:06.363 [main]  INFO Acessando tela de inclusão componente
+12:15:06.523 [main]  INFO input:Botão
+12:15:06.842 [main]  INFO input:2
+12:15:07.090 [main]  INFO Foram preenchidos os dados do componente.
+12:15:07.392 [main]  INFO Produto adicionado com sucesso
+12:15:07.655 [main]  INFO Teste finalizado com sucesso!
+12:15:09.247 [main]  INFO Acessando tela lista de produtos
+12:16:10.159 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:16:14.769 [main]  INFO Acessando tela de login
+12:16:14.914 [main]  INFO input:admin
+12:16:15.279 [main]  INFO input:admin
+12:16:16.397 [main]  INFO Acessando tela inicial 
+12:16:17.381 [main]  INFO Acessando tela de inclusão produto
+12:16:17.806 [main]  INFO input:Camiseta
+12:16:18.106 [main]  INFO input:50,00
+12:16:18.404 [main]  INFO input:Azul, Branco
+12:16:18.672 [main]  INFO Foram preenchidos os dados do produto.
+12:16:19.893 [main]  INFO Produto adicionado com sucesso
+12:16:19.996 [main]  INFO Teste finalizado com sucesso!
+12:16:20.066 [main]  INFO Acessando tela de inclusão componente
+12:16:20.227 [main]  INFO input:Botão
+12:16:20.516 [main]  INFO input:2
+12:16:20.747 [main]  INFO Foram preenchidos os dados do componente.
+12:17:30.949 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:17:34.870 [main]  INFO Acessando tela de login
+12:17:35.020 [main]  INFO input:admin
+12:17:35.401 [main]  INFO input:admin
+12:17:37.141 [main]  INFO Acessando tela inicial 
+12:17:37.634 [main]  INFO Acessando tela de inclusão produto
+12:17:38.019 [main]  INFO input:Camiseta
+12:17:38.293 [main]  INFO input:50,00
+12:17:38.576 [main]  INFO input:Azul, Branco
+12:17:38.842 [main]  INFO Foram preenchidos os dados do produto.
+12:18:06.617 [main]  INFO Produto adicionado com sucesso
+12:18:14.289 [main]  INFO Teste finalizado com sucesso!
+12:18:19.010 [main]  INFO Acessando tela de inclusão componente
+12:18:19.170 [main]  INFO input:Botão
+12:18:19.456 [main]  INFO input:2
+12:18:19.688 [main]  INFO Foram preenchidos os dados do componente.
+12:18:54.678 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+12:18:58.319 [main]  INFO Acessando tela de login
+12:18:58.453 [main]  INFO input:admin
+12:18:58.777 [main]  INFO input:admin
+12:19:00.609 [main]  INFO Acessando tela inicial 
+12:19:01.113 [main]  INFO Acessando tela de inclusão produto
+12:19:01.468 [main]  INFO input:Camiseta
+12:19:01.734 [main]  INFO input:50,00
+12:19:02.125 [main]  INFO input:Azul, Branco
+12:19:02.386 [main]  INFO Foram preenchidos os dados do produto.
+12:19:03.622 [main]  INFO Produto adicionado com sucesso
+12:19:03.716 [main]  INFO Teste finalizado com sucesso!
+12:19:03.780 [main]  INFO Acessando tela de inclusão componente
+12:19:03.944 [main]  INFO input:Botão
+12:19:04.243 [main]  INFO input:2
+12:19:04.470 [main]  INFO Foram preenchidos os dados do componente.
+12:19:04.718 [main]  INFO Produto adicionado com sucesso
+12:19:05.042 [main]  INFO Teste finalizado com sucesso!
+12:19:06.660 [main]  INFO Acessando tela lista de produtos
+13:37:39.666 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+13:37:43.354 [main]  INFO Acessando tela de login
+13:37:43.584 [main]  INFO input:admin
+13:37:44.292 [main]  INFO input:admin
+13:37:46.554 [main]  INFO Acessando tela inicial 
+13:37:47.693 [main]  INFO Acessando tela de inclusão produto
+13:37:49.538 [main]  INFO input:Camiseta
+13:37:50.721 [main]  INFO input:50,00
+13:37:51.575 [main]  INFO input:Azul, Branco
+13:37:52.807 [main]  INFO Foram preenchidos os dados do produto.
+13:37:54.378 [main]  INFO Produto adicionado com sucesso
+13:37:54.582 [main]  INFO Teste finalizado com sucesso!
+13:37:54.741 [main]  INFO Acessando tela de inclusão componente
+13:37:54.997 [main]  INFO input:Botão
+13:37:55.549 [main]  INFO input:2
+13:37:56.205 [main]  INFO Foram preenchidos os dados do componente.
+13:37:56.671 [main]  INFO Produto adicionado com sucesso
+13:37:57.148 [main]  INFO Teste finalizado com sucesso!
+13:37:59.022 [main]  INFO Acessando tela lista de produtos
+21:41:27.257 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+21:41:31.450 [main]  INFO Acessando tela de login
+21:41:31.593 [main]  INFO input:admin
+21:41:31.993 [main]  INFO input:admin
+21:41:33.128 [main]  INFO Acessando tela inicial 
+21:41:34.017 [main]  INFO Acessando tela de inclusão produto
+21:41:34.447 [main]  INFO input:Camiseta
+21:41:34.744 [main]  INFO input:50,00
+21:41:35.007 [main]  INFO input:Azul, Branco
+21:41:35.276 [main]  INFO Foram preenchidos os dados do produto.
+21:41:43.217 [main]  INFO Produto adicionado com sucesso
+21:41:43.326 [main]  INFO Teste finalizado com sucesso!
+21:41:43.402 [main]  INFO Acessando tela de inclusão componente
+21:41:43.561 [main]  INFO input:Botão
+21:41:43.932 [main]  INFO input:2
+21:41:44.306 [main]  INFO Foram preenchidos os dados do componente.
+21:42:18.297 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+21:42:22.655 [main]  INFO Acessando tela de login
+21:42:22.792 [main]  INFO input:admin
+21:42:23.226 [main]  INFO input:admin
+21:42:25.488 [main]  INFO Acessando tela inicial 
+21:42:26.202 [main]  INFO Acessando tela de inclusão produto
+21:42:26.707 [main]  INFO input:Camiseta
+21:42:26.999 [main]  INFO input:50,00
+21:42:27.281 [main]  INFO input:Azul, Branco
+21:42:27.544 [main]  INFO Foram preenchidos os dados do produto.
+21:42:28.711 [main]  INFO Produto adicionado com sucesso
+21:42:28.809 [main]  INFO Teste finalizado com sucesso!
+21:42:28.883 [main]  INFO Acessando tela de inclusão componente
+21:42:29.037 [main]  INFO input:Botão
+21:42:29.355 [main]  INFO input:2
+21:42:29.641 [main]  INFO Foram preenchidos os dados do componente.
+21:42:29.865 [main]  INFO Produto adicionado com sucesso
+21:42:30.226 [main]  INFO Teste finalizado com sucesso!
+21:42:31.807 [main]  INFO Acessando tela lista de produtos
+21:42:57.952 [main]  INFO URL: http://165.227.93.41/lojinha-web/v2/
+21:43:02.102 [main]  INFO Acessando tela de login
+21:43:02.245 [main]  INFO input:admin
+21:43:02.628 [main]  INFO input:admin
+21:43:04.787 [main]  INFO Acessando tela inicial 
+21:43:05.298 [main]  INFO Acessando tela de inclusão produto
+21:43:05.829 [main]  INFO input:Camiseta
+21:43:06.609 [main]  INFO input:50,00
+21:43:08.510 [main]  INFO input:Azul, Branco
+21:43:09.063 [main]  INFO Foram preenchidos os dados do produto.
+21:45:41.214 [main]  INFO Produto adicionado com sucesso

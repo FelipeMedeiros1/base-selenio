@@ -2,8 +2,8 @@ package sistema.transacoes.cadastropessoas.fundamental.automacao;
 
 
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioCadastro;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioCadastro;
 import sistema.transacoes.cadastropessoas.fundamental.pagina.PaginaFundamental;
 
 import static webdriver.componentes.Evidencia.capturaTelaInfo;

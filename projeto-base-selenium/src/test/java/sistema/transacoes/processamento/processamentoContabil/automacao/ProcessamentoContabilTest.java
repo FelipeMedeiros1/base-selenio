@@ -1,6 +1,6 @@
 package sistema.transacoes.processamento.processamentoContabil.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class ProcessamentoContabilTest extends BaseTeste {

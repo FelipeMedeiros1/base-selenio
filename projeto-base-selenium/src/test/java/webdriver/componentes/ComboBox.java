@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static servico.utils.LogUtil.info;
+import static utils.LogUtil.info;
 import static webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**

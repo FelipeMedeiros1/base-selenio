@@ -1,7 +1,7 @@
 package sistema.relatorios.renda_fixa.rendimentos.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioRelatorio;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioRelatorio;
 import sistema.relatorios.renda_fixa.rendimentos.pagina.PaginaRendimentos;
 
 public class RendimentosRelFixUtils extends UtilitarioRelatorio<RendimentosRelFix> {

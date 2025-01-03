@@ -1,7 +1,7 @@
 //package amplis.transacoes.cadastropessoas.fundos.automacao;
 //
 //import org.junit.Test;
-//import servico.base.BaseTeste;
+//import base.BaseTeste;
 //
 //
 //public class CadastroFundosTest extends BaseTeste {

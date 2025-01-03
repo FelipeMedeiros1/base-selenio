@@ -1,8 +1,8 @@
 package sistema.transacoes.importacoes.fundos.cotacoesDeFundos.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
+import utils.leitorDeArquivo.config_json.LeitorJson;
 import sistema.transacoes.importacoes.fundos.cotacoesDeFundos.pagina.PaginaCotacoesDeFundos;
-import servico.utils.UtilitarioImportacao;
+import sistema.servico.utils.UtilitarioImportacao;
 
 public class CotacoesDeFundosUtils extends UtilitarioImportacao<CotacoesDeFundos> {
     public CotacoesDeFundosUtils(String caminhoJson) {

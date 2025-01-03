@@ -1,0 +1,100 @@
+name: Java Selenium Cucumber Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['17'] # Teste com diferentes versões do Java
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        run: echo "Código baixado com sucesso!"
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+        run: echo "JDK versão ${{ matrix.java }} configurado!"
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+        run: echo "Cache do Maven configurado!"
+
+      - name: Build with Maven
+        run: |
+          echo "Iniciando a construção com Maven..."
+          mvn clean install
+          echo "Construção com Maven finalizada!"
+
+      - name: Run Tests
+        run: |
+          echo "Iniciando a execução dos testes..."
+          mvn test
+          echo "Execução dos testes finalizada!"
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: target/surefire-reports
+        run: echo "Resultados dos testes enviados!"
+
+      - name: Publish Test Results
+        if: always() # Publica os resultados mesmo em caso de falha
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const annotations = [];
+            const files = context.payload.workflow_run.artifacts.find(artifact => artifact.name === 'test-results').archive_download_url;
+            const response = await fetch(files);
+            const buffer = await response.arrayBuffer();
+            const zip = new JSZip();
+            await zip.loadAsync(buffer);
+            for (const file of Object.keys(zip.files)) {
+              if (file.endsWith('.xml')) {
+                const xml = await zip.file(file).async('text');
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(xml, 'text/xml');
+                const testsuites = doc.getElementsByTagName('testsuite');
+                for (const testsuite of testsuites) {
+                  const name = testsuite.getAttribute('name');
+                  const errors = testsuite.getAttribute('errors');
+                  const failures = testsuite.getAttribute('failures');
+                  const tests = testsuite.getAttribute('tests');
+                  const skipped = testsuite.getAttribute('skipped');
+                  const time = testsuite.getAttribute('time');
+                  annotations.push({
+                    path: file,
+                    start_line: 1,
+                    end_line: 1,
+                    annotation_level: 'failure',
+                    message: `${name}: ${errors} errors, ${failures} failures, ${tests} tests, ${skipped} skipped, ${time} seconds`,
+                  });
+                }
+              }
+            }
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Test Results',
+              head_sha: context.sha,
+              status: 'completed',
+              conclusion: annotations.length > 0 ? 'failure' : 'success',
+              output: {
+                title: 'Test Results',
+                summary: annotations.length > 0 ? 'Some tests failed' : 'All tests passed',
+                annotations: annotations,
+              },
+            });

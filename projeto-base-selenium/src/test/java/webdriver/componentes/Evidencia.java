@@ -9,7 +9,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import servico.utils.LogUtil;
+import utils.LogUtil;
 
 
 import java.io.File;
@@ -130,7 +130,7 @@ public class Evidencia {
         String url = (String) ((JavascriptExecutor) getDriver())
                 .executeScript("return window.location.href;");
         String[] segmentos = url.split("/");
-        String ultimoSegmento = segmentos[segmentos.length - 1];
+        String ultimoSegmento = segmentos[segmentos.length - 2];
         return ultimoSegmento.split("\\.")[0];
     }
 

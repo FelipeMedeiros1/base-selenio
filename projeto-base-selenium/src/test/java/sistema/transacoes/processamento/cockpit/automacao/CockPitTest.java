@@ -1,6 +1,6 @@
 package sistema.transacoes.processamento.cockpit.automacao;
 
-import servico.base.BaseTeste;
+import base.BaseTeste;
 import org.junit.Test;
 
 public class CockPitTest extends BaseTeste {

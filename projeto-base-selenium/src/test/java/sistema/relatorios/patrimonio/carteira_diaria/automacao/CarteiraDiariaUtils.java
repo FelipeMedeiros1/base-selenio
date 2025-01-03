@@ -1,7 +1,7 @@
 package sistema.relatorios.patrimonio.carteira_diaria.automacao;
 
-import servico.leitorDeArquivo.config_json.LeitorJson;
-import servico.utils.UtilitarioRelatorio;
+import utils.leitorDeArquivo.config_json.LeitorJson;
+import sistema.servico.utils.UtilitarioRelatorio;
 import sistema.relatorios.patrimonio.carteira_diaria.pagina.PaginaCarteiraDiaria;
 
 public class CarteiraDiariaUtils extends UtilitarioRelatorio<CarteiraDiaria> {
