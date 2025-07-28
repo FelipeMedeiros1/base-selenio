@@ -9,7 +9,7 @@ public class LeitorPropriedade {
     private static Properties properties;
 
     static {
-        URL resource = LeitorPropriedade.class.getClassLoader().getResource("config.propriedades");
+        URL resource = LeitorPropriedade.class.getClassLoader().getResource("src\\test\\java\\utils\\leitorDeArquivo\\LeitorPropriedade.java");
         if (resource == null) {
             throw new RuntimeException("Arquivo config.propriedades não encontrado no classpath.");
         }
