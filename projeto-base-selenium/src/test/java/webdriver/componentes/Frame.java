@@ -1,6 +1,6 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe utilitária para gerenciar frames e janelas em testes automatizados.

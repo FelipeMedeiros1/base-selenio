@@ -1,7 +1,7 @@
-package webdriver.base.navegacao.automacao;
+package test.java.webdriver.base.navegacao.automacao;
 
 import org.openqa.selenium.WebElement;
-import webdriver.base.navegacao.pagina.PaginaMenuNavegacao;
+import test.java.webdriver.base.navegacao.pagina.PaginaMenuNavegacao;
 
 public class MenuNavegacao extends PaginaMenuNavegacao {
 

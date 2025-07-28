@@ -1,4 +1,4 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
 public record Lojinha(
         String nomeDoProduto,

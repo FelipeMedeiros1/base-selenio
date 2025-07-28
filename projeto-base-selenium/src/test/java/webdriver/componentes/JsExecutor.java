@@ -1,8 +1,8 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.WebElement;
 
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe utilitária para executar scripts JavaScript no navegador.

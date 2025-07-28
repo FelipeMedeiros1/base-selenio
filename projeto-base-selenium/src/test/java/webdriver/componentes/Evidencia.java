@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -9,7 +9,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utils.LogUtil;
+import test.java.utils.LogUtil;
 
 
 import java.io.File;
@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class Evidencia {
     private static ExtentReports extent;

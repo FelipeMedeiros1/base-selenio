@@ -1,4 +1,4 @@
-package base;
+package test.java.base;
 
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -7,12 +7,12 @@ import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-import static utils.leitorDeArquivo.LeitorPropriedade.*;
-import static utils.LogUtil.info;
+import static test.java.utils.leitorDeArquivo.LeitorPropriedade.*;
+import static test.java.utils.LogUtil.info;
 
-import static webdriver.componentes.Evidencia.flushReports;
-import static webdriver.fabrica.FabricaDeDriver.fecharBrowser;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.componentes.Evidencia.flushReports;
+import static test.java.webdriver.fabrica.FabricaDeDriver.fecharBrowser;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class BaseCucumber {
     @Before

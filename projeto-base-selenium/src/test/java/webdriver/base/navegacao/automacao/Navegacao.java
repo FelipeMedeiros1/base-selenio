@@ -1,15 +1,15 @@
-package webdriver.base.navegacao.automacao;
+package test.java.webdriver.base.navegacao.automacao;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import webdriver.componentes.Espera;
+import test.java.webdriver.componentes.Espera;
 
 import java.time.Duration;
 
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class Navegacao {
     public void navegarParaPagina(WebElement menu, WebElement modulo, WebElement pagina) {

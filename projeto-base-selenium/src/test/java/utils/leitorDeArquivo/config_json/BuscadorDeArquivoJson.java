@@ -1,5 +1,5 @@
 
-package utils.leitorDeArquivo.config_json;
+package test.java.utils.leitorDeArquivo.config_json;
 
 import org.junit.Test;
 

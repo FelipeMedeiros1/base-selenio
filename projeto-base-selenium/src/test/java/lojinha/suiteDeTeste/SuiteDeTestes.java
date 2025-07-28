@@ -1,4 +1,4 @@
-package lojinha.suiteDeTeste;
+package test.java.lojinha.suiteDeTeste;
 
 
 import org.junit.runner.RunWith;

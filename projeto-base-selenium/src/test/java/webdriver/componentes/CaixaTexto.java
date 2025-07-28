@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.By;
 
@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static utils.LogUtil.info;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.utils.LogUtil.info;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe responsável por interagir com campos de texto em uma página web.

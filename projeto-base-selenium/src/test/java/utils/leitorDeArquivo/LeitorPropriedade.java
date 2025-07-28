@@ -1,4 +1,4 @@
-package utils.leitorDeArquivo;
+package test.java.utils.leitorDeArquivo;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

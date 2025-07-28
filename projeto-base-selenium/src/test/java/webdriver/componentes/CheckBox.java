@@ -1,11 +1,11 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import static utils.LogUtil.info;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.utils.LogUtil.info;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe responsável por interagir com checkboxes em testes automatizados.

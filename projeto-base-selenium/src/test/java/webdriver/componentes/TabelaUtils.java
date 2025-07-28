@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class TabelaUtils {
 

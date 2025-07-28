@@ -1,12 +1,13 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import webdriver.componentes.Botao;
-import webdriver.componentes.CaixaTexto;
-import webdriver.componentes.Espera;
 
-import static webdriver.componentes.Evidencia.logFalha;
+import test.java.webdriver.componentes.Botao;
+import test.java.webdriver.componentes.CaixaTexto;
+import test.java.webdriver.componentes.Espera;
+
+import static test.java.webdriver.componentes.Evidencia.logFalha;
 
 public class Interagivel {
 

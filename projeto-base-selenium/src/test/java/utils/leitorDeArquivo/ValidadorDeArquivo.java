@@ -1,4 +1,4 @@
-package utils.leitorDeArquivo;
+package test.java.utils.leitorDeArquivo;
 
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
@@ -9,8 +9,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-import static utils.leitorDeArquivo.config_csv.LeitorCSV.lerCSV;
-import static utils.LogUtil.info;
+import static test.java.utils.leitorDeArquivo.config_csv.LeitorCSV.lerCSV;
+import static test.java.utils.LogUtil.info;
 
 public class ValidadorDeArquivo {
 

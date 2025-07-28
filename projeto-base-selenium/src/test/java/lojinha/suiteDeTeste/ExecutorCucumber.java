@@ -1,4 +1,4 @@
-package lojinha.suiteDeTeste;
+package test.java.lojinha.suiteDeTeste;
 
 import org.junit.FixMethodOrder;
 import org.junit.runner.RunWith;
@@ -8,7 +8,7 @@ import org.junit.runners.MethodSorters;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:lojinha/asutomacao",
+        features = "classpath:test/java/lojinha/automacao",
         glue = {"java", "./base" },
         monochrome = true,
         dryRun = false,

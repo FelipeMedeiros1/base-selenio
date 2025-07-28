@@ -1,4 +1,4 @@
-package webdriver.base.navegacao.automacao;
+package test.java.webdriver.base.navegacao.automacao;
 
 public class NavegacaoSistema extends MenuNavegacao {
 

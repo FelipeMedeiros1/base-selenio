@@ -1,4 +1,4 @@
-package utils.leitorDeArquivo.config_json;
+package test.java.utils.leitorDeArquivo.config_json;
 
 
 import com.google.gson.Gson;

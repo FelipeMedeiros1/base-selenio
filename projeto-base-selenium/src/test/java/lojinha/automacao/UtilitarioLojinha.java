@@ -1,8 +1,10 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
-import lojinha.login.Login;
+import static test.java.webdriver.componentes.Evidencia.capturaTelaInfo;
 
-import static webdriver.componentes.Evidencia.capturaTelaInfo;
+import test.java.lojinha.login.Login;
+
+ 
 
 public abstract class UtilitarioLojinha<M> extends Interagivel {
 

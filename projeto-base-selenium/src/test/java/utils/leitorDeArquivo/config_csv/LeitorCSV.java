@@ -1,4 +1,4 @@
-package utils.leitorDeArquivo.config_csv;
+package test.java.utils.leitorDeArquivo.config_csv;
 
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;

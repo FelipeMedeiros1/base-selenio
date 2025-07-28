@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

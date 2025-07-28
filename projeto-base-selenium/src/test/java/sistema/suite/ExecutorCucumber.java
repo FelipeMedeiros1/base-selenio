@@ -1,4 +1,4 @@
-package sistema.suite;
+package test.java.sistema.suite;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -8,7 +8,7 @@ import org.junit.runners.MethodSorters;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:sistema/transacoes",
+        features = "classpath:test/java/sistema/transacoes",
         glue = {"sistema", "sistema.servico.base" },
         monochrome = true,
         dryRun = false,

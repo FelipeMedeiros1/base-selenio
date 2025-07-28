@@ -1,9 +1,9 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
-import webdriver.componentes.Assertivas;
+import test.java.webdriver.componentes.Assertivas;
 
 import static org.junit.Assert.assertTrue;
-import static webdriver.componentes.Evidencia.*;
+import static test.java.webdriver.componentes.Evidencia.*;
 
 public class ValidadorMensagem {
 

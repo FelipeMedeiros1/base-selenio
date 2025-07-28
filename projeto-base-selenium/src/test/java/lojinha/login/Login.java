@@ -1,10 +1,10 @@
-package lojinha.login;
+package test.java.lojinha.login;
 
-import lojinha.automacao.Interagivel;
-import utils.leitorDeArquivo.LeitorPropriedade;
-import webdriver.componentes.Evidencia;
+import test.java.lojinha.automacao.Interagivel;
+import test.java.utils.leitorDeArquivo.LeitorPropriedade;
+import test.java.webdriver.componentes.Evidencia;
 
-import static webdriver.componentes.Evidencia.capturaTelaInfo;
+import static test.java.webdriver.componentes.Evidencia.capturaTelaInfo;
 
 
 public class Login extends Interagivel {

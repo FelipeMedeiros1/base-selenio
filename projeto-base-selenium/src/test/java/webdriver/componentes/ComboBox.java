@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static utils.LogUtil.info;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.utils.LogUtil.info;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe responsável por interagir com comboboxes em testes automatizados.

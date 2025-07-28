@@ -1,8 +1,8 @@
-package lojinha.login;
+package test.java.lojinha.login;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import webdriver.base.BasePagina;
+import test.java.webdriver.base.BasePagina;
 
 public class PaginaLogin extends BasePagina {
 

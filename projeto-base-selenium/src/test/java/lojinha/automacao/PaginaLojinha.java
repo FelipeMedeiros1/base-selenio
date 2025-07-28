@@ -1,10 +1,13 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import webdriver.base.BasePagina;
+import test.java.webdriver.base.BasePagina;
 
 public class PaginaLojinha extends BasePagina {
+
+    public PaginaLojinha() {
+    }
 
 
     @FindBy(id = "produtonome")

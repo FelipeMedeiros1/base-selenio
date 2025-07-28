@@ -1,9 +1,9 @@
-package webdriver.base.navegacao.pagina;
+package test.java.webdriver.base.navegacao.pagina;
 
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import webdriver.base.BasePagina;
+import test.java.webdriver.base.BasePagina;
 
 public class PaginaMenuNavegacao extends BasePagina {
 //region

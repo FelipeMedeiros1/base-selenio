@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,9 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.NoSuchElementException;
 
-import static utils.LogUtil.info;
-import static webdriver.componentes.Evidencia.capturaTelaInfo;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.utils.LogUtil.info;
+import static test.java.webdriver.componentes.Evidencia.capturaTelaInfo;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 /**
  * Classe responsável por encapsular as ações de interação com botões em uma página web.
@@ -73,7 +73,7 @@ public class Botao {
         espera.esperaAteElementoAparecerNaTela(elemento);
         espera.esperaElementoSerClicavel(elemento);
         try {
-            if (elemento.isDisplayed() && elemento.isDisplayed()) ;
+            if (elemento.isDisplayed()) ;
             encontrou = true;
         } catch (NoSuchElementException e) {
             // Se o elemento não for encontrado, a pesquisa não teve sucesso

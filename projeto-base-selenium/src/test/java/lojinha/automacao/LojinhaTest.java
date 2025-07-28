@@ -1,8 +1,8 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
-import base.BaseTeste;
+import test.java.base.BaseTeste;
 import org.junit.Test;
-import utils.DescricaoCenario;
+import test.java.utils.DescricaoCenario;
 
 public class LojinhaTest extends BaseTeste {
 

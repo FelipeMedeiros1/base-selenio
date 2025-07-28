@@ -1,7 +1,8 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
 
-import utils.leitorDeArquivo.config_json.LeitorJson;
+import test.java.lojinha.login.PaginaLogin;
+import test.java.utils.leitorDeArquivo.config_json.LeitorJson;
 
 public class LojinhaUtils extends UtilitarioLojinha<Lojinha> {
     private String caminhoDoArquivo;

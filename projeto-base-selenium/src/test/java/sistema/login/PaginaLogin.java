@@ -1,14 +1,14 @@
-package sistema.login;
+package test.java.sistema.login;
 
-import webdriver.base.BasePagina;
-import webdriver.componentes.Botao;
-import webdriver.componentes.CaixaTexto;
+import test.java.webdriver.base.BasePagina;
+import test.java. webdriver.componentes.Botao;
+import test.java.webdriver.componentes.CaixaTexto;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static utils.leitorDeArquivo.LeitorPropriedade.getLogin;
-import static utils.leitorDeArquivo.LeitorPropriedade.getSenha;
-import static webdriver.componentes.Evidencia.*;
+import static test.java.utils.leitorDeArquivo.LeitorPropriedade.getLogin;
+import static test.java.utils.leitorDeArquivo.LeitorPropriedade.getSenha;
+import static test.java.webdriver.componentes.Evidencia.*;
 
 public class PaginaLogin extends BasePagina {
     private final CaixaTexto pagina = new CaixaTexto();

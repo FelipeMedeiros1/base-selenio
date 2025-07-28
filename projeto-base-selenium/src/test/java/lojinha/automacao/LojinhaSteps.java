@@ -1,4 +1,4 @@
-package lojinha.automacao;
+package test.java.lojinha.automacao;
 
 public class LojinhaSteps {
 }

@@ -1,4 +1,4 @@
-package webdriver.componentes;
+package test.java.webdriver.componentes;
 
 
 import org.openqa.selenium.By;
@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertTrue;
 
-import static utils.LogUtil.*;
+import static test.java.utils.LogUtil.*;
 
-import static webdriver.componentes.Evidencia.*;
-import static webdriver.fabrica.FabricaDeDriver.getDriver;
+import static test.java.webdriver.componentes.Evidencia.*;
+import static test.java.webdriver.fabrica.FabricaDeDriver.getDriver;
 
 public class PainelMensagem {
 
